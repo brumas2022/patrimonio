@@ -38,7 +38,7 @@ if i:
         col = st.columns((1,1))
         a1 = col[0].text_input("Objeto da licitacao")
         a2 = col[0].text_input("Data inicial")
-        enviar=st.button_confirm("ENTRA")
+        enviar = st_form_submit_button("ENTRA")
         if enviar:
             inserir(a1,a2)
   
