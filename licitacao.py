@@ -13,9 +13,9 @@ i=st.sidebar.button("INSERIR")
 c=st.sidebar.button("CONSULTAR")
 
 if i:
-   inserir
+   inserir()
 
 if c:
-   consulta
+   consulta()
 
 
