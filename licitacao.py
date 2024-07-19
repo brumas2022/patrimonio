@@ -41,7 +41,7 @@ if i:
         
         if enviar:
             inserir(a1,a2)
-   inserir()
+  
 
 if c:
    consulta()
