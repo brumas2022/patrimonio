@@ -17,7 +17,7 @@ def inserir(obj, dataini):
      )
      st.write("conexao exitosa")
      cursor = connection.cursor()
-     comando = f"""INSERT INTO licitacao (objeto, datainicial) VALUES ('{obj}', '{dataini}')"""
+     comando = f"""INSERT INTO Patrimonio (objeto, datainicial) VALUES ('{obj}', '{dataini}')"""
      cursor.execute(comando)
      connection.commit()
      st.text("Cadastro efetuado com sucesso")
