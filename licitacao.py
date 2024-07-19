@@ -9,8 +9,8 @@ def inserir(obj, dataini):
     try:
      connection = psycopg2.connect(
                host='aws-0-sa-east-1.pooler.supabase.com',
-               user='postgres.ibhcxtnwnonsnycfgjay',
-               password='Hoje#estamos#firmes#como#geleia',
+               user='postgres.hdhvkseneldllvnlvpgc',
+               password='Hoje#estamos#fortes#como#geleia',
                database='postgres',
                port='5432'
 
@@ -38,7 +38,7 @@ if i:
         col = st.columns((1,1))
         a1 = col[0].text_input("Objeto da licitacao")
         a2 = col[0].text_input("Data inicial")
-        
+        enviar=st.button_confirm("ENTRA")
         if enviar:
             inserir(a1,a2)
   
