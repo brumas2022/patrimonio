@@ -31,7 +31,7 @@ def inserir(a1, a2):
                cursor.close()
                connection.close()
          
-           except Exception as ex:
+            except Exception as ex:
                st.write(ex)
         
 def consulta():
