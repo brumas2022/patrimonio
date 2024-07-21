@@ -4,7 +4,7 @@ import psycopg2
 
 st.set_page_config("Licitações de materiais", layout="wide")
 
-def inserir(a1, a2):
+def inserir():
     st.write("Este é o modulo de inserção")
     with st.form("ENTRA", clear_on_submit=True):
          col = st.columns((1,1))
