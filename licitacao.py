@@ -32,7 +32,7 @@ def inserir(a1, a2):
                connection.close()
          
            except Exception as ex:
-                  st.write(ex)
+               st.write(ex)
         
 def consulta():
     st.write("Este é o modulo de consulta")
