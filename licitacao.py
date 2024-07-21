@@ -41,14 +41,8 @@ i=st.sidebar.button("INSERIR")
 c=st.sidebar.button("CONSULTAR")
 
 if i:
-    with st.form("ENTRA", clear_on_submit=True):
-         col = st.columns((1,1))
-         a1 = col[0].text_input("Objeto da licitacao")
-         a2 = col[0].text_input("Data inicial")
-         enviar = st.form_submit_button("ENTRA")
-         if enviar:
-            st.write("Aqui") 
-            inserir(a1,a2)
+    inserir()
+    
   
 
 if c:
