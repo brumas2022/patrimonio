@@ -41,7 +41,7 @@ def consulta():
 
     conn = engine.connect()
 
-    query='SELECT * FROM Patrimonio'
+    query='SELECT * FROM nmemo'
     result = conn.execute(query)
 
     st.write(result)
