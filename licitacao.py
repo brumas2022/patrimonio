@@ -56,6 +56,7 @@ def consulta():
                resultado=cursor.fetchall()
                resultado1=pd.DataFrame(resultado)
                resultado1.columns=['Id', 'Entrada', 'Licitacao', 'Data'] 
+               resultado1.set_index=['Id', inplace=True] 
                st.dataframe(resultado1)
          
     except Exception as ex:
