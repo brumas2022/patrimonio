@@ -50,7 +50,7 @@ if escolha=="INSERIR":
     if enviar:
        inserir1(a1,a2)
         
-elif escolha=="CONSULTA"
+elif escolha=="CONSULTA":
      st.write("Este é o modulo de inserção")
      consulta()
    
