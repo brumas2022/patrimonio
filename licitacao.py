@@ -58,7 +58,7 @@ def consulta():
                resultado1.columns=['Id', 'Entrada', 'Licitacao', 'Data'] 
                resultado1.set_index("Id", inplace=True) 
                resultado1['Data'] = pd.to_datetime(resultado1.Data)
-               resultado1['Data'] = resultado1['Data'].dt.strftime('%m/%d/%Y')
+               resultado1['Data'] = resultado1['Data'].dt.strftime('%d/%m/%Y')
                st.dataframe(resultado1)
          
     except Exception as ex:
