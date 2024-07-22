@@ -19,7 +19,7 @@ def inserir1(a1,a2):
                          user='postgres.hdhvkseneldllvnlvpgc',
                          password='Hoje#estamos#fortes#como#geleia',
                          database='postgres',
-                         port='5432'
+                         port='6543'
 
                )
                st.write("conexao exitosa")
