@@ -38,7 +38,7 @@ def consulta():
     st.write("Este é o modulo de consulta")
 
 
-escolha=st.radio("ESCOLHA A OPÇÃO", ("INSERIR", "CONSULTAR"))
+escolha=st.selectbox("ESCOLHA A OPÇÃO", ("INSERIR", "CONSULTAR"))
 
 if escolha=="INSERIR":
     st.write("Este é o modulo de inserção")
