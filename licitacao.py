@@ -52,7 +52,8 @@ def consulta():
                st.write("conexao exitosa")
                cursor = connection.cursor()
                comando = "SELECT * FROM Patrimonio"
-               resultado = cursor.execute(comando)
+               cursor.execute(comando)
+               resultado=cursor.fetchall()
                st.write(resultado)
          
     except Exception as ex:
