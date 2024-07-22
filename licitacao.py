@@ -54,7 +54,7 @@ def consulta():
                comando = "SELECT * FROM Patrimonio"
                cursor.execute(comando)
                resultado=cursor.fetchall()
-               resultado.header=["Id", "Entrada", "Licitacao", "Data"] 
+               resultado.columns=['Id', 'Entrada', 'Licitacao', 'Data'] 
                st.dataframe(resultado)
          
     except Exception as ex:
