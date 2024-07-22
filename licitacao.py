@@ -12,7 +12,7 @@ def inserir():
     with st.form("ENTRA", clear_on_submit=True):
          col = st.columns((1,1))
          a1 = col[0].text_input("Objeto da licitacao")
-         a2 = col[0].text_input("Data inicial")
+         a2 = col[0].date_input("Data inicial")
          
          enviar = st.form_submit_button("ENTRA")
 def inserir1(a1,a2):
