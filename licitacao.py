@@ -36,7 +36,9 @@ def inserir1(a1,a2):
         
 def consulta():
     st.write("Este é o modulo de consulta")
-  
+
+
+escolha=st.radio("ESCOLHA A OPÇÃO", ("INSERIR", "CONSULTAR"))
 i=st.sidebar.button("INSERIR")
 c=st.sidebar.button("CONSULTAR")
 
