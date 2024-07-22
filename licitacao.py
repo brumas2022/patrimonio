@@ -39,10 +39,8 @@ def consulta():
 
 
 escolha=st.radio("ESCOLHA A OPÇÃO", ("INSERIR", "CONSULTAR"))
-i=st.sidebar.button("INSERIR")
-c=st.sidebar.button("CONSULTAR")
 
-if i:
+if escolha=="INSERIR":
     st.write("Este é o modulo de inserção")
     with st.form("ENTRA", clear_on_submit=True):
          col = st.columns((1,1))
@@ -51,12 +49,12 @@ if i:
          enviar = st.form_submit_button("ENTRA")
     if enviar:
        inserir1(a1,a2)
-    else:
-       consulta() 
-    
+        
+elif escolha=="CONSULTA"
+     st.write("Este é o modulo de inserção")
+     consulta()
+   
   
 
-if c:
-   consulta()
 
 
