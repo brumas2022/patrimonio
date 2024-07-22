@@ -62,8 +62,9 @@ def consulta():
     except Exception as ex:
                st.write(ex)
 
+col1=st.columns((1,1,1,1))
 
-escolha=st.selectbox("ESCOLHA A OPÇÃO", ("INSERIR", "CONSULTA"))
+escolha=col1[0].selectbox("ESCOLHA A OPÇÃO", ("INSERIR", "CONSULTA"))
 
 if escolha=="INSERIR":
     st.write("Este é o modulo de inserção")
@@ -76,7 +77,7 @@ if escolha=="INSERIR":
        inserir1(a1,a2)
         
 elif escolha=="CONSULTA":
-     st.write("Este é o modulo de inserção")
+     
      consulta()
    
   
