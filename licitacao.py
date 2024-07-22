@@ -12,7 +12,7 @@ def inserir():
          a2 = col[0].text_input("Data inicial")
          
          enviar = st.form_submit_button("ENTRA")
-def inserir1():
+def inserir1(a1,a2):
     try:
                connection = psycopg2.connect(
                          host='aws-0-sa-east-1.pooler.supabase.com',
@@ -41,8 +41,13 @@ i=st.sidebar.button("INSERIR")
 c=st.sidebar.button("CONSULTAR")
 
 if i:
-    inserir()
-    inserir1()
+    st.write("Este é o modulo de inserção")
+    with st.form("ENTRA", clear_on_submit=True):
+         col = st.columns((1,1))
+         a1 = col[0].text_input("Objeto da licitacao")
+         a2 = col[0].text_input("Data inicial")
+         enviar = st.form_submit_button("ENTRA")
+    inserir1(a1,a2)
     
   
 
