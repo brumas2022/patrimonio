@@ -43,7 +43,7 @@ def consulta():
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    result = session.query(patrimonio).all()
+    result = session.query('Patrimonio').all()
     #conn = engine.connect()
 
     #query="SELECT * FROM nmemo"
