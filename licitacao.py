@@ -44,7 +44,7 @@ def consulta():
     st.write(df)
 
 
-escolha=st.selectbox("ESCOLHA A OPÇÃO", ("INSERIR", "CONSULTAR"))
+escolha=st.selectbox("ESCOLHA A OPÇÃO", ("INSERIR", "CONSULTA"))
 
 if escolha=="INSERIR":
     st.write("Este é o modulo de inserção")
