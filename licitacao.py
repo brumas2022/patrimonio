@@ -37,7 +37,7 @@ def inserir1(a1,a2):
         
 def consulta():
     st.write("Este é o modulo de consulta")
-    engine = create_engine('postgresql://postgres.hdhvkseneldllvnlvpgc:[Hoje#estamos#fortes#como#geleia]@aws-0-sa-east-1.pooler.supabase.com:6543/postgres')
+    engine = create_engine('postgresql://postgres.hdhvkseneldllvnlvpgc:Hoje#estamos#fortes#como#geleia@aws-0-sa-east-1.pooler.supabase.com:6543/postgres')
 
     conn = engine.connect()
 
