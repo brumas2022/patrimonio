@@ -25,7 +25,7 @@ def inserir1(a1,a2):
                )
                st.write("conexao exitosa")
                cursor = connection.cursor()
-               comando = f"""INSERT INTO 'Patrimonio' (objeto, datainicial) VALUES ('{a1}', '{a2}')"""
+               comando = f"""INSERT INTO Patrimonio (objeto, datainicial) VALUES ('{a1}', '{a2}')"""
                cursor.execute(comando)
                connection.commit()
                st.text("Cadastro efetuado com sucesso")
@@ -39,10 +39,13 @@ def consulta():
     st.write("Este é o modulo de consulta")
     engine = create_engine('postgresql://postgres.hdhvkseneldllvnlvpgc:Hoje#estamos#fortes#como#geleia@aws-0-sa-east-1.pooler.supabase.com:6543/postgres')
 
-    conn = engine.connect()
+    Session = sessionmaker(bind=engine)
+    session = Session()
+    result = session.query(Patrimonio).all()
+    #conn = engine.connect()
 
-    query="SELECT * FROM nmemo"
-    result = conn.execute(query)
+    #query="SELECT * FROM nmemo"
+    #result = conn.execute(query)
 
     st.write(result)
     
