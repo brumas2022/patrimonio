@@ -24,7 +24,7 @@ def inserir1(a1,a2):
                )
                st.write("conexao exitosa")
                cursor = connection.cursor()
-               comando = f"""INSERT INTO Patrimonio (objeto, datainicial) VALUES ('{a1}', '{a2}')"""
+               comando = f"""INSERT INTO patrimonio (objeto, datainicial) VALUES ('{a1}', '{a2}')"""
                cursor.execute(comando)
                connection.commit()
                st.text("Cadastro efetuado com sucesso")
