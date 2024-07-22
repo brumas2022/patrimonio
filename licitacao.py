@@ -54,8 +54,9 @@ def consulta():
                comando = "SELECT * FROM Patrimonio"
                cursor.execute(comando)
                resultado=cursor.fetchall()
-               resultado.columns=['Id', 'Entrada', 'Licitacao', 'Data'] 
-               st.dataframe(resultado)
+               resultado1=st.DataFrame(resultado)
+               resultado1.columns=['Id', 'Entrada', 'Licitacao', 'Data'] 
+               st.dataframe(resultado1)
          
     except Exception as ex:
                st.write(ex)
