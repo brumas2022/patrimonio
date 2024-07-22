@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import psycopg2
 from sqlalchemy import create_engine, text
+from sqlalchemy.orm import sessionmaker
+
 
 st.set_page_config("Licitações de materiais", layout="wide")
 
