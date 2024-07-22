@@ -42,7 +42,7 @@ def consulta():
     conn = engine.connect()
 
     query='SELECT * FROM Patrimonio'
-    result = conn.exec_driver_sql(query)
+    result = conn.execute(query)
 
     st.write(result)
     
