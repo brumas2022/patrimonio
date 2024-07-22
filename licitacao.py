@@ -12,9 +12,8 @@ def inserir():
          a2 = col[0].text_input("Data inicial")
          
          enviar = st.form_submit_button("ENTRA")
-        
-    if enviar:
-            try:
+def inserir1():
+    try:
                connection = psycopg2.connect(
                          host='aws-0-sa-east-1.pooler.supabase.com',
                          user='postgres.hdhvkseneldllvnlvpgc',
@@ -32,7 +31,7 @@ def inserir():
                cursor.close()
                connection.close()
          
-            except Exception as ex:
+    except Exception as ex:
                st.write(ex)
         
 def consulta():
@@ -43,6 +42,7 @@ c=st.sidebar.button("CONSULTAR")
 
 if i:
     inserir()
+    inserir1()
     
   
 
