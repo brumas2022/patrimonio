@@ -49,7 +49,7 @@ if i:
          enviar = st.form_submit_button("ENTRA")
     if enviar:
        inserir1(a1,a2)
-    else
+    else:
        consulta() 
     
   
