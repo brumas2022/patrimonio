@@ -10,9 +10,10 @@ def inserir():
          col = st.columns((1,1))
          a1 = col[0].text_input("Objeto da licitacao")
          a2 = col[0].text_input("Data inicial")
+         
          enviar = st.form_submit_button("ENTRA")
-         if enviar:
-    
+        
+    if enviar:
             try:
                connection = psycopg2.connect(
                          host='aws-0-sa-east-1.pooler.supabase.com',
