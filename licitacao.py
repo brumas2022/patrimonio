@@ -51,7 +51,7 @@ def consulta():
                )
                st.write("conexao exitosa")
                cursor = connection.cursor()
-               comando = "SELECT * FROM nmemo"
+               comando = "SELECT * FROM Patrimonio"
                cursor.execute(comando)
                resultado=cursor.fetchall()
                st.write(resultado)
