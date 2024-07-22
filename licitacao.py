@@ -39,24 +39,24 @@ def inserir1(a1,a2):
         
 def consulta():
     st.write("Este é o modulo de consulta")
-    engine = create_engine('postgresql://postgres.hdhvkseneldllvnlvpgc:Hoje#estamos#fortes#como#geleia@aws-0-sa-east-1.pooler.supabase.com:6543/postgres')
+    #engine = create_engine('postgresql://postgres.hdhvkseneldllvnlvpgc:Hoje#estamos#fortes#como#geleia@aws-0-sa-east-1.pooler.supabase.com:6543/postgres')
+    try:
+               connection = psycopg2.connect(
+                         host='aws-0-sa-east-1.pooler.supabase.com',
+                         user='postgres.hdhvkseneldllvnlvpgc',
+                         password='Hoje#estamos#fortes#como#geleia',
+                         database='postgres',
+                         port='6543'
 
-    Session = sessionmaker(bind=engine)
-    session = Session()
-    result = session.query('Patrimonio').all()
-    #conn = engine.connect()
-
-    #query="SELECT * FROM nmemo"
-    #result = conn.execute(query)
-
-    st.write(result)
-    
-    
-    
-    #sql = 'SELECT * FROM "Patrimonio"'
-    #df = pd.read_sql_query(sql, con=engine)
-    #st.write("Chegou aqui")
-    #st.write(df)
+               )
+               st.write("conexao exitosa")
+               cursor = connection.cursor()
+               comando = "SELECT * FROM Patrimonio"
+               resultado = cursor.execute(comando)
+               st.write(resultado)
+         
+    except Exception as ex:
+               st.write(ex)
 
 
 escolha=st.selectbox("ESCOLHA A OPÇÃO", ("INSERIR", "CONSULTA"))
