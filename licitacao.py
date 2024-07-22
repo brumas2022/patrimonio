@@ -40,7 +40,8 @@ def consulta():
     engine = create_engine('postgresql://postgres.hdhvkseneldllvnlvpgc:[Hoje#estamos#fortes#como#geleia]@aws-0-sa-east-1.pooler.supabase.com:6543/postgres')
     sql = 'SELECT * FROM "Patrimonio"'
     df = pd.read_sql_query(sql, con=engine)
-    st.dataframe(df)
+    st.write("Chegou aqui")
+    st.write(df)
 
 
 escolha=st.selectbox("ESCOLHA A OPÇÃO", ("INSERIR", "CONSULTAR"))
