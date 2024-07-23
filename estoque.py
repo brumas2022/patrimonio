@@ -13,7 +13,7 @@ if consulta=="POR ITEM":
    df.set_index("Item", inplace=True)
    
    #st.dataframe(df.iloc[3:])
-   selecao = df['Item']==1974
+   selecao = df['Item']=="1974"
    st.dataframe(df[selecao])
 
 elif consulta=="POR NOME":
