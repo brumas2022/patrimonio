@@ -14,7 +14,7 @@ if consulta=="POR ITEM":
    #df.set_index("Item", inplace=True)
   
    st.dataframe(df.iloc[3:])
-   valor = "19"
+   valor = 19
  
    resultado = df[df['Item'] == valor]
    st.dataframe(df.iloc[valor])
