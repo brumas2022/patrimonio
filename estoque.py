@@ -13,7 +13,10 @@ if consulta=="POR ITEM":
    df.set_index("Item", inplace=True)
   
    st.dataframe(df.iloc[3:])
-   
+   valor = 1974
+ 
+   resultado = df[df['Item'] == valor]
+   st.dataframe(resultado)
    #selecao = df['Item']=="1974"
    #line = df.loc[df["Item"] == '1974']
    #st.dataframe(line)
