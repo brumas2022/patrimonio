@@ -14,7 +14,8 @@ if consulta=="POR ITEM":
    
    #st.dataframe(df.iloc[3:])
    #selecao = df['Item']=="1974"
-   st.dataframe(df.query("Item==1974"))
+   line = df.loc[df['Item'] == '1974']
+   st.dataframe(line)
 
 elif consulta=="POR NOME":
    st.write("Consulta por ordem alfabetica")
