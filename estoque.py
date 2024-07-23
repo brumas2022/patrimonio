@@ -13,8 +13,8 @@ if consulta=="POR ITEM":
    df.set_index("Item", inplace=True)
    
    #st.dataframe(df.iloc[3:])
-   selecao = df['Item']=="1974"
-   st.dataframe(df[selecao])
+   #selecao = df['Item']=="1974"
+   st.dataframe(df.query("Item==1974"))
 
 elif consulta=="POR NOME":
    st.write("Consulta por ordem alfabetica")
