@@ -12,7 +12,7 @@ if consulta=="POR ITEM":
    df.columns=['Item', 'Descrição', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
    df.set_index("Item", inplace=True)
    
-   st.dataframe(df.iloc[4:])
+   st.dataframe(df.iloc[3:])
 elif consulta=="POR NOME":
    st.write("Consulta por ordem alfabetica")
 
