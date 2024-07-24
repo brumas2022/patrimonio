@@ -19,7 +19,7 @@ if consulta=="POR ITEM":
    resultado = df[df['Item'] == valor]
    st.dataframe(df.iloc[valor])
 
-   nomes = df['Descrição'].tolist()
+   nomes = df['Descricao'].tolist()
    a = st.selectbox("Escolha a descrição :", nomes)
 
    resultado = df[df['Descricao']==a]
