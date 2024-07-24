@@ -29,7 +29,7 @@ elif consulta=="POR NOME":
    st.dataframe(resultado, hide_index=True)
    
 elif consulta=="TODOS":
-   st.dataframe(df.iloc[3:])
+   st.dataframe(df.iloc[3:], hide_index=True)
    
 
 
