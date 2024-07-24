@@ -20,6 +20,7 @@ if consulta=="POR ITEM":
    st.dataframe(df.iloc[valor])
 
    nomes = df['Descrição'].tolist()
+   a = st.selectbox("Escolha a descrição :", nomes)
    st.dataframe(nomes)
    #selecao = df['Item']=="1974"
    #line = df.loc[df["Item"] == '1974']
