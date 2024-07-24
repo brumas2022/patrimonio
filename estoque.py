@@ -18,17 +18,7 @@ if consulta=="POR ITEM":
    st.dataframe(resultado_item)
    
    #df.set_index("Item", inplace=True)
-   st.dataframe(df.iloc[3:])
-   valor = 19
- 
-   resultado = df[df['Item'] == valor]
-   st.dataframe(df.iloc[valor])
-   
-   
-   #selecao = df['Item']=="1974"
-   #line = df.loc[df["Item"] == '1974']
-   #st.dataframe(line)
-
+         
 elif consulta=="POR NOME":
    st.write("Consulta por ordem alfabetica")
    nomes = df['Descricao'].tolist()
@@ -36,6 +26,7 @@ elif consulta=="POR NOME":
 
    resultado = df[df['Descricao']==a]
    st.dataframe(resultado)
+   
 elif consulta=="TODOS":
    st.dataframe(df.iloc[3:])
    
