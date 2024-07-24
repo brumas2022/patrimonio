@@ -11,6 +11,11 @@ consulta = st.selectbox("Escolha o tipo de consulta", ("POR ITEM", "POR NOME"))
 
 if consulta=="POR ITEM":
    st.write("Consulta por ordem numerica")
+   item = df['Item'].tolist()
+   b = st.selectbox("Escolha o item", item)
+   resultado_item = df[df['Item']==b]
+   st.dataframe(resultado_item)
+   
    #df.set_index("Item", inplace=True)
    st.dataframe(df.iloc[3:])
    valor = 19
