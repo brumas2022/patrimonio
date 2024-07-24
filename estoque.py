@@ -26,7 +26,7 @@ elif consulta=="POR NOME":
    a = st.selectbox("Escolha a descrição :", nomes, index=None, placeholder="Digite o nome....")
 
    resultado = df[df['Descricao']==a]
-   st.dataframe(resultado)
+   st.dataframe(resultado, hide_index=True)
    
 elif consulta=="TODOS":
    st.dataframe(df.iloc[3:])
