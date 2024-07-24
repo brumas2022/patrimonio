@@ -3,11 +3,12 @@ import pandas as pd
 import openpyxl
 
 st.set_page_config("Consulta estoque", layout="wide")
+st.image("logosanear.png")
 
 df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=0)
 df.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
 
-consulta = st.selectbox("Escolha o tipo de consulta", ("POR ITEM", "POR NOME"))
+consulta = st.selectbox("Escolha o tipo de consulta", ("POR ITEM", "POR NOME", "TODOS"))
 
 if consulta=="POR ITEM":
    st.write("Consulta por ordem numerica")
@@ -35,5 +36,8 @@ elif consulta=="POR NOME":
 
    resultado = df[df['Descricao']==a]
    st.dataframe(resultado)
+elif consulta=="TODOS":
+   st.dataframe(df.iloc[3:])
+   
 
 
