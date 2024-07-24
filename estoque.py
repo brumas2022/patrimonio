@@ -19,7 +19,7 @@ if consulta=="POR ITEM":
    resultado = df[df['Item'] == valor]
    st.dataframe(df.iloc[valor])
 
-   nomes = df['Descrição']
+   nomes = df['Descrição'].tolist()
    st.dataframe(nomes)
    #selecao = df['Item']=="1974"
    #line = df.loc[df["Item"] == '1974']
