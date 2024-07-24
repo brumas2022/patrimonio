@@ -13,7 +13,7 @@ consulta = st.selectbox("Escolha o tipo de consulta", ("POR ITEM", "POR NOME", "
 if consulta=="POR ITEM":
    st.write("Consulta por ordem numerica")
    item = df['Item'].tolist()
-   b = st.selectbox("Escolha o item", item)
+   b = st.selectbox("Escolha o item", item, index=None, placeholder="Digite o nro...")
    resultado_item = df[df['Item']==b]
    st.dataframe(resultado_item)
    
