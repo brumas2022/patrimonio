@@ -18,6 +18,8 @@ if consulta=="POR ITEM":
  
    resultado = df[df['Item'] == valor]
    st.dataframe(df.iloc[valor])
+
+   st.dataframe(df['Item'])
    #selecao = df['Item']=="1974"
    #line = df.loc[df["Item"] == '1974']
    #st.dataframe(line)
