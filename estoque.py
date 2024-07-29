@@ -6,6 +6,7 @@ st.set_page_config("Consulta estoque", layout="wide")
 st.image("logosanear.png")
 
 df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=3)
+df1=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=3)  ##para testes
 df.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
 
 consulta = st.selectbox("Escolha o tipo de consulta", ("POR ITEM", "POR NOME", "TODOS"))
@@ -16,8 +17,10 @@ if consulta=="POR ITEM":
    b = st.selectbox("Escolha o item", item, index=None, placeholder="Digite o nro...")
    resultado_item = df[df['Item']==b]
    st.dataframe(resultado_item, hide_index=True)
-   nome=df.columns[2]
-   st.write(nome)
+
+   
+   #nome=df.columns[2]
+   st.dataframe(df1)
 
    #st.write(resultado_item.iat[1,1])
    
