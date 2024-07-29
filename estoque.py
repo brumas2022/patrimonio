@@ -33,9 +33,11 @@ elif consulta=="POR NOME":
 
    resultado = df[df['Descricao']==a]
    st.dataframe(resultado, hide_index=True)
+   st.write("Data e horario da atualização : ", df1.columns[1])
    
 elif consulta=="TODOS":
    st.dataframe(df.iloc[3:], hide_index=True)
+   st.write("Data e horario da atualização : ", df1.columns[1])
    
 
 
