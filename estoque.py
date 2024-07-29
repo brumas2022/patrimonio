@@ -20,7 +20,7 @@ if consulta=="POR ITEM":
 
    
    #nome=df.columns[2]
-   st.dataframe(df1)
+   st.dataframe(df1.index)
 
    #st.write(resultado_item.iat[1,1])
    
