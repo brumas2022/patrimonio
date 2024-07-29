@@ -17,7 +17,7 @@ if consulta=="POR ITEM":
    resultado_item = df[df['Item']==b]
    st.dataframe(resultado_item, hide_index=True)
    nome=df.columns[2]
-   st.dataframe(nome)
+   st.write(nome)
 
    #st.write(resultado_item.iat[1,1])
    
