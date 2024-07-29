@@ -16,6 +16,9 @@ if consulta=="POR ITEM":
    b = st.selectbox("Escolha o item", item, index=None, placeholder="Digite o nro...")
    resultado_item = df[df['Item']==b]
    st.dataframe(resultado_item, hide_index=True)
+   nome=df.iloc[0,1]
+   st.dataframe(nome)
+
    #st.write(resultado_item.iat[1,1])
    
    #df.set_index("Item", inplace=True)
