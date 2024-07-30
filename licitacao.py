@@ -63,7 +63,7 @@ def consulta():
                cursor.execute(comando)
                resultado=cursor.fetchall()
                resultado1=pd.DataFrame(resultado)
-               resultado1.columns=['Id', 'Entrada', 'Licitacao', 'Data'] 
+               resultado1.columns=['Id', 'Entrada', 'Licitacao', 'Data', 'Modalidade'] 
                resultado1.set_index("Id", inplace=True) 
                resultado1['Data'] = pd.to_datetime(resultado1.Data)
                resultado1['Data'] = resultado1['Data'].dt.strftime('%d/%m/%Y')
