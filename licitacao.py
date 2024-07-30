@@ -103,7 +103,7 @@ elif escolha=="MAPA":
     folium.Marker(location=[-16.4507341,-54.6498371], popup='SANEAR', tooltip="Clique aqui", icon=folium.Icon(color="green")).add_to(mapa)
     folium.CircleMarker(location=[-16.4507341,-54.6498371],
                     radius=150,
-                    color='red'
+                    color='red',
                     fill=True,
                     fill_color='red').add_to(mapa)
     st_folium(mapa)
