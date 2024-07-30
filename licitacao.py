@@ -90,7 +90,7 @@ elif escolha=="CONSULTA":
 
 elif escolha=="CLASSE":
     computador = Computador("asus", "16GB", "N7vidia")
-    st.write(computador)
+    st.write(computador.marca)
    
   
 
