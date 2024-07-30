@@ -7,6 +7,12 @@ from sqlalchemy.orm import sessionmaker
 
 st.set_page_config("Licitações de materiais", layout="wide")
 
+class Computador:
+    def __init__(self, marca, memoria, video):
+        self.marca = marca
+        self.memoria = memoria
+        self.video = video
+
 def inserir():
     st.write("Este é o modulo de inserção")
     with st.form("ENTRA", clear_on_submit=True):
@@ -66,7 +72,7 @@ def consulta():
 
 col1=st.columns((1,1,1,1))
 
-escolha=col1[0].selectbox("ESCOLHA A OPÇÃO", ("INSERIR", "CONSULTA"))
+escolha=col1[0].selectbox("ESCOLHA A OPÇÃO", ("INSERIR", "CONSULTA", "CLASSE"))
 
 if escolha=="INSERIR":
     st.write("Este é o modulo de inserção")
@@ -81,6 +87,10 @@ if escolha=="INSERIR":
 elif escolha=="CONSULTA":
      
      consulta()
+
+elif escolha=="CLASSE":
+    computador = Computador("asus", "16GB", "Nvidia")
+    st.write(computador)
    
   
 
