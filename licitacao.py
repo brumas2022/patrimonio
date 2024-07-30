@@ -89,7 +89,7 @@ elif escolha=="CONSULTA":
      consulta()
 
 elif escolha=="CLASSE":
-    computador = Computador("asus", "16GB", "Nvidia")
+    computador = Computador("asus", "16GB", "N7vidia")
     st.write(computador)
    
   
