@@ -7,3 +7,4 @@ sqlalchemy==2.0.28
 pandas==2.2.1
 supabase==2.4.1
 openpyxl
+folium
