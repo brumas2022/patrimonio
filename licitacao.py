@@ -20,6 +20,7 @@ def inserir():
          col = st.columns((1,1))
          a1 = col[0].text_input("Objeto da licitacao")
          a2 = col[0].date_input("Data inicial")
+         #a3 = col[0].text_input("Nro da Modalidade")
          
          enviar = st.form_submit_button("ENTRA")
 def inserir1(a1,a2):
@@ -34,7 +35,7 @@ def inserir1(a1,a2):
                )
                st.write("conexao exitosa")
                cursor = connection.cursor()
-               comando = f"""INSERT INTO Patrimonio (objeto, datainicial) VALUES ('{a1}', '{a2}')"""
+               comando = f"""INSERT INTO Patrimonio (objeto, datainicial, modalidade) VALUES ('{a1}', '{a2}', '{a3}')"""
                cursor.execute(comando)
                connection.commit()
                st.text("Cadastro efetuado com sucesso")
@@ -81,6 +82,7 @@ if escolha=="INSERIR":
          col = st.columns((1,1))
          a1 = col[0].text_input("Objeto da licitacao")
          a2 = col[0].text_input("Data inicial")
+         a3 = col[0].text_input("Nro da Modalidade")
          enviar = st.form_submit_button("ENTRA")
     if enviar:
        inserir1(a1,a2)
