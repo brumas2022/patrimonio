@@ -3,6 +3,7 @@ import pandas as pd
 import psycopg2
 from sqlalchemy import create_engine, text
 from sqlalchemy.orm import sessionmaker
+import folium
 
 
 st.set_page_config("Licitações de materiais", layout="wide")
@@ -91,6 +92,8 @@ elif escolha=="CONSULTA":
 elif escolha=="CLASSE":
     computador = Computador("asus", "16GB", "N7vidia")
     st.write(computador.marca)
+    mapa = folium.Map()
+    mapa
    
   
 
