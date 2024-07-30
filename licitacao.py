@@ -74,7 +74,9 @@ def consulta():
 
 col1=st.columns((1,1,1,1))
 
-escolha=col1[0].selectbox("ESCOLHA A OPÇÃO", ("INSERIR", "CONSULTA", "CLASSE"))
+lista=['INSERIR', 'CONSULTA', 'CLASSE', 'MAPA']
+
+escolha=col1[0].selectbox("ESCOLHA A OPÇÃO", lista)
 
 if escolha=="INSERIR":
     st.write("Este é o modulo de inserção")
@@ -94,6 +96,8 @@ elif escolha=="CONSULTA":
 elif escolha=="CLASSE":
     computador = Computador("asus", "16GB", "N7vidia")
     st.write(computador.marca)
+
+elif escolha=="MAPA":
     from streamlit_folium import st_folium
     mapa = folium.Map(location=[-16.4507341,-54.6498371], zoom_start=17)
     #folium.Marker(location=[-16.4507341,-54.6498371], popup='SANEAR')
