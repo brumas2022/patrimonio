@@ -100,7 +100,7 @@ elif escolha=="CLASSE":
 elif escolha=="MAPA":
     from streamlit_folium import st_folium
     mapa = folium.Map(location=[-16.4507341,-54.6498371], zoom_start=17)
-    folium.Marker(location=[-16.4507341,-54.6498371], popup='SANEAR').add_to(mapa)
+    folium.Marker(location=[-16.4507341,-54.6498371], popup='SANEAR', tooltip="Clique aqui").add_to(mapa)
     st_folium(mapa)
     #-16.4507341,-54.6498371,17z
    
