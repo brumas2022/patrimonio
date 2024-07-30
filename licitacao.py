@@ -92,9 +92,9 @@ elif escolha=="CONSULTA":
 elif escolha=="CLASSE":
     computador = Computador("asus", "16GB", "N7vidia")
     st.write(computador.marca)
-    from streamlit_folium import st_folium
+    from streamlit.folium import st.folium
     mapa = folium.Map()
-    st_folium(mapa)
+    st.folium(mapa)
    
   
 
