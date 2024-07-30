@@ -95,7 +95,8 @@ elif escolha=="CLASSE":
     computador = Computador("asus", "16GB", "N7vidia")
     st.write(computador.marca)
     from streamlit_folium import st_folium
-    mapa = folium.Map(location=[-16.4507341,-54.6498371], zoom_start=17, popup='SANEAR')
+    mapa = folium.Map(location=[-16.4507341,-54.6498371], zoom_start=17)
+    folium.Marker(location=[-16.4507341,-54.6498371], popup='SANEAR')
     st_folium(mapa)
     #-16.4507341,-54.6498371,17z
    
