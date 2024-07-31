@@ -48,8 +48,8 @@ elif consulta=="ORÇAMENTO":
    
          item_orc = st.selectbox("Escolha o produto", ("a", "b", "c", " "))
          lista_orc.append(item_orc)
-         st.dataframe(lista_orc)
-         fim=fim+1
+   st.dataframe(lista_orc)
+         
    
    
    
