@@ -44,9 +44,10 @@ elif consulta=="ORÇAMENTO":
    st.write("Escolha os produtos")
    lista_orc=[]
    fim=0
+   item_orc=""
    
-   while fim<=5:
-         item_orc = st.selectbox("Escolha o produto", ("a", "b", "c", "d"))
+   while item_orc!="e":
+         item_orc = st.selectbox("Escolha o produto", ("a", "b", "c", " "))
          lista_orc.append(item_orc)
          st.dataframe(lista_orc)
          fim=fim+1
