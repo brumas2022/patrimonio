@@ -9,7 +9,7 @@ df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=5)
 df1=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=5)  ##para testes
 df.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
 
-consulta = st.selectbox("Escolha o tipo de consulta", ("POR ITEM", "POR NOME", "TODOS"))
+consulta = st.selectbox("Escolha o tipo de consulta", ("POR ITEM", "POR NOME", "TODOS", "ORÇAMENTO"))
 
 if consulta=="POR ITEM":
    st.write("Consulta por ordem numerica")
@@ -38,6 +38,11 @@ elif consulta=="POR NOME":
 elif consulta=="TODOS":
    st.write("Data e horario da atualização : ", df1.columns[1])
    st.dataframe(df.iloc[3:], hide_index=True)
+
+elif consulta=="ORÇAMENTO":
+   st.write("Escolha os produtos")
+   item_orc = st.selectbox("Escolha o produto", ("a", "b", "c", "d"))
+   
    
    
 
