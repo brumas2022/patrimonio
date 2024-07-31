@@ -42,6 +42,7 @@ elif consulta=="TODOS":
 elif consulta=="ORÇAMENTO":
    st.write("Escolha os produtos")
    lista_orc=[]
+   item_orc=""
    while item_orc:
          item_orc = st.selectbox("Escolha o produto", ("a", "b", "c", "d"))
          lista_orc.append(item_orc)
