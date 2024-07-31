@@ -42,12 +42,12 @@ elif consulta=="TODOS":
 elif consulta=="ORÇAMENTO":
    st.write("Escolha os produtos")
    lista_orc=[]
-   fim=False
-   while fim==False:
+   fim=0
+   while fim<=10:
          item_orc = st.selectbox("Escolha o produto", ("a", "b", "c", "d"))
          lista_orc.append(item_orc)
          st.dataframe(lista_orc)
-         fim=st.button("Fim")
+         fim=fim+1
    
    
    
