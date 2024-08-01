@@ -43,11 +43,12 @@ elif consulta=="TODOS":
 elif consulta=="ORÇAMENTO":
    st.write("Escolha os produtos")
    lista_orc=[]
-   
+   nomes_orc = df['Descricao'].tolist()
+   #a = st.selectbox("Escolha a descrição :", nomes_orc, index=None, placeholder="Digite o nome....")
    
    #item_orc = st.selectbox("Escolha o produto", ("a", "b", "c", " "))
-   item_orc1=st.selectbox("item1",("café"))
-   item_orc2=st.selectbox("item2",("açúcar"))
+   item_orc1=st.selectbox("Escolha produto 01 :", nomes_orc, index=None, placeholder="Digite o nome....")
+   item_orc2=st.selectbox("Escolha produto 02 :", nomes_orc, index=None, placeholder="Digite o nome....")
    item_orc3="papel higiênico"
    lista_orc.append(item_orc1)
    lista_orc.append(item_orc2)
