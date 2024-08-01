@@ -48,7 +48,7 @@ elif consulta=="ORÇAMENTO":
    #item_orc = st.selectbox("Escolha o produto", ("a", "b", "c", " "))
    item_orc1=st.selectbox("item1",("café"))
    item_orc2=st.selectbox("item2",("açúcar"))
-   item_orc3="papel higienico"
+   item_orc3="papel higiênico"
    lista_orc.append(item_orc1)
    lista_orc.append(item_orc2)
    lista_orc.append(item_orc3)
