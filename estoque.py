@@ -45,23 +45,23 @@ elif consulta=="ORÇAMENTO":
    lista_orc=[]
    qtdes=[]
    nomes_orc = df['Descricao'].tolist()
-   #a = st.selectbox("Escolha a descrição :", nomes_orc, index=None, placeholder="Digite o nome....")
+   col=st.columns(1,1,1)
    
    #item_orc = st.selectbox("Escolha o produto", ("a", "b", "c", " "))
-   item_orc1=st.selectbox("Escolha produto 01 :", nomes_orc, index=None, placeholder="Digite o nome....")
-   qtde1=st.text_input("Qtde produto 1 : ")
-   item_orc2=st.selectbox("Escolha produto 02 :", nomes_orc, index=None, placeholder="Digite o nome....")
-   qtde2=st.text_input("Qtde produto 2 : ")
-   item_orc3=st.selectbox("Escolha produto 03 :", nomes_orc, index=None, placeholder="Digite o nome....")
-   qtde3=st.text_input("Qtde produto 3 : ")
+   item_orc1=col[0].selectbox("Escolha produto 01 :", nomes_orc, index=None, placeholder="Digite o nome....")
+   qtde1=col[1].text_input("Qtde produto 1 : ")
+   item_orc2=col[0].selectbox("Escolha produto 02 :", nomes_orc, index=None, placeholder="Digite o nome....")
+   qtde2=col[1].text_input("Qtde produto 2 : ")
+   item_orc3=col[0].selectbox("Escolha produto 03 :", nomes_orc, index=None, placeholder="Digite o nome....")
+   qtde3=col[1].text_input("Qtde produto 3 : ")
    lista_orc.append(item_orc1)
    lista_orc.append(item_orc2)
    lista_orc.append(item_orc3)
    qtdes.append(qtde1)
    qtdes.append(qtde2)
    qtdes.append(qtde3)
-   st.dataframe(lista_orc)
-   st.dataframe(qtdes)
+   col[0].dataframe(lista_orc)
+   col[1].dataframe(qtdes)
          
    
    
