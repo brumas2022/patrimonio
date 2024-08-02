@@ -45,7 +45,7 @@ elif consulta=="ORÇAMENTO":
    lista_orc=[]
    qtdes=[]
    nomes_orc = df['Descricao'].tolist()
-   col=st.columns(1,1,1)
+   col=st.columns([1,1,1])
    
    #item_orc = st.selectbox("Escolha o produto", ("a", "b", "c", " "))
    item_orc1=col[0].selectbox("Escolha produto 01 :", nomes_orc, index=None, placeholder="Digite o nome....")
