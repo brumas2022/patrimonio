@@ -47,21 +47,32 @@ elif consulta=="ORÇAMENTO":
    nomes_orc = df['Descricao'].tolist()
    col=st.columns([1,1,1])
    
-   #item_orc = st.selectbox("Escolha o produto", ("a", "b", "c", " "))
+   # INSERIR OS PRODUTOS DO ESTOQUE PARA AQUISICAO
    item_orc1=col[0].selectbox("Escolha produto 01 :", nomes_orc, index=None, placeholder="Digite o nome....")
    qtde1=col[1].text_input("Qtde produto 1 : ")
+   
    item_orc2=col[0].selectbox("Escolha produto 02 :", nomes_orc, index=None, placeholder="Digite o nome....")
    qtde2=col[1].text_input("Qtde produto 2 : ")
+   
    item_orc3=col[0].selectbox("Escolha produto 03 :", nomes_orc, index=None, placeholder="Digite o nome....")
    qtde3=col[1].text_input("Qtde produto 3 : ")
+
+   # CRIAR AS LISTAS 
    lista_orc.append(item_orc1)
    lista_orc.append(item_orc2)
    lista_orc.append(item_orc3)
    qtdes.append(qtde1)
    qtdes.append(qtde2)
    qtdes.append(qtde3)
+
+   # MOSTRAR NA TELA OS ITENS ESCOLHIDOS
    col[0].dataframe(lista_orc)
    col[1].dataframe(qtdes)
+
+   
+
+   # DISPARAR PARA FORNECEDORES
+   col[0].button("ENVIAR POR EMAIL PARA FORNECEDORES")
          
    
    
