@@ -66,8 +66,11 @@ elif consulta=="ORÇAMENTO":
    qtdes.append(qtde3)
 
    # MOSTRAR NA TELA OS ITENS ESCOLHIDOS
-   col[0].dataframe(lista_orc)
-   col[1].dataframe(qtdes)
+   lista_total=lidt(zip(lista_orc, qtdes))
+   df_orc=pd.Dataframe(lista_total, columns=['Descricao', 'Qtde']
+                       
+   col[0].dataframe(df_orc)
+   #col[1].dataframe(qtdes)
 
    
 
