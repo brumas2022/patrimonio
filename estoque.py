@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd 
 import openpyxl
 
-st.set_page_config("Consulta estoque", layout="wide")
+st.set_page_config("Consulta estoque SANEAR", layout="wide")
 st.image("logosanear.png")
 
 
