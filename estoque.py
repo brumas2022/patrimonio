@@ -67,7 +67,7 @@ elif consulta=="ORÇAMENTO":
 
    # MOSTRAR NA TELA OS ITENS ESCOLHIDOS
    lista_total=list(zip(lista_orc, qtdes))
-   df_orc=pd.Dataframe(lista_total, columns=['Descricao', 'Qtde'])
+   df_orc=pd.DataFrame(lista_total, columns=['Descricao', 'Qtde'])
                        
    col[0].dataframe(df_orc)
    #col[1].dataframe(qtdes)
