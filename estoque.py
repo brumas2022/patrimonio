@@ -79,15 +79,15 @@ elif consulta=="ORÇAMENTO":
    # DISPARAR PARA FORNECEDORES
    enviar = col[0].button("ENVIAR POR EMAIL PARA FORNECEDORES")
    if enviar:
-      df_orc.to_excel("https://github.com/brumas2022/patrimonio.git/orcamento.xlsx", index=False)
+      #df_orc.to_excel("https://github.com/brumas2022/patrimonio.git/orcamento.xlsx", index=False)
       #arquivo = load_workbook('RPosicao_Estoque_Data_Atual_Excel.xlsx')
 
       #st.write(arquivo)
-      #pdf = FPDF()
-      #pdf.add_page()
-      #pdf.set_font("Arial")
-      #pdf.text(115, 145, "Orçamento")
-      #pdf.output('orcamento.pdf', 'D')
+      pdf = FPDF()
+      pdf.add_page()
+      pdf.set_font("Arial")
+      pdf.text(115, 145, "Orçamento")
+      pdf.output('https://github.com/brumas2022/patrimonio.git/orcamento.pdf', 'D')
       
          
    
