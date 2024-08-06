@@ -80,7 +80,7 @@ elif consulta=="ORÇAMENTO":
    enviar = col[0].button("ENVIAR POR EMAIL PARA FORNECEDORES")
    if enviar:
       df_orc.to_excel('orcamento.xlsx', index=False)
-      arquivo = load_workbook('orcamento.xlsx')
+      arquivo = load_workbook('RPosicao_Estoque_Data_Atual_Excel.xlsx')
 
       st.write(arquivo)
       #pdf = FPDF()
