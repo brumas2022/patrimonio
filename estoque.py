@@ -29,6 +29,7 @@ if consulta=="POR ITEM":
    #st.write(resultado_item.iat[1,1])
    
    #df.set_index("Item", inplace=True)
+   webbrowser.open("www.gmail.com")
          
 elif consulta=="POR NOME":
    st.write("Consulta por ordem alfabetica")
