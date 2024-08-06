@@ -3,6 +3,7 @@ import pandas as pd
 import openpyxl
 from fpdf import FPDF
 from openpyxl import load_workbook
+import webbrowser
 
 st.set_page_config("Consulta estoque SANEAR", layout="wide")
 st.image("logosanear.png")
@@ -87,7 +88,8 @@ elif consulta=="ORÇAMENTO":
       pdf.add_page()
       pdf.set_font("Arial")
       pdf.text(115, 145, "Orçamento")
-      pdf.output('https://github.com/brumas2022/patrimonio.git/orcamento.pdf', 'D')
+      pdf.output('orcamento.pdf', 'D')
+      webbrowser.open('www.gmail.com')
       
          
    
