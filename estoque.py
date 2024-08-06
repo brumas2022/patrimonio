@@ -78,11 +78,14 @@ elif consulta=="ORÇAMENTO":
    # DISPARAR PARA FORNECEDORES
    enviar = col[0].button("ENVIAR POR EMAIL PARA FORNECEDORES")
    if enviar:
-      pdf = FPDF()
-      pdf.add_page()
-      pdf.set_font("Arial")
-      pdf.text(115, 145, "Orçamento")
-      pdf.output('orcamento.pdf', 'D')
+      df_orc.to_excel('orcamento.xlsx', index=False)
+
+      
+      #pdf = FPDF()
+      #pdf.add_page()
+      #pdf.set_font("Arial")
+      #pdf.text(115, 145, "Orçamento")
+      #pdf.output('orcamento.pdf', 'D')
       
          
    
