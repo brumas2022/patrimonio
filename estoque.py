@@ -80,7 +80,7 @@ elif consulta=="ORÇAMENTO":
    if enviar:
       df_orc.to_excel('orcamento.xlsx', index=False)
 
-      
+      st.write(orcamento.xlsx)
       #pdf = FPDF()
       #pdf.add_page()
       #pdf.set_font("Arial")
