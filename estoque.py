@@ -82,7 +82,7 @@ elif consulta=="ORÇAMENTO":
       pdf.add_page()
       pdf.set_font("Arial")
       pdf.text(115, 145, "Orçamento")
-      pdf.output("github.com\brumas2022\patrimonio\orcamento.pdf")
+      pdf.output("github.com/brumas2022/patrimonio/orcamento.pdf")
       
          
    
