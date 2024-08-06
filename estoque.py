@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd 
 import openpyxl
+from fpdf import FPDF
 
 st.set_page_config("Consulta estoque SANEAR", layout="wide")
 st.image("logosanear.png")
@@ -75,7 +76,14 @@ elif consulta=="ORÇAMENTO":
    
 
    # DISPARAR PARA FORNECEDORES
-   col[0].button("ENVIAR POR EMAIL PARA FORNECEDORES")
+   enviar = col[0].button("ENVIAR POR EMAIL PARA FORNECEDORES")
+   if enviar:
+      pdf = FPDF()
+      pdf.add_page()
+      pdf.set_font("Arial")
+      pdf.text(115, 145, "Orçamento")
+      pdf.output("orcamento.pdf")
+      
          
    
    
