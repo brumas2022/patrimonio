@@ -9,3 +9,4 @@ supabase==2.4.1
 openpyxl
 folium
 streamlit_folium
+fpdf
