@@ -8,7 +8,7 @@ import webbrowser
 st.set_page_config("Consulta estoque SANEAR", layout="wide")
 st.image("logosanear.png")
 def imprimir():
-   webbrowser.get('mozzila').open("www.gmail.com")
+   webbrowser.get('chrome').open("www.gmail.com", new=2)
    st.write("funcinou")
 
 
