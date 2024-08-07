@@ -96,7 +96,7 @@ elif consulta=="ORÇAMENTO":
       a = webbrowser.open('www.gmail.com', new=1)
       st.write(a)
       st.write(b)
-      i
+      
       
          
    
