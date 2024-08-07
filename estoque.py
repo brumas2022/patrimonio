@@ -9,6 +9,7 @@ st.set_page_config("Consulta estoque SANEAR", layout="wide")
 st.image("logosanear.png")
 def imprimir():
    webbrowser.open("www.gmail.com")
+   st.write("funcinou")
 
 
 
