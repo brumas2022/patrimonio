@@ -90,7 +90,7 @@ elif consulta=="ORÇAMENTO":
       pdf.set_font("Arial")
       pdf.text(115, 145, "Orçamento")
       #pdf.output('orcamento.pdf', 'D')
-      a = webbrowser.open('orcamento.pdf', new=1)
+      a = webbrowser.open('www.gmail.com', new=1)
       st.write(a)
       
          
