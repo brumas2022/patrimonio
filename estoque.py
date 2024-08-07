@@ -10,6 +10,11 @@ st.image("logosanear.png")
 def imprimir():
    #webbrowser.get('firefox').open("www.gmail.com", new=2)
    st.write("funcionou")
+   pdf = FPDF()
+   pdf.add_page()
+   pdf.set_font("Arial")
+   pdf.text(115, 145, "Orçamento")
+   pdf.output('orcamento.pdf', 'D')
 
 
 
@@ -83,8 +88,8 @@ elif consulta=="ORÇAMENTO":
    
 
    # DISPARAR PARA FORNECEDORES
-   # enviar = col[0].button("ENVIAR POR EMAIL PARA FORNECEDORES", on_click=imprimir)
-   enviar = col[0].button("ENVIAR POR EMAIL PARA FORNECEDORES")
+   enviar = col[0].button("ENVIAR POR EMAIL PARA FORNECEDORES", on_click=imprimir)
+   #enviar = col[0].button("ENVIAR POR EMAIL PARA FORNECEDORES")
    if enviar:
       #df_orc.to_excel("https://github.com/brumas2022/patrimonio.git/orcamento.xlsx", index=False)
       #arquivo = load_workbook('RPosicao_Estoque_Data_Atual_Excel.xlsx')
