@@ -7,6 +7,9 @@ import webbrowser
 
 st.set_page_config("Consulta estoque SANEAR", layout="wide")
 st.image("logosanear.png")
+def imprimir():
+   webbrowser.open("www.gmail.com")
+
 
 
 df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=9)
@@ -79,7 +82,7 @@ elif consulta=="ORÇAMENTO":
    
 
    # DISPARAR PARA FORNECEDORES
-   enviar = col[0].button("ENVIAR POR EMAIL PARA FORNECEDORES")
+   enviar = col[0].button("ENVIAR POR EMAIL PARA FORNECEDORES", on_click=imprimir)
    if enviar:
       #df_orc.to_excel("https://github.com/brumas2022/patrimonio.git/orcamento.xlsx", index=False)
       #arquivo = load_workbook('RPosicao_Estoque_Data_Atual_Excel.xlsx')
@@ -93,6 +96,7 @@ elif consulta=="ORÇAMENTO":
       a = webbrowser.open('www.gmail.com', new=1)
       st.write(a)
       st.write(b)
+      i
       
          
    
