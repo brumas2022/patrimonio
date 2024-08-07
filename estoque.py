@@ -13,8 +13,8 @@ def imprimir():
 
 
 
-df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=9)
-df1=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=9)  ##para testes
+df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=10)
+df1=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=10)  ##para testes
 df.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
 
 consulta = st.selectbox("Escolha o tipo de consulta", ("POR ITEM", "POR NOME", "TODOS", "ORÇAMENTO"))
