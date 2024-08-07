@@ -9,7 +9,7 @@ st.set_page_config("Consulta estoque SANEAR", layout="wide")
 st.image("logosanear.png")
 def imprimir():
    #webbrowser.get('firefox').open("www.gmail.com", new=2)
-   st.write("funcinou")
+   st.write("funcionou")
 
 
 
@@ -96,7 +96,7 @@ elif consulta=="ORÇAMENTO":
       b = pdf.output('orcamento.pdf', 'D')
       a = webbrowser.open('www.gmail.com', new=1)
       st.write(a)
-      st.write(b)
+      st.write("Vou testar aqui o desktop")
       
       
          
