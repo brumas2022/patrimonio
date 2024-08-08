@@ -82,7 +82,7 @@ elif consulta=="ORÇAMENTO":
    lista_total=list(zip(lista_orc, qtdes))
    df_orc=pd.DataFrame(lista_total, columns=['Descricao', 'Qtde'])
                        
-   col[0].dataframe(df_orc)
+   col[0].dataframe(df_orc, use_content_width=True)
    #col[1].dataframe(qtdes)
 
    
