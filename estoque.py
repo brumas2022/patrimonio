@@ -90,9 +90,9 @@ elif consulta=="ORÇAMENTO":
    
 
    # DISPARAR PARA FORNECEDORES
-   enviar = col[0].button("ENVIAR POR EMAIL PARA FORNECEDORES", on_click=imprimir)
+   #enviar = col[0].button("ENVIAR POR EMAIL PARA FORNECEDORES", on_click=imprimir)
    #enviar = col[0].button("ENVIAR POR EMAIL PARA FORNECEDORES")
-   
+   col[0].link_button("ENVIAR ORCAMENTO", "https://gmail.com")
       
       
          
