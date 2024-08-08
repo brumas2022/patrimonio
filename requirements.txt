@@ -10,3 +10,4 @@ openpyxl
 folium
 streamlit_folium
 fpdf
+reportlab.pdfgen
