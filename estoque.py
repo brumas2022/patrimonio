@@ -9,7 +9,7 @@ st.set_page_config("Consulta estoque SANEAR", layout="wide")
 st.image("logosanear.png")
 
 def imprimir():
-   webbrowser.open("www.gmail.com", new=2)
+   st.page_link("https://gmail.com")
    #df_orc.to_excel("orcamento.xlsx", index=False)
    #st.write("funcionou")
    #pdf = FPDF()
