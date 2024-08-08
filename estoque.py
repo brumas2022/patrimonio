@@ -63,7 +63,7 @@ elif consulta=="ORÇAMENTO":
    col=st.columns([1,1,1])
    
    # INSERIR OS PRODUTOS DO ESTOQUE PARA AQUISICAO
-   item_orc1=col[0].selectbox("Escolha produto 01 :", nomes_orc, index=None, placeholder="Digite o nome....")
+   item_orc1=col[0].selectbox("", nomes_orc, index=None, placeholder="Digite o nome....")
    qtde1=col[1].text_input("Qtde produto 1 : ")
    
    item_orc2=col[0].selectbox("Escolha produto 02 :", nomes_orc, index=None, placeholder="Digite o nome....")
