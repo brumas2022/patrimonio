@@ -6,9 +6,10 @@ from openpyxl import load_workbook
 
 st.set_page_config("Consulta estoque SANEAR", layout="wide")
 st.image("logosanear.png")
+
 def imprimir():
-   #webbrowser.get('firefox').open("www.gmail.com", new=2)
-   df_orc.to_excel("orcamento.xlsx", index=False)
+   webbrowser.get('firefox').open("www.gmail.com", new=2)
+   #df_orc.to_excel("orcamento.xlsx", index=False)
    #st.write("funcionou")
    #pdf = FPDF()
    #pdf.add_page()
