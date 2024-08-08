@@ -3,6 +3,7 @@ import pandas as pd
 import openpyxl
 from fpdf import FPDF
 from openpyxl import load_workbook
+import webbrowser
 
 st.set_page_config("Consulta estoque SANEAR", layout="wide")
 st.image("logosanear.png")
