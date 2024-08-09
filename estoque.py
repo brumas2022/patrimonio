@@ -86,7 +86,7 @@ elif consulta=="ORÇAMENTO":
    df_orc=pd.DataFrame(lista_total, columns=['Descricao', 'Qtde'])
                        
    col[0].dataframe(df_orc, use_container_width=True)
-   df_orc.to_excel("orcamento.xlsx", index=False)
+   #df_orc.to_excel("orcamento.xlsx", index=False)
    #col[1].dataframe(qtdes)
 
    
@@ -96,7 +96,10 @@ elif consulta=="ORÇAMENTO":
    #enviar = col[0].button("ENVIAR POR EMAIL PARA FORNECEDORES")
    #col[0].link_button("ENVIAR ORCAMENTO", "https://mail.google.com/mail/u/0/#inbox?compose=new")
    #col[0].link_button("ENVIAR ORCAMENTO", "https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKkHdPzwgWkcrNGPSHrrKdTGvlGShJwtqqrtkpppgzfSbRtqKjbKXrwzFCvbNDLrMzCrWhP")
-      
+   from openpyxl.workbook import Workbook
+   writer = pd.ExcelWriter('amostra.xlsx')
+   df_orc.to_excel(writer, sheet_name='Planilha1', index=False)
+   writer.save()  
       
          
    
