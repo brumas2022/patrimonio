@@ -86,6 +86,7 @@ elif consulta=="ORÇAMENTO":
    df_orc=pd.DataFrame(lista_total, columns=['Descricao', 'Qtde'])
                        
    col[0].dataframe(df_orc, use_container_width=True)
+   df_orc.to_excel("orcamento.xlsx", index=False)
    #col[1].dataframe(qtdes)
 
    
