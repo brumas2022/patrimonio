@@ -99,7 +99,7 @@ elif consulta=="ORÇAMENTO":
    from openpyxl.workbook import Workbook
    writer = pd.ExcelWriter("amostra.xlsx", mode="a", egine="openpyxl")
    df_orc.to_excel(writer, sheet_name='Planilha1', index=False)
-   writer._save()  
+   writer.save()  
       
          
    
