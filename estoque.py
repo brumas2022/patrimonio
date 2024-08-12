@@ -10,13 +10,13 @@ st.image("logosanear.png")
 
 def imprimir():
    #st.page_link("https://gmail.com")
-   df_orc.to_excel("orcamento.xlsx", index=False)
+   #df_orc.to_excel("orcamento.xlsx", index=False)
    st.write("funcionou")
-   #pdf = FPDF()
-   #pdf.add_page()
-   #pdf.set_font("Arial")
-   #pdf.text(115, 145, "Orçamento")
-   #pdf.output('orcamento.pdf')
+   pdf = FPDF()
+   pdf.add_page()
+   pdf.set_font("Arial")
+   pdf.text(115, 145, "Orçamento")
+   pdf.output('orcamento.pdf')
 
 
 
