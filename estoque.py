@@ -9,9 +9,9 @@ st.set_page_config("Consulta estoque SANEAR", layout="wide")
 st.image("logosanear.png")
 
 def imprimir():
-   st.page_link("https://gmail.com")
-   #df_orc.to_excel("orcamento.xlsx", index=False)
-   #st.write("funcionou")
+   #st.page_link("https://gmail.com")
+   df_orc.to_excel("orcamento.xlsx", index=False)
+   st.write("funcionou")
    #pdf = FPDF()
    #pdf.add_page()
    #pdf.set_font("Arial")
@@ -93,7 +93,7 @@ elif consulta=="ORÇAMENTO":
    
 
    # DISPARAR PARA FORNECEDORES
-   #enviar = col[0].button("ENVIAR POR EMAIL PARA FORNECEDORES", on_click=imprimir)
+   enviar = col[0].button("ENVIAR POR EMAIL PARA FORNECEDORES", on_click=imprimir)
    #enviar = col[0].button("ENVIAR POR EMAIL PARA FORNECEDORES")
    #col[0].link_button("ENVIAR ORCAMENTO", "https://mail.google.com/mail/u/0/#inbox?compose=new")
    #col[0].link_button("ENVIAR ORCAMENTO", "https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKkHdPzwgWkcrNGPSHrrKdTGvlGShJwtqqrtkpppgzfSbRtqKjbKXrwzFCvbNDLrMzCrWhP")
