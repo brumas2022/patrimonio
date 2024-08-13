@@ -62,7 +62,7 @@ elif consulta=="ORÇAMENTO":
    qtdes=[]
    nomes_orc = df['Descricao'].tolist()
    col=st.columns([1,1,1])
-elif consulta=="ESTOQUE-ZERO"
+elif consulta=="ESTOQUE-ZERO":
    st.markdown(:red[Em construção])
    
    # INSERIR OS PRODUTOS DO ESTOQUE PARA AQUISICAO
