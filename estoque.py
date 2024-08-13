@@ -62,9 +62,7 @@ elif consulta=="ORÇAMENTO":
    qtdes=[]
    nomes_orc = df['Descricao'].tolist()
    col=st.columns([1,1,1])
-elif consulta=="ESTOQUE-ZERO":
-   st.markdown(:red[Em construção])
-   
+  
    # INSERIR OS PRODUTOS DO ESTOQUE PARA AQUISICAO
    
    item_orc1=col[0].selectbox("Descrição 1", nomes_orc, index=None, placeholder="Digite o nome....")
@@ -103,7 +101,10 @@ elif consulta=="ESTOQUE-ZERO":
    #from openpyxl.workbook import Workbook
    #writer = pd.ExcelWriter("/mount/src/patrimonio/amostra.xlsx")
    #df_orc.to_excel(writer, sheet_name='Planilha1')
-   #writer._save()  
+   #writer._save()
+   
+elif consulta=="ESTOQUE-ZERO":
+   st.markdown("Em construção")  
       
          
    
