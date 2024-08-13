@@ -23,8 +23,9 @@ def imprimir():
 df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=14)
 df1=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=14)  ##para testes
 df.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
+lista_consulta=["POR ITEM", "POR NOME", "TODOS", "ORÇAMENTO", "ESTOQUE-ZERO"]
 
-consulta = st.selectbox("Escolha o tipo de consulta", ("POR ITEM", "POR NOME", "TODOS", "ORÇAMENTO"))
+consulta = st.selectbox("Escolha o tipo de consulta", (lista_consulta))
 
 if consulta=="POR ITEM":
    st.write("Consulta por ordem numerica")
@@ -61,6 +62,8 @@ elif consulta=="ORÇAMENTO":
    qtdes=[]
    nomes_orc = df['Descricao'].tolist()
    col=st.columns([1,1,1])
+elif consulta=="ESTOQUE-ZERO"
+   st.markdown(:red[Em construção])
    
    # INSERIR OS PRODUTOS DO ESTOQUE PARA AQUISICAO
    
