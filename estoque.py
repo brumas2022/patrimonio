@@ -19,7 +19,13 @@ def imprimir():
    #pdf.output('orcamento.pdf')
 
 def estoque_zero():
-   st.markdown("Em construção")
+   #st.markdown("Em construção")
+   df_zero=pd.read_excel("estoque-zero.xlsx", sheet_name=0)
+   df_zero=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
+   item_zero=df_zero['Item'].tolist()
+   z = st.selectbox("Escolhao item", item_zero)
+   resultado_item_zero=df_zero[df_zero["Item"]==z]
+   st.dataframe(resultado_item_zero, hide_index=True)
 
 
 df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=14)
