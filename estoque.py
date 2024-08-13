@@ -112,7 +112,7 @@ elif consulta=="ORÇAMENTO":
    #writer._save()
    
 elif consulta=="ESTOQUE-ZERO":
-   estoque_zero()
+   estoque_zero():
      
       
          
