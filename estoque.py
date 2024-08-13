@@ -18,6 +18,8 @@ def imprimir():
    pdf.text(115, 145, "Orçamento")
    pdf.output('orcamento.pdf')
 
+def estoque_zero():
+   st.markdown("Em construção")
 
 
 df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=14)
@@ -104,7 +106,8 @@ elif consulta=="ORÇAMENTO":
    #writer._save()
    
 elif consulta=="ESTOQUE-ZERO":
-   st.markdown("Em construção")  
+   estoque_zero()
+     
       
          
    
