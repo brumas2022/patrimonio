@@ -23,7 +23,7 @@ def inserir():
          #a3 = col[0].text_input("Nro da Modalidade")
          
          enviar = st.form_submit_button("ENTRA")
-def inserir1(a1,a2):
+def inserir1(a1,a2,a3,a4):
     try:
                connection = psycopg2.connect(
                          host='aws-0-sa-east-1.pooler.supabase.com',
@@ -35,7 +35,7 @@ def inserir1(a1,a2):
                )
                st.write("conexao exitosa")
                cursor = connection.cursor()
-               comando = f"""INSERT INTO patrimonio (objeto, datainicial, modalidade) VALUES ('{a1}', '{a2}', '{a3}')"""
+               comando = f"""INSERT INTO patrimonio (objeto, datainicial, datafinal, modalidade) VALUES ('{a1}', '{a2}', '{a3}', '{a4}')"""
                cursor.execute(comando)
                connection.commit()
                st.text("Cadastro efetuado com sucesso")
@@ -63,10 +63,13 @@ def consulta():
                cursor.execute(comando)
                resultado=cursor.fetchall()
                resultado1=pd.DataFrame(resultado)
-               resultado1.columns=['Id', 'Entrada', 'Licitacao', 'Data', 'Modalidade'] 
+               resultado1.columns=['Id', 'Entrada', 'Licitacao', 'Data Inicio', 'Data Final', 'Modalidade'] 
                resultado1.set_index("Id", inplace=True) 
-               resultado1['Data'] = pd.to_datetime(resultado1.Data)
-               resultado1['Data'] = resultado1['Data'].dt.strftime('%d/%m/%Y')
+               resultado1['Data Inicio'] = pd.to_datetime(resultado1.Data)
+               resultado1['Data Inicio'] = resultado1['Data Inicio'].dt.strftime('%d/%m/%Y')
+               resultado1['Data Final'] = pd.to_datetime(resultado1.Data)
+               resultado1['Data Final'] = resultado1['Data Final'].dt.strftime('%d/%m/%Y')
+               
                st.dataframe(resultado1)
          
     except Exception as ex:
@@ -84,10 +87,11 @@ if escolha=="INSERIR":
          col = st.columns((1,1))
          a1 = col[0].text_input("Objeto da licitacao")
          a2 = col[0].text_input("Data inicial")
-         a3 = col[0].text_input("Nro da Modalidade")
+         a3 = col[0].text_input("Data Final")
+         a4 = col[0].text_input("Nro da Modalidade")
          enviar = st.form_submit_button("ENTRA")
     if enviar:
-       inserir1(a1,a2)
+       inserir1(a1,a2,a3,a4)
         
 elif escolha=="CONSULTA":
      
