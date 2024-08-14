@@ -21,7 +21,7 @@ def imprimir():
 def estoque_zero():
    #st.markdown("Em construção")
    df_zero=pd.read_excel("estoque-zero.xlsx", sheet_name=0)
-   df_zero=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
+   df_zero.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
    item_zero=df_zero["Item"].tolist()
    z = st.selectbox("Escolhao item", item_zero)
    resultado_item_zero=df_zero[df_zero["Item"]==z]
