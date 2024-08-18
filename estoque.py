@@ -8,6 +8,19 @@ import webbrowser
 st.set_page_config("Consulta estoque SANEAR", layout="wide")
 st.image("logosanear.png")
 
+def controle():
+   a=st.sidebar.button("Agua")
+   b=st.sidebar.button("Esgoto")
+   c=st.sidebar.button("Residuos")
+   d=st.sidebar.button("Aguas pluviais")
+   if a:
+      tab1, tab2, tab3, tab4 = st.tabs(["Tabela 1", "Tabela 2", "Tabela 3", "Tabela 4"])
+   if b:
+      tab1, tab2, tab3, tab4 = st.tabs(["Tabela 1", "Tabela 2", "Tabela 3", "Tabela 4"])
+   if c:
+      tab1, tab2, tab3, tab4 = st.tabs(["Tabela 1", "Tabela 2", "Tabela 3", "Tabela 4"])
+   if d:
+      tab1, tab2, tab3, tab4 = st.tabs(["Tabela 1", "Tabela 2", "Tabela 3", "Tabela 4"])
 def imprimir():
    #st.page_link("https://gmail.com")
    #df_orc.to_excel("orcamento.xlsx", index=False)
@@ -112,8 +125,8 @@ elif consulta=="ORÇAMENTO":
    #writer._save()
    
 elif consulta=="ESTOQUE-ZERO":
-   estoque_zero()
-     
+   #estoque_zero()
+   controle() 
       
          
    
