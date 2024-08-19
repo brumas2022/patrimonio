@@ -41,8 +41,8 @@ def estoque_zero():
    st.dataframe(resultado_item_zero, hide_index=True)
 
 
-df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=17)
-df1=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=17)  ##para testes
+df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=18)
+df1=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=18)  ##para testes
 df.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
 lista_consulta=["POR ITEM", "POR NOME", "TODOS", "ORÇAMENTO", "ESTOQUE-ZERO"]
 
@@ -125,8 +125,8 @@ elif consulta=="ORÇAMENTO":
    #writer._save()
    
 elif consulta=="ESTOQUE-ZERO":
-   #estoque_zero()
-   controle() 
+   estoque_zero()
+   #controle() 
       
          
    
