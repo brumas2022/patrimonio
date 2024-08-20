@@ -40,11 +40,15 @@ def estoque_zero():
    resultado_item_zero=df_zero[df_zero["Item"]==z]
    st.dataframe(resultado_item_zero, hide_index=True)
 
+def nad():
+   st.header("Controle das NADS")
+   df_nad=pd.read_excel("controle_nad.xlsx", sheet_name=0)
+   st.dataframe(df_nad)
 
 df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=18)
 df1=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=18)  ##para testes
 df.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
-lista_consulta=["POR ITEM", "POR NOME", "TODOS", "ORÇAMENTO", "ESTOQUE-ZERO"]
+lista_consulta=["POR ITEM", "POR NOME", "TODOS", "ORÇAMENTO", "ESTOQUE-ZERO", "NAD"]
 
 consulta = st.selectbox("Escolha o tipo de consulta", (lista_consulta))
 
@@ -126,7 +130,10 @@ elif consulta=="ORÇAMENTO":
    
 elif consulta=="ESTOQUE-ZERO":
    estoque_zero()
-   #controle() 
+   #controle()
+
+elif consulta=="NAD":
+   nad() 
       
          
    
