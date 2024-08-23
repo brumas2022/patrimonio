@@ -4,7 +4,11 @@ from openpyxl import load_workbook
 
 st.set_page_config("Solicitação de materiais e orçamentos", layout="wide")
 st.image("logosanear.png")
-
+def repete():
+    x = st.text_input("Quantos itens deve ter o orçamento ?")
+    for i in range(int(x))
+        st.write("Produtos")
+        st.write(i)
 
 def criar_memo():
     memo = load_workbook("modelo_memo.xlsx")
