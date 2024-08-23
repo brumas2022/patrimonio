@@ -13,6 +13,9 @@ def criar_memo():
     aba_modelo.cell(row=22, column=4).value = item_orc1
     aba_modelo.cell(row=23, column=4).value = item_orc2
     aba_modelo.cell(row=24, column=4).value = item_orc3
+    aba_modelo.cell(row=25, column=4).value = item_orc4
+    aba_modelo.cell(row=26, column=4).value = item_orc5
+    aba_modelo.cell(row=27, column=4).value = item_orc6
     #print(aba_alunos.cell(row=1, column=2).value)
     memo.save(f"{nome_arquivo}.xlsx")
 
@@ -28,7 +31,7 @@ def orcamento():
    col=st.columns([1,1,1])
   
    # INSERIR OS PRODUTOS DO ESTOQUE PARA AQUISICAO
-   global item_orc1, item_orc2, item_orc3
+   global item_orc1, item_orc2, item_orc3, item_orc4, item_orc5, item_orc6
    
    item_orc1=col[0].selectbox("Descrição 1", nomes_orc, index=None, placeholder="Digite o nome....")
    qtde1=col[1].text_input("Qtde produto 1 : ")
@@ -39,13 +42,28 @@ def orcamento():
    item_orc3=col[0].selectbox("Descrição 3 :", nomes_orc, index=None, placeholder="Digite o nome....")
    qtde3=col[1].text_input("Qtde produto 3 : ")
 
+   item_orc4=col[0].selectbox("Descrição 4 :", nomes_orc, index=None, placeholder="Digite o nome....")
+   qtde4=col[1].text_input("Qtde produto 4 : ")
+   
+   item_orc5=col[0].selectbox("Descrição 5 :", nomes_orc, index=None, placeholder="Digite o nome....")
+   qtde5=col[1].text_input("Qtde produto 5 : ")
+   
+   item_orc6=col[0].selectbox("Descrição 6 :", nomes_orc, index=None, placeholder="Digite o nome....")
+   qtde6=col[1].text_input("Qtde produto 6 : ")
+   
    # CRIAR AS LISTAS 
    lista_orc.append(item_orc1)
    lista_orc.append(item_orc2)
    lista_orc.append(item_orc3)
+   lista_orc.append(item_orc4)
+   lista_orc.append(item_orc5)
+   lista_orc.append(item_orc6)
    qtdes.append(qtde1)
    qtdes.append(qtde2)
    qtdes.append(qtde3)
+   qtdes.append(qtde4)
+   qtdes.append(qtde5)
+   qtdes.append(qtde6)
 
    # MOSTRAR NA TELA OS ITENS ESCOLHIDOS
    lista_total=list(zip(lista_orc, qtdes))
