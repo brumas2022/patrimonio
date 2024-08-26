@@ -47,6 +47,7 @@ def orcamento():
   
    # INSERIR OS PRODUTOS DO ESTOQUE PARA AQUISICAO
    global item_orc1, item_orc2, item_orc3, item_orc4, item_orc5, item_orc6
+   global qtde1, qtde2, qtde3, qtde4, qtde5, qtde6
    
    item_orc1=col[0].selectbox("Descrição 1", nomes_orc, index=None, placeholder="Digite o nome....")
    qtde1=col[1].text_input("Qtde produto 1 : ")
@@ -87,7 +88,7 @@ def orcamento():
    col[0].dataframe(df_orc, use_container_width=True)
    #df_orc.to_excel("orcamento.xlsx", index=False)
    #col[1].dataframe(qtdes)
-   df_orc.to_excel("orcamento.xlsx", sheet_name='Planilha1')
+   # df_orc.to_excel("orcamento.xlsx", sheet_name='Planilha1') ##criar tabela em excel com os dados do dataframe criado
 
    
 
