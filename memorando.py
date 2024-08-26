@@ -105,7 +105,7 @@ def orcamento():
 orcamento()
 global nome_arquivo
 nome_arquivo=st.text_input("Qual o nome do arquivo? ")
-criar_orcamento=enviar = st.button("ENVIAR POR EMAIL PARA FORNECEDORES")
+criar_orcamento=enviar = st.button("CRIAR MEMORANDO")
 if criar_orcamento:
     
     criar_memo()
