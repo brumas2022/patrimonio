@@ -20,6 +20,17 @@ def criar_memo():
     aba_modelo.cell(row=25, column=4).value = item_orc4
     aba_modelo.cell(row=26, column=4).value = item_orc5
     aba_modelo.cell(row=27, column=4).value = item_orc6
+    
+    aba_modelo.cell(row=22, column=6).value = qtde1
+    aba_modelo.cell(row=23, column=6).value = qtde2
+    aba_modelo.cell(row=24, column=6).value = qtde3
+    aba_modelo.cell(row=25, column=6).value = qtde4
+    aba_modelo.cell(row=26, column=6).value = qtde5
+    aba_modelo.cell(row=27, column=6).value = qtde6
+    
+    
+    
+    
     #print(aba_alunos.cell(row=1, column=2).value)
     memo.save(f"{nome_arquivo}.xlsx")
 
