@@ -6,7 +6,7 @@ st.set_page_config("Solicitação de materiais e orçamentos", layout="wide")
 st.image("logosanear.png")
 def repete():
     x = st.text_input("Quantos itens deve ter o orçamento ?")
-    for i in range(int(x))
+    for i in range(int(x)):
         st.write("Produtos")
         st.write(i)
 
