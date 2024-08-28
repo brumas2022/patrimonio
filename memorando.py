@@ -43,6 +43,8 @@ def orcamento():
    df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=20)
    df.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
    nomes_orc = df['Item'].tolist()
+   
+   
    col=st.columns([1,1,1])
   
    # INSERIR OS PRODUTOS DO ESTOQUE PARA AQUISICAO
@@ -51,7 +53,9 @@ def orcamento():
    
    item_orc1=col[0].selectbox("Numero do produto", nomes_orc, index=None, placeholder="Digite o nro....")
    resultado_item = df[df['Item']==item_orc1]
-   col[1].write(resultado_item.columns[1])
+   result = resultado_item.tolist
+   col[1].write(result)
+   #col[1].write(resultado_item.columns[1])
    qtde1=col[2].text_input("Qtde produto 1 : ")
    
    item_orc2=col[0].selectbox("Descrição 2 :", nomes_orc, index=None, placeholder="Digite o nome....")
