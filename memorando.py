@@ -13,13 +13,20 @@ def repete():
 def criar_memo():
     memo = load_workbook("modelo_memo.xlsx")
     aba_modelo = memo["Plan1"]
+    
+    aba_modelo.cell(row=22, column=2).value = item_orc1
+    aba_modelo.cell(row=23, column=2).value = item_orc2
+    aba_modelo.cell(row=24, column=2).value = item_orc3
+    aba_modelo.cell(row=25, column=2).value = item_orc4
+    aba_modelo.cell(row=26, column=2).value = item_orc5
+    aba_modelo.cell(row=27, column=2).value = item_orc6
 
-    aba_modelo.cell(row=22, column=4).value = item_orc1
-    aba_modelo.cell(row=23, column=4).value = item_orc2
-    aba_modelo.cell(row=24, column=4).value = item_orc3
-    aba_modelo.cell(row=25, column=4).value = item_orc4
-    aba_modelo.cell(row=26, column=4).value = item_orc5
-    aba_modelo.cell(row=27, column=4).value = item_orc6
+    aba_modelo.cell(row=22, column=4).value = descricao1
+    aba_modelo.cell(row=23, column=4).value = descricao2
+    aba_modelo.cell(row=24, column=4).value = descricao3
+    aba_modelo.cell(row=25, column=4).value = descricao4
+    aba_modelo.cell(row=26, column=4).value = descricao5
+    aba_modelo.cell(row=27, column=4).value = descricao6
     
     aba_modelo.cell(row=22, column=7).value = qtde1
     aba_modelo.cell(row=23, column=7).value = qtde2
