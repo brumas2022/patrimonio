@@ -51,6 +51,7 @@ def orcamento():
    # INSERIR OS PRODUTOS DO ESTOQUE PARA AQUISICAO
    global item_orc1, item_orc2, item_orc3, item_orc4, item_orc5, item_orc6
    global qtde1, qtde2, qtde3, qtde4, qtde5, qtde6
+   global descricao1, descricao2, descricao3, descricao4, descricao5, descricao6
    
    item_orc1=col[0].selectbox("Numero do produto", nomes_orc, index=None, placeholder="Digite o nro....")
    resultado_item1 = df[df['Item']==item_orc1]
