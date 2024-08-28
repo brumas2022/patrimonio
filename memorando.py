@@ -61,20 +61,40 @@ def orcamento():
    
    
    
-   item_orc2=col[0].selectbox("Descrição 2 :", nomes_orc, index=None, placeholder="Digite o nome....")
+   item_orc2=col[0].selectbox("Numero do produto :", nomes_orc, index=None, placeholder="Digite o nome....")
+   resultado_item = df[df['Item']==item_orc2]
+   descricao2=resultado_item.iat[0,1]
+   col[1].write("Descrição do produto")
+   col[1].write(descricao2)
    qtde2=col[2].text_input("Qtde produto 2 : ")
    
    item_orc3=col[0].selectbox("Descrição 3 :", nomes_orc, index=None, placeholder="Digite o nome....")
+   resultado_item = df[df['Item']==item_orc3]
+   descricao3=resultado_item.iat[0,1]
+   col[1].write("Descrição do produto")
+   col[1].write(descricao3)
    qtde3=col[2].text_input("Qtde produto 3 : ")
 
    item_orc4=col[0].selectbox("Descrição 4 :", nomes_orc, index=None, placeholder="Digite o nome....")
+   resultado_item = df[df['Item']==item_orc4]
+   descricao4=resultado_item.iat[0,1]
+   col[1].write("Descrição do produto")
+   col[1].write(descricao4)
    qtde4=col[2].text_input("Qtde produto 4 : ")
    
    item_orc5=col[0].selectbox("Descrição 5 :", nomes_orc, index=None, placeholder="Digite o nome....")
+   resultado_item = df[df['Item']==item_orc5]
+   descricao5=resultado_item.iat[0,1]
+   col[1].write("Descrição do produto")
+   col[1].write(descricao5)
    qtde5=col[2].text_input("Qtde produto 5 : ")
    
    item_orc6=col[0].selectbox("Descrição 6 :", nomes_orc, index=None, placeholder="Digite o nome....")
-   qtde6=col[1].text_input("Qtde produto 6 : ")
+   resultado_item = df[df['Item']==item_orc6]
+   descricao6=resultado_item.iat[0,1]
+   col[1].write("Descrição do produto")
+   col[1].write(descricao6)
+   qtde6=col[2].text_input("Qtde produto 6 : ")
    
    # CRIAR AS LISTAS 
    lista_orc.append(descricao1)
