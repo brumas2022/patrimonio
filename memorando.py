@@ -78,7 +78,7 @@ def orcamento():
    qtde6=col[1].text_input("Qtde produto 6 : ")
    
    # CRIAR AS LISTAS 
-   lista_orc.append(resultado_item['Descricao'])
+   lista_orc.append(teste)
    lista_orc.append(item_orc2)
    lista_orc.append(item_orc3)
    lista_orc.append(item_orc4)
