@@ -53,7 +53,7 @@ def orcamento():
    
    item_orc1=col[0].selectbox("Numero do produto", nomes_orc, index=None, placeholder="Digite o nro....")
    resultado_item = df[df['Item']==item_orc1]
-   teste=resultado_item.at['Descricao',0]
+   teste=resultado_item.at[0,'Descricao']
    
    
    col[1].write(teste)
