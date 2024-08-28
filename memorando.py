@@ -62,16 +62,16 @@ def orcamento():
    
    
    item_orc2=col[0].selectbox("Descrição 2 :", nomes_orc, index=None, placeholder="Digite o nome....")
-   qtde2=col[1].text_input("Qtde produto 2 : ")
+   qtde2=col[2].text_input("Qtde produto 2 : ")
    
    item_orc3=col[0].selectbox("Descrição 3 :", nomes_orc, index=None, placeholder="Digite o nome....")
-   qtde3=col[1].text_input("Qtde produto 3 : ")
+   qtde3=col[2].text_input("Qtde produto 3 : ")
 
    item_orc4=col[0].selectbox("Descrição 4 :", nomes_orc, index=None, placeholder="Digite o nome....")
-   qtde4=col[1].text_input("Qtde produto 4 : ")
+   qtde4=col[2].text_input("Qtde produto 4 : ")
    
    item_orc5=col[0].selectbox("Descrição 5 :", nomes_orc, index=None, placeholder="Digite o nome....")
-   qtde5=col[1].text_input("Qtde produto 5 : ")
+   qtde5=col[2].text_input("Qtde produto 5 : ")
    
    item_orc6=col[0].selectbox("Descrição 6 :", nomes_orc, index=None, placeholder="Digite o nome....")
    qtde6=col[1].text_input("Qtde produto 6 : ")
