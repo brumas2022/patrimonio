@@ -39,6 +39,7 @@ def criar_memo():
 def orcamento():
    st.write("Escolha os produtos")
    lista_orc=[]
+   descr_orc=[]
    qtdes=[]
    df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=20)
    df.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
@@ -103,6 +104,12 @@ def orcamento():
    lista_orc.append(item_orc4)
    lista_orc.append(item_orc5)
    lista_orc.append(item_orc6)
+   descr_orc.append(descricao1)
+   descr_orc.append(descricao2)
+   descr_orc.append(descricao3)
+   descr_orc.append(descricao4)
+   descr_orc.append(descricao5)
+   descr_orc.append(descricao6)
    qtdes.append(qtde1)
    qtdes.append(qtde2)
    qtdes.append(qtde3)
@@ -111,8 +118,8 @@ def orcamento():
    qtdes.append(qtde6)
 
    # MOSTRAR NA TELA OS ITENS ESCOLHIDOS
-   lista_total=list(zip(lista_orc, qtdes))
-   df_orc=pd.DataFrame(lista_total, columns=['Descricao', 'Qtde'])
+   lista_total=list(zip(lista_orc, descr_orc, qtdes))
+   df_orc=pd.DataFrame(lista_total, columns=['Numero', 'Descricao', 'Qtde'])
                        
    col[0].dataframe(df_orc, use_container_width=True)
    #df_orc.to_excel("orcamento.xlsx", index=False)
