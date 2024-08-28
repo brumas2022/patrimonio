@@ -42,7 +42,7 @@ def orcamento():
    qtdes=[]
    df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=20)
    df.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
-   nomes_orc = df['Descricao'].tolist()
+   nomes_orc = df['Item'].tolist()
    col=st.columns([1,1,1])
   
    # INSERIR OS PRODUTOS DO ESTOQUE PARA AQUISICAO
