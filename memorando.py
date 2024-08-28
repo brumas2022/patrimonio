@@ -53,7 +53,7 @@ def orcamento():
    nomes_orc = df['Item'].tolist()
    
    
-   col=st.columns([1,1,1])
+   col=st.columns([0.25,0.5,0.25])
   
    # INSERIR OS PRODUTOS DO ESTOQUE PARA AQUISICAO
    global item_orc1, item_orc2, item_orc3, item_orc4, item_orc5, item_orc6
