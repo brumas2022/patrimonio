@@ -121,7 +121,7 @@ def orcamento():
    lista_total=list(zip(lista_orc, descr_orc, qtdes))
    df_orc=pd.DataFrame(lista_total, columns=['Numero', 'Descricao', 'Qtde'])
                        
-   col[0].dataframe(df_orc, use_container_width=False)
+   st.dataframe(df_orc, use_container_width=False)
    #df_orc.to_excel("orcamento.xlsx", index=False)
    #col[1].dataframe(qtdes)
    # df_orc.to_excel("orcamento.xlsx", sheet_name='Planilha1') ##criar tabela em excel com os dados do dataframe criado
