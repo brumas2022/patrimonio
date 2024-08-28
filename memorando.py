@@ -54,7 +54,7 @@ def orcamento():
    item_orc1=col[0].selectbox("Numero do produto", nomes_orc, index=None, placeholder="Digite o nro....")
    resultado_item = df[df['Item']==item_orc1]
    
-   #col[1].write(resultado_item.columns[1])
+   col[1].write(resultado_item.columns[1])
    qtde1=col[2].text_input("Qtde produto 1 : ")
    
    item_orc2=col[0].selectbox("Descrição 2 :", nomes_orc, index=None, placeholder="Digite o nome....")
@@ -73,7 +73,7 @@ def orcamento():
    qtde6=col[1].text_input("Qtde produto 6 : ")
    
    # CRIAR AS LISTAS 
-   lista_orc.append(str(resultado_item['Descricao']))
+   lista_orc.append(str(resultado_item['Descricao'].tolist))
    lista_orc.append(item_orc2)
    lista_orc.append(item_orc3)
    lista_orc.append(item_orc4)
