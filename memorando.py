@@ -49,8 +49,10 @@ def orcamento():
    global item_orc1, item_orc2, item_orc3, item_orc4, item_orc5, item_orc6
    global qtde1, qtde2, qtde3, qtde4, qtde5, qtde6
    
-   item_orc1=col[0].selectbox("Descrição 1", nomes_orc, index=None, placeholder="Digite o nome....")
-   qtde1=col[1].text_input("Qtde produto 1 : ")
+   item_orc1=col[0].selectbox("Numero do produto", nomes_orc, index=None, placeholder="Digite o nro....")
+   resultado_item = df[df['Item']==item_orc1]
+   col[1].write(resultado_item)
+   qtde1=col[2].text_input("Qtde produto 1 : ")
    
    item_orc2=col[0].selectbox("Descrição 2 :", nomes_orc, index=None, placeholder="Digite o nome....")
    qtde2=col[1].text_input("Qtde produto 2 : ")
@@ -68,7 +70,7 @@ def orcamento():
    qtde6=col[1].text_input("Qtde produto 6 : ")
    
    # CRIAR AS LISTAS 
-   lista_orc.append(item_orc1)
+   lista_orc.append(resultado_item['Descricao'])
    lista_orc.append(item_orc2)
    lista_orc.append(item_orc3)
    lista_orc.append(item_orc4)
