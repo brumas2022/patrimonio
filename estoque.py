@@ -49,7 +49,7 @@ def nad():
 df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=26)
 df1=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=26)  ##para testes
 df.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
-lista_consulta=["POR ITEM", "POR NOME", "TODOS", "ORÇAMENTO", "ESTOQUE-ZERO", "NAD"]
+lista_consulta=["POR ITEM", "POR NOME", "TODOS", "ESTOQUE-ZERO", "NAD EMITIDA"]
 
 consulta = st.selectbox("Escolha o tipo de consulta", (lista_consulta))
 
