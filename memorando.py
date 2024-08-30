@@ -40,6 +40,7 @@ def criar_memo():
     
     #print(aba_alunos.cell(row=1, column=2).value)
     memo.save(f"{nome_arquivo}.xlsx")
+    st.warning("O arquivo foi salvo como")
 
     
 
