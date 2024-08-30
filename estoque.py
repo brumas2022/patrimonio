@@ -33,7 +33,7 @@ def imprimir():
 
 def estoque_zero():
    #st.markdown("Em construção")
-   df_zero=pd.read_excel("estoque-zero.xlsx", sheet_name=12)
+   df_zero=pd.read_excel("estoque-zero.xlsx", sheet_name=13)
    df_zero.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
    item_zero=df_zero["Item"].tolist()
    z = st.selectbox("Escolhao item", item_zero)
@@ -46,8 +46,8 @@ def nad():
    df_nad=pd.read_excel("controle_nad.xlsx", sheet_name=0)
    st.dataframe(df_nad)
 
-df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=26)
-df1=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=26)  ##para testes
+df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=27)
+df1=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=27)  ##para testes
 df.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
 lista_consulta=["POR ITEM", "POR NOME", "TODOS", "ESTOQUE-ZERO", "NAD"]
 
