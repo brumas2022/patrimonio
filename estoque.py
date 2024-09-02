@@ -45,7 +45,8 @@ def nad():
    st.header("Controle das NADS")
    df_nad=pd.read_excel("controle_nad.xlsx", sheet_name=0)
    st.dataframe(df_nad)
-   df_ponto=pd.read_excel("https://docs.google.com/spreadsheets/d/1CcE0dc60ezKeIVTOlXOoM42UBDve46HI4GTSxIs_qY0/edit?gid=177221921#gid=177221921", sheet_name=1)
+   df_ponto = pd.read_sql_table('nmemo', 'postgres:///hdhvkseneldllvnlvpgc') 
+   
    st.dataframe(df_ponto)
 
 df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=28)
