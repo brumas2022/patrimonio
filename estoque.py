@@ -44,8 +44,13 @@ def estoque_zero():
 def nad():
    st.header("Controle das NADS")
    df_nad=pd.read_excel("controle_nad.xlsx", sheet_name=0)
+   df_nad.style.applymap(neg_vermelho)
    st.dataframe(df_nad)
-   
+
+def neg_vermelho(val):
+   color='red' if val < 1000 else 'black'   
+   return 'color : {0!s}'.format(color)
+
 
 df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=30)
 df1=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=30)  ##para testes
