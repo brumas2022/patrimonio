@@ -44,7 +44,7 @@ def estoque_zero():
 def nad():
    st.header("Controle das NADS")
    df_nad=pd.read_excel("controle_nad.xlsx", sheet_name=0)
-   df_nad.map(neg_vermelho)
+   #df_nad.map(neg_vermelho)
    st.dataframe(df_nad)
 
 def neg_vermelho(val):
