@@ -45,7 +45,7 @@ def nad():
    st.header("Controle das NADS")
    df_nad=pd.read_excel("controle_nad.xlsx", sheet_name=0)
    #df_nad.map(neg_vermelho)
-   df_nad.reset_index()
+   df_nad.reset_index(inplace=True)
    st.dataframe(df_nad.style.set_properties(**{'color':'blue', 'background-color':'yellow'}))
 
 def neg_vermelho(val):
