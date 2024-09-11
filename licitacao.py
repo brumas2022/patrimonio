@@ -111,7 +111,13 @@ elif escolha=="MAPA":
                     fill=True,
                     fill_color='red').add_to(mapa)
     st_folium(mapa)
-    #-16.4507341,-54.6498371,17z
+    funcionarios = {
+    'Nome': ['João Silva', 'Maria Souza', 'José Ramos', 'Pedro Ferreira'],
+    'Idade': [35, 40, 54, 39],
+    'Tempo de Empresa': [3, 10, 15, 7],
+    }
+    mapa = pd.Dataframe(funcionarios)
+    st.dataframe(mapa)
    
   
 
