@@ -116,7 +116,7 @@ elif escolha=="MAPA":
     'Idade': [35, 40, 54, 39],
     'Tempo de Empresa': [3, 10, 15, 7],
     }
-    mapa = pd.Dataframe(funcionarios)
+    mapa = pd.DataFrame(funcionarios)
     st.dataframe(mapa)
    
   
