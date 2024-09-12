@@ -111,7 +111,13 @@ elif escolha=="MAPA":
                     fill=True,
                     fill_color='red').add_to(mapa)
     st_folium(mapa)
-    #-16.4507341,-54.6498371,17z
+    funcionarios = {
+    'Pregao': ['021/2023', '021/2023', '021/2023', '021/2023'],
+    'Empresa': ['Conehidro', 'Conehidro', 'Conehidro', 'Conehidro'],
+    'NAD': ['994/2023', '1009/2023', '123/2024', '478/2024'],
+    }
+    mapa = pd.DataFrame(funcionarios)
+    st.dataframe(mapa)
    
   
 
