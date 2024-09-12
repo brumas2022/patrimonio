@@ -62,8 +62,7 @@ def nad():
    # Adicionar um botão de clique em cada célula do DataFrame
    for index, row in df_nad1.iterrows():
        st.button(f"Detalhes de {row['pregao']}", on_click=on_click, args=(row,))
-
-   row[1]
+       row[1]
    
 def neg_vermelho(val):
    color='red' if val < 1000 else 'black'   
