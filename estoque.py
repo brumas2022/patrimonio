@@ -49,9 +49,12 @@ def nad():
    st.dataframe(df_nad.style.set_properties(**{'color':'blue', 'background-color':'yellow'}))
    df_nad1=pd.read_excel("controle_nad.xlsx", sheet_name=1)
    #st.dataframe(df_nad1)
-   
+   data = {'Nome': ['João', 'Maria', 'Pedro', 'Ana'],
+        'Idade': [25, 31, 42, 28],
+        'Cidade': ['São Paulo', 'Rio de Janeiro', 'Belo Horizonte', 'Porto Alegre']}
+   dft = pd.DataFrame(data)
    # Criar um widget de tabela para exibir o DataFrame
-   st.write(df_nad1)
+   st.write(dft)
 
    # Criar um evento de clique para abrir a tela de detalhes
    def on_click(row):
@@ -60,9 +63,9 @@ def nad():
       st.write(row)
 
    # Adicionar um botão de clique em cada célula do DataFrame
-   for index, row in df_nad1.iterrows():
-       st.button(f"Detalhes de {row['pregao']}", on_click=on_click, args=(row,))
-       row[1]
+   for index, row in dft.iterrows():
+       st.button(f"Detalhes de {row['Nome']}", on_click=on_click, args=(row,))
+       
    
 def neg_vermelho(val):
    color='red' if val < 1000 else 'black'   
