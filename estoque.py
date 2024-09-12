@@ -61,7 +61,7 @@ def nad():
 
    # Adicionar um botão de clique em cada célula do DataFrame
    for index, row in df.iterrows():
-       st.button(f"Detalhes de {row['Nome']}", on_click=on_click, args=(row,))
+       st.button(f"Detalhes de {row['pregao']}", on_click=on_click, args=(row,))
 
    # Iniciar a aplicação Streamlit
    if __name__ == "__main__":
