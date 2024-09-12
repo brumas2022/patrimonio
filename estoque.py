@@ -48,7 +48,24 @@ def nad():
    #df_nad.reset_index(inplace=False)
    st.dataframe(df_nad.style.set_properties(**{'color':'blue', 'background-color':'yellow'}))
    df_nad1=pd.read_excel("controle_nad.xlsx", sheet_name=1)
-   st.dataframe(df_nad1)
+   #st.dataframe(df_nad1)
+   
+   # Criar um widget de tabela para exibir o DataFrame
+   st.write(df_nad1)
+
+   # Criar um evento de clique para abrir a tela de detalhes
+   def on_click(row):
+      # Abrir a tela de detalhes
+      st.write("Detalhes:")
+      st.write(row)
+
+   # Adicionar um botão de clique em cada célula do DataFrame
+   for index, row in df.iterrows():
+       st.button(f"Detalhes de {row['Nome']}", on_click=on_click, args=(row,))
+
+   # Iniciar a aplicação Streamlit
+   if __name__ == "__main__":
+      st.run()
    
 def neg_vermelho(val):
    color='red' if val < 1000 else 'black'   
