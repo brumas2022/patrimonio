@@ -63,9 +63,7 @@ def nad():
    for index, row in df_nad1.iterrows():
        st.button(f"Detalhes de {row['pregao']}", on_click=on_click, args=(row,))
 
-   # Iniciar a aplicação Streamlit
-   if __name__ == "__main__":
-      st.run()
+   row[1]
    
 def neg_vermelho(val):
    color='red' if val < 1000 else 'black'   
