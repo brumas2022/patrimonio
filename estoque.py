@@ -47,7 +47,9 @@ def nad():
    #df_nad.map(neg_vermelho)
    #df_nad.reset_index(inplace=False)
    st.dataframe(df_nad.style.set_properties(**{'color':'blue', 'background-color':'yellow'}))
-
+   df_nad1=pd.read_excel("controle_nad.xlsx", sheet_name=1)
+   st.dataframe(df_nad1)
+   
 def neg_vermelho(val):
    color='red' if val < 1000 else 'black'   
    return 'color : {0!s}'.format(color)
