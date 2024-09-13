@@ -33,7 +33,7 @@ def imprimir():
 
 def estoque_zero():
    #st.markdown("Em construção")
-   df_zero=pd.read_excel("estoque-zero.xlsx", sheet_name=22)
+   df_zero=pd.read_excel("estoque-zero.xlsx", sheet_name=23)
    df_zero.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
    item_zero=df_zero["Item"].tolist()
    z = st.selectbox("Escolhao item", item_zero)
@@ -54,17 +54,9 @@ def nad():
         'Cidade': ['São Paulo', 'Rio de Janeiro', 'Belo Horizonte', 'Porto Alegre']}
    dft = pd.DataFrame(data)
    # Criar um widget de tabela para exibir o DataFrame
-   st.write(dft)
+   st.data_editor(dft)
 
-   # Criar um evento de clique para abrir a tela de detalhes
-   def on_click(row):
-      # Abrir a tela de detalhes
-      st.write("Detalhes:")
-      st.write(row)
-
-   # Adicionar um botão de clique em cada célula do DataFrame
-   for index, row in dft.iterrows():
-       st.button(f"Detalhes de {row['Nome']}", on_click=on_click, args=(row,))
+   
        
    
 def neg_vermelho(val):
@@ -72,8 +64,8 @@ def neg_vermelho(val):
    return 'color : {0!s}'.format(color)
 
 
-df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=36)
-df1=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=36)  ##para testes
+df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=37)
+df1=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=37)  ##para testes
 df.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
 lista_consulta=["POR ITEM", "POR NOME", "TODOS", "ESTOQUE-ZERO", "NAD"]
 
