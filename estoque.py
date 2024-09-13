@@ -55,6 +55,7 @@ def nad():
    dft = pd.DataFrame(data)
    # Criar um widget de tabela para exibir o DataFrame
    st.data_editor(dft)
+   import mymodel as m
 
    
        
