@@ -56,6 +56,7 @@ def nad():
    # Criar um widget de tabela para exibir o DataFrame
    st.data_editor(dft)
    import mymodel as m
+   st.write(m.run(window=15))
 
    
        
