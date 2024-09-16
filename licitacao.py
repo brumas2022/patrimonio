@@ -100,6 +100,8 @@ elif escolha=="CONSULTA":
 elif escolha=="CLASSE":
     computador = Computador("asus", "16GB", "N7vidia")
     st.write(computador.marca)
+    with st.expander('leia mais aqui'):
+      st.write("Neste local serão inseridas as informações sobre as NADs")
 
 elif escolha=="MAPA":
     from streamlit_folium import st_folium
