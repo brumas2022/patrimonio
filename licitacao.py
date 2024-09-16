@@ -83,6 +83,8 @@ escolha=col1[0].selectbox("ESCOLHA A OPÇÃO", lista)
 
 if escolha=="INSERIR":
     st.write("Este é o modulo de inserção")
+    with st.expander('leia mais aqui'):
+      st.write("Neste local serão inseridas as informações sobre as licitacoes")
     with st.form("ENTRA", clear_on_submit=True):
          col = st.columns((1,1))
          a1 = col[0].text_input("Objeto da licitacao")
@@ -100,8 +102,7 @@ elif escolha=="CONSULTA":
 elif escolha=="CLASSE":
     computador = Computador("asus", "16GB", "N7vidia")
     st.write(computador.marca)
-    with st.expander('leia mais aqui'):
-      st.write("Neste local serão inseridas as informações sobre as NADs")
+    
 
 elif escolha=="MAPA":
     from streamlit_folium import st_folium
