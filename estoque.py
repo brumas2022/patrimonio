@@ -45,7 +45,7 @@ def estoque_zero():
 def nad():
    st.header("Controle das NADS")
    st.info("Acompanhe o andamento das NADS aqui")
-   with st.expander('leia mais aqui')
+   with st.expander('leia mais aqui'):
       st.write("Neste local serão inseridas as informações sobre as NADs")
    df_nad=pd.read_excel("controle_nad.xlsx", sheet_name=0)
    #df_nad.map(neg_vermelho)
