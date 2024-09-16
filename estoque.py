@@ -7,7 +7,7 @@ import webbrowser
 
 
 st.set_page_config("Consulta estoque SANEAR", layout="wide")
-st.image("logosanear.png", width=100)
+st.image("logosanear.png", width=300)
 
 def controle():
    a=st.sidebar.button("Agua")
