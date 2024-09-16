@@ -33,7 +33,7 @@ def imprimir():
    #pdf.output('orcamento.pdf')
 
 def estoque_zero():
-   #st.markdown("Em construção")
+   st.info("As informações desta seção refere-se ao banco de dados da Coplan com todos os itens zerados no estoque")
    df_zero=pd.read_excel("estoque-zero.xlsx", sheet_name=24)
    df_zero.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
    item_zero=df_zero["Item"].tolist()
@@ -60,7 +60,7 @@ def nad():
    # Criar um widget de tabela para exibir o DataFrame
    st.data_editor(dft)
    
-   st.write(m.run(window=15))
+  
 
    
        
@@ -79,6 +79,7 @@ consulta = st.selectbox("Escolha o tipo de consulta", (lista_consulta))
 
 if consulta=="POR ITEM":
    st.write("Consulta por ordem numerica")
+   st.info("Nesta seção você precisa saber o numero do item a ser pesquisado")
    item = df['Item'].tolist()
    b = st.selectbox("Escolha o item", item, index=None, placeholder="Digite o nro...")
    resultado_item = df[df['Item']==b]
@@ -95,6 +96,7 @@ if consulta=="POR ITEM":
          
 elif consulta=="POR NOME":
    st.write("Consulta por ordem alfabetica")
+   st.info("Nesta seção você pode pesquisa pelo nome do item")
    nomes = df['Descricao'].tolist()
    a = st.selectbox("Escolha a descrição :", nomes, index=None, placeholder="Digite o nome....")
 
