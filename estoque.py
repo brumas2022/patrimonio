@@ -79,14 +79,7 @@ if consulta=="POR ITEM":
    resultado_item = df[df['Item']==b]
    st.dataframe(resultado_item, hide_index=True)
 
-   
-   #nome=df.columns[2]
-   st.write("Data e horario da atualização : ", data_atualizacao)
-
-   #st.write(resultado_item.iat[1,1])
-   
-   #df.set_index("Item", inplace=True)
-   
+        
          
 elif consulta=="POR NOME":
    st.write("Consulta por ordem alfabetica")
@@ -97,10 +90,9 @@ elif consulta=="POR NOME":
    resultado = df[df['Descricao']==a]
    
    st.dataframe(resultado, hide_index=True)
-   st.write("Data e horario da atualização : ", df1.columns[1])
+   
    
 elif consulta=="TODOS":
-   st.write("Data e horario da atualização : ", df1.columns[1])
    st.dataframe(df.iloc[3:], hide_index=True)
 
    
