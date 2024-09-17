@@ -48,11 +48,10 @@ def nad():
    st.info("Acompanhe o andamento das NADS aqui")
    
    df_nad=pd.read_excel("controle_nad.xlsx", sheet_name=0)
-   #df_nad.map(neg_vermelho)
-   #df_nad.reset_index(inplace=False)
    st.dataframe(df_nad.style.set_properties(**{'color':'blue', 'background-color':'yellow'}))
    df_nad1=pd.read_excel("controle_nad.xlsx", sheet_name=1)
-   #st.dataframe(df_nad1)
+   
+   
    data = {'Nome': ['João', 'Maria', 'Pedro', 'Ana'],
         'Idade': [25, 31, 42, 28],
         'Cidade': ['São Paulo', 'Rio de Janeiro', 'Belo Horizonte', 'Porto Alegre']}
@@ -60,15 +59,6 @@ def nad():
    # Criar um widget de tabela para exibir o DataFrame
    st.data_editor(dft)
    
-  
-
-   
-       
-   
-def neg_vermelho(val):
-   color='red' if val < 1000 else 'black'   
-   return 'color : {0!s}'.format(color)
-
 
 df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=39)
 df1=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=39)  ##para testes
