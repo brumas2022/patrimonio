@@ -69,7 +69,7 @@ df.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
 lista_consulta=["POR ITEM", "POR NOME", "TODOS", "ESTOQUE-ZERO", "NAD"]
 
 hoje = datetime.date.today() 
-st.write("A data atual é :", hoje.strftime("%d/%m/%Y"))
+st.write("A data atual é : ", hoje.strftime("%d/%m/%Y"))
 
 consulta = st.selectbox("Escolha o tipo de consulta", (lista_consulta))
 
