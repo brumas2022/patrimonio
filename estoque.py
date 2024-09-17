@@ -68,8 +68,8 @@ st.write("Este aplicativo foi atualizado em :", data_atualizacao)
 df.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
 lista_consulta=["POR ITEM", "POR NOME", "TODOS", "ESTOQUE-ZERO", "NAD"]
 
-teste = datetime.date.today() 
-st.write(teste)
+hoje = datetime.date.today() 
+st.write("A data atual é :", hoje)
 
 consulta = st.selectbox("Escolha o tipo de consulta", (lista_consulta))
 
