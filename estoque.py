@@ -71,7 +71,7 @@ lista_consulta=["POR ITEM", "POR NOME", "TODOS", "ESTOQUE-ZERO", "NAD"]
 consulta = st.selectbox("Escolha o tipo de consulta", (lista_consulta))
 
 if consulta=="POR ITEM":
-   st.write("Consulta por ordem numerica", data_atualizacao)
+   st.write("Consulta por ordem numerica")
    st.info("Nesta seção você precisa saber o numero do item a ser pesquisado")
    item = df['Item'].tolist()
    b = st.selectbox("Escolha o item", item, index=None, placeholder="Digite o nro...")
@@ -80,7 +80,7 @@ if consulta=="POR ITEM":
 
    
    #nome=df.columns[2]
-   st.write("Data e horario da atualização : ", df1.columns[1])
+   st.write("Data e horario da atualização : ", data_atualizacao)
 
    #st.write(resultado_item.iat[1,1])
    
