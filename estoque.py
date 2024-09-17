@@ -4,6 +4,7 @@ import openpyxl
 #from fpdf import FPDF
 from openpyxl import load_workbook
 import webbrowser
+import datetime
 
 
 st.set_page_config("Consulta estoque SANEAR", layout="wide")
@@ -67,8 +68,8 @@ st.write("Este aplicativo foi atualizado em :", data_atualizacao)
 df.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
 lista_consulta=["POR ITEM", "POR NOME", "TODOS", "ESTOQUE-ZERO", "NAD"]
 
-teste = type(data_atualizacao) 
-#st.dataframe(teste)
+teste = datetime.date(data_atualizacao) 
+st.write(teste)
 
 consulta = st.selectbox("Escolha o tipo de consulta", (lista_consulta))
 
