@@ -26,7 +26,7 @@ def nad():
    st.info("Acompanhe o andamento das NADS aqui")
    df_nad=pd.read_excel("controle_nad.xlsx", sheet_name=0)
    df_new=df_nad.style.format(precision=0, thousands=".", decimal=",")
-   df_new1=
+   
    st.dataframe(df_new1.style.set_properties(**{'color':'blue', 'background-color':'yellow'}))
    st.dataframe(df_new)
    df_nad1=pd.read_excel("controle_nad.xlsx", sheet_name=1)
