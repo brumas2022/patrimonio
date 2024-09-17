@@ -11,29 +11,6 @@ st.set_page_config("Consulta estoque SANEAR", layout="wide")
 colimage = st.columns((1,1,1))
 colimage[1].image("logosanear.png", width=300)
 
-def controle():
-   a=st.sidebar.button("Agua")
-   b=st.sidebar.button("Esgoto")
-   c=st.sidebar.button("Residuos")
-   d=st.sidebar.button("Aguas pluviais")
-   if a:
-      tab1, tab2, tab3, tab4 = st.tabs(["Tabela 1", "Tabela 2", "Tabela 3", "Tabela 4"])
-   if b:
-      tab1, tab2, tab3, tab4 = st.tabs(["Tabela 1", "Tabela 2", "Tabela 3", "Tabela 4"])
-   if c:
-      tab1, tab2, tab3, tab4 = st.tabs(["Tabela 1", "Tabela 2", "Tabela 3", "Tabela 4"])
-   if d:
-      tab1, tab2, tab3, tab4 = st.tabs(["Tabela 1", "Tabela 2", "Tabela 3", "Tabela 4"])
-def imprimir():
-   #st.page_link("https://gmail.com")
-   #df_orc.to_excel("orcamento.xlsx", index=False)
-   st.write("funcionou")
-   #pdf = FPDF()
-   #pdf.add_page()
-   #pdf.set_font("Arial")
-   #pdf.text(115, 145, "Orçamento")
-   #pdf.output('orcamento.pdf')
-
 def estoque_zero():
    st.info("As informações desta seção refere-se ao banco de dados da Coplan com todos os itens zerados no estoque")
    df_zero=pd.read_excel("estoque-zero.xlsx", sheet_name=25)
@@ -47,12 +24,11 @@ def estoque_zero():
 def nad():
    st.header("Controle das NADS")
    st.info("Acompanhe o andamento das NADS aqui")
-   
    df_nad=pd.read_excel("controle_nad.xlsx", sheet_name=0)
    st.dataframe(df_nad.style.set_properties(**{'color':'blue', 'background-color':'yellow'}))
    df_nad1=pd.read_excel("controle_nad.xlsx", sheet_name=1)
    
-   
+   # teste com tabela editavel
    data = {'Nome': ['João', 'Maria', 'Pedro', 'Ana'],
         'Idade': [25, 31, 42, 28],
         'Cidade': ['São Paulo', 'Rio de Janeiro', 'Belo Horizonte', 'Porto Alegre']}
@@ -60,7 +36,8 @@ def nad():
    # Criar um widget de tabela para exibir o DataFrame
    st.data_editor(dft)
    
-
+# INICIO DO PROGRAMA 
+# Transforma tabela do excel em DataFrame
 df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=39)
 data_atualizacao = df.columns[1]
 
@@ -101,7 +78,7 @@ elif consulta=="TODOS":
    
 elif consulta=="ESTOQUE-ZERO":
    estoque_zero()
-   #controle()
+   
 
 elif consulta=="NAD":
    nad() 
