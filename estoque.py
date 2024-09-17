@@ -35,7 +35,7 @@ def imprimir():
 
 def estoque_zero():
    st.info("As informações desta seção refere-se ao banco de dados da Coplan com todos os itens zerados no estoque")
-   df_zero=pd.read_excel("estoque-zero.xlsx", sheet_name=24)
+   df_zero=pd.read_excel("estoque-zero.xlsx", sheet_name=25)
    df_zero.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
    item_zero=df_zero["Item"].tolist()
    z = st.selectbox("Escolhao item", item_zero)
@@ -70,8 +70,8 @@ def neg_vermelho(val):
    return 'color : {0!s}'.format(color)
 
 
-df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=38)
-df1=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=38)  ##para testes
+df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=39)
+df1=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=39)  ##para testes
 df.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
 lista_consulta=["POR ITEM", "POR NOME", "TODOS", "ESTOQUE-ZERO", "NAD"]
 
