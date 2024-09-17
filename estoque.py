@@ -62,7 +62,8 @@ def nad():
 
 df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=39)
 data_atualizacao = df.columns[1]
-df1=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=39)  ##para testes
+st.write("Este aplicativo foi atualizado em :", data_atualizacao)
+#df1=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=39)  ##para testes
 df.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
 lista_consulta=["POR ITEM", "POR NOME", "TODOS", "ESTOQUE-ZERO", "NAD"]
 
