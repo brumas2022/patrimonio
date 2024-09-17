@@ -25,16 +25,18 @@ def nad():
    st.header("Controle das NADS")
    st.info("Acompanhe o andamento das NADS aqui")
    df_nad=pd.read_excel("controle_nad.xlsx", sheet_name=0)
+   df_new=df_nad.style.format(precision=3, thousands=".", decimal=",")
    st.dataframe(df_nad.style.set_properties(**{'color':'blue', 'background-color':'yellow'}))
+   st.dataframe(df_new)
    df_nad1=pd.read_excel("controle_nad.xlsx", sheet_name=1)
    
    # teste com tabela editavel
-   data = {'Nome': ['João', 'Maria', 'Pedro', 'Ana'],
-        'Idade': [25, 31, 42, 28],
-        'Cidade': ['São Paulo', 'Rio de Janeiro', 'Belo Horizonte', 'Porto Alegre']}
-   dft = pd.DataFrame(data)
+   #data = {'Nome': ['João', 'Maria', 'Pedro', 'Ana'],
+   #     'Idade': [25, 31, 42, 28],
+   #     'Cidade': ['São Paulo', 'Rio de Janeiro', 'Belo Horizonte', 'Porto Alegre']}
+   #dft = pd.DataFrame(data)
    # Criar um widget de tabela para exibir o DataFrame
-   st.data_editor(dft)
+   #st.data_editor(dft)
    
 # INICIO DO PROGRAMA 
 # Transforma tabela do excel em DataFrame
