@@ -67,7 +67,8 @@ st.write("Este aplicativo foi atualizado em :", data_atualizacao)
 df.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
 lista_consulta=["POR ITEM", "POR NOME", "TODOS", "ESTOQUE-ZERO", "NAD"]
 
-type(data_atualizacao) 
+teste = type(data_atualizacao) 
+st.write(teste)
 
 consulta = st.selectbox("Escolha o tipo de consulta", (lista_consulta))
 
