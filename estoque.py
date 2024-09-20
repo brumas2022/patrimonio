@@ -25,7 +25,7 @@ def nad():
    st.header("Controle das NADS")
    st.info("Acompanhe o andamento das NADS aqui")
    df_nad=pd.read_excel("controle_nad.xlsx", sheet_name=0)
-   df_new=df_nad.style.format(precision=0, thousands=".", decimal=",").highlight_between()
+   df_new=df_nad.style.format(precision=0, thousands=".", decimal=",").highlight_between(subset='entrega total')
    
    #st.dataframe(df_nad.style.set_properties(**{'color':'blue', 'background-color':'yellow'}), hide_index=True)
    st.dataframe(df_new, hide_index=True)
