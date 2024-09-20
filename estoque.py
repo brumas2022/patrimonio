@@ -30,7 +30,7 @@ def nad():
    #st.dataframe(df_nad.style.set_properties(**{'color':'blue', 'background-color':'yellow'}), hide_index=True)
    st.dataframe(df_new, hide_index=True)
    dfteste=pd.read_excel("controle_nad.xlsx", sheet_name=0)
-   dfteste.style.apply(lambda _: "background-color: green", subset=(df.index[:17],))
+   dfteste.style.apply(lambda _: "background-color: green", subset=(df_nad.index[:17],))
    st.dataframe(dfteste)
    
    
