@@ -25,10 +25,13 @@ def nad():
    st.header("Controle das NADS")
    st.info("Acompanhe o andamento das NADS aqui")
    df_nad=pd.read_excel("controle_nad.xlsx", sheet_name=0)
+   df_new1=df_nad.style.apply(lambda _: "background-color: CornflowerBlue;", subset=([0], slice(None)))
    df_new=df_nad.style.format(precision=0, thousands=".", decimal=",")
    
    #st.dataframe(df_nad.style.set_properties(**{'color':'blue', 'background-color':'yellow'}), hide_index=True)
-   st.dataframe(df_new, hide_index=True)
+   st.dataframe(df_new1, hide_index=True)
+   
+   
    df_nad1=pd.read_excel("controle_nad.xlsx", sheet_name=1)
    
    # teste com tabela editavel
