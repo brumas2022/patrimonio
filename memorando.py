@@ -13,6 +13,11 @@ def repete():
 def criar_memo():
     memo = load_workbook("modelo_memo.xlsx")
     aba_modelo = memo["Plan1"]
+    numeros = [1, 2, 3, 4, 5, 6]
+    l = [22, 23, 24, 25, 26, 27]
+    
+    for i in numeros, l:
+        aba_modelo.cell(row=l, column=1).value = i
     
     aba_modelo.cell(row=22, column=2).value = item_orc1
     aba_modelo.cell(row=23, column=2).value = item_orc2
