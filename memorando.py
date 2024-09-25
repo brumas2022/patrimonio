@@ -17,7 +17,9 @@ def criar_memo():
     aba_modelo.cell(row=22, column=1).value = "1"
     aba_modelo.cell(row=23, column=1).value = "2"
     aba_modelo.cell(row=24, column=1).value = "3"
-    
+    aba_modelo.cell(row=25, column=1).value = "4"
+    aba_modelo.cell(row=26, column=1).value = "5"
+    aba_modelo.cell(row=27, column=1).value = "6"
     
     aba_modelo.cell(row=22, column=2).value = item_orc1
     aba_modelo.cell(row=23, column=2).value = item_orc2
