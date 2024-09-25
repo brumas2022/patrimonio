@@ -61,7 +61,10 @@ def orcamento():
    global qtde1, qtde2, qtde3, qtde4, qtde5, qtde6
    global descricao1, descricao2, descricao3, descricao4, descricao5, descricao6
    
-   item_orc1=col[0].selectbox("Numero do produto", nomes_orc, index=None, placeholder="Digite o nro....")
+      
+   with col[0]:
+       item_orc1=col[0].selectbox("Numero do produto", nomes_orc, index=None, placeholder="Digite o nro....")
+   
    resultado_item1 = df[df['Item']==item_orc1]
    print(resultado_item1)
    descricao1=resultado_item1.iat[0,1]
