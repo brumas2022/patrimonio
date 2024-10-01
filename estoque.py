@@ -13,7 +13,7 @@ colimage[1].image("logosanear.png", width=300)
 
 def estoque_zero():
    st.info("As informações desta seção refere-se ao banco de dados da Coplan com todos os itens zerados no estoque")
-   df_zero=pd.read_excel("estoque-zero.xlsx", sheet_name=0)
+   df_zero=pd.read_excel("Zero_Estoque_Data_Atual_Excel.xlsx", sheet_name=0)
    df_zero.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
    item_zero=df_zero["Item"].tolist()
    z = st.selectbox("Escolhao item", item_zero)
