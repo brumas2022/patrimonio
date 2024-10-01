@@ -53,7 +53,7 @@ def nad():
    
 # INICIO DO PROGRAMA 
 # Transforma tabela do excel em DataFrame
-df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=0)
+df=pd.read_excel("Estoque_Data_Atual_Excel.xlsx", sheet_name=0)
 data_atualizacao = df.columns[1]
 
 st.write("Atualizado em :", data_atualizacao)
