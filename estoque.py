@@ -27,7 +27,7 @@ def nad():
    
    df_nad=pd.read_excel("controle_nad.xlsx", sheet_name=0)
   
-   df_new=df_nad.style.format(precision=0, thousands=".", decimal=",").highlight_between(subset='entrega total', left="ok", color="red").format(subset="entrega prevista", na_rep="MISS").apply(destacar, axis=1)
+   df_new=df_nad.style.format(precision=0, thousands=".", decimal=",").highlight_between(subset='entrega total', left="ok", color="red").format(subset="entrega prevista", na_rep="MISS")
    #.highlight_between(subset='entrega total', left="ok", color="red")
    #st.dataframe(df_nad.style.set_properties(**{'color':'blue', 'background-color':'yellow'}), hide_index=True)
    
