@@ -13,6 +13,8 @@ def repete():
 def criar_memo():
     memo = load_workbook("modelo_memo.xlsx")
     aba_modelo = memo["Plan1"]
+    
+    aba_modelo.cell(row=3, column=5).value = f"n° {nro_memo}"
    
     aba_modelo.cell(row=22, column=1).value = "1"
     aba_modelo.cell(row=23, column=1).value = "2"
@@ -160,8 +162,9 @@ def orcamento():
    #writer._save()
 
 orcamento()
-global nome_arquivo
+global nome_arquivo, nro_memo
 nome_arquivo=st.text_input("Qual o nome do arquivo? ")
+nro_memo = st.text_input("Digite o nro do memorando : ")
 criar_orcamento=enviar = st.button("CRIAR MEMORANDO")
 if criar_orcamento:
     
