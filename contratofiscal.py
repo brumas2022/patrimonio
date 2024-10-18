@@ -11,15 +11,18 @@ from fpdf import FPDF
 
 
 st.set_page_config(page_title="Contratos do fiscal Marcos Brumatti", layout="wide", menu_items={'About':"Its very cool"})
+col = st.columns((1,1,1,1))
+nro_contrato = col[0].text_input("CONTRATO/ANO")
+empresa = col[0].text_input("EMPRESA")
+objeto = col[0].text_input("OBJETO")
+valor = col[0].text_input("VALOR")
+data_inicio = col[0].text_input("DATA INICIAL")
+data_fim = col[0].text_input("DATA FINAL")
+licitacao = col[0].text_input("LICITACAO N°/ANO")
 
-nro_contrato = st.text_input("entre com o numero do contrato/ano :")
-data_inicio = st.text_input("entre com a data inicio :")
-empresa = st.text_input("entre com o nome da empresa")
-objeto = st.text_input("entre com o objeto do contrato")
-data_fim = st.text_input("entre com a data de conclusao :")
-valor = st.text_input("eentre com o valor do contrato :")
-licitacao = st.text_input("entre com a licitacao/ano")
-enviar = st.button("ENVIAR")
+portaria_nro = col[1].text_input("Numero da portaria")
+portaria_data = col[1].text_input("Data portaria")
+enviar = col[0].button("ENVIAR")
 if enviar:
     pdf = FPDF("P", "mm", "A4") 
     pdf.add_page() 
@@ -39,14 +42,18 @@ if enviar:
     pdf.text(51, 60, empresa)
     pdf.rect(10, 55, 40, 10)
     pdf.rect(50, 55, 150, 10)
-    pdf.text(11, 73, txt="TERMO DO CONTRATO : "+objeto)
+    pdf.text(11, 73, txt="TERMO DO CONTRATO : ")
+    pdf.text(53, 73, txt=objeto[:68])
+    pdf.text(53, 78, txt=objeto[67:130])
+    pdf.text(53, 83, txt=objeto[131:195])
+    
     pdf.rect(10, 68, 190, 20)
     pdf.text(11, 95, txt="UNIDADE DETENTORA DO CONTRATO:")
     pdf.rect(10, 90, 190, 8)
     pdf.rect(10, 98, 190, 20)
     pdf.text(11, 105, txt="DATA DO INICIO : "+data_inicio)
     pdf.text(11, 110, txt="DATA DA CONCLUSAO : "+data_fim)
-    pdf.text(11, 115, txt="PRAZO DO CONTRATO : 465 DIAS")
+    pdf.text(11, 115, txt="PRAZO DO CONTRATO : 180 DIAS")
     pdf.text(121, 105, txt="VALOR DO CONTRATO : "+valor)
     pdf.text(121, 110, txt="LICITACAO : "+licitacao)
     pdf.text(121, 115, txt="RECURSO : PROPRIO")
@@ -71,7 +78,7 @@ if enviar:
     pdf.text(11, 205, txt="pela empresa")
 
     pdf.text(11, 215, txt="Observacoes /")
-    pdf.text(51, 215, txt="Sem observações")  # textp da observação
+    pdf.text(51, 215, txt="Sem sugestões")  # textp da observação
     pdf.text(11, 220, txt="Sugestões /")
     pdf.text(11, 225, txt="Reclamações")
 
@@ -83,9 +90,9 @@ if enviar:
     pdf.rect(10, 260, 100, 8)
     pdf.text(11, 265, txt="FISCAL DE CONTRATO : MARCOS BRUMATTI")
     pdf.rect(10, 268, 100, 8)
-    pdf.text(11, 273, txt="PORTARIA N° : 013,"+"DATA: 31/10/2024")
+    pdf.text(11, 273, txt=f"PORTARIA N° {portaria_nro},"+f"DATA: {portaria_data}")
     pdf.rect(10, 276, 100, 8)
-    pdf.text(11, 281, txt="RELATORIO REFERENTE A ; 31/05/2023")
+    pdf.text(11, 281, txt="RELATORIO REFERENTE A : 30/08/2024")
 
     pdf.rect(110, 260, 90, 8)
     pdf.text(130, 265, txt='ASSINATURA')
