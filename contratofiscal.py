@@ -55,19 +55,23 @@ if enviar:
     pdf.rect(10, 180, 30, 30)
     pdf.rect(10, 210, 30, 30)
     pdf.text(11, 125, txt="Ocorrencias")
+    pdf.text(51, 125, txt="Não houve")  #texto da ocorrencia
 
     pdf.text(11, 155, txt="Diligencias")
+    pdf.text(51, 155, txt="Não houve") # texto da diligencia
     pdf.text(11, 160, txt="demandas e")
     pdf.text(11, 165, txt="providências")
     pdf.text(11, 170, txt="adotadas")
 
     pdf.text(11, 185, txt="Avaliação dos")
+    pdf.text(51, 185, txt="Sem avaliação") # texto da avaliação
     pdf.text(11, 190, txt="serviços e")
     pdf.text(11, 195, txt="documentos")
     pdf.text(11, 200, txt="apresentados")
     pdf.text(11, 205, txt="pela empresa")
 
     pdf.text(11, 215, txt="Observacoes /")
+    pdf.text(51, 215, txt="Sem observações")  # textp da observação
     pdf.text(11, 220, txt="Sugestões /")
     pdf.text(11, 225, txt="Reclamações")
 
@@ -89,7 +93,7 @@ if enviar:
 
 
 
-    pdf.output(f"relatorio {empresa}.pdf")
+    pdf.output(f"C:/Users/Compras/Desktop/2024/fiscaldecontratos/relatorio {empresa}.pdf")
     
 
 
