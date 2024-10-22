@@ -22,6 +22,8 @@ licitacao = col[0].text_input("LICITACAO N°/ANO")
 
 portaria_nro = col[1].text_input("Numero da portaria")
 portaria_data = col[1].text_input("Data portaria")
+
+obs = col[2].text_input("Obsevação")
 enviar = col[0].button("ENVIAR")
 if enviar:
     pdf = FPDF("P", "mm", "A4") 
@@ -43,9 +45,9 @@ if enviar:
     pdf.rect(10, 55, 40, 10)
     pdf.rect(50, 55, 150, 10)
     pdf.text(11, 73, txt="TERMO DO CONTRATO : ")
-    pdf.text(53, 73, txt=objeto[:68])
-    pdf.text(53, 78, txt=objeto[67:130])
-    pdf.text(53, 83, txt=objeto[131:195])
+    pdf.text(53, 73, txt=objeto[:65])
+    pdf.text(53, 78, txt=objeto[65:130])
+    pdf.text(53, 83, txt=objeto[130:195])
     
     pdf.rect(10, 68, 190, 20)
     pdf.text(11, 95, txt="UNIDADE DETENTORA DO CONTRATO:")
@@ -53,7 +55,7 @@ if enviar:
     pdf.rect(10, 98, 190, 20)
     pdf.text(11, 105, txt="DATA DO INICIO : "+data_inicio)
     pdf.text(11, 110, txt="DATA DA CONCLUSAO : "+data_fim)
-    pdf.text(11, 115, txt="PRAZO DO CONTRATO : 180 DIAS")
+    pdf.text(11, 115, txt="PRAZO DO CONTRATO : 365 DIAS")
     pdf.text(121, 105, txt="VALOR DO CONTRATO : "+valor)
     pdf.text(121, 110, txt="LICITACAO : "+licitacao)
     pdf.text(121, 115, txt="RECURSO : PROPRIO")
@@ -78,7 +80,7 @@ if enviar:
     pdf.text(11, 205, txt="pela empresa")
 
     pdf.text(11, 215, txt="Observacoes /")
-    pdf.text(51, 215, txt="Sem sugestões")  # textp da observação
+    pdf.text(51, 215, txt=obs)  # texto da observação
     pdf.text(11, 220, txt="Sugestões /")
     pdf.text(11, 225, txt="Reclamações")
 
