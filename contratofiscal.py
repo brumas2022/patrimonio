@@ -24,12 +24,12 @@ nro_contrato = col[0].text_input("CONTRATO/ANO", value=f"{df_contratos.iloc[n,1]
 empresa = col[0].text_input("EMPRESA", value=f"{df_contratos.iloc[n,2]}")
 objeto = col[0].text_input("OBJETO", value=f"{df_contratos.iloc[n,3]}")
 valor = col[0].text_input("VALOR", value=f"{df_contratos.iloc[n,7]}")
-data_inicio = col[0].text_input("DATA INICIAL")
-data_fim = col[0].text_input("DATA FINAL")
+data_inicio = col[0].text_input("DATA INICIAL", value=f"{df_contratos.iloc[n,4].strftime("%d/%m/%Y")}")
+data_fim = col[0].text_input("DATA FINAL", value=f"{df_contratos.iloc[n,5].strftime("%d/%m/%Y")}")
 licitacao = col[0].text_input("LICITACAO N°/ANO", value=f"{df_contratos.iloc[n,8]}")
 
 portaria_nro = col[1].text_input("Numero da portaria", value=f"{df_contratos.iloc[n,11]}")
-portaria_data = col[1].text_input("Data portaria", value=f"{df_contratos.iloc[n,12]}")
+portaria_data = col[1].text_input("Data portaria", value=f"{df_contratos.iloc[n,12].strftime("%d/%m/%Y")}")
 
 obs = col[2].text_input("Obsevação")
 st.dataframe(df_contratos)
