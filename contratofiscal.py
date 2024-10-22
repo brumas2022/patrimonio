@@ -11,19 +11,28 @@ from fpdf import FPDF
 
 
 st.set_page_config(page_title="Contratos do fiscal Marcos Brumatti", layout="wide", menu_items={'About':"Its very cool"})
+
+df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
+
 col = st.columns((1,1,1,1))
-nro_contrato = col[0].text_input("CONTRATO/ANO")
-empresa = col[0].text_input("EMPRESA")
-objeto = col[0].text_input("OBJETO")
-valor = col[0].text_input("VALOR")
+#n=18
+# nro_indice = st.selectbox("Escolha o  contrato", ("1", "2", "3"))
+
+nro = col[0].number_input("Digite um nro", format="%i")
+n = int(nro)
+nro_contrato = col[0].text_input("CONTRATO/ANO", value=f"{df_contratos.iloc[n,1]}")
+empresa = col[0].text_input("EMPRESA", value=f"{df_contratos.iloc[n,2]}")
+objeto = col[0].text_input("OBJETO", value=f"{df_contratos.iloc[n,3]}")
+valor = col[0].text_input("VALOR", value=f"{df_contratos.iloc[n,7]}")
 data_inicio = col[0].text_input("DATA INICIAL")
 data_fim = col[0].text_input("DATA FINAL")
-licitacao = col[0].text_input("LICITACAO N°/ANO")
+licitacao = col[0].text_input("LICITACAO N°/ANO", value=f"{df_contratos.iloc[n,8]}")
 
-portaria_nro = col[1].text_input("Numero da portaria")
-portaria_data = col[1].text_input("Data portaria")
+portaria_nro = col[1].text_input("Numero da portaria", value=f"{df_contratos.iloc[n,11]}")
+portaria_data = col[1].text_input("Data portaria", value=f"{df_contratos.iloc[n,12]}")
 
 obs = col[2].text_input("Obsevação")
+st.dataframe(df_contratos)
 enviar = col[0].button("ENVIAR")
 if enviar:
     pdf = FPDF("P", "mm", "A4") 
