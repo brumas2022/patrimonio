@@ -83,14 +83,17 @@ if consulta=="POR ITEM":
         
          
 elif consulta=="POR NOME":
-   st.write("Consulta por ordem alfabetica")
-   st.info("Nesta seção você pode pesquisa pelo nome do item")
+   colnome = st.columns((1,1,1))
+   colnome[0].write("Consulta por ordem alfabetica")
+   colnome[0].info("Nesta seção você pode pesquisar pelo nome do item")
    nomes = df['Descricao'].tolist()
    a = st.selectbox("Escolha a descrição :", nomes, index=None, placeholder="Digite o nome....")
 
    resultado = df[df['Descricao']==a]
    
-   st.dataframe(resultado, hide_index=True)
+   #st.dataframe(resultado, hide_index=True)
+   colnome[1].dataframe(resultado['Descricao'], hide_index=True, use_container_width=True)
+   colnome[1].dataframe(resultado['Qtde'], hide_index=True, use_container_width=True)
    
    
 elif consulta=="TODOS":
