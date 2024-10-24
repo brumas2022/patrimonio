@@ -69,7 +69,7 @@ st.write("A data atual é : ", hoje.strftime("%d/%m/%Y"))
 consulta = st.selectbox("Escolha o tipo de consulta", (lista_consulta))
 
 if consulta=="POR ITEM":
-   colitem1, colitem2 = st.columns(2)
+   colitem1, colitem2 = st.columns(4)
    with colitem1:
        st.write("Consulta por ordem numerica")
        st.info("Nesta seção você precisa saber o numero do item a ser pesquisado")
