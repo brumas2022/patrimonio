@@ -66,7 +66,9 @@ lista_consulta=["POR ITEM", "POR NOME", "TODOS", "ESTOQUE-ZERO", "NAD"]
 hoje = datetime.date.today() 
 st.write("A data atual é : ", hoje.strftime("%d/%m/%Y"))
 
-consulta = st.selectbox("Escolha o tipo de consulta", (lista_consulta))
+col = st.columns((1,1,1))
+
+consulta = col[0].selectbox("Escolha o tipo de consulta", (lista_consulta))
 
 if consulta=="POR ITEM":
    colitem = st.columns((1,1,1))
