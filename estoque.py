@@ -66,7 +66,7 @@ lista_consulta=["POR ITEM", "POR NOME", "TODOS", "ESTOQUE-ZERO", "NAD"]
 hoje = datetime.date.today() 
 st.write("A data atual é : ", hoje.strftime("%d/%m/%Y"))
 
-consulta = st.selectbox("Escolha o tipo de consulta", (lista_consulta))
+consulta = colimage[0].selectbox("Escolha o tipo de consulta", (lista_consulta))
 
 if consulta=="POR ITEM":
    colitem = st.columns((1,1,1))
@@ -75,7 +75,7 @@ if consulta=="POR ITEM":
    item = df['Item'].tolist()
    b = colitem[0].selectbox("Escolha o item", item, index=None, placeholder="Digite o nro...")
    resultado_item = df[df['Item']==b]
-   colitem[1].write("Nome "+resultado_item[1])
+   #colitem[1].write("Nome "+resultado_item[1])
    st.dataframe(resultado_item, hide_index=True)
 
         
