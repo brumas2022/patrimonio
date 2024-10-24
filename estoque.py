@@ -69,11 +69,13 @@ st.write("A data atual é : ", hoje.strftime("%d/%m/%Y"))
 consulta = st.selectbox("Escolha o tipo de consulta", (lista_consulta))
 
 if consulta=="POR ITEM":
-   st.write("Consulta por ordem numerica")
-   st.info("Nesta seção você precisa saber o numero do item a ser pesquisado")
+   colitem = st.columns((1,1,1))
+   colitem[0].write("Consulta por ordem numerica")
+   colitem[0].info("Nesta seção você precisa saber o numero do item a ser pesquisado")
    item = df['Item'].tolist()
-   b = st.selectbox("Escolha o item", item, index=None, placeholder="Digite o nro...")
+   b = colitem[0].selectbox("Escolha o item", item, index=None, placeholder="Digite o nro...")
    resultado_item = df[df['Item']==b]
+   colitem[1].write("Nome "+resultado_item[1])
    st.dataframe(resultado_item, hide_index=True)
 
         
