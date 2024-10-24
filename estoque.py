@@ -77,7 +77,7 @@ if consulta=="POR ITEM":
    resultado_item = df[df['Item']==b]
    #colitem[1].write("Nome "+resultado_item[1])
    st.dataframe(resultado_item, hide_index=True)
-   colitem[1].write(resultado_item.loc[2])
+   colitem[1].write(resultado_item(2))
 
         
          
