@@ -78,6 +78,7 @@ if consulta=="POR ITEM":
    #colitem[1].write("Nome "+resultado_item[1])
    st.dataframe(resultado_item, hide_index=True)
    colitem[1].dataframe(resultado_item['Descricao'], hide_index=True)
+   colitem[1].dataframe(resultado_item['Qtde'], hide_index=True)
 
         
          
