@@ -87,7 +87,7 @@ elif consulta=="POR NOME":
    colnome[0].write("Consulta por ordem alfabetica")
    colnome[0].info("Nesta seção você pode pesquisar pelo nome do item")
    nomes = df['Descricao'].tolist()
-   a = st.selectbox("Escolha a descrição :", nomes, index=None, placeholder="Digite o nome....")
+   a = colnome[0].selectbox("Escolha a descrição :", nomes, index=None, placeholder="Digite o nome....")
 
    resultado = df[df['Descricao']==a]
    
