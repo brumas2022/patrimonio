@@ -69,16 +69,18 @@ st.write("A data atual é : ", hoje.strftime("%d/%m/%Y"))
 consulta = st.selectbox("Escolha o tipo de consulta", (lista_consulta))
 
 if consulta=="POR ITEM":
-   colitem = st.columns((1,1,1))
-   colitem[0].write("Consulta por ordem numerica")
-   colitem[0].info("Nesta seção você precisa saber o numero do item a ser pesquisado")
-   item = df['Item'].tolist()
-   b = colitem[0].selectbox("Escolha o item", item, index=None, placeholder="Digite o nro...")
-   resultado_item = df[df['Item']==b]
+   colitem1, colitem2 = st.columns(2)
+   with colitem1:
+       st.write("Consulta por ordem numerica")
+       st.info("Nesta seção você precisa saber o numero do item a ser pesquisado")
+       item = df['Item'].tolist()
+       b = st.selectbox("Escolha o item", item, index=None, placeholder="Digite o nro...", )
+       resultado_item = df[df['Item']==b]
    #colitem[1].write("Nome "+resultado_item[1])
    #st.dataframe(resultado_item, hide_index=True)
-   colitem[1].dataframe(resultado_item['Descricao'], hide_index=True, use_container_width=True)
-   colitem[1].dataframe(resultado_item['Qtde'], hide_index=True, use_container_width=True)
+   with colitem2:
+       st.dataframe(resultado_item['Descricao'], hide_index=True, use_container_width=True)
+       st.dataframe(resultado_item['Qtde'], hide_index=True, use_container_width=True)
 
         
          
