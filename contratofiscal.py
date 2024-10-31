@@ -14,6 +14,8 @@ st.set_page_config(page_title="Contratos do fiscal Marcos Brumatti", layout="wid
 
 df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
 
+df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=2)
+
 col = st.columns((1,1,1,1))
 #n=18
 # nro_indice = st.selectbox("Escolha o  contrato", ("1", "2", "3"))
@@ -35,6 +37,8 @@ obs = col[2].text_input("Obsevação")
 st.dataframe(df_contratos)
 enviar = col[0].button("ENVIAR")
 if enviar:
+    st.dataframe(df_medicao)
+    
     pdf = FPDF("P", "mm", "A4") 
     pdf.add_page() 
     pdf.set_font("Arial" , size=10) 
