@@ -37,7 +37,7 @@ obs = col[2].text_input("Obsevação")
 st.dataframe(df_contratos)
 enviar = col[0].button("ENVIAR")
 if enviar:
-    st.dataframe(df_medicao)
+    st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
     
     pdf = FPDF("P", "mm", "A4") 
     pdf.add_page() 
