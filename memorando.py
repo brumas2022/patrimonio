@@ -63,6 +63,8 @@ def orcamento():
    df.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
    nomes_orc = df['Item'].tolist()
    
+   print(nomes_orc)
+   
    
    col=st.columns([0.25,0.5,0.25])
   
