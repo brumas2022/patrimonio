@@ -59,7 +59,7 @@ def orcamento():
    lista_orc=[]
    descr_orc=[]
    qtdes=[]
-   df=pd.read_excel("RPosicao_Estoque_Data_Atual_Excel.xlsx", sheet_name=20)
+   df=pd.read_excel("Estoque_Data_Atual_Excel.xlsx", sheet_name=0)
    df.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
    nomes_orc = df['Item'].tolist()
    
