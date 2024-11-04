@@ -75,7 +75,7 @@ def orcamento():
    exemplo = ['hoje', 'amanha', 'depois de amanha']
       
    with col[0]:
-       item_orc1=col[0].selectbox("Numero do produto", exemplo, index=None)
+       item_orc1=col[0].selectbox("Numero do produto", exemplo)
        resultado_item1 = df[df['Item']==item_orc1]
        print(resultado_item1)
        descricao1=resultado_item1.iat[0,1]
