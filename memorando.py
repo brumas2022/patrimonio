@@ -75,7 +75,7 @@ def orcamento():
    exemplo = ['hoje', 'amanha', 'depois de amanha']
       
    with col[0]:
-       item_orc1=col[0].selectbox("Numero do produto", exemplo)
+       item_orc1=col[0].selectbox("Numero do produto", nomes_orc)
        resultado_item1 = df[df['Item']==item_orc1]
        print(resultado_item1)
        descricao1=resultado_item1.iat[0,1]
@@ -86,7 +86,7 @@ def orcamento():
    
    
    
-   item_orc2=col[0].selectbox("Numero do produto :", nomes_orc, index=None, placeholder="Digite o nome....")
+   item_orc2=col[0].selectbox("Numero do produto :", nomes_orc)
    resultado_item2 = df[df['Item']==item_orc2]
    descricao2=resultado_item2.iat[0,1]
    
@@ -94,28 +94,28 @@ def orcamento():
    col[1].write(descricao2)
    qtde2=col[2].text_input("Qtde produto 2 : ")
    
-   item_orc3=col[0].selectbox("Descrição 3 :", nomes_orc, index=None, placeholder="Digite o nome....")
+   item_orc3=col[0].selectbox("Descrição 3 :", nomes_orc)
    resultado_item3 = df[df['Item']==item_orc3]
    descricao3=resultado_item3.iat[0,1]
    col[1].write("Descrição do produto")
    col[1].write(descricao3)
    qtde3=col[2].text_input("Qtde produto 3 : ")
 
-   item_orc4=col[0].selectbox("Descrição 4 :", nomes_orc, index=None, placeholder="Digite o nome....")
+   item_orc4=col[0].selectbox("Descrição 4 :", nomes_orc)
    resultado_item4 = df[df['Item']==item_orc4]
    descricao4=resultado_item4.iat[0,1]
    col[1].write("Descrição do produto")
    col[1].write(descricao4)
    qtde4=col[2].text_input("Qtde produto 4 : ")
    
-   item_orc5=col[0].selectbox("Descrição 5 :", nomes_orc, index=None, placeholder="Digite o nome....")
+   item_orc5=col[0].selectbox("Descrição 5 :", nomes_orc)
    resultado_item5 = df[df['Item']==item_orc5]
    descricao5=resultado_item5.iat[0,1]
    col[1].write("Descrição do produto")
    col[1].write(descricao5)
    qtde5=col[2].text_input("Qtde produto 5 : ")
    
-   item_orc6=col[0].selectbox("Descrição 6 :", nomes_orc, index=None, placeholder="Digite o nome....")
+   item_orc6=col[0].selectbox("Descrição 6 :", nomes_orc)
    resultado_item6 = df[df['Item']==item_orc6]
    descricao6=resultado_item6.iat[0,1]
    col[1].write("Descrição do produto")
