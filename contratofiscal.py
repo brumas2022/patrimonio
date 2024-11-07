@@ -36,8 +36,12 @@ portaria_data = col[1].text_input("Data portaria", value=f"{df_contratos.iloc[n,
 obs = col[2].text_input("Obsevação")
 st.dataframe(df_contratos)
 enviar = col[0].button("ENVIAR")
-if enviar:
+mostrar = col[1].button("MEDICAO")
+if mostrar:
     st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
+    st.write(df_medicao["VALOR"].sum())
+if enviar:
+    #st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
     
     pdf = FPDF("P", "mm", "A4") 
     pdf.add_page() 
