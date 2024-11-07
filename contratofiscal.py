@@ -20,6 +20,9 @@ col = st.columns((1,1,1,1))
 #n=18
 # nro_indice = st.selectbox("Escolha o  contrato", ("1", "2", "3"))
 
+enviar = col[2].button("EMITE RELATORIO")
+mostrar = col[2].button("MOSTRA MEDICAO")
+
 nro = col[0].number_input("Digite um nro", format="%i")
 n = int(nro)
 nro_contrato = col[0].text_input("CONTRATO/ANO", value=f"{df_contratos.iloc[n,1]}")
@@ -33,13 +36,14 @@ licitacao = col[0].text_input("LICITACAO N°/ANO", value=f"{df_contratos.iloc[n,
 portaria_nro = col[1].text_input("Numero da portaria", value=f"{df_contratos.iloc[n,11]}")
 portaria_data = col[1].text_input("Data portaria", value=f"{df_contratos.iloc[n,12].strftime("%d/%m/%Y")}")
 
-obs = col[2].text_input("Obsevação")
+obs = col[1].text_input("Obsevação")
 st.dataframe(df_contratos)
-enviar = col[0].button("ENVIAR")
-mostrar = col[1].button("MEDICAO")
+
 if mostrar:
     st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
-    st.write(df_medicao["VALOR"].sum(["CONTRATO"]=="028/2023"))
+    df_selecao=df_medicao.groupby(by='CONTRATO').sum(numeric_only=True)
+    st.dataframe(df_selecao)
+    #st.write(df_medicao.loc["VALOR"].sum(["CONTRATO"]=="028/2023"))
 if enviar:
     #st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
     
