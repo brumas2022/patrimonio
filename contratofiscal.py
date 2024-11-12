@@ -36,9 +36,10 @@ licitacao = col[0].text_input("LICITACAO N°/ANO", value=f"{df_contratos.iloc[n,
 portaria_nro = col[1].text_input("Numero da portaria", value=f"{df_contratos.iloc[n,11]}")
 portaria_data = col[1].text_input("Data portaria", value=f"{df_contratos.iloc[n,12].strftime("%d/%m/%Y")}")
 
-obs = col[1].text_input("Obsevação")
-tecla = st.dataframe(df_contratos)
-st.write(tecla)
+obs = col[1].text_input("Observação")
+data_relatorio = col[1].date_input("Data do relatorio")
+st.dataframe(df_contratos)
+## st.write(tecla) ##quero clicar no dataframe e ele atribuir o valor do click para abrir outra janela
 
 if mostrar:
     st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
@@ -116,7 +117,7 @@ if enviar:
     pdf.rect(10, 268, 100, 8)
     pdf.text(11, 273, txt=f"PORTARIA N° {portaria_nro},"+f"DATA: {portaria_data}")
     pdf.rect(10, 276, 100, 8)
-    pdf.text(11, 281, txt="RELATORIO REFERENTE A : 30/08/2024")
+    pdf.text(11, 281, txt=f"RELATORIO REFERENTE A : {data_relatorio}")
 
     pdf.rect(110, 260, 90, 8)
     pdf.text(130, 265, txt='ASSINATURA')
