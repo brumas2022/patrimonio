@@ -37,7 +37,7 @@ portaria_nro = col[1].text_input("Numero da portaria", value=f"{df_contratos.ilo
 portaria_data = col[1].text_input("Data portaria", value=f"{df_contratos.iloc[n,12].strftime("%d/%m/%Y")}")
 
 obs = col[1].text_input("Obsevação")
-st.dataframe(df_contratos)
+tecla = st.dataframe(df_contratos)
 
 if mostrar:
     st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
