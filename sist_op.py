@@ -23,5 +23,6 @@ impressora = lista_impressoras[6]
 win32print.SetDefaultPrinter(impressora[2])
 caminho1=r'C:\Users\Compras\Documents\GitHub\patrimonio'
 
-win32api.ShellExecute(0, "open", 'estoque-zero.xlsx', None, caminho1, 0 )
+win32api.ShellExecute(0, "open", 'Estoque_Data_Atual_Excel.xlsx', None, caminho1, 0 )
+win32api.ShellExecute(0, "open", 'Zero_Estoque_Data_Atual_Excel.xlsx', None, caminho1, 0 )
     
