@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 from openpyxl import load_workbook
 
+
 st.set_page_config("Solicitação de materiais e orçamentos", layout="wide")
 st.image("logosanear.png")
 def repete():
