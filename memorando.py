@@ -4,7 +4,7 @@ from openpyxl import load_workbook
 
 
 st.set_page_config("Solicitação de materiais e orçamentos", layout="wide")
-st.image("logosanear.png")
+st.image("logosanear.png", width=300)
 def repete():
     item = int(input("Qtos itens teremos? "))
     itens = 0
