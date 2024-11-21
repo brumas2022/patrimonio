@@ -73,8 +73,10 @@ def orcamento():
    global descr_orc
    global qtdes
    global nro_itens
+   
+   #col=st.columns([0.5,1,0.5,1,1,1])
     
-   nro_itens = st.number_input("Digite a quantidade de itens a serem solicitados - funciona com 6", value=0)
+   nro_itens = st.number_input("Digite a quantidade de itens a serem solicitados - funciona com 6", max_value=6)
    item_zero = 0
    lista_orc=[]
    descr_orc=[]
@@ -87,10 +89,10 @@ def orcamento():
    nomes_orc = df['Item'].tolist()
      
    
-   col=st.columns([0.25,0.5,0.25])
-   col[0].text("Numero do produto")
-   col[1].text("Descrição")
-   col[2].text("Quantidade")
+   col=st.columns([0.5,1,0.5,1,1,1])
+   col[0].write("Numero do produto")
+   col[1].write("Descrição")
+   col[2].write("Quantidade")
   
    # INSERIR OS PRODUTOS DO ESTOQUE PARA AQUISICAO
    
@@ -186,7 +188,7 @@ def orcamento():
    lista_total=list(zip(lista_orc, descr_orc, qtdes))
    df_orc=pd.DataFrame(lista_total, columns=['Numero', 'Descricao', 'Qtde'])
                        
-   st.dataframe(df_orc)
+   col[4].dataframe(df_orc, hide_index=True)
    #df_orc.to_excel("orcamento.xlsx", index=False)
    #col[1].dataframe(qtdes)
    # df_orc.to_excel("orcamento.xlsx", sheet_name='Planilha1') ##criar tabela em excel com os dados do dataframe criado
