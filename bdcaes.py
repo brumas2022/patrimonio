@@ -18,6 +18,10 @@ resposta = supabase.table("caninos").select("nome", "genero", "entrada").eq("ado
 st.dataframe(resposta.data)
 a=len(resposta.data)
 st.write(f"Ainda temos {a} {genero}")
+exemplo = 'https://ibhcxtnwnonsnycfgjay.supabase.co/storage/v1/object/sign/Meninos/Femeas/Betina.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJNZW5pbm9zL0ZlbWVhcy9CZXRpbmEuanBnIiwiaWF0IjoxNzMyNTY3OTQxLCJleHAiOjE3MzMxNzI3NDF9.aIt9tjBxecz2lFiQRv1Uv21dklQtVtNzC_-QmygtCZo&t=2024-11-25T20%3A52%3A21.837Z'
+imagem = supabase.storage.from_("Meninos").get_public_url("Femeas/antonieta.jpg")
+st.image(imagem)
+st.image(exemplo)
 #st.dataframe(resposta.data[data="nome"])
 
 #res = supabase.storage.from_('Meninos').get_public_url('Femeas/Betina.jpg')
