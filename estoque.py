@@ -11,11 +11,7 @@ st.set_page_config("Consulta estoque SANEAR", layout="wide")
 colimage = st.columns((1,1,1))
 colimage[1].image("logosanear.png", width=300)
 
-def highlight_greaterthan_1(s):
-    if s.B > 1.0:
-        return ['background-color: yellow']*5
-    else:
-        return ['background-color: white']*5
+
      
 def estoque_zero():
    st.info("As informações desta seção refere-se ao banco de dados da Coplan com todos os itens zerados no estoque")
@@ -33,10 +29,10 @@ def nad():
    
    df_nad=pd.read_excel("controle_nad.xlsx", sheet_name=0)
    
-   df_new=df_nad.style.format(precision=0, thousands=".", decimal=",").apply(highlight_greaterthan_1, axis=1)
-   #highlight_between(subset='entrega total', left="ok", color="red").format(subset="entrega prevista", na_rep="MISS")
+   df_new=df_nad.style.format(precision=0, thousands=".", decimal=",").highlight_between(subset='entrega total', left="ok", color="red").format(subset="entrega prevista", na_rep="MISS")
    #.highlight_between(subset='entrega total', left="ok", color="red")
    #st.dataframe(df_nad.style.set_properties(**{'color':'blue', 'background-color':'yellow'}), hide_index=True)
+   
    
    st.dataframe(df_new, hide_index=True, column_config={
         "data envio": st.column_config.DatetimeColumn(
