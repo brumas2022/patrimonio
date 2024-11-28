@@ -29,7 +29,13 @@ def nad():
    
    df_nad=pd.read_excel("controle_nad.xlsx", sheet_name=0)
    #dfnovo=df_nad.style.apply(highlight, axis=1)
-   df_new=df_nad.style.format(precision=0, thousands=".", decimal=",").apply()
+   
+   def highlight_survived(s):
+    return ['background-color: green']*len(s) if s.entrega else ['background-color: red']*len(s)
+
+   
+   
+   df_new=df_nad.style.format(precision=0, thousands=".", decimal=",").apply(highlight_survived, axis=1)
    ##.highlight_between(subset='entrega total', left="ok", color="red")
    #.format(subset="entrega prevista", na_rep="MISS").set_table_styles9[{'selector':'tr:hover', 'props':[('background-color', 'black'), ('color', 'white')]}]
    #.highlight_between(subset='entrega total', left="ok", color="red")
