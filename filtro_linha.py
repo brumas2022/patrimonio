@@ -15,7 +15,7 @@ def main():
         #filter_value = st.text_input("Digite o valor para filtrar")
 
         # Aplicar a condição e destacar a linha
-        if df[df.entrega total=='ok']:
+        if df[df.columns['entrega total']=='ok']:
             df_filtered = df.style.apply(
                 lambda x: ['background: lightblue'], axis=1
             )
