@@ -11,8 +11,7 @@ st.set_page_config("Consulta estoque SANEAR", layout="wide")
 colimage = st.columns((1,1,1))
 colimage[1].image("logosanear.png", width=300)
 
-def highlight(s):
-   if s."entrega total" = "ok"
+     
      
 def estoque_zero():
    st.info("As informações desta seção refere-se ao banco de dados da Coplan com todos os itens zerados no estoque")
@@ -29,7 +28,7 @@ def nad():
    st.info("Acompanhe o andamento das NADS aqui")
    
    df_nad=pd.read_excel("controle_nad.xlsx", sheet_name=0)
-   dfnovo=df_nad.style.apply(highlight, axis=1)
+   #dfnovo=df_nad.style.apply(highlight, axis=1)
    df_new=df_nad.style.format(precision=0, thousands=".", decimal=",").highlight_between(subset='entrega total', left="ok", color="red").format(subset="entrega prevista", na_rep="MISS")
    #.highlight_between(subset='entrega total', left="ok", color="red")
    #st.dataframe(df_nad.style.set_properties(**{'color':'blue', 'background-color':'yellow'}), hide_index=True)
@@ -83,6 +82,7 @@ if consulta=="POR ITEM":
    resultado_item = df[df['Item']==b]
    #colitem[1].write("Nome "+resultado_item[1])
    #st.dataframe(resultado_item, hide_index=True)
+   colitem[1].dataframe(resultado_item['Item'], hide_index=True, use_container_width=True)
    colitem[1].dataframe(resultado_item['Descricao'], hide_index=True, use_container_width=True)
    colitem[1].dataframe(resultado_item['Qtde'], hide_index=True, use_container_width=True)
 
