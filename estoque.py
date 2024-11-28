@@ -29,7 +29,9 @@ def nad():
    
    df_nad=pd.read_excel("controle_nad.xlsx", sheet_name=0)
    #dfnovo=df_nad.style.apply(highlight, axis=1)
-   df_new=df_nad.style.format(precision=0, thousands=".", decimal=",").highlight_between(subset='entrega total', left="ok", color="red").format(subset="entrega prevista", na_rep="MISS").set_table_styles9[{'selector':'tr:hover', 'props':[('background-color', 'black'), ('color', 'white')]}]
+   df_new=df_nad.style.format(precision=0, thousands=".", decimal=",").set_table_styles9[{'selector':'tr:hover', 'props':[('background-color', 'black'), ('color', 'white')]}]
+   #.highlight_between(subset='entrega total', left="ok", color="red")
+   #.format(subset="entrega prevista", na_rep="MISS").set_table_styles9[{'selector':'tr:hover', 'props':[('background-color', 'black'), ('color', 'white')]}]
    #.highlight_between(subset='entrega total', left="ok", color="red")
    #st.dataframe(df_nad.style.set_properties(**{'color':'blue', 'background-color':'yellow'}), hide_index=True)
    
