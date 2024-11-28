@@ -1,8 +1,13 @@
 import streamlit as st
 import pandas as pd
 
+
+
 def main():
     st.title("Destacador de Linhas em DataFrame")
+    preco = st.number_input("entre numero")
+    calcular_imposto = lambda x: x*0.3 if x<500 else x*0.9
+    st.write(calcular_imposto(preco))
 
     # Carregar o DataFrame
     uploaded_file = pd.read_excel("controle_nad.xlsx", sheet_name=0)
