@@ -98,7 +98,7 @@ elif consulta=="POR NOME":
    resultado = df[df['Descricao']==a]
    
    #st.dataframe(resultado, hide_index=True)
-   colitem[1].dataframe(resultado_item['Item'], hide_index=True, use_container_width=True)
+   colnome[1].dataframe(resultado_item['Item'], hide_index=True, use_container_width=True)
    colnome[1].dataframe(resultado['Descricao'], hide_index=True, use_container_width=True)
    colnome[1].dataframe(resultado['Qtde'], hide_index=True, use_container_width=True)
    
