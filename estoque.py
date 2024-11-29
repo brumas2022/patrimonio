@@ -31,7 +31,7 @@ def nad():
    #dfnovo=df_nad.style.apply(highlight, axis=1)
    
    def highlight_survived(s):
-    return ['background-color: orange']*len(s) if s['entrega total'] == 'ok' else ['background-color: lightgrey']*len(s)
+    return ['background-color: lightorange']*len(s) if s['entrega total'] == 'ok' else ['background-color: lightgrey']*len(s)
 
    
    
