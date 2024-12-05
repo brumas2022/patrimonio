@@ -14,8 +14,8 @@ saida_tarde = st.time_input("Saida tarde :")
 calendar_events = [
     {
         "title": "Event 1",
-        "start": "2024-12-01T08:30:00",
-        "end": "2024-12-05T10:30:00",
+        "start": f"dia" #"2024-12-01T08:30:00",
+        "end": "2024-12-08T10:30:00",
         "resourceId": "a",
     },
     {
