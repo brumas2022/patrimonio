@@ -1,6 +1,16 @@
 import streamlit as st 
 from streamlit_calendar import calendar
 
+
+dia = st.date_input("Entre com o dia:")
+entrada_manha = st.time_input("Entrada manha :", value="now")
+saida_manha = st.time_input("Saida manha :")
+entrada_tarde = st.time_input("Entrada tarde :")
+saida_tarde = st.time_input("Saida tarde :")
+
+
+
+
 calendar_events = [
     {
         "title": "Event 1",
