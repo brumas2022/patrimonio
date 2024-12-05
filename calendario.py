@@ -3,7 +3,7 @@ from streamlit_calendar import calendar
 
 
 dia = st.date_input("Entre com o dia:")
-entrada_manha = st.time_input("Entrada manha :", value="now")
+entrada_manha = st.time_input("Entrada manha :", value=None)
 saida_manha = st.time_input("Saida manha :")
 entrada_tarde = st.time_input("Entrada tarde :")
 saida_tarde = st.time_input("Saida tarde :")
@@ -14,8 +14,8 @@ saida_tarde = st.time_input("Saida tarde :")
 calendar_events = [
     {
         "title": "Event 1",
-        "start": "dia", #"2024-12-01T08:30:00",
-        "end": "2024-12-08T10:30:00",
+        "start": "2024-12-01T08:30:00",
+        "end": "2024-12-01T10:30:00",
         "resourceId": "a",
     },
     {
