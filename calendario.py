@@ -6,7 +6,7 @@ with shelve.open('TesteDB') as db:
     db['entrada']=10
     db['saida']=20
     
-print(db["entrada"])
+
 
 col = st.columns((1,1,1,1,1))
 dia = col[0].date_input("Entre com o dia:")
