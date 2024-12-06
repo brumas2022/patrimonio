@@ -1,5 +1,12 @@
 import streamlit as st 
 from streamlit_calendar import calendar
+import shelve
+
+with shelve.open('TesteDB') as db:
+    db['entrada']=10
+    db['saida']=20
+    
+st.dataframe(db)
 
 col = st.columns((1,1,1,1,1))
 dia = col[0].date_input("Entre com o dia:")
