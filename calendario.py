@@ -9,11 +9,14 @@ with shelve.open('TesteDB') as db:
 
 
 col = st.columns((1,1,1,1,1))
+fluxo = []
 dia = col[0].date_input("Entre com o dia:")
 entrada_manha = col[1].time_input("Entrada manha :", value=None)
 saida_manha = col[2].time_input("Saida manha :")
 entrada_tarde = col[3].time_input("Entrada tarde :")
 saida_tarde = col[4].time_input("Saida tarde :")
+
+
 
 
 
