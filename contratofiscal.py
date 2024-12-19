@@ -114,7 +114,7 @@ if enviar:
     pdf.rect(40, 210, 160, 30)
 
     pdf.rect(10, 260, 100, 8)
-    pdf.text(11, 265, txt="FISCAL DE CONTRATO : MARCOS BRUMATTI")
+    pdf.text(11, 265, txt="FISCAL DE CONTRATO : DENIZE M. S. DE OLIVEIRA")
     pdf.rect(10, 268, 100, 8)
     pdf.text(11, 273, txt=f"PORTARIA N° {portaria_nro},"+f"DATA: {portaria_data}")
     pdf.rect(10, 276, 100, 8)
