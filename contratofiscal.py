@@ -38,6 +38,7 @@ portaria_data = col[1].text_input("Data portaria", value=f"{df_contratos.iloc[n,
 
 obs = col[1].text_input("Observação")
 data_relatorio = col[1].date_input("Data do relatorio")
+data_relatorio_1 = data_relatorio.strftime("%d/%m/%Y")
 st.dataframe(df_contratos)
 ## st.write(tecla) ##quero clicar no dataframe e ele atribuir o valor do click para abrir outra janela
 
@@ -117,7 +118,7 @@ if enviar:
     pdf.rect(10, 268, 100, 8)
     pdf.text(11, 273, txt=f"PORTARIA N° {portaria_nro},"+f"DATA: {portaria_data}")
     pdf.rect(10, 276, 100, 8)
-    pdf.text(11, 281, txt=f"RELATORIO REFERENTE A : {data_relatorio}")
+    pdf.text(11, 281, txt=f"RELATORIO REFERENTE A : {data_relatorio_1}")
 
     pdf.rect(110, 260, 90, 8)
     pdf.text(130, 265, txt='ASSINATURA')
