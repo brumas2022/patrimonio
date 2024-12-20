@@ -88,16 +88,16 @@ if enviar:
     pdf.rect(10, 180, 30, 30)
     pdf.rect(10, 210, 30, 30)
     pdf.text(11, 125, txt="Ocorrencias")
-    pdf.text(51, 125, txt="Não houve")  #texto da ocorrencia
+    pdf.text(51, 125, txt="Realizada coleta conforme solicitada, laudos entregues.")  #texto da ocorrencia
 
     pdf.text(11, 155, txt="Diligencias")
-    pdf.text(51, 155, txt="Não houve") # texto da diligencia
+    pdf.text(51, 155, txt="Sem diligência.") # texto da diligencia
     pdf.text(11, 160, txt="demandas e")
     pdf.text(11, 165, txt="providências")
     pdf.text(11, 170, txt="adotadas")
 
     pdf.text(11, 185, txt="Avaliação dos")
-    pdf.text(51, 185, txt="Sem avaliação") # texto da avaliação
+    pdf.text(51, 185, txt="Serviço realizado conforme contratado. Contrato encerrado.") # texto da avaliação
     pdf.text(11, 190, txt="serviços e")
     pdf.text(11, 195, txt="documentos")
     pdf.text(11, 200, txt="apresentados")
