@@ -88,7 +88,7 @@ if enviar:
     pdf.rect(10, 180, 30, 30)
     pdf.rect(10, 210, 30, 30)
     pdf.text(11, 125, txt="Ocorrencias")
-    pdf.text(51, 125, txt="Realizada coleta conforme solicitada, laudos entregues.")  #texto da ocorrencia
+    pdf.text(51, 125, txt="Sem ocorrências")  #texto da ocorrencia
 
     pdf.text(11, 155, txt="Diligencias")
     pdf.text(51, 155, txt="Sem diligência.") # texto da diligencia
@@ -97,7 +97,7 @@ if enviar:
     pdf.text(11, 170, txt="adotadas")
 
     pdf.text(11, 185, txt="Avaliação dos")
-    pdf.text(51, 185, txt="Serviço realizado conforme contratado. Contrato encerrado.") # texto da avaliação
+    pdf.text(51, 185, txt="Serviço efetuado conforme contratado.") # texto da avaliação
     pdf.text(11, 190, txt="serviços e")
     pdf.text(11, 195, txt="documentos")
     pdf.text(11, 200, txt="apresentados")
@@ -114,7 +114,7 @@ if enviar:
     pdf.rect(40, 210, 160, 30)
 
     pdf.rect(10, 260, 100, 8)
-    pdf.text(11, 265, txt="FISCAL DE CONTRATO : DENIZE M. S. DE OLIVEIRA")
+    pdf.text(11, 265, txt="FISCAL DE CONTRATO : MARCOS BRUMATTI")
     pdf.rect(10, 268, 100, 8)
     pdf.text(11, 273, txt=f"PORTARIA N° {portaria_nro},"+f"DATA: {portaria_data}")
     pdf.rect(10, 276, 100, 8)
