@@ -11,6 +11,16 @@ st.set_page_config("Consulta estoque SANEAR", layout="wide")
 colimage = st.columns((1,1,1))
 colimage[1].image("logosanear.png", width=300)
 
+
+def medicao():
+   st.header("Controle das NADS")
+   st.info("Acompanhe o andamento das NADS aqui")
+   
+   df_medicao = pd.read_excel("PREGAO 13.xlsx", sheet_name=0)
+   
+   st.dataframe(df_medicao)
+   
+
      
      
 def estoque_zero():
