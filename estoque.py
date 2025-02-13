@@ -13,12 +13,14 @@ colimage[1].image("logosanear.png", width=300)
 
 
 def medicao():
-   st.header("Controle das NADS")
-   st.info("Acompanhe o andamento das NADS aqui")
+   st.header("Controle do PREGAO 013/2024")
+   st.info("Acompanhe o andamento da entrega dos materiais deste pregão")
    
    df_medicao = pd.read_excel("PREGAO 13.xlsx", sheet_name=0)
+   df_medicao.colums=["LOTE", "EMPRESA", "VALOR", "DATA EMVIO NAD", "SITUACAO", "PRAZO DE ENTREGA", "DIAS", "OBSERVACAO"]
    
-   st.dataframe(df_medicao)
+   
+   st.dataframe(df_medicao.iloc[3:], hide_index=True)
    
 
      
@@ -133,8 +135,8 @@ elif consulta=="NAD":
    nad() 
       
 elif consulta=="MEDICAO":
-   st.write("EM CONSTRUÇÃO")
-   ## medicao()
+   ##st.write("EM CONSTRUÇÃO")
+   medicao()
          
    
    
