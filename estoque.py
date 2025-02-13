@@ -132,7 +132,7 @@ elif consulta=="ESTOQUE-ZERO":
 elif consulta=="NAD":
    nad() 
       
-elif consulta=="MEDICAO"
+elif consulta=="MEDICAO":
    medicao()
          
    
