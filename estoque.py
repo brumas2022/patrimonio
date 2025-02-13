@@ -133,7 +133,8 @@ elif consulta=="NAD":
    nad() 
       
 elif consulta=="MEDICAO":
-   medicao()
+   st.write("EM CONSTRUÇÃO")
+   ## medicao()
          
    
    
