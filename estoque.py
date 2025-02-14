@@ -22,7 +22,15 @@ def medicao():
    
    st.dataframe(df_medicao.iloc[3:16], hide_index=True)
    
-
+def medicao1():
+   st.header("Controle do PREGAO 014/2024")
+   st.info("Acompanhe o andamento da entrega dos materiais deste pregão")
+   
+   df_medicao = pd.read_excel("PREGAO 13.xlsx", sheet_name=1)
+   df_medicao.columns=["LOTE", "EMPRESA", "VALOR", "DATA EMVIO NAD", "SITUACAO", "PRAZO DE ENTREGA", "DIAS", "OBSERVACAO"]
+   
+   
+   st.dataframe(df_medicao.iloc[3:16], hide_index=True)
      
      
 def estoque_zero():
@@ -84,7 +92,7 @@ data_atualizacao = df.columns[1]
 st.write("Atualizado em :", data_atualizacao)
 
 df.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
-lista_consulta=["POR ITEM", "POR NOME", "TODOS", "ESTOQUE-ZERO", "NAD", "PREGAO 013"]
+lista_consulta=["POR ITEM", "POR NOME", "TODOS", "ESTOQUE-ZERO", "NAD", "PREGAO 013", "PREGA0 014"]
 
 hoje = datetime.date.today() 
 st.write("A data atual é : ", hoje.strftime("%d/%m/%Y"))
@@ -137,7 +145,9 @@ elif consulta=="NAD":
 elif consulta=="PREGAO 013":
    ##st.write("EM CONSTRUÇÃO")
    medicao()
-         
+
+elif consulta=="PREGAO 014":
+   medicao1()        
    
    
    
