@@ -92,7 +92,7 @@ data_atualizacao = df.columns[1]
 st.write("Atualizado em :", data_atualizacao)
 
 df.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
-lista_consulta=["POR ITEM", "POR NOME", "TODOS", "ESTOQUE-ZERO", "NAD", "PREGAO 013", "PREGA0 014"]
+lista_consulta=["POR ITEM", "POR NOME", "TODOS", "ESTOQUE-ZERO", "NAD", "PREGAO 013", "PREGAO 014"]
 
 hoje = datetime.date.today() 
 st.write("A data atual é : ", hoje.strftime("%d/%m/%Y"))
