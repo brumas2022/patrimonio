@@ -17,9 +17,9 @@ def medicao():
    st.info("Acompanhe o andamento da entrega dos materiais deste pregão")
    
    df_medicao = pd.read_excel("PREGAO 13.xlsx", sheet_name=0)
-   df_medicao.columns=["LOTE", "EMPRESA", "VALOR", "DATA NAD1", "VALOR NAD1", "SITUAÇAO", "DATA NAD2", "VALOR NAD2"]
+   df_medicao.columns=["LOTE", "EMPRESA", "VALOR", "DATA EMVIO NAD", "SITUACAO", "PRAZO DE ENTREGA", "DIAS", "OBSERVACAO"]
    
-   
+   "LOTE", "EMPRESA", "VALOR", "DATA EMVIO NAD", "SITUACAO", "PRAZO DE ENTREGA", "DIAS", "OBSERVACAO"
    st.dataframe(df_medicao.iloc[3:16], hide_index=True)
    
 def medicao1():
@@ -27,7 +27,7 @@ def medicao1():
    st.info("Acompanhe o andamento da entrega dos materiais deste pregão")
    
    df_medicao = pd.read_excel("PREGAO 13.xlsx", sheet_name=1)
-   df_medicao.columns=["LOTE", "EMPRESA", "VALOR", "DATA EMVIO NAD", "SITUACAO", "PRAZO DE ENTREGA", "DIAS", "OBSERVACAO"]
+   df_medicao.columns=["LOTE", "EMPRESA", "VALOR", "DATA NAD1", "VALOR NAD1", "SITUAÇAO", "DATA NAD2", "VALOR NAD2"]
    
    
    st.dataframe(df_medicao.iloc[3:16], hide_index=True)
