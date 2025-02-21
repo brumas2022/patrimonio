@@ -41,7 +41,7 @@ def botoes():
 janela = tk.Tk()
 
 janela.title("Cadastro de audiencias")
-janela.geometry("1000x1000+100+100")
+janela.geometry("500x500+100+100")
 
 menubar = tk.Menu()
 filemenu = tk.Menu(menubar, tearoff=False)
@@ -51,7 +51,7 @@ filemenu.add_command(label="Mostrar processo", command=mostrar)
 filemenu.add_command(label="Mostrar botoes", command=botoes)
 filemenu.add_separator()
 filemenu.add_command(label="Exit", command=janela.quit)
-menubar.add_cascade(label="File", menu=filemenu)
+menubar.add_cascade(label="Zezinho", menu=filemenu)
 janela.config(menu=menubar)
 
 
