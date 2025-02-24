@@ -14,7 +14,7 @@ colimage[1].image("logosanear.png", width=300)
 
 def medicao():
    st.header("Controle do PREGAO 013/2024")
-   st.info("Acompanhe o andamento da entrega dos materiais deste pregão")
+   st.info("CAPTAÇÃO DE AGUA BRUTA, ELEVATORIA RC1, ELEVATORIA RC2 E UFMT")
    
    df_medicao = pd.read_excel("PREGAO 13.xlsx", sheet_name=0)
    df_medicao.columns=["LOTE", "EMPRESA", "VALOR", "DATA EMVIO NAD", "SITUACAO", "PRAZO DE ENTREGA", "DIAS", "OBSERVACAO"]
@@ -24,7 +24,7 @@ def medicao():
    
 def medicao1():
    st.header("Controle do PREGAO 014/2024")
-   st.info("Acompanhe o andamento da entrega dos materiais deste pregão")
+   st.info("LOTEAMENTOS CPA, MARIA AMELIA, ALTAMIRANDO II E ALFREDO III")
    
    df_medicao = pd.read_excel("PREGAO 13.xlsx", sheet_name=1)
    df_medicao.columns=["LOTE", "EMPRESA", "VALOR", "DATA NAD1", "VALOR NAD1", "SITUAÇAO", "DATA NAD2", "VALOR NAD2"]
