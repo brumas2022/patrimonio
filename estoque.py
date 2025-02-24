@@ -19,7 +19,7 @@ def medicao():
    df_medicao = pd.read_excel("PREGAO 13.xlsx", sheet_name=0)
    df_medicao.columns=["LOTE", "EMPRESA", "VALOR", "DATA EMVIO NAD", "SITUACAO", "PRAZO DE ENTREGA", "DIAS", "OBSERVACAO"]
    
-   "LOTE", "EMPRESA", "VALOR", "DATA EMVIO NAD", "SITUACAO", "PRAZO DE ENTREGA", "DIAS", "OBSERVACAO"
+   ##"LOTE", "EMPRESA", "VALOR", "DATA EMVIO NAD", "SITUACAO", "PRAZO DE ENTREGA", "DIAS", "OBSERVACAO"
    st.dataframe(df_medicao.iloc[3:16], hide_index=True)
    
 def medicao1():
