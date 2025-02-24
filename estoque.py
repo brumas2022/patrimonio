@@ -32,7 +32,15 @@ def medicao1():
    
    st.dataframe(df_medicao.iloc[3:16], hide_index=True)
      
-     
+def medicao2():
+   st.header("Controle do PREGAO 014/2024")
+   st.info("AMPLIAÇÃO DO SISTEMA DE ABASTECIMETNO DE ÁGUA NA ESTAÇÃO DE TRATAMENTO DE ÁGUA (ETA)")
+   
+   df_medicao = pd.read_excel("PREGAO 13.xlsx", sheet_name=2)
+   df_medicao.columns=["LOTE", "EMPRESA", "VALOR", "DATA NAD1", "VALOR NAD1", "SITUAÇAO", "DATA NAD2", "VALOR NAD2"]
+   
+   
+   st.dataframe(df_medicao.iloc[3:16], hide_index=True)     
 def estoque_zero():
    st.info("As informações desta seção refere-se ao banco de dados da Coplan com todos os itens zerados no estoque")
    df_zero=pd.read_excel("Zero_Estoque_Data_Atual_Excel.xlsx", sheet_name=0)
@@ -92,7 +100,7 @@ data_atualizacao = df.columns[1]
 st.write("Atualizado em :", data_atualizacao)
 
 df.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
-lista_consulta=["POR ITEM", "POR NOME", "TODOS", "ESTOQUE-ZERO", "NAD", "PREGAO 013", "PREGAO 014"]
+lista_consulta=["POR ITEM", "POR NOME", "TODOS", "ESTOQUE-ZERO", "NAD", "PREGAO 013", "PREGAO 014", "PREGAO 012"]
 
 hoje = datetime.date.today() 
 st.write("A data atual é : ", hoje.strftime("%d/%m/%Y"))
@@ -148,7 +156,9 @@ elif consulta=="PREGAO 013":
 
 elif consulta=="PREGAO 014":
    medicao1()        
-   
+
+elif consulta=="PREGAO 012":
+   medicao2()
    
    
 
