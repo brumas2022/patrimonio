@@ -40,7 +40,7 @@ def medicao2():
    df_medicao.columns=["LOTE", "EMPRESA", "VALOR", "DATA NAD1", "VALOR NAD1", "SITUAÇAO", "DATA NAD2", "VALOR NAD2"]
    
    
-   st.dataframe(df_medicao.iloc[3:10], hide_index=True)     
+   st.dataframe(df_medicao.iloc[3:8], hide_index=True)     
 def estoque_zero():
    st.info("As informações desta seção refere-se ao banco de dados da Coplan com todos os itens zerados no estoque")
    df_zero=pd.read_excel("Zero_Estoque_Data_Atual_Excel.xlsx", sheet_name=0)
