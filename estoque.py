@@ -39,6 +39,14 @@ def medicao2():
    df_medicao = pd.read_excel("PREGAO 13.xlsx", sheet_name=2)
    df_medicao.columns=["LOTE", "EMPRESA", "VALOR", "DATA NAD1", "VALOR NAD1", "SITUAÇAO", "DATA NAD2", "VALOR NAD2"]
    
+   st.dataframe(df_medicao, hide_index=True, column_config={
+        "DATA NAD1": st.column_config.DatetimeColumn(
+            "DATA NAD1",
+            format="D MMM YYYY, h:mm a",
+            
+        ),
+    })
+   
    
    st.dataframe(df_medicao.iloc[3:8], hide_index=True)     
 def estoque_zero():
