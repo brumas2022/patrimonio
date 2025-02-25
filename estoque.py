@@ -13,7 +13,7 @@ colimage[1].image("logosanear.png", width=300)
 
 
 def medicao():
-   st.header("Controle do PREGAO 013/2024")
+   #st.header("Controle do PREGAO 013/2024")
    st.info("CAPTAÇÃO DE AGUA BRUTA, ELEVATORIA RC1, ELEVATORIA RC2 E UFMT")
    
    df_medicao = pd.read_excel("PREGAO 13.xlsx", sheet_name=0)
@@ -23,7 +23,7 @@ def medicao():
    st.dataframe(df_medicao.iloc[3:16], hide_index=True)
    
 def medicao1():
-   st.header("Controle do PREGAO 014/2024")
+   #st.header("Controle do PREGAO 014/2024")
    st.info("LOTEAMENTOS CPA, MARIA AMELIA, ALTAMIRANDO II E ALFREDO III")
    
    df_medicao = pd.read_excel("PREGAO 13.xlsx", sheet_name=1)
@@ -33,7 +33,7 @@ def medicao1():
    st.dataframe(df_medicao.iloc[3:16], hide_index=True)
      
 def medicao2():
-   st.header("Controle do PREGAO 014/2024")
+   #st.header("Controle do PREGAO 014/2024")
    st.info("AMPLIAÇÃO DO SISTEMA DE ABASTECIMETNO DE ÁGUA NA ESTAÇÃO DE TRATAMENTO DE ÁGUA (ETA)")
    
    df_medicao = pd.read_excel("PREGAO 13.xlsx", sheet_name=2)
