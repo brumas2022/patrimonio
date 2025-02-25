@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 
 df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
+df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=2)
 
 st.set_page_config("Consulta contratos de obra", layout="wide")
 lista_contratos=["TECNOBOMBAS", "MASTER", "SPARTACUS", "MENEGUETI"]
@@ -24,6 +25,7 @@ with tab1:
         
     with t12:
         st.write("Medição nro")
+        st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
         
     with t13:
         st.write("Relatorio")
