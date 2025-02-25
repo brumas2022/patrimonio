@@ -42,7 +42,7 @@ def medicao2():
    st.dataframe(df_medicao, hide_index=True, column_config={
         "DATA NAD1": st.column_config.DatetimeColumn(
             "DATA NAD1",
-            format="%d/%mm/%Y",
+            format="D MM YYYY",
             
         ),
     })
