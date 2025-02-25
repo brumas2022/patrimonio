@@ -1,9 +1,9 @@
 import streamlit as st 
 
 st.set_page_config("Consulta contratos de obra", layout="wide")
-lista_contratos=["TECNOBOMBAS", "MASTER", "SPARTACUS"]
+lista_contratos=["TECNOBOMBAS", "MASTER", "SPARTACUS", "MENEGUETI"]
 lista_dados=["Dados", "Medições", "Relatorios"]
-tab1, tab2, teab3 = st.tabs(lista_contratos)
+tab1, tab2, tab3, tab4 = st.tabs(lista_contratos)
 with tab1:
     
     t11, t12, t13 = st.tabs(lista_dados)
