@@ -22,6 +22,8 @@ with tab1:
         data_inicio = col[0].text_input("DATA INICIAL", value=f"{df_contratos.iloc[n,4].strftime("%d/%m/%Y")}")
         data_fim = col[0].text_input("DATA FINAL", value=f"{df_contratos.iloc[n,5].strftime("%d/%m/%Y")}")
         
+        ordem_inicio = col[1].text_input("Data da ordem de inicio", value= f"{df_contratos.iloc[n,14]}")
+        
         
     with t12:
         st.write("Medição nro")
