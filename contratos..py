@@ -1,8 +1,8 @@
 import streamlit as st 
 
-lista_contratos=["TECNOBOMBAS", "MASTER", "SPARTACUS"]
+lista_contratos=["TECNOBOMBAS", "MASTER", "SPARTACUS", "MENEGUETI"]
 lista_dados=["Dados", "Medições", "Relatorios"]
-tab1, tab2, teab3 = st.tabs(lista_contratos)
+tab1, tab2, teab3, tab4 = st.tabs(lista_contratos)
 with tab1:
     
     t11, t12, t13 = st.tabs(lista_dados)
