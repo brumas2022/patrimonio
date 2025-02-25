@@ -41,7 +41,7 @@ licitacao = col[0].text_input("LICITACAO N°/ANO", value=f"{df_contratos.iloc[n,
 portaria_nro = col[1].text_input("Numero da portaria", value=f"{df_contratos.iloc[n,11]}")
 portaria_data = col[1].text_input("Data portaria", value=f"{df_contratos.iloc[n,12].strftime("%d/%m/%Y")}")
 
-ordem_inicio = col[1].text_input("Data da ordem de inicio", value= f"{df_contratos.iloc[n,13]}")
+ordem_inicio = col[2].text_input("Data da ordem de inicio", value= f"{df_contratos.iloc[n,14]}")
 
 obs = col[1].text_input("Observação")
 data_relatorio = col[1].date_input("Data do relatorio")
