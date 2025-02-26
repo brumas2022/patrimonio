@@ -47,7 +47,7 @@ def medicao2():
    #     ),
    # })
    
-   
+   st.download_button("tabela", file_name="controle_nad.xlsx")
    st.dataframe(df_medicao.iloc[3:8], hide_index=True)     
 def estoque_zero():
    st.info("As informações desta seção refere-se ao banco de dados da Coplan com todos os itens zerados no estoque")
