@@ -11,6 +11,14 @@ st.set_page_config("Consulta estoque SANEAR", layout="wide")
 colimage = st.columns((1,1,1))
 colimage[1].image("logosanear.png", width=300)
 
+def entrar():
+   usuario=st.text_input("Digite seu nome")
+   senha=st.text_input("Digite sua senha")
+   go=st.button("GO")
+   if go:   
+      pass
+         
+      
 
 def medicao():
    #st.header("Controle do PREGAO 013/2024")
@@ -48,8 +56,13 @@ def medicao2():
    # })
    
    
-   st.dataframe(df_medicao.iloc[3:8], hide_index=True)     
+   st.dataframe(df_medicao.iloc[3:8], hide_index=True)
+   with open("PREGAO 13.xlsx", "rb") as file: 
+      st.download_button(label='PLANILHA ORIGINAL', data=file, file_name="PREGAO 13.xlsx") 
+      
+         
 def estoque_zero():
+   ##entrar()
    st.info("As informações desta seção refere-se ao banco de dados da Coplan com todos os itens zerados no estoque")
    df_zero=pd.read_excel("Zero_Estoque_Data_Atual_Excel.xlsx", sheet_name=0)
    df_zero.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
