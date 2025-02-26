@@ -49,7 +49,7 @@ def medicao2():
    
    
    st.dataframe(df_medicao.iloc[3:8], hide_index=True) 
-   st.download_button(label='tabela', file_name="controle_nad.xlsx")    
+   st.download_button(label='tabela', data='controle_nad.xlsx')    
 def estoque_zero():
    st.info("As informações desta seção refere-se ao banco de dados da Coplan com todos os itens zerados no estoque")
    df_zero=pd.read_excel("Zero_Estoque_Data_Atual_Excel.xlsx", sheet_name=0)
