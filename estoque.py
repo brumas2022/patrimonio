@@ -10,6 +10,7 @@ import datetime
 st.set_page_config("Consulta estoque SANEAR", layout="wide")
 colimage = st.columns((1,1,1))
 colimage[1].image("logosanear.png", width=300)
+
 def entrar():
    usuario=st.text_input("Digite seu nome")
    senha=st.text_input("Digite sua senha")
