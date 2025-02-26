@@ -14,6 +14,7 @@ colimage[1].image("logosanear.png", width=300)
 def entrar():
    usuario=st.text_input("Digite seu nome")
    senha=st.text_input("Digite sua senha")
+   go=st.button("GO")
    if usuario=="marcos":
       if senha=="123":
          st.write("Entrada liberada")
