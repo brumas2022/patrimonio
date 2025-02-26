@@ -10,7 +10,16 @@ import datetime
 st.set_page_config("Consulta estoque SANEAR", layout="wide")
 colimage = st.columns((1,1,1))
 colimage[1].image("logosanear.png", width=300)
-
+def entrar():
+   usuario=st.text_input("Digite seu nome")
+   senha=st.text_input("Digite sua senha")
+   if usuario=="marcos":
+      if senha=="123":
+         st.write("Entrada liberada")
+      else:
+         st.write("Usuario e senha incorretos")
+         
+      
 
 def medicao():
    #st.header("Controle do PREGAO 013/2024")
@@ -54,6 +63,7 @@ def medicao2():
       
          
 def estoque_zero():
+   entrar()
    st.info("As informações desta seção refere-se ao banco de dados da Coplan com todos os itens zerados no estoque")
    df_zero=pd.read_excel("Zero_Estoque_Data_Atual_Excel.xlsx", sheet_name=0)
    df_zero.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
