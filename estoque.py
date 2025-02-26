@@ -15,8 +15,7 @@ def entrar():
    usuario=st.text_input("Digite seu nome")
    senha=st.text_input("Digite sua senha")
    go=st.button("GO")
-   while usuario!="marcos":
-      st.write("senha incorreta")
+   
          
       
 
