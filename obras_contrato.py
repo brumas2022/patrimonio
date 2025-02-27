@@ -5,7 +5,7 @@ df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
 df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=2)
 
 st.set_page_config("Consulta contratos de obra", layout="wide")
-lista_contratos=["TECNOBOMBAS", "MASTER", "SPARTACUS", "MENEGUETI"]
+lista_contratos=["CTR 007/2024", "MASTER", "SPARTACUS", "MENEGUETI"]
 lista_dados=["Dados", "Medições", "Relatorios"]
 tab1, tab2, tab3, tab4 = st.tabs(lista_contratos)
 with tab1:
