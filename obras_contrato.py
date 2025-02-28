@@ -1,5 +1,6 @@
 import streamlit as st 
 import pandas as pd
+import os
 
 df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
 df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=2)
@@ -23,8 +24,9 @@ with tab1:
         data_fim = col[0].text_input("DATA FINAL", value=f"{df_contratos.iloc[n,5].strftime("%d/%m/%Y")}")
         
         ordem_inicio = col[1].text_input("Data da ordem de inicio", value= f"{df_contratos.iloc[n,14]}")
-        
-        
+        open = st.button("Abrir arquivo")
+        if open:
+            os.startfile('PLANILHA PREGÃO LOTEAMENTOS.pdf')
     with t12:
         
         st.write("Medição nro")
