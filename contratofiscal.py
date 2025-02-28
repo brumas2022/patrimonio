@@ -44,6 +44,8 @@ portaria_data = col[1].text_input("Data portaria", value=f"{df_contratos.iloc[n,
 ordem_inicio = col[2].text_input("Data da ordem de inicio", value= f"{df_contratos.iloc[n,14]}")
 
 obs = col[1].text_input("Observação")
+diligencia = col[1].text_input("Diligencias")
+ocorrecias = col[1].text_input("Ocorrencias")
 data_relatorio = col[1].date_input("Data do relatorio")
 data_relatorio_1 = data_relatorio.strftime("%d/%m/%Y")
 st.dataframe(df_contratos)
@@ -95,10 +97,10 @@ if enviar:
     pdf.rect(10, 180, 30, 30)
     pdf.rect(10, 210, 30, 30)
     pdf.text(11, 125, txt="Ocorrencias")
-    pdf.text(51, 125, txt="Sem ocorrências")  #texto da ocorrencia
+    pdf.text(51, 125, txt=ocorrecias)  #texto da ocorrencia
 
     pdf.text(11, 155, txt="Diligencias")
-    pdf.text(51, 155, txt="Sem diligência.") # texto da diligencia
+    pdf.text(51, 155, txt=diligencia) # texto da diligencia
     pdf.text(11, 160, txt="demandas e")
     pdf.text(11, 165, txt="providências")
     pdf.text(11, 170, txt="adotadas")
