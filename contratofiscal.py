@@ -134,8 +134,8 @@ if enviar:
     pdf.rect(110, 268, 90, 16)
 
 
-
-    pdf.output(f"C:/Users/Compras/Desktop/2024/fiscaldecontratos/relatorio {empresa}.pdf")
+    
+    pdf.output(f"C:/Users/Compras/Desktop/2024/fiscaldecontratos/CTR {nro_contrato.replace("/", "-")} {empresa}.pdf")
     
 
 
