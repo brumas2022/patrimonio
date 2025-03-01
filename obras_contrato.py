@@ -8,6 +8,7 @@ df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=3)
 st.set_page_config("Consulta contratos de obra", layout="wide")
 
 def dados_contrato(n):
+    df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
     nro_contrato = col[0].text_input("CONTRATO/ANO", value=f"{df_contratos.iloc[n,1]}")
     empresa = col[0].text_input("EMPRESA", value=f"{df_contratos.iloc[n,2]}")
     objeto = col[0].text_input("OBJETO", value=f"{df_contratos.iloc[n,3]}")
@@ -52,7 +53,7 @@ with tab2:
     
     with t21:
         st.write("Contrado Nro")
-        dados_contrato()
+        dados_contrato(15)
     with t22:
         st.write("Medição nro")
     with t23:
