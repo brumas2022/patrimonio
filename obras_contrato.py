@@ -39,7 +39,7 @@ with tab2:
     t21, t22, t23 = st.tabs(lista_dados) 
        
     with t21:
-        n=12
+        n=10
         col = st.columns((1,1,1))
         nro_contrato = col[0].text_input("CONTRATO/ANO", value=f"{df_contratos.iloc[n,1]}")
         empresa = col[0].text_input("EMPRESA", value=f"{df_contratos.iloc[n,2]}")
