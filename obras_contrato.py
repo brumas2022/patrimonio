@@ -30,9 +30,10 @@ with tab1:
     with t12:
         
         st.write("Medição nro")
-        st.dataframe(df_medicao["CONTRATO"=="009/2022"])
-        df_selecao=df_medicao.groupby(by='CONTRATO').sum(numeric_only=True)
-        st.dataframe(df_selecao)
+        st.dataframe(df_medicao)
+        #st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
+        #df_selecao=df_medicao.groupby(by='CONTRATO').sum(numeric_only=True)
+        #st.dataframe(df_selecao)
     with t13:
         st.write("Relatorio")
         
