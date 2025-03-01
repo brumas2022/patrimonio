@@ -34,7 +34,7 @@ with tab1:
         st.dataframe(df_selecao)
     with t13:
        st.write(df_contratos.iloc[n,1]) 
-       #nro_contrato = col[0].text_input("CONTRATO/ANO", value=f"{df_contratos.iloc[n,1]}")
+       nro_contrato = col[0].text_input("CONTRATO/ANO", value=f"{df_contratos.iloc[n,1]}")
        empresa = col[0].text_input("EMPRESA", value=f"{df_contratos.iloc[n,2]}")
        objeto = col[0].text_input("OBJETO", value=f"{df_contratos.iloc[n,3]}")
        valor = col[0].text_input("VALOR", value=f"{df_contratos.iloc[n,7]}")
