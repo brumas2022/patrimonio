@@ -3,7 +3,7 @@ import pandas as pd
 import os
 
 df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
-df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=2)
+df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=3)
 
 st.set_page_config("Consulta contratos de obra", layout="wide")
 lista_contratos=["TECNOBOMBAS", "MASTER", "SPARTACUS", "MENEGUETI", "MILLENIUM", "RST ENGENHARIA", "SM7"]
