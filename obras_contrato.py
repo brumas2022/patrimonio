@@ -52,7 +52,7 @@ with tab2:
     
     with t21:
         st.write("Contrado Nro")
-        dados_contrato(15)
+        dados_contrato()
     with t22:
         st.write("Medição nro")
     with t23:
