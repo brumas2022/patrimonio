@@ -50,6 +50,7 @@ with tab1:
 with tab2:
     t21, t22, t23 = st.tabs(lista_dados) 
     t21.subheader("Contrato 007/2024", divider="blue")
+    t21.button("Aperte aqui")
     
     with t21:
         st.write("Contrado Nro")
