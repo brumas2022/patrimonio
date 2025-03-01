@@ -33,7 +33,7 @@ with tab1:
         df_selecao=df_medicao.groupby(by='CONTRATO').sum(numeric_only=True)
         st.dataframe(df_selecao)
     with t13:
-       st.write(df_contratos.iloc[n,1]) 
+       st.write("Numero do Contrato", df_contratos.iloc[n,1]) 
        nro_contrato = col[0].text_input("CONTRATO/ANO", value=f"{df_contratos.iloc[n,1]}")
        empresa = col[0].text_input("EMPRESA", value=f"{df_contratos.iloc[n,2]}")
        objeto = col[0].text_input("OBJETO", value=f"{df_contratos.iloc[n,3]}")
