@@ -169,7 +169,7 @@ elif consulta=="TODOS":
       b="102030"
       botao_submit = form.form_submit_button("Confirma!")
    if a==b:
-      st.write({'email'} "Vc acertou!!!")
+      st.write("{email} Vc acertou!!!")
       st.dataframe(df.iloc[3:], hide_index=True)
 
    
