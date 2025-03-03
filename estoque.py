@@ -5,6 +5,9 @@ import openpyxl
 from openpyxl import load_workbook
 import webbrowser
 import datetime
+import os
+#from dotenv import load_dotenv
+import dotenv
 
 
 st.set_page_config("Consulta estoque SANEAR", layout="wide")
@@ -161,7 +164,15 @@ elif consulta=="POR NOME":
    
    
 elif consulta=="TODOS":
-   st.dataframe(df.iloc[3:], hide_index=True)
+   form = st.form(key="Caes", clear_on_submit=True)
+   with form:
+      email = st.text_input("Digite seum email")
+      a=st.text_input("Entre com a senha", type="password" )
+      b=os.getenv("senha")
+      botao_submit = form.form_submit_button("Confirma!")
+   if a==b:
+      st.write("Vc acertou!!!")
+      st.dataframe(df.iloc[3:], hide_index=True)
 
    
 elif consulta=="ESTOQUE-ZERO":
