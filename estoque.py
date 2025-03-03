@@ -168,7 +168,7 @@ elif consulta=="TODOS":
       a=st.text_input("Entre com a senha", type="password" )
       b="102030"
       botao_submit = form.form_submit_button("Confirma!")
-      if a==b and a in lista:
+      if a==b and email in lista:
           st.write(f"{email}, vc acertou!!!")
           st.dataframe(df.iloc[3:], hide_index=True)
       if a!="":
