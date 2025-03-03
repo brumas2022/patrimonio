@@ -170,7 +170,7 @@ elif consulta=="TODOS":
       b="102030"
       botao_submit = form.form_submit_button("Confirma!")
       if a==b and email in lista:
-          st.write(f"{email}, vc acertou!!!")
+          st.write(f"{email}, acesso liberado!!!")
           st.dataframe(df.iloc[3:], hide_index=True)
       if a!="":
           st.write(f"{email}, a senha está incorreta. Verifique como desenvolvedor do produto")
