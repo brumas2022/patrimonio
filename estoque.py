@@ -161,12 +161,12 @@ elif consulta=="POR NOME":
    
    
 elif consulta=="TODOS":
-   col_todos = st.columns((1,1))
-   form = col_todos[0].form(key="Caes", clear_on_submit=True)
+   
+   form = st.form(key="Caes", clear_on_submit=True, border=True, )
    with form:
       lista = ["marcos", "maria", "pitoca"]
-      email = col_todos[0].text_input("Qual o seu nome")
-      a=col_todos[0].text_input("Entre com a senha", type="password" )
+      email = st.text_input("Qual o seu nome")
+      a=st.text_input("Entre com a senha", type="password" )
       b="102030"
       botao_submit = form.form_submit_button("Confirma!")
       if a==b and email in lista:
