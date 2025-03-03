@@ -170,7 +170,7 @@ elif consulta=="TODOS":
       if a==b:
           st.write(f"{email}, vc acertou!!!")
           st.dataframe(df.iloc[3:], hide_index=True)
-      else:
+      if a!="":
           st.write(f"{email}, a senha está incorreta. Verifique como desenvolvedor do produto")
    
 elif consulta=="ESTOQUE-ZERO":
