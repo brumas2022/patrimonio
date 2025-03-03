@@ -162,7 +162,7 @@ elif consulta=="POR NOME":
    
 elif consulta=="TODOS":
    col_todos = st.columns((1,1))
-   form = st.form(key="Caes", clear_on_submit=True)
+   form = col_todos[0].form(key="Caes", clear_on_submit=True)
    with form:
       lista = ["marcos", "maria", "pitoca"]
       email = col_todos[0].text_input("Qual o seu nome")
