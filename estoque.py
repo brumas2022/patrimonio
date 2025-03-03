@@ -7,7 +7,7 @@ import webbrowser
 import datetime
 import os
 #from dotenv import load_dotenv
-import dotenv
+#import dotenv
 
 
 st.set_page_config("Consulta estoque SANEAR", layout="wide")
@@ -168,7 +168,8 @@ elif consulta=="TODOS":
    with form:
       email = st.text_input("Digite seum email")
       a=st.text_input("Entre com a senha", type="password" )
-      b=os.getenv("senha")
+      #b=os.getenv("senha")
+      b="marcos"
       botao_submit = form.form_submit_button("Confirma!")
    if a==b:
       st.write("Vc acertou!!!")
