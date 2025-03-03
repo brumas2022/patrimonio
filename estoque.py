@@ -167,11 +167,11 @@ elif consulta=="TODOS":
       a=st.text_input("Entre com a senha", type="password" )
       b="102030"
       botao_submit = form.form_submit_button("Confirma!")
-   if a==b:
-      st.write(f"{email} Vc acertou!!!")
-      st.dataframe(df.iloc[3:], hide_index=True)
-   elif a!=b:
-      st.write(f"{email}, a senha está incorreta. Verifique como desenvolvedor do produto")
+      if a==b:
+         st.write(f"{email} Vc acertou!!!")
+         st.dataframe(df.iloc[3:], hide_index=True)
+      elif a!=b:
+         st.write(f"{email}, a senha está incorreta. Verifique como desenvolvedor do produto")
    
 elif consulta=="ESTOQUE-ZERO":
    estoque_zero()
