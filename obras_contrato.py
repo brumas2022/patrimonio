@@ -71,3 +71,14 @@ with tab3:
     with t33:
         st.write("Relatorios")
         
+with tab4:
+    t41, t42, t43 = st.tabs(lista_dados)
+    
+    with t41:
+        n=24
+        st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto"])])
+        nro_contrato = f"{df_contratos.iloc[n,1]}"
+    with t42:
+         st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
+    with t43:
+        st.write("Relatorios")        
