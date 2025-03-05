@@ -23,7 +23,7 @@ st.set_page_config("Consulta contratos de obra", layout="wide")
 
 #senha()
 
-lista_contratos=["TECNOBOMBAS", "MASTER", "SPARTACUS", "MENEGUETI", "MILLENIUM", "RST ENGENHARIA", "SM7", "RESUMO"]
+lista_contratos=["TECNOBOMBAS", "MASTER", "SPARTACUS", "MENEGUETI", "GEOPOÇOS", "RST ENGENHARIA", "SM7", "RESUMO"]
 lista_dados=["Dados", "Medições", "Relatorios"]
 tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs(lista_contratos)
 with tab1:
@@ -81,4 +81,16 @@ with tab4:
     with t42:
          st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
     with t43:
-        st.write("Relatorios")        
+        st.write("Relatorios")
+        
+with tab5:
+    t51, t52, t53 = st.tabs(lista_dados)
+    
+    with t51:
+        n=29
+        st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto"])])
+        nro_contrato = f"{df_contratos.iloc[n,1]}"
+    with t52:
+         st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
+    with t53:
+        st.write("Relatorios")          
