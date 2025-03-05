@@ -10,6 +10,6 @@ for paragrafo in documento.paragraphs:
     st.write(paragrafo.text)
     
 documento.add_paragraph("Mais um paragrafo aqui")
-
+documento.add_picture("organo.jpg")
 
 documento.save("Novo_arquivo.docx")
