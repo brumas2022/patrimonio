@@ -2,10 +2,26 @@ import streamlit as st
 import pandas as pd
 import os
 
+def senha():
+    form = st.form(key="Obras", clear_on_submit=True)
+    with form:
+        lista = ["marcos", "maria", "pitoca"]
+        email = st.text_input("Qual o seu nome")
+        a=st.text_input("Entre com a senha", type="password" )
+        b="102030"
+        botao_submit = form.form_submit_button("Confirma!")
+        if a==b and email in lista:
+            st.write(f"{email}, acesso liberado!!!")
+            #st.dataframe(df.iloc[3:], hide_index=True)
+        if a!="":
+             st.write(f"{email}, a senha está incorreta. Verifique como desenvolvedor do produto")
+
 df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
 df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=3)
 
 st.set_page_config("Consulta contratos de obra", layout="wide")
+
+#senha()
 
 lista_contratos=["TECNOBOMBAS", "MASTER", "SPARTACUS", "MENEGUETI", "MILLENIUM", "RST ENGENHARIA", "SM7"]
 lista_dados=["Dados", "Medições", "Relatorios"]
