@@ -135,7 +135,7 @@ if enviar:
 
 
     
-    pdf.output(f"C:/Users/Compras/Desktop/2024/fiscaldecontratos/CTR {nro_contrato.replace("/", "-")} {empresa}.pdf")
+    pdf.output(f"C:/Users/Compras/Desktop/2025/RELATORIOS/CTR {nro_contrato.replace("/", "-")} {empresa}.pdf")
     
 
 
