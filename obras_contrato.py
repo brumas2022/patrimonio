@@ -32,7 +32,7 @@ with tab1:
     with t11:
         
         n=11
-        st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto"])])
+        st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto", "valor", "fiscal"])])
         nro_contrato = f"{df_contratos.iloc[n,1]}"
         
         #open = st.button("Abrir arquivo")
