@@ -93,4 +93,40 @@ with tab5:
     with t52:
          st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
     with t53:
-        st.write("Relatorios")          
+        st.write("Relatorios")
+        
+with tab6:
+    t61, t62, t63 = st.tabs(lista_dados)
+    
+    with t61:
+        n=29
+        st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto"])])
+        nro_contrato = f"{df_contratos.iloc[n,1]}"
+    with t62:
+         st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
+    with t63:
+        st.write("Relatorios")
+        
+with tab7:
+    t71, t72, t73 = st.tabs(lista_dados)
+    
+    with t71:
+        n=29
+        st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto"])])
+        nro_contrato = f"{df_contratos.iloc[n,1]}"
+    with t72:
+         st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
+    with t73:
+        st.write("Relatorios")  
+        
+with tab8:
+    t81, t82, t83 = st.tabs(lista_dados)
+    
+    with t81:
+        n=29
+        st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto"])])
+        nro_contrato = f"{df_contratos.iloc[n,1]}"
+    with t82:
+         st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
+    with t83:
+        st.write("Relatorios")              
