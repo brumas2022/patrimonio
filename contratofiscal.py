@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 #from streamlit_extras.colored_header import colored_header
 #from streamlit_extras.add_vertical_space import add_vertical_space
-import psycopg2
+#import psycopg2
 
 #from reportlab.pdfgen import canvas  # impressap de pdf
 import fpdf
