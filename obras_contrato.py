@@ -31,7 +31,7 @@ with tab1:
     t11, t12, t13 = st.tabs(lista_dados)
     with t11:
         
-        n=13
+        n=11
         st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto"])])
         nro_contrato = f"{df_contratos.iloc[n,1]}"
         
