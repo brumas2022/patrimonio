@@ -34,7 +34,7 @@ valor = col[0].text_input("VALOR", value=f"{df_contratos.iloc[n,7]}")
 data_inicio = col[0].text_input("DATA INICIAL", value=f"{df_contratos.iloc[n,4].strftime("%d/%m/%Y")}")
 data_fim = col[0].text_input("DATA FINAL", value=f"{df_contratos.iloc[n,5].strftime("%d/%m/%Y")}")
 
-data_aditivo = col[2].text_input("ULTIMO ADITIVO", value=f"{df_aditivos.iloc[n,3].strftime("%d/%m/%Y")}")
+#data_aditivo = col[2].text_input("ULTIMO ADITIVO", value=f"{df_aditivos.iloc[n,3].strftime("%d/%m/%Y")}")
 
 licitacao = col[0].text_input("LICITACAO N°/ANO", value=f"{df_contratos.iloc[n,8]}")
 
@@ -135,7 +135,7 @@ if enviar:
 
 
     
-    pdf.output(f"C:/Users/Compras/Desktop/2024/fiscaldecontratos/CTR {nro_contrato.replace("/", "-")} {empresa}.pdf")
+    pdf.output(f"C:/Users/Compras/Desktop/2025/RELATORIOS/CTR {nro_contrato.replace("/", "-")} {empresa}.pdf")
     
 
 
