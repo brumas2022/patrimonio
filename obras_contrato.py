@@ -112,7 +112,7 @@ with tab7:
     
     with t71:
         n=4
-        st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto", "prazo"])])
+        st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto", "valor"])])
         nro_contrato = f"{df_contratos.iloc[n,1]}"
         
         
