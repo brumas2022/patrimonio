@@ -23,7 +23,7 @@ st.set_page_config("Consulta contratos de obra", layout="wide")
 
 #senha()
 
-lista_contratos=[":clipboard: TECNOBOMBAS", " :coffee: MASTER", ":green[SPARTACUS]", "MENEGUETI", "GEOPOÇOS", "ALPHA", "SM7", "RESUMO"]
+lista_contratos=[":clipboard: TECNOBOMBAS", " :coffee: MASTER", ":green[SPARTACUS]", "**MENEGUETI**", "GEOPOÇOS", "ALPHA", "SM7", "RESUMO"]
 lista_dados=["Dados", "Medições", "Relatorios"]
 tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs(lista_contratos)
 with tab1:
