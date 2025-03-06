@@ -125,7 +125,7 @@ with tab8:
     t81, t82, t83 = st.tabs(lista_dados)
     
     with t81:
-        n=29
+        n=13
         st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto"])])
         nro_contrato = f"{df_contratos.iloc[n,1]}"
         #df_selecao=df_medicao.groupby(by='CONTRATO').sum(numeric_only=True)
@@ -143,10 +143,10 @@ with tab9:
     
     with t91:
         n=29
-        st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto"])])
-        nro_contrato = f"{df_contratos.iloc[n,1]}"
-        #df_selecao=df_medicao.groupby(by='CONTRATO').sum(numeric_only=True)
-        #st.dataframe(df_selecao)
+        ##st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto"])])
+        ##nro_contrato = f"{df_contratos.iloc[n,1]}"
+        df_selecao=df_medicao.groupby(by='CONTRATO').sum(numeric_only=True)
+        st.dataframe(df_selecao)
         
     with t92:
          st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
