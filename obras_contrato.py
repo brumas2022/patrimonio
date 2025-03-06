@@ -23,7 +23,7 @@ st.set_page_config("Consulta contratos de obra", layout="wide")
 
 #senha()
 
-lista_contratos=["TECNOBOMBAS", "MASTER", "SPARTACUS", "MENEGUETI", "GEOPOÇOS", "RST ENGENHARIA", "SM7", "RESUMO"]
+lista_contratos=[":clipboard: TECNOBOMBAS", " :coffee: MASTER", ":green {[SPARTACUS]}", "MENEGUETI", "GEOPOÇOS", "ALPHA", "SM7", "RESUMO"]
 lista_dados=["Dados", "Medições", "Relatorios"]
 tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs(lista_contratos)
 with tab1:
@@ -93,4 +93,46 @@ with tab5:
     with t52:
          st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
     with t53:
-        st.write("Relatorios")          
+        st.write("Relatorios")
+        
+with tab6:
+    t61, t62, t63 = st.tabs(lista_dados)
+    
+    with t61:
+        n=0
+        st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto"])])
+        nro_contrato = f"{df_contratos.iloc[n,1]}"
+    with t62:
+         st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
+    with t63:
+        st.write("Relatorios")
+        
+with tab7:
+    t71, t72, t73 = st.tabs(lista_dados)
+    
+    with t71:
+        n=4
+        st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto"])])
+        nro_contrato = f"{df_contratos.iloc[n,1]}"
+        
+        
+    with t72:
+         st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
+    with t73:
+        st.write("Relatorios")  
+        
+with tab8:
+    t81, t82, t83 = st.tabs(lista_dados)
+    
+    with t81:
+        #n=29
+        #st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto"])])
+        #nro_contrato = f"{df_contratos.iloc[n,1]}"
+        df_selecao=df_medicao.groupby(by='CONTRATO').sum(numeric_only=True)
+        st.dataframe(df_selecao)
+        
+    with t82:
+         st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
+    with t83:
+        
+        st.write("Relatorios")              
