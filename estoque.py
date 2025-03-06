@@ -40,7 +40,8 @@ def medicao1():
    
    
    st.dataframe(df_medicao.iloc[3:16], hide_index=True)
-     
+   st.markdown(":red[***Ultima atualização em 06/03/2025 - CONSTRUFER entregou TOTAL DA NAD2 no valor de 6.313,03]")
+   
 def medicao2():
    #st.header("Controle do PREGAO 014/2024")
    st.info("AMPLIAÇÃO DO SISTEMA DE ABASTECIMETNO DE ÁGUA NA ESTAÇÃO DE TRATAMENTO DE ÁGUA (ETA)")
