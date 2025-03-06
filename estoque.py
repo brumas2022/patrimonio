@@ -36,7 +36,7 @@ def medicao1():
    st.info("LOTEAMENTOS CPA, MARIA AMELIA, ALTAMIRANDO II E ALFREDO III")
    
    df_medicao = pd.read_excel("PREGAO 13.xlsx", sheet_name=1)
-   df_medicao.columns=["LOTE", "EMPRESA", "VALOR", "DATA NAD1", "VALOR NAD1", "SITUAÇAO", "DATA NAD2", "VALOR NAD2"]
+   df_medicao.columns=["LOTE", "EMPRESA", "VALOR", "DATA NAD1", "VALOR NAD1", "SITUAÇAO", "DATA NAD2", "VALOR NAD2", "SITUACAO 2"]
    
    
    st.dataframe(df_medicao.iloc[3:16], hide_index=True)
