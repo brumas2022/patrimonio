@@ -25,9 +25,9 @@ st.set_page_config("Consulta contratos de obra", layout="wide")
 
 lista_contratos=["TECNOBOMBAS - 004/2023", "MASTER - 028/2023", "SPARTACUS", \
                  "MENEGUETI", "GEOPOÇOS", "ALPHA", "SM7", "MASTER - 034/2022", "SAGATEC", "ELETRIC", \
-                 "LEILOEIRA", "DA GARISTO", "TECNBOMBAS - 007/2024", "RESUMO"]
+                 "LEILOEIRA", "DA GARISTO", "TECNBOMBAS - 007/2024", "UPX", "GENTE", "RESUMO"]
 lista_dados=["Dados", "Medições", "Relatorios"]
-tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11, tab12, tab13, tab14 = st.tabs(lista_contratos)
+tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11, tab12, tab13, tab14, tab15, tab16 = st.tabs(lista_contratos)
 with tab1:
     
     t11, t12, t13 = st.tabs(lista_dados)
@@ -231,14 +231,48 @@ with tab14:
     t141, t142, t143 = st.tabs(lista_dados)
     
     with t141:
+        n=27
+        st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto"])])
+        nro_contrato = f"{df_contratos.iloc[n,1]}"
+        ##df_selecao=df_medicao.groupby(by='CONTRATO').sum(numeric_only=True)
+        ##st.dataframe(df_selecao)
+        
+    with t142:
+         st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
+    with t143:
+        
+        st.write("Relatorios")      
+        
+with tab15:
+        
+    t151, t152, t153 = st.tabs(lista_dados)
+    
+    with t151:
+        n=28
+        st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto"])])
+        nro_contrato = f"{df_contratos.iloc[n,1]}"
+        ##df_selecao=df_medicao.groupby(by='CONTRATO').sum(numeric_only=True)
+        ##st.dataframe(df_selecao)
+        
+    with t152:
+         st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
+    with t153:
+        
+        st.write("Relatorios")   
+
+with tab16:
+        
+    t161, t162, t163 = st.tabs(lista_dados)
+    
+    with t161:
         n=29
         ##st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto"])])
         ##nro_contrato = f"{df_contratos.iloc[n,1]}"
         df_selecao=df_medicao.groupby(by='CONTRATO').sum(numeric_only=True)
         st.dataframe(df_selecao)
         
-    with t142:
+    with t162:
          st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
-    with t143:
+    with t163:
         
-        st.write("Relatorios")             
+        st.write("Relatorios")         
