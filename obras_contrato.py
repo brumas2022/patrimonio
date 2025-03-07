@@ -202,7 +202,7 @@ with tab12:
     with t122:
          df_medicao.style.format(hyperlinks="html")
          #st.dataframe(df_medicao.style.format(thousands=".", decimal=","))
-         st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato].style.format(thousands=".", decimal=","))
+         st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato]))
     with t123:
         
         st.write("Relatorios")             
