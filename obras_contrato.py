@@ -25,7 +25,7 @@ st.set_page_config("Consulta contratos de obra", layout="wide")
 
 lista_contratos=["TECNOBOMBAS - 004/2023", "MASTER - 028/2023", "SPARTACUS", \
                  "MENEGUETI", "GEOPOÇOS", "ALPHA", "SM7", "MASTER - 034/2022", "SAGATEC", "ELETRIC", \
-                 "LEILOEIRA", "DA GARISTO", "TECNBOMBAS - 007/2024" "RESUMO"]
+                 "LEILOEIRA", "DA GARISTO", "TECNBOMBAS - 007/2024", "RESUMO"]
 lista_dados=["Dados", "Medições", "Relatorios"]
 tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11, tab12, tab13, tab14 = st.tabs(lista_contratos)
 with tab1:
