@@ -200,6 +200,7 @@ with tab12:
         ##st.dataframe(df_selecao)
         
     with t122:
+         df_medicao.style.format(thousands=".", decimal=",")
          st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
     with t123:
         
