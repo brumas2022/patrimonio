@@ -193,7 +193,7 @@ with tab12:
     t121, t122, t123 = st.tabs(lista_dados)
     
     with t121:
-        n=221
+        n=21
         st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto"])])
         nro_contrato = f"{df_contratos.iloc[n,1]}"
         ##df_selecao=df_medicao.groupby(by='CONTRATO').sum(numeric_only=True)
