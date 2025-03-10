@@ -23,9 +23,6 @@ st.set_page_config("Consulta contratos de obra", layout="wide")
 
 #senha()
 
-relatorios = st.button("Vai para relatorios")
-if relatorios:
-   st.write("Aqui teremos relatoriso") 
 
 lista_contratos=["TECNOBOMBAS - 004/2023", "MASTER - 028/2023", "SPARTACUS", \
                  "MENEGUETI", "GEOPOÇOS", "ALPHA", "SM7", "MASTER - 034/2022", "SAGATEC", "ELETRIC", \
