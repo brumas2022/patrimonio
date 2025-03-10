@@ -46,8 +46,10 @@ with tab1:
         #df_selecao=df_medicao.groupby(by='CONTRATO').sum(numeric_only=True)
         #st.dataframe(df_selecao)
     with t13:
-        
-       st.dataframe(df_contratos.loc[(11, ["contrato", "empresa", "objeto"])])
+        st.write("Aqui serão disponibilizados os relatorios mensais de acompanhamento da obra")
+        with open("CTR 009-2022 ALPHA CONSTRUTORA EIRELI.pdf", "rb") as file: 
+             st.download_button(label='RELATORIO FEVEREIRO-2025', data=file, file_name="CTR 009-2022 ALPHA CONSTRUTORA EIRELI.pdf")
+      
        
         
 with tab2:
