@@ -42,6 +42,7 @@ def medicao1():
    st.dataframe(df_medicao.iloc[3:16], hide_index=True)
    st.markdown(":red[***Ultima atualização em 06/03/2025 - CONSTRUFER entregou TOTAL DA NAD2 no valor de 6.313,03]")
    st.markdown(":green[***Ultima atualização em 10/03/2025 - CORR PLASTIK emitiu NF no total de 52.972,90]")
+   st.markdown(":red[***Ultima atualização em 11/03/2025 - ENGESAN entregou o lote completo")
    
 def medicao2():
    #st.header("Controle do PREGAO 014/2024")
