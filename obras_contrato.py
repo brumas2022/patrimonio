@@ -23,9 +23,6 @@ st.set_page_config("Consulta contratos de obra", layout="wide")
 
 #senha()
 
-relatorios = st.button("Vai para relatorios")
-if relatorios:
-   st.write("Aqui teremos relatoriso") 
 
 lista_contratos=["TECNOBOMBAS - 004/2023", "MASTER - 028/2023", "SPARTACUS", \
                  "MENEGUETI", "GEOPOÇOS", "ALPHA", "SM7", "MASTER - 034/2022", "SAGATEC", "ELETRIC", \
@@ -49,7 +46,10 @@ with tab1:
         #df_selecao=df_medicao.groupby(by='CONTRATO').sum(numeric_only=True)
         #st.dataframe(df_selecao)
     with t13:
-       st.dataframe(df_contratos.loc[(11, ["contrato", "empresa", "objeto"])])
+        st.write("Aqui serão disponibilizados os relatorios mensais de acompanhamento da obra")
+        with open("CTR_004-2023_TECNOBOMBAS_BOMBAS_MOTORES_E_SERVICOS_LTDA_assinado.pdf", "rb") as file: 
+             st.download_button(label='RELATORIO FEVEREIRO-2025', data=file, file_name="CTR_004-2023_TECNOBOMBAS_BOMBAS_MOTORES_E_SERVICOS_LTDA_assinado.pdf")
+      
        
         
 with tab2:
@@ -111,7 +111,9 @@ with tab6:
     with t62:
          st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
     with t63:
-        st.write("Relatorios")
+        st.write("Aqui serão disponibilizados os relatorios mensais de acompanhamento da obra")
+        with open("CTR 009-2022 ALPHA CONSTRUTORA EIRELI.pdf", "rb") as file: 
+             st.download_button(label='RELATORIO FEVEREIRO-2025', data=file, file_name="CTR 009-2022 ALPHA CONSTRUTORA EIRELI.pdf")
         
 with tab7:
     t71, t72, t73 = st.tabs(lista_dados)
