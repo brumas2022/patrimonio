@@ -16,3 +16,4 @@ w2 = load_workbook("teste_outro.xlsx")
 ws_to_move = w1['Planilha1']
 ws_to_move._parent = w2
 w2._add_sheet(ws_to_move)
+w2.save("teste_outro.xlsx")
