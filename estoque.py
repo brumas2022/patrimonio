@@ -30,6 +30,7 @@ def medicao():
    ##"LOTE", "EMPRESA", "VALOR", "DATA EMVIO NAD", "SITUACAO", "PRAZO DE ENTREGA", "DIAS", "OBSERVACAO"
    st.dataframe(df_medicao.iloc[3:16], hide_index=True)
    st.markdown(":red[***Ultima atualização em 06/03/2025 - V E GOMES entregou ultima peça, um TUBO FERRO FUNDIDO, FLANGE/FLANGE - PN 10 - DN 700MM - L=0,5]")
+   st.markdown(":green[***Ultima atualização em 12/03/2025 - TAF ENTREGOU LOTE PARAFUSOS 125.899,9]")
    
 def medicao1():
    #st.header("Controle do PREGAO 014/2024")

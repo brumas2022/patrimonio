@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import os
 
+
+
 def senha():
     form = st.form(key="Obras", clear_on_submit=True)
     with form:
@@ -20,6 +22,8 @@ df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
 df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=3)
 
 st.set_page_config("Consulta contratos de obra", layout="wide")
+colimage = st.columns((1,1,1))
+colimage[1].image("logosanear.png", width=300)
 
 #senha()
 
