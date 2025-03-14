@@ -22,8 +22,8 @@ def entrar():
 
 def medicao():
    #st.header("Controle do PREGAO 013/2024")
-   def highlight_survived1(s):
-    return ['background-color: darkorange']*len(s) if s['SITUACAO'] == 'AGUARDANDO ENTREGA' else ['background-color: lightgrey']*len(s)
+   #def highlight_survived1(s):
+   # return ['background-color: darkorange']*len(s) if s['SITUACAO'] == 'AGUARDANDO ENTREGA' else ['background-color: lightgrey']*len(s)
    
    st.info("CAPTAÇÃO DE AGUA BRUTA, ELEVATORIA RC1, ELEVATORIA RC2 E UFMT")
    
@@ -31,7 +31,7 @@ def medicao():
    df_medicao.columns=["LOTE", "EMPRESA", "VALOR", "DATA EMVIO NAD", "SITUACAO", "PRAZO DE ENTREGA", "DIAS", "OBSERVACAO"]
    
    ##"LOTE", "EMPRESA", "VALOR", "DATA EMVIO NAD", "SITUACAO", "PRAZO DE ENTREGA", "DIAS", "OBSERVACAO"
-   st.dataframe(df_medicao.iloc[3:16].apply(highlight_survived1, axis=1), hide_index=True)
+   st.dataframe(df_medicao.iloc[3:16], hide_index=True)
    st.markdown(":red[***Ultima atualização em 06/03/2025 - V E GOMES entregou ultima peça, um TUBO FERRO FUNDIDO, FLANGE/FLANGE - PN 10 - DN 700MM - L=0,5]")
    st.markdown(":green[***Ultima atualização em 12/03/2025 - TAF ENTREGOU LOTE PARAFUSOS 125.899,9]")
    st.markdown(":red[***Ultima atualização em 13/03/2025 - TUBCON ENTREGOU 258.900,56 - restante do LOTE 01, lote 03 completo e restante do lote 04]")
