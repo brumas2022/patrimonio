@@ -13,18 +13,18 @@ senha = st.sidebar.selectbox(
     ("Poços", "Elevatorias de Esgoto", "Agencias Comerciais", "Reservatórios")
 )
 if senha == "Poços":
-   st.sidebar.link_button("PT - 01")
-   st.sidebar.link_button("PT - 02")
-   st.sidebar.link_button("PT - 03")
-   st.sidebar.link_button("PT - 04")
-   st.sidebar.link_button("PT - 05")
-   st.sidebar.link_button("PT - 06")
-   st.sidebar.link_button("PT - 07")
-   st.sidebar.link_button("PT - 08")
-   st.sidebar.link_button("PT - 09")
-   st.sidebar.link_button("PT - 10")
-   st.sidebar.link_button("PT - 11")
-   st.sidebar.link_button("PT - 12")
+   st.sidebar.link_button("PT - 01", "https://estoque1.streamlit.app")
+   st.sidebar.link_button("PT - 02", "https://estoque1.streamlit.app")
+   st.sidebar.link_button("PT - 03", "https://estoque1.streamlit.app")
+   st.sidebar.link_button("PT - 04", "https://estoque1.streamlit.app")
+   st.sidebar.link_button("PT - 05", "https://estoque1.streamlit.app")
+   st.sidebar.link_button("PT - 06", "https://estoque1.streamlit.app")
+   st.sidebar.link_button("PT - 07", "https://estoque1.streamlit.app")
+   st.sidebar.link_button("PT - 08", "https://estoque1.streamlit.app")
+   st.sidebar.link_button("PT - 09", "https://estoque1.streamlit.app")
+   st.sidebar.link_button("PT - 10", "https://estoque1.streamlit.app")
+   st.sidebar.link_button("PT - 11", "https://estoque1.streamlit.app")
+   st.sidebar.link_button("PT - 12", "https://estoque1.streamlit.app")
    
 
 if senha=="Elevatorias":
@@ -77,11 +77,11 @@ if senha=="Reservatorios":
     st.sidebar.audio(pedro, format='audio/mpeg')
     st.sidebar.audio(zegeraldo, format='audio/mpeg')
 
-st.header(":green[Sebo do Marcão]", divider="orange")
-st.markdown("Tente fazer coisas diferentes para melhorar o seu dia :musical_note:")
+st.header(":green[SANEAR]", divider="orange")
+st.markdown("Estrutura do SANEAR")
 st.write("---")
 #st.image("IMG_20220616_220024.jpg")
-st.image("crie_uma_imagem_de_um_violao_inteirona_diagonal_ladeado_por_livros_e_notas_musicais_png.png")
+st.image("img.png")
 
 
 
@@ -94,19 +94,17 @@ cols[4].link_button("CATRACA", "https://catracalivre.com.br/", use_container_wid
 cols[5].link_button("DOU", "https://www.in.gov.br/servicos/diario-oficial-da-uniao", use_container_width=True)
 
 
-a = st.selectbox("Escolha a opção desejada",("Mensagem para o Marcao", "Desejar bom dia ao Marcao", "Desejar boa noite ao Marcao"))
-if a == "Mensagem para o Marcao":
+a = st.selectbox("Escolha a opção desejada",("Elogio SANEAR", "Reclamação SANEAR", "Sugestão SANEAR"))
+if a == "Elogio SANEAR":
   nome = st.text_input("Digite seu nome")
   prompt = st.chat_input("Say something")
   if prompt:
       st.write(f"{nome} enviou a seguinte mensagem : {prompt}")
-elif a == "Desejar bom dia ao Marcao":
-  st.markdown("BOM DIA, MARCAO")
-  st.markdown("Com fé, chegamos la")
+elif a == "Reclamação SANEAR":
+  st.markdown("Reclamação SANEAR")
   st.balloons()
   
-elif a ==  "Desejar boa noite ao Marcao":
-  st.markdown("BOA NOITE, MARCAO")
-  st.markdown("Espero estar melhor no outro dia....boa noite")
+elif a ==  "Sugestão SANEAR":
+  st.markdown("Sugestão SANEAR")
   st.snow()
   st.write("---")
