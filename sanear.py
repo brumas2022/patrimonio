@@ -3,14 +3,14 @@ import os
 #from dotenv import load_dotenv
 import st_pages 
 from st_pages import add_page_title
-from elevatorias import ipanema
+from elevatorias import ipanema, p01, p02
 
 
 with open('style.css') as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-def inicio():
-    st.header("Estrutura do SANEAR", divider="orange")
+
+st.header("Estrutura do SANEAR", divider="orange")
     
         
 
@@ -20,8 +20,8 @@ senha = st.sidebar.selectbox(
     ("Poços", "Elevatorias de Esgoto", "Agencias Comerciais", "Reservatorios")
 )
 if senha == "Poços":
-   st.sidebar.link_button("P - 01", "https://estoque1.streamlit.app", use_container_width=True)
-   st.sidebar.link_button("P - 02", "https://estoque1.streamlit.app", use_container_width=True)
+   st.sidebar.button("P - 01", on_click=p01, use_container_width=True)
+   st.sidebar.button("P - 02", on_click=p02, use_container_width=True)
    st.sidebar.link_button("P - 03", "https://estoque1.streamlit.app", use_container_width=True)
    st.sidebar.link_button("P - 04", "https://estoque1.streamlit.app", use_container_width=True)
    st.sidebar.link_button("P - 05", "https://estoque1.streamlit.app", use_container_width=True)
@@ -74,7 +74,7 @@ if senha=="Reservatorios":
         
     
 
-inicio()
+
 
 
 
