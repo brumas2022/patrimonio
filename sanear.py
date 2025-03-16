@@ -6,6 +6,13 @@ from st_pages import add_page_title
 from elevatorias import ipanema
 
 
+with open('style.css') as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+def inicio():
+    st.header("Estrutura do SANEAR", divider="orange")
+    
+        
 
 
 senha = st.sidebar.selectbox(
@@ -67,35 +74,16 @@ if senha=="Reservatorios":
         
     
 
-st.header(":green[SANEAR]", divider="orange")
-st.markdown("Estrutura do SANEAR")
-st.write("---")
-#st.image("IMG_20220616_220024.jpg")
-st.image("img.png")
+inicio()
 
 
 
-cols = st.columns((0.75,1,1.25,1,1,1))
-cols[0].link_button("PCI", "https://www.pciconcursos.com.br/", use_container_width=True)
-cols[1].link_button("SANEAR", "https://www.sanearmt.com.br", use_container_width=True)
-cols[2].link_button("PREFEITURA", "http://www.rondonopolis.mt.gov.br", use_container_width=True)
-cols[3].link_button("A TRIBUNA", "https://www.atribunamt.com.br", use_container_width=True)
-cols[4].link_button("CATRACA", "https://catracalivre.com.br/", use_container_width=True)
-cols[5].link_button("DOU", "https://www.in.gov.br/servicos/diario-oficial-da-uniao", use_container_width=True)
+#cols = st.columns((0.75,1,1.25,1,1,1))
+#cols[0].link_button("PCI", "https://www.pciconcursos.com.br/", use_container_width=True)
+#cols[1].link_button("SANEAR", "https://www.sanearmt.com.br", use_container_width=True)
+#cols[2].link_button("PREFEITURA", "http://www.rondonopolis.mt.gov.br", use_container_width=True)
+#cols[3].link_button("A TRIBUNA", "https://www.atribunamt.com.br", use_container_width=True)
+#cols[4].link_button("CATRACA", "https://catracalivre.com.br/", use_container_width=True)
+#cols[5].link_button("DOU", "https://www.in.gov.br/servicos/diario-oficial-da-uniao", use_container_width=True)
 
 
-a = st.selectbox("Escolha a opção desejada",("Elogio SANEAR", "Reclamação SANEAR", "Sugestão SANEAR"))
-if a == "Elogio SANEAR":
-  nome = st.text_input("Digite seu nome")
-  prompt = st.chat_input("Say something")
-  if prompt:
-      st.write(f"{nome} enviou a seguinte mensagem : {prompt}")
-elif a == "Reclamação SANEAR":
-  st.markdown("Reclamação SANEAR")
-  st.balloons()
-  
-elif a ==  "Sugestão SANEAR":
-  st.markdown("Sugestão SANEAR")
-  st.snow()
-  ipanema()
-  st.write("---")
