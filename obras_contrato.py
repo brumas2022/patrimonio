@@ -81,6 +81,7 @@ with tab3:
          st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
     with t33:
         st.write("Relatorios")
+        st.dataframe(df_medicao.dtypes)
         
 with tab4:
     t41, t42, t43 = st.tabs(lista_dados)
