@@ -30,6 +30,7 @@ def relatorios():
 st.sidebar.header("Contratos")
 st.sidebar.button("TECNOBOMBAS - 004/2023", use_container_width=True)
 st.sidebar.button("MASTER - 028/2023", use_container_width=True)
+st.sidebar.button("SPARTACUS", use_container_width=True)
 
 lista_contratos=["TECNOBOMBAS - 004/2023", "MASTER - 028/2023", "SPARTACUS", \
                  "MENEGUETI", "GEOPOÇOS", "ALPHA", "SM7", "MASTER - 034/2022", "SAGATEC", "ELETRIC", \
