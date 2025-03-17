@@ -75,7 +75,7 @@ with tab3:
     
     with t31:
         n=23
-        st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto"])])
+        st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto", f"valor"])])
         nro_contrato = f"{df_contratos.iloc[n,1]}"
     with t32:
          st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
