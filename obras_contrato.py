@@ -40,13 +40,12 @@ with tab1:
         
         n=11
         st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto"])])
-            
+        nro_contrato = f"{df_contratos.iloc[n,1]}"
+        
         #open = st.button("Abrir arquivo")
         #if open:
         #    os.startfile('PLANILHA PREGÃO LOTEAMENTOS.pdf')
     with t12:
-        n=11
-        nro_contrato = f"{df_contratos.iloc[n,1]}"
         st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
         #df_selecao=df_medicao.groupby(by='CONTRATO').sum(numeric_only=True)
         #st.dataframe(df_selecao)
