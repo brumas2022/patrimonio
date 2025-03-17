@@ -13,7 +13,7 @@ df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=3)
 def dados():
     n=11
     df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
-    st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto"])])
+    st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto", "valor", "fiscal"])])
     #st.write("dados do contrato")
 
 def medicoes():
