@@ -14,7 +14,7 @@ df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=3)
 def dados(n):
     #n=11
     df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
-    st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto"])])
+    st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto", "valor", "fiscal"])])
     #st.write("dados do contrato")
 
 def medicoes(n):
@@ -34,6 +34,16 @@ def medicoes(n):
 def relatorios():
     st.write('relatorios')
 
+<<<<<<< HEAD
+=======
+
+
+st.sidebar.header("Contratos")
+st.sidebar.button("TECNOBOMBAS - 004/2023", use_container_width=True)
+st.sidebar.button("MASTER - 028/2023", use_container_width=True)
+st.sidebar.button("SPARTACUS", use_container_width=True)
+
+>>>>>>> 28971044d69f0b0564828891214c360d1abcff9b
 lista_contratos=["TECNOBOMBAS - 004/2023", "MASTER - 028/2023", "SPARTACUS", \
                  "MENEGUETI", "GEOPOÇOS", "ALPHA", "SM7", "MASTER - 034/2022", "SAGATEC", "ELETRIC", \
                  "LEILOEIRA", "DA GARISTO", "TECNBOMBAS - 007/2024", "UPX", "GENTE", "RESUMO"]
