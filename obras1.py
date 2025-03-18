@@ -109,7 +109,7 @@ if e:
    with t13:
        relatorios()  
        
-if e:
+if f:
    t11, t12, t13 = st.tabs(lista_dados)
    with t11:
        dados(0)
@@ -117,6 +117,16 @@ if e:
        medicoes(0)
 
    with t13:
-       relatorios()  
+       relatorios() 
+       
+if g:
+   t11, t12, t13 = st.tabs(lista_dados)
+   with t11:
+       dados(4)
+   with t12:
+       medicoes(4)
+
+   with t13:
+       relatorios() 
     
     
