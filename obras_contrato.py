@@ -39,12 +39,18 @@ with tab1:
     with t11:
         
         n=11
+<<<<<<< HEAD
         st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto"])])
         nro_contrato = f"{df_contratos.iloc[n,1]}"
         
         #open = st.button("Abrir arquivo")
         #if open:
         #    os.startfile('PLANILHA PREGÃO LOTEAMENTOS.pdf')
+=======
+        st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto", "valor"])])
+            
+        
+>>>>>>> 28971044d69f0b0564828891214c360d1abcff9b
     with t12:
         st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
         #df_selecao=df_medicao.groupby(by='CONTRATO').sum(numeric_only=True)
@@ -61,11 +67,12 @@ with tab2:
        
     with t21:
         n=10
-        st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto"])])
+        st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto", "valor"])])
         nro_contrato = f"{df_contratos.iloc[n,1]}"
         
     with t22:
         st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
+        
     with t23:
         st.write("Relatorio")
         
@@ -74,12 +81,13 @@ with tab3:
     
     with t31:
         n=23
-        st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto"])])
+        st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto", "valor"])])
         nro_contrato = f"{df_contratos.iloc[n,1]}"
     with t32:
          st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
     with t33:
         st.write("Relatorios")
+        
         
 with tab4:
     t41, t42, t43 = st.tabs(lista_dados)
