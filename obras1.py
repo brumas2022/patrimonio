@@ -23,9 +23,11 @@ def medicoes(n):
     nro_contrato = f"{df_contratos.iloc[n,1]}"
     st.dataframe(df_medicao[df_medicao["CONTRATO"]==nro_contrato])
     #df_medicao.dtypes
+    df_y = df_medicao['VALOR'].tolist()
+    st.dataframe(df_y)
     df_x=[1, 2, 3, 4, 5, 6, 7, 8]
-    df_y=[93264, 89785, 143861, 92502, 192910, 117159, 104735, 101971]
-    st.bar_chart(df_y)
+    #df_y=[93264, 89785, 143861, 92502, 192910, 117159, 104735, 101971]
+    #st.bar_chart(df_y)
     #print(df_medicao["VALOR"])
     #fig, ax = plt.subplots(figsize = (8,5))
     #ax.bar(df_x, df_y)
