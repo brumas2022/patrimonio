@@ -38,7 +38,7 @@ def medicoes(n):
     #df_medicao[df_medicao["CONTRATO"==nro_contrato]]
     #st.dataframe(df_x)
 def relatorios():
-    st.write('relatorios')
+    st.write('Aqui serão colocados os relatorios mensais da obra')
 
 lista_contratos=["TECNOBOMBAS - 004/2023", "MASTER - 028/2023", "SPARTACUS", \
                  "MENEGUETI", "GEOPOÇOS", "ALPHA", "SM7", "MASTER - 034/2022", "SAGATEC", "ELETRIC", \
@@ -107,6 +107,16 @@ if e:
        medicoes(29)
 
    with t13:
-       relatorios()   
+       relatorios()  
+       
+if e:
+   t11, t12, t13 = st.tabs(lista_dados)
+   with t11:
+       dados(0)
+   with t12:
+       medicoes(0)
+
+   with t13:
+       relatorios()  
     
     
