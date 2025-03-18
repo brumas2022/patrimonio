@@ -41,7 +41,7 @@ def relatorios():
     st.write('Aqui serão colocados os relatorios mensais da obra')
     linha = []
     for number in range(30):
-        a = st.text_input("Linha {number} :", key=number)
+        a = st.text_input(f"Linha {number} :", key=number)
         linha.append(a)
 
 lista_contratos=["TECNOBOMBAS - 004/2023", "MASTER - 028/2023", "SPARTACUS", \
