@@ -25,25 +25,17 @@ def medicoes(n):
     #df_medicao.dtypes
     df_x=[1, 2, 3, 4, 5, 6, 7, 8]
     df_y=[10, 20, 30, 40, 50, 60, 70, 80]
+    st.bar_chart(df_x, df_y)
     #print(df_medicao["VALOR"])
-    plt.figure(figsize = (20, 12))
-    plt.plot(df_x, df_y)
-    plt.show()
+    #fig, ax = plt.subplots(figsize = (8,5))
+    #ax.bar(df_x, df_y)
+    #plt.plot(df_x, df_y)
+    #plt.show()
     #df_medicao[df_medicao["CONTRATO"==nro_contrato]]
     #st.dataframe(df_x)
 def relatorios():
     st.write('relatorios')
 
-<<<<<<< HEAD
-=======
-
-
-st.sidebar.header("Contratos")
-st.sidebar.button("TECNOBOMBAS - 004/2023", use_container_width=True)
-st.sidebar.button("MASTER - 028/2023", use_container_width=True)
-st.sidebar.button("SPARTACUS", use_container_width=True)
-
->>>>>>> 28971044d69f0b0564828891214c360d1abcff9b
 lista_contratos=["TECNOBOMBAS - 004/2023", "MASTER - 028/2023", "SPARTACUS", \
                  "MENEGUETI", "GEOPOÇOS", "ALPHA", "SM7", "MASTER - 034/2022", "SAGATEC", "ELETRIC", \
                  "LEILOEIRA", "DA GARISTO", "TECNBOMBAS - 007/2024", "UPX", "GENTE", "RESUMO"]
