@@ -98,6 +98,15 @@ if d:
 
    with t13:
        relatorios()
-    
+ 
+if e:
+   t11, t12, t13 = st.tabs(lista_dados)
+   with t11:
+       dados(29)
+   with t12:
+       medicoes(29)
+
+   with t13:
+       relatorios()   
     
     
