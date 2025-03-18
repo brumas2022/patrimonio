@@ -1,6 +1,6 @@
 import streamlit as st 
 import pandas as pd 
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 
 st.set_page_config("Consulta contratos de obra", layout="wide")
