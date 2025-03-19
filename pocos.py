@@ -2,6 +2,7 @@ import streamlit as st
 import folium
 from streamlit_folium import st_folium
 import pandas as pd
+import time
 
    
 def p03():
@@ -25,3 +26,4 @@ def p02():
 
     # call to render Folium map in Streamlit
     st_data = st_folium(m, width=725)
+    time.sleep(10)
