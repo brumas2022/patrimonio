@@ -19,11 +19,13 @@ def p03():
 def p02():
     st.header("P02 - Cohab", divider="orange")
     st.markdown("Esta é a localização do poço")
-    m = folium.Map(location=[39.949610, -75.150282], zoom_start=16)
-    folium.Marker(
-        [39.949610, -75.150282], popup="Liberty Bell", tooltip="Liberty Bell"
-    ).add_to(m)
+    while not pausa:
+            m = folium.Map(location=[39.949610, -75.150282], zoom_start=16)
+            folium.Marker(
+            [39.949610, -75.150282], popup="Liberty Bell", tooltip="Liberty Bell"
+            ).add_to(m)
 
-    # call to render Folium map in Streamlit
-    st_data = st_folium(m, width=725)
-    time.sleep(100)
+              # call to render Folium map in Streamlit
+            st_data = st_folium(m, width=725)
+            pausa = st.button("pausa")
+            #time.sleep(100)
