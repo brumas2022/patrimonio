@@ -41,7 +41,7 @@ def relatorios():
     st.write('Aqui serão colocados os relatorios mensais da obra')
     linha = []
     for number in range(30):
-        a = st.text_input(f"Linha {number} :", key=number)
+        a = st.text_input(f"Linha {number} :", key=number, label_visibility="collapsed")
         linha.append(a)
 
 lista_contratos=["TECNOBOMBAS - 004/2023", "MASTER - 028/2023", "SPARTACUS", \
@@ -60,6 +60,11 @@ g = st.sidebar.button(lista_contratos[6], use_container_width=True)
 h = st.sidebar.button(lista_contratos[7], use_container_width=True)
 i = st.sidebar.button(lista_contratos[8], use_container_width=True)
 j = st.sidebar.button(lista_contratos[9], use_container_width=True)
+k = st.sidebar.button(lista_contratos[10], use_container_width=True)
+l = st.sidebar.button(lista_contratos[11], use_container_width=True)
+m = st.sidebar.button(lista_contratos[12], use_container_width=True)
+n = st.sidebar.button(lista_contratos[13], use_container_width=True)
+o = st.sidebar.button(lista_contratos[14], use_container_width=True)
 
 lista_dados=["Dados", "Medições", "Relatorios"]
 
@@ -163,4 +168,52 @@ if j:
    with t13:
        relatorios() 
 
-    
+if k:
+   t11, t12, t13 = st.tabs(lista_dados)
+   with t11:
+       dados(20)
+   with t12:
+       medicoes(20)
+
+   with t13:
+       relatorios()   
+       
+if l:
+   t11, t12, t13 = st.tabs(lista_dados)
+   with t11:
+       dados(21)
+   with t12:
+       medicoes(21)
+
+   with t13:
+       relatorios()   
+       
+if m:
+   t11, t12, t13 = st.tabs(lista_dados)
+   with t11:
+       dados(22)
+   with t12:
+       medicoes(22)
+
+   with t13:
+       relatorios()   
+       
+if n:
+   t11, t12, t13 = st.tabs(lista_dados)
+   with t11:
+       dados(27)
+   with t12:
+       medicoes(27)
+
+   with t13:
+       relatorios() 
+       
+if o:
+   t11, t12, t13 = st.tabs(lista_dados)
+   with t11:
+       dados(28)
+   with t12:
+       medicoes(28)
+
+   with t13:
+       relatorios() 
