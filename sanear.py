@@ -10,7 +10,7 @@ with open('style.css') as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
-st.header("Estrutura do SANEAR", divider="orange")
+#st.header("Estrutura do SANEAR", divider="orange")
     
         
 
@@ -35,8 +35,6 @@ if senha == "Poços":
    
 
 if senha=="Elevatorias de Esgoto":
-    pagina = st.empty()
-    pagina.text("Hello")
     st.sidebar.button("Canaa", on_click=ipanema, use_container_width=True)
     st.sidebar.link_button("Rio Vermelho", "https://estoque1.streamlit.app", use_container_width=True)
     st.sidebar.link_button("Canivete", "https://estoque1.streamlit.app",  use_container_width=True)
