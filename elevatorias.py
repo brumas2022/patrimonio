@@ -1,11 +1,12 @@
 import streamlit as st 
 import folium
-import streamlit_folium 
+from streamlit_folium import st_folium
 def ipanema():
     st.empty()
     st.subheader("EEE IPANEMA", divider="orange")
-    m = folium.Map(location=(-16.478585175815436, -54.64800486531498))
-    streamlit_folium.st_folium(m)
+    m = folium.Map(location=(-16.478585175815436, -54.64800486531498), zoom_control=True)
+    a=st_folium(m)
+    
 def p01():
     st.subheader("P01 - Atlantico", divider="orange")
     st.markdown("Esta é a localização do poço")
