@@ -16,15 +16,15 @@ def p03():
     'name': ['ATLANTICO']
     })
     st.map(poi)
-def p02():
-    st.header("P02 - Cohab", divider="orange")
+def p04():
+    st.header("P04 - Vila Goulart", divider="orange")
     st.markdown("Esta é a localização do poço")
     m = folium.Map(location=[39.949610, -75.150282], zoom_start=16)
     folium.Marker(
     [39.949610, -75.150282], popup="Liberty Bell", tooltip="Liberty Bell"
     ).add_to(m)
     
-    return st_folium(m, width=725)
+    return st_folium(m, width=725, returned_objects=[])
             
 
     #call to render Folium map in Streamlit
