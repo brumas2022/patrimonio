@@ -19,6 +19,7 @@ def p03():
 def p02():
     st.header("P02 - Cohab", divider="orange")
     st.markdown("Esta é a localização do poço")
+    pausa = False
     while not pausa:
             m = folium.Map(location=[39.949610, -75.150282], zoom_start=16)
             folium.Marker(
