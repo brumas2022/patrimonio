@@ -3,7 +3,8 @@ import os
 #from dotenv import load_dotenv
 import st_pages 
 from st_pages import add_page_title
-from elevatorias import ipanema, p01, p02
+from elevatorias import ipanema
+from pocos import p01, p02
 
 
 with open('style.css') as f:
