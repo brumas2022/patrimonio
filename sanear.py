@@ -4,7 +4,7 @@ import os
 import st_pages 
 from st_pages import add_page_title
 from elevatorias import ipanema
-from pocos import p03, p02
+from pocos import p03, p04
 
 
 with open('style.css') as f:
@@ -22,7 +22,7 @@ senha = st.sidebar.selectbox(
 )
 if senha == "Poços":
    st.sidebar.button("P - 03", on_click=p03, use_container_width=True)
-   st.sidebar.button("P - 02", on_click=p02, use_container_width=True)
+   st.sidebar.button("P - 04", on_click=p04, use_container_width=True)
    st.sidebar.link_button("P - 03", "https://estoque1.streamlit.app", use_container_width=True)
    st.sidebar.link_button("P - 04", "https://estoque1.streamlit.app", use_container_width=True)
    st.sidebar.link_button("P - 05", "https://estoque1.streamlit.app", use_container_width=True)
