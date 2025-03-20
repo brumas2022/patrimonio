@@ -15,6 +15,7 @@ def dados(n):
     #n=11
     df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
     st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto", "valor", "fiscal"])])
+    
     #st.write("dados do contrato")
 
 def medicoes(n):
@@ -23,6 +24,7 @@ def medicoes(n):
     nro_contrato = f"{df_contratos.iloc[n,1]}"
     df_selecao = df_medicao[df_medicao["CONTRATO"]==nro_contrato]
     st.dataframe(df_selecao)
+    st.write("Total das medições :", df_selecao['VALOR'].sum())
     
     #df_medicao.dtypes
     df_y = df_selecao['VALOR'].tolist()
