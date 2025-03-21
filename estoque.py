@@ -66,6 +66,7 @@ def medicao2():
    
    
    st.dataframe(df_medicao.iloc[3:8], hide_index=True)
+   st.markdown(":green[Em 19/03/2025 - Chegou Registro de gaveta DN 600]")
    with open("PREGAO 13.xlsx", "rb") as file: 
       st.download_button(label='PLANILHA ORIGINAL', data=file, file_name="PREGAO 13.xlsx") 
       
