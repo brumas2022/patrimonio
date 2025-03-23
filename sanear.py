@@ -23,7 +23,7 @@ senha = st.sidebar.selectbox(
 if senha == "Poços":
    st.sidebar.button("P - 03", on_click=p03, use_container_width=True)
    st.sidebar.button("P - 04", on_click=p04, use_container_width=True)
-   st.sidebar.link_button("P - 03", "https://estoque1.streamlit.app", use_container_width=True)
+   st.sidebar.button("P - 05", use_container_width=True)
    st.sidebar.link_button("P - 04", "https://estoque1.streamlit.app", use_container_width=True)
    st.sidebar.link_button("P - 05", "https://estoque1.streamlit.app", use_container_width=True)
    st.sidebar.link_button("P - 06", "https://estoque1.streamlit.app", use_container_width=True)
@@ -70,8 +70,10 @@ if senha=="Reservatorios":
     st.sidebar.link_button("Monte Libano", "https://www.atribunamt.com.br/opiniao-do-leitor/2024/05/entre-o-passado-e-o-futuro-o-papel-do-museu-rosa-bororo-na-historia-em-rondonopolis/", use_container_width=True)
     st.sidebar.link_button("Magnolia", "http://inquilinos.streamlit.app", use_container_width=True)
     st.sidebar.link_button("Buriti", "http://controle1.streamlit.app", use_container_width=True)
-        
-    
+
+
+
+
 
 
 
