@@ -24,7 +24,12 @@ def medicoes(n):
     nro_contrato = f"{df_contratos.iloc[n,1]}"
     df_selecao = df_medicao[df_medicao["CONTRATO"]==nro_contrato]
     st.dataframe(df_selecao)
-    st.write("Total das medições :", df_selecao['VALOR'].sum())
+    total_medido = df_selecao["VALOR"].sum()
+    contrato = df_contratos.iloc[(n,7)]
+    saldo = contrato - total_medido
+    st.write("Total das medições :", total_medido)
+    st.write("Saldo do contrato", saldo)
+    
     
     #df_medicao.dtypes
     df_y = df_selecao['VALOR'].tolist()
@@ -48,7 +53,7 @@ def relatorios():
 
 lista_contratos=["TECNOBOMBAS - 004/2023", "MASTER - 028/2023", "SPARTACUS", \
                  "MENEGUETI", "GEOPOÇOS", "ALPHA", "SM7", "MASTER - 034/2022", "SAGATEC", "ELETRIC", \
-                 "LEILOEIRA", "DA GARISTO", "TECNBOMBAS - 007/2024", "UPX", "GENTE", "RESUMO"]
+                 "LEILOEIRA", "DA GARISTO", "TECNBOMBAS - 007/2024", "UPX", "GENTE", "MILLENIUM"]
 
 
 st.sidebar.header("Contratos")
@@ -67,6 +72,7 @@ l = st.sidebar.button(lista_contratos[11], use_container_width=True)
 m = st.sidebar.button(lista_contratos[12], use_container_width=True)
 n = st.sidebar.button(lista_contratos[13], use_container_width=True)
 o = st.sidebar.button(lista_contratos[14], use_container_width=True)
+p = st.sidebar.button(lista_contratos[15], use_container_width=True)
 
 lista_dados=["Dados", "Medições", "Relatorios"]
 
@@ -216,6 +222,16 @@ if o:
        dados(28)
    with t12:
        medicoes(28)
+
+   with t13:
+       relatorios() 
+       
+if p:
+   t11, t12, t13 = st.tabs(lista_dados)
+   with t11:
+       dados(15)
+   with t12:
+       medicoes(15)
 
    with t13:
        relatorios() 
