@@ -14,7 +14,7 @@ df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=3)
 def dados(n):
     #n=11
     df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
-    st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto", "valor", "fiscal"])])
+    st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto", "valor", "fiscal", "inicio", "fim"])])
     
     #st.write("dados do contrato")
 
@@ -30,7 +30,7 @@ def medicoes(n):
     
     dados = {'total': total_medido, 'saldo': saldo}
     df_dados = pd.DataFrame(dados, index=[0])
-    st.dataframe(df_dados.style.format(thousands=".", decimal=","), use_container_width=True, hide_index=True)
+    st.dataframe(df_dados.style.format(thousands=".", decimal=","), width=500, use_container_width=False, hide_index=True)
     
     #st.write("Total das medições :", total_medido)
     #st.write("Saldo do contrato", saldo)
