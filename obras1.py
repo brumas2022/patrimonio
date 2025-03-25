@@ -14,7 +14,8 @@ df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=3)
 def dados(n):
     #n=11
     df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
-    st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto", "valor", "fiscal", "inicio", "fim"])])
+    df_mostra_dados = df_contratos.loc[(n, ["contrato", "empresa", "objeto", "valor", "fiscal", "inicio", "fim"])]
+    st.dataframe(df_mostra_dados)
     
     #st.write("dados do contrato")
 
@@ -58,7 +59,8 @@ def relatorios():
 
 lista_contratos=["TECNOBOMBAS - 004/2023", "MASTER - 028/2023", "SPARTACUS", \
                  "MENEGUETI", "GEOPOÇOS", "ALPHA", "SM7", "MASTER - 034/2022", "SAGATEC", "ELETRIC", \
-                 "LEILOEIRA", "DA GARISTO", "TECNBOMBAS - 007/2024", "UPX", "GENTE", "MILLENIUM"]
+                 "LEILOEIRA", "DA GARISTO", "TECNBOMBAS - 007/2024", "UPX", "GENTE", "MILLENIUM - 008/2023", "MILLENIUM - 009/2023", \
+                 "MILLENIUM - 003/2024"    ]
 
 
 st.sidebar.header("Contratos")
@@ -78,6 +80,8 @@ m = st.sidebar.button(lista_contratos[12], use_container_width=True)
 n = st.sidebar.button(lista_contratos[13], use_container_width=True)
 o = st.sidebar.button(lista_contratos[14], use_container_width=True)
 p = st.sidebar.button(lista_contratos[15], use_container_width=True)
+q = st.sidebar.button(lista_contratos[16], use_container_width=True)
+r = st.sidebar.button(lista_contratos[17], use_container_width=True)
 
 lista_dados=["Dados", "Medições", "Relatorios"]
 
@@ -237,6 +241,26 @@ if p:
        dados(15)
    with t12:
        medicoes(15)
+
+   with t13:
+       relatorios() 
+       
+if q:
+   t11, t12, t13 = st.tabs(lista_dados)
+   with t11:
+       dados(16)
+   with t12:
+       medicoes(16)
+
+   with t13:
+       relatorios() 
+       
+if r:
+   t11, t12, t13 = st.tabs(lista_dados)
+   with t11:
+       dados(17)
+   with t12:
+       medicoes(17)
 
    with t13:
        relatorios() 
