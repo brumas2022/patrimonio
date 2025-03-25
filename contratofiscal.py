@@ -46,6 +46,7 @@ ordem_inicio = col[2].text_input("Data da ordem de inicio", value= f"{df_contrat
 obs = col[1].text_input("Observação")
 diligencia = col[1].text_input("Diligencias")
 ocorrecias = col[1].text_input("Ocorrencias")
+avaliacao = col[1].text_input("Avaliação")
 data_relatorio = col[1].date_input("Data do relatorio")
 data_relatorio_1 = data_relatorio.strftime("%d/%m/%Y")
 st.dataframe(df_contratos)
@@ -106,7 +107,7 @@ if enviar:
     pdf.text(11, 170, txt="adotadas")
 
     pdf.text(11, 185, txt="Avaliação dos")
-    pdf.text(51, 185, txt="Serviço efetuado conforme contratado.") # texto da avaliação
+    pdf.text(51, 185, txt=avaliacao) # texto da avaliação
     pdf.text(11, 190, txt="serviços e")
     pdf.text(11, 195, txt="documentos")
     pdf.text(11, 200, txt="apresentados")
@@ -123,7 +124,7 @@ if enviar:
     pdf.rect(40, 210, 160, 30)
 
     pdf.rect(10, 260, 100, 8)
-    pdf.text(11, 265, txt="FISCAL DE CONTRATO : MARCOS BRUMATTI")
+    pdf.text(11, 265, txt="FISCAL DE CONTRATO : JAMAL BADIE DAUD")
     pdf.rect(10, 268, 100, 8)
     pdf.text(11, 273, txt=f"PORTARIA N° {portaria_nro},"+f"DATA: {portaria_data}")
     pdf.rect(10, 276, 100, 8)
