@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+#from openpyxl import load_workbook
 
 st.set_page_config("Sessão de dados", layout="wide")
 
@@ -14,6 +15,14 @@ with st.form("Cadastro"):
         dados = {'dia': dia, 'anotacao': anotacao, 'pessoa': pessoa}
         df = pd.DataFrame(dados, index=[0])
         st.session_state.data = pd.concat([st.session_state.data, df], ignore_index=True)
+        #wb = load_workbook("teste_outro.xlsx", read_only=False)
+
+        #ws = wb.active
+        #ws.append(st.session_state.data)
+        #wb.save("teste_outro.xlsx")
+        #st.rerun()
+        
+        
         st.success("Dados inseridos com sucesso")
     
 st.write("Lista")
