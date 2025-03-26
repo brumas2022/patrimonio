@@ -23,26 +23,27 @@ def inicia_relatorio():
     #pdf.rect(x=10, y=70, w=60, h=8)
     #
     # pdf.rect(x=70, y=70, w=60, h=8)
-            pdf.text(11, 50, txt="CONTRATO N° : "+nro_contrato)
-            pdf.text(130, 50, txt="DATA DE ABERTURA: "+data_inicio)
+            pdf.text(11, 50, txt="CONTRATO N° : "+nro)
+            pdf.text(130, 50, txt="DATA DE ABERTURA: ")
+            #pdf.text(180, 50, txt=inicio)
             pdf.text(11, 60, txt="CONTRATADO(A)")
-            pdf.text(51, 60, empresa)
+            pdf.text(51, 60, str(empresa.values))
             pdf.rect(10, 55, 40, 10)
             pdf.rect(50, 55, 150, 10)
             pdf.text(11, 73, txt="TERMO DO CONTRATO : ")
-            pdf.text(53, 73, txt=objeto[:65])
-            pdf.text(53, 78, txt=objeto[65:130])
-            pdf.text(53, 83, txt=objeto[130:195])
+            #pdf.text(53, 73, txt=objeto[:65])
+            #pdf.text(53, 78, txt=objeto[65:130])
+            #pdf.text(53, 83, txt=objeto[130:195])
     
             pdf.rect(10, 68, 190, 20)
             pdf.text(11, 95, txt="UNIDADE DETENTORA DO CONTRATO:")
             pdf.rect(10, 90, 190, 8)
             pdf.rect(10, 98, 190, 20)
-            pdf.text(11, 105, txt="DATA DO INICIO : "+data_inicio)
-            pdf.text(11, 110, txt="DATA DA CONCLUSAO : "+data_fim)
+            #pdf.text(11, 105, txt="DATA DO INICIO : "+data_inicio)
+            #pdf.text(11, 110, txt="DATA DA CONCLUSAO : "+data_fim)
             pdf.text(11, 115, txt="PRAZO DO CONTRATO : 365 DIAS")
-            pdf.text(121, 105, txt="VALOR DO CONTRATO : "+valor)
-            pdf.text(121, 110, txt="LICITACAO : "+licitacao)
+            #pdf.text(121, 105, txt="VALOR DO CONTRATO : "+valor)
+            #pdf.text(121, 110, txt="LICITACAO : "+licitacao)
             pdf.text(121, 115, txt="RECURSO : PROPRIO")
             pdf.rect(10, 120, 30, 30)
             pdf.rect(10, 150, 30, 30)
@@ -77,7 +78,7 @@ def inicia_relatorio():
             pdf.rect(10, 260, 100, 8)
             pdf.text(11, 265, txt="FISCAL DE CONTRATO : JAMAL BADIE DAUD")
             pdf.rect(10, 268, 100, 8)
-            pdf.text(11, 273, txt=f"PORTARIA N° {portaria_nro},"+f"DATA: {portaria_data}")
+            #pdf.text(11, 273, txt=f"PORTARIA N° {portaria_nro},"+f"DATA: {portaria_data}")
             pdf.rect(10, 276, 100, 8)
             pdf.text(11, 281, txt=f"RELATORIO REFERENTE A : {data_relatorio_1}")
 
@@ -87,8 +88,8 @@ def inicia_relatorio():
 
 
     
-            pdf.output(f"C:/Users/Compras/Desktop/2025/RELATORIOS/CTR {nro_contrato.replace("/", "-")} {empresa}.pdf") 
-        
+            #pdf.output(f"C:/Users/Compras/Desktop/2025/RELATORIOS/CTR {nro.replace("/", "-")} {empresa}.pdf") 
+            pdf.output(f"C:/Users/Compras/Desktop/2025/RELATORIOS/CTR {nro.replace("/", "-")}.pdf") 
 
 
 df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
@@ -105,8 +106,11 @@ nro = st.sidebar.selectbox("Escolha o contrato", df_nro_contrato)
 with st.form("Relatorio"):
        
     resultado = df_contratos[df_contratos['contrato']==nro]
-    st.dataframe(resultado)
-    n=int(resultado['id'])-1
+    
+    
+    empresa = resultado["empresa"]
+    st.dataframe(resultado['empresa'])
+    #n=int(resultado['id'])-1
     #st.write(n)
     #empresa = st.text_input("EMPRESA", value=f"{df_contratos.iloc[n,2]}")
     #objeto = st.text_input("OBJETO", value=f"{df_contratos.iloc[n,3]}")
