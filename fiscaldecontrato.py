@@ -8,10 +8,9 @@ from fpdf import FPDF
 st.set_page_config(page_title="Contratos do fiscal Marcos Brumatti", layout="wide", menu_items={'About':"Its very cool"})
 
 def inicia_relatorio():
-    with st.form("Relatorio"):
+    
+              
         
-        
-        if st.form_submit_button("confirma"):
             pdf = FPDF("P", "mm", "A4") 
             pdf.add_page() 
             pdf.set_font("Arial" , size=10) 
