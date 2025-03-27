@@ -299,8 +299,8 @@ if u:
    with t11:
        dados(34)
    with t12:
-       #medicoes(34)
-       pass
+       medicoes(34)
+       #pass
 
    with t13:
        relatorios()
