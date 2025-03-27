@@ -30,8 +30,9 @@ def medicoes(n):
     total_medido = df_selecao["VALOR"].sum()
     contrato = df_contratos.iloc[(n,7)]
     saldo = contrato - total_medido
+    porcento = (total_medido - df_contratos['valor'])*100
     
-    dados = {'TOTAL MEDIDO': total_medido, 'SALDO DO CONTRATO': saldo}
+    dados = {'TOTAL MEDIDO': total_medido, 'PERCENTUAL EXECUTADO': porcento, 'SALDO DO CONTRATO': saldo}
     df_dados = pd.DataFrame(dados, index=[0])
     st.dataframe(df_dados.style.format(thousands=".", decimal=","), width=500, use_container_width=False, hide_index=True)
     
