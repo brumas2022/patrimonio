@@ -30,6 +30,7 @@ def medicoes(n):
     total_medido = df_selecao["VALOR"].sum()
     contrato = df_contratos.iloc[(n,7)]
     saldo = contrato - total_medido
+    
     porcento = (total_medido - df_contratos['valor'])*100
     
     dados = {'TOTAL MEDIDO': total_medido, 'PERCENTUAL EXECUTADO': porcento, 'SALDO DO CONTRATO': saldo}
@@ -63,7 +64,7 @@ def relatorios():
 lista_contratos=["TECNOBOMBAS - 004/2023", "MASTER - 028/2023", "SPARTACUS", \
                  "MENEGUETI", "GEOPOÇOS", "ALPHA", "SM7", "MASTER - 034/2022", "SAGATEC", "ELETRIC", \
                  "LEILOEIRA", "DA GARISTO", "TECNBOMBAS - 007/2024", "UPX", "GENTE", "MILLENIUM - 008/2023", "MILLENIUM - 009/2023", \
-                 "MILLENIUM - 003/2024"    ]
+                 "MILLENIUM - 003/2024", "MASTER 019-2024"    ]
 
 
 st.sidebar.header("Contratos")
@@ -85,6 +86,7 @@ o = st.sidebar.button(lista_contratos[14], use_container_width=True)
 p = st.sidebar.button(lista_contratos[15], use_container_width=True)
 q = st.sidebar.button(lista_contratos[16], use_container_width=True)
 r = st.sidebar.button(lista_contratos[17], use_container_width=True)
+s = st.sidebar.button(lista_contratos[18], use_container_width=True)
 
 lista_dados=["Dados", "Medições", "Relatorios"]
 
@@ -264,6 +266,16 @@ if r:
        dados(17)
    with t12:
        medicoes(17)
+
+   with t13:
+       relatorios() 
+       
+if s:
+   t11, t12, t13 = st.tabs(lista_dados)
+   with t11:
+       dados(33)
+   with t12:
+       medicoes(33)
 
    with t13:
        relatorios() 
