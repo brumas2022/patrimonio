@@ -25,6 +25,7 @@ def medicoes(n):
     nro_contrato = f"{df_contratos.iloc[n,1]}"
     df_selecao = df_medicao[df_medicao["CONTRATO"]==nro_contrato]
     df_selecao["%Acumulado"]=df_selecao["VALOR"].cumsum()
+    df_selecao["%Percentual do Contrato"]=df_selecao["VALOR"].cumsum()/df_contratos["valor"]
     st.dataframe(df_selecao, hide_index=True)
     total_medido = df_selecao["VALOR"].sum()
     contrato = df_contratos.iloc[(n,7)]
