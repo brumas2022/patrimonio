@@ -305,13 +305,13 @@ if u:
    with t13:
        relatorios()
        
-if V:
+if v:
    t11, t12, t13 = st.tabs(lista_dados)
    with t11:
        dados(37)
    with t12:
-       #medicoes(37)
-       pass
+       medicoes(37)
+       #pass
 
    with t13:
        relatorios()
