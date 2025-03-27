@@ -286,7 +286,8 @@ if t:
    with t11:
        dados(35)
    with t12:
-       medicoes(35)
+       #medicoes(35)
+       pass
 
    with t13:
        relatorios() 
