@@ -64,7 +64,7 @@ def relatorios():
 lista_contratos=["TECNOBOMBAS - 004/2023", "MASTER - 028/2023", "SPARTACUS", \
                  "MENEGUETI", "GEOPOÇOS", "ALPHA", "SM7", "MASTER - 034/2022", "SAGATEC", "ELETRIC", \
                  "LEILOEIRA", "DA GARISTO", "TECNBOMBAS - 007/2024", "UPX", "GENTE", "MILLENIUM - 008/2023", "MILLENIUM - 009/2023", \
-                 "MILLENIUM - 003/2024", "MASTER 019-2024"    ]
+                 "MILLENIUM - 003/2024", "MASTER 019-2024", "DIMBEL"    ]
 
 
 st.sidebar.header("Contratos")
@@ -87,6 +87,7 @@ p = st.sidebar.button(lista_contratos[15], use_container_width=True)
 q = st.sidebar.button(lista_contratos[16], use_container_width=True)
 r = st.sidebar.button(lista_contratos[17], use_container_width=True)
 s = st.sidebar.button(lista_contratos[18], use_container_width=True)
+t = st.sidebar.button(lista_contratos[19], use_container_width=True)
 
 lista_dados=["Dados", "Medições", "Relatorios"]
 
@@ -276,6 +277,16 @@ if s:
        dados(33)
    with t12:
        medicoes(33)
+
+   with t13:
+       relatorios() 
+       
+if t:
+   t11, t12, t13 = st.tabs(lista_dados)
+   with t11:
+       dados(35)
+   with t12:
+       medicoes(35)
 
    with t13:
        relatorios() 
