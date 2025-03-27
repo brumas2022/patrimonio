@@ -17,7 +17,7 @@ def inicia_relatorio():
     #pdf.cell(200, 10, txt = "Bem-vindo ao Python!", ln = 1, align="C")
     #      pdf.cell(100, 50, txt="Novo texto....avante" )
     #pdf.cell()"C:/Users/Compras/Documents/GitHub/patrimonio/
-            pdf.image("img.png", x=60, y=10, w=90, h=20) 
+            pdf.image("C:/Users/Compras/Documents/GitHub/patrimonio/img.png", x=60, y=10, w=90, h=20) 
             pdf.text(50, 40, txt="RELATORIO MENSAL DE ACOMPANHAMENTO DE CONTRATO")
     #pdf.rect(x=10, y=70, w=180, h=8)
     #pdf.rect(x=10, y=70, w=60, h=8)
@@ -89,8 +89,8 @@ def inicia_relatorio():
 
     
             #pdf.output(f"C:/Users/Compras/Desktop/2025/RELATORIOS/CTR {nro.replace("/", "-")} {empresa}.pdf") 
-            #C:/Users/Compras/Desktop/2025/RELATORIOS/CTR 
-            pdf.output(f"{nro.replace("/", "-")}.pdf") 
+            # 
+            pdf.output(f"C:/Users/Compras/Desktop/2025/RELATORIOS/CTR {nro.replace("/", "-")}.pdf") 
 
 
 df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
@@ -108,9 +108,11 @@ with st.form("Relatorio"):
        
     resultado = df_contratos.loc[df_contratos['contrato']==nro]
     
-    
+    empresa1 = []
+    empresa1.append(resultado.loc[resultado.index, 'empresa'])
     empresa = resultado.loc[resultado.index, 'empresa'].values
-    st.sidebar.write(empresa)
+    st.sidebar.dataframe(empresa)
+    st.sidebar.dataframe(empresa1)
     #n=int(resultado['id'])-1
     #st.write(n)
     #empresa = st.text_input("EMPRESA", value=f"{df_contratos.iloc[n,2]}")
