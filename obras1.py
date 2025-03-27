@@ -24,6 +24,7 @@ def medicoes(n):
     df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=3)
     nro_contrato = f"{df_contratos.iloc[n,1]}"
     df_selecao = df_medicao[df_medicao["CONTRATO"]==nro_contrato]
+    df_selecao["%Acumulado"]=df_selecao["VALOR"].cumsum()
     st.dataframe(df_selecao, hide_index=True)
     total_medido = df_selecao["VALOR"].sum()
     contrato = df_contratos.iloc[(n,7)]
