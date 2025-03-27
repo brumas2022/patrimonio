@@ -16,8 +16,8 @@ def inicia_relatorio():
             pdf.set_font("Arial" , size=10) 
     #pdf.cell(200, 10, txt = "Bem-vindo ao Python!", ln = 1, align="C")
     #      pdf.cell(100, 50, txt="Novo texto....avante" )
-    #pdf.cell()
-            pdf.image("C:/Users/Compras/Documents/GitHub/patrimonio/img.png", x=60, y=10, w=90, h=20) 
+    #pdf.cell()"C:/Users/Compras/Documents/GitHub/patrimonio/
+            pdf.image("img.png", x=60, y=10, w=90, h=20) 
             pdf.text(50, 40, txt="RELATORIO MENSAL DE ACOMPANHAMENTO DE CONTRATO")
     #pdf.rect(x=10, y=70, w=180, h=8)
     #pdf.rect(x=10, y=70, w=60, h=8)
@@ -27,7 +27,7 @@ def inicia_relatorio():
             pdf.text(130, 50, txt="DATA DE ABERTURA: ")
             #pdf.text(180, 50, txt=inicio)
             pdf.text(11, 60, txt="CONTRATADO(A)")
-            pdf.text(51, 60, str(empresa.values))
+            pdf.text(51, 60, str(empresa))
             pdf.rect(10, 55, 40, 10)
             pdf.rect(50, 55, 150, 10)
             pdf.text(11, 73, txt="TERMO DO CONTRATO : ")
@@ -89,7 +89,8 @@ def inicia_relatorio():
 
     
             #pdf.output(f"C:/Users/Compras/Desktop/2025/RELATORIOS/CTR {nro.replace("/", "-")} {empresa}.pdf") 
-            pdf.output(f"C:/Users/Compras/Desktop/2025/RELATORIOS/CTR {nro.replace("/", "-")}.pdf") 
+            #C:/Users/Compras/Desktop/2025/RELATORIOS/CTR 
+            pdf.output(f"{nro.replace("/", "-")}.pdf") 
 
 
 df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
@@ -105,11 +106,11 @@ nro = st.sidebar.selectbox("Escolha o contrato", df_nro_contrato)
 
 with st.form("Relatorio"):
        
-    resultado = df_contratos[df_contratos['contrato']==nro]
+    resultado = df_contratos.loc[df_contratos['contrato']==nro]
     
     
-    empresa = resultado["empresa"]
-    st.dataframe(resultado['empresa'])
+    empresa = resultado.loc[resultado.index, 'empresa'].values
+    st.sidebar.write(empresa)
     #n=int(resultado['id'])-1
     #st.write(n)
     #empresa = st.text_input("EMPRESA", value=f"{df_contratos.iloc[n,2]}")
