@@ -110,7 +110,7 @@ with st.form("Relatorio"):
     
     empresa1 = []
     empresa1.append(resultado.loc[resultado.index, 'empresa'])
-    empresa = resultado.loc[resultado.index, 'empresa'].values
+    empresa = resultado.loc[(resultado.index, 'empresa')].values
     st.sidebar.dataframe(empresa)
     st.sidebar.dataframe(empresa1)
     #n=int(resultado['id'])-1
