@@ -25,13 +25,18 @@ def medicoes(n):
     nro_contrato = f"{df_contratos.iloc[n,1]}"
     df_selecao = df_medicao[df_medicao["CONTRATO"]==nro_contrato]
     df_selecao["%ACULUMADO"]=df_selecao["VALOR"].cumsum()
+    
     df_selecao["%PERCENTUUAL DO CONTRATO"]=(df_selecao["VALOR"].cumsum()/df_contratos["valor"])*100
+    
     st.dataframe(df_selecao, hide_index=True)
     total_medido = df_selecao["VALOR"].sum()
     contrato = df_contratos.iloc[(n,7)]
     saldo = contrato - total_medido
+    valor_contrato = df_contratos.loc[(n, ["valor"])]
     
-    porcento = "indisponivel" #(total_medido / df_contratos['valor'])*100
+    porcento = (total_medido / float(valor_contrato))*100
+    print(total_medido)
+    print(df_contratos.loc[(n, ["valor"])])
     
     dados = {'TOTAL MEDIDO': total_medido, 'PERCENTUAL EXECUTADO': porcento, 'SALDO DO CONTRATO': saldo}
     df_dados = pd.DataFrame(dados, index=[0])
@@ -87,8 +92,8 @@ n = st.sidebar.button(lista_contratos_OBRAS[13], use_container_width=True)
 o = st.sidebar.button(lista_contratos_OBRAS[14], use_container_width=True)
 p = st.sidebar.button(lista_contratos_OBRAS[15], use_container_width=True)
 q = st.sidebar.button(lista_contratos_OBRAS[16], use_container_width=True)
-r = st.sidebar.button(lista_contratos_OBRAS[17], use_container_width=True)
-s = st.sidebar.button(lista_contratos_OBRAS[18], use_container_width=True)
+#r = st.sidebar.button(lista_contratos_OBRAS[17], use_container_width=True)
+#s = st.sidebar.button(lista_contratos_OBRAS[18], use_container_width=True)
 
 lista_dados=["Dados", "Medições", "Relatorios"]
 
@@ -261,66 +266,3 @@ if q:
    with t13:
        relatorios() 
        
-if r:
-   t11, t12, t13 = st.tabs(lista_dados)
-   with t11:
-       dados(17)
-   with t12:
-       medicoes(17)
-
-   with t13:
-       relatorios() 
-       
-if s:
-   t11, t12, t13 = st.tabs(lista_dados)
-   with t11:
-       dados(33)
-   with t12:
-       medicoes(33)
-
-   with t13:
-       relatorios() 
-       
-if t:
-   t11, t12, t13 = st.tabs(lista_dados)
-   with t11:
-       dados(35)
-   with t12:
-       #medicoes(35)
-       pass
-
-   with t13:
-       relatorios() 
-       
-if u:
-   t11, t12, t13 = st.tabs(lista_dados)
-   with t11:
-       dados(34)
-   with t12:
-       medicoes(34)
-       #pass
-
-   with t13:
-       relatorios()
-       
-if v:
-   t11, t12, t13 = st.tabs(lista_dados)
-   with t11:
-       dados(37)
-   with t12:
-       medicoes(37)
-       #pass
-
-   with t13:
-       relatorios()
-       
-if x:
-   t11, t12, t13 = st.tabs(lista_dados)
-   with t11:
-       dados(38)
-   with t12:
-       #medicoes(38)
-       pass
-
-   with t13:
-       relatorios()
