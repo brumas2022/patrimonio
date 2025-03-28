@@ -107,10 +107,16 @@ nro = st.sidebar.selectbox("Escolha o contrato", df_nro_contrato)
 with st.form("Relatorio"):
        
     resultado = df_contratos.loc[df_contratos['contrato']==nro]
-    
+    print(resultado.dtypes)
+    resultado.set_index('contrato', inplace=True)
+    n=str(nro)
+    result = resultado[f'{n}']['empresa']
     empresa1 = []
     empresa1.append(resultado.loc[resultado.index, 'empresa'])
-    empresa = resultado.loc[(resultado.index, 'empresa')].values
+    empresa = resultado.loc[(resultado.index, 'empresa')]
+    empresa_str = empresa.astype('str')
+    #s2=str(empresa)
+    print(result)
     st.sidebar.dataframe(empresa)
     st.sidebar.dataframe(empresa1)
     #n=int(resultado['id'])-1
