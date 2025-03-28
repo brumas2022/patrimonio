@@ -24,15 +24,18 @@ def medicoes(n):
     df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=3)
     nro_contrato = f"{df_contratos.iloc[n,1]}"
     df_selecao = df_medicao[df_medicao["CONTRATO"]==nro_contrato]
+    
+    valor_contrato = df_contratos.loc[(n, ["valor"])]
+    
     df_selecao["%ACULUMADO"]=df_selecao["VALOR"].cumsum()
     
-    df_selecao["%PERCENTUUAL DO CONTRATO"]=(df_selecao["VALOR"].cumsum()/df_contratos["valor"])*100
+    df_selecao["%PERCENTUUAL DO CONTRATO"]=(df_selecao["VALOR"].cumsum()/float(valor_contrato))*100
     
     st.dataframe(df_selecao, hide_index=True)
     total_medido = df_selecao["VALOR"].sum()
     contrato = df_contratos.iloc[(n,7)]
     saldo = contrato - total_medido
-    valor_contrato = df_contratos.loc[(n, ["valor"])]
+   
     
     porcento = (total_medido / float(valor_contrato))*100
     print(total_medido)
