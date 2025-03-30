@@ -105,20 +105,22 @@ df_nro_contrato = df_contratos['contrato'].tolist()
 nro = st.sidebar.selectbox("Escolha o contrato", df_nro_contrato)
 
 with st.form("Relatorio"):
-       
+    j=11   
     resultado = df_contratos.loc[df_contratos['contrato']==nro]
     print(resultado.dtypes)
-    resultado.set_index('contrato', inplace=True)
+    print(resultado['empresa'])
+    menina=resultado['prazo']
+    #resultado.set_index('contrato', inplace=True)
     n=str(nro)
-    result = resultado[f'{n}']['empresa']
-    empresa1 = []
-    empresa1.append(resultado.loc[resultado.index, 'empresa'])
-    empresa = resultado.loc[(resultado.index, 'empresa')]
+    #result = resultado[j]['empresa']
+    
+    empresa = resultado['empresa']
     empresa_str = empresa.astype('str')
     #s2=str(empresa)
-    print(result)
-    st.sidebar.dataframe(empresa)
-    st.sidebar.dataframe(empresa1)
+    #print(result)
+    st.sidebar.write(menina)
+    st.sidebar.write(empresa)
+    
     #n=int(resultado['id'])-1
     #st.write(n)
     #empresa = st.text_input("EMPRESA", value=f"{df_contratos.iloc[n,2]}")
