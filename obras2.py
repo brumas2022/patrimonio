@@ -100,9 +100,6 @@ q = st.sidebar.button(lista_contratos_OBRAS[16], use_container_width=True)
 
 lista_dados=["Dados", "Medições", "Relatorios"]
 
-if not a or b or c or d or e or f or g or h or i or j or l or m or n or p or q:
-    st.write ("As teclas a, b e c nao foram digitadas")
-
 if a:
     t11, t12, t13 = st.tabs(lista_dados)
     with t11:
@@ -111,8 +108,7 @@ if a:
         medicoes(13)
     with t13:
         relatorios()
-
-if b:
+elif b:
    t11, t12, t13 = st.tabs(lista_dados)
    with t11:
        dados(10)
@@ -122,7 +118,7 @@ if b:
    with t13:
        relatorios() 
 
-if c:
+elif c:
    t11, t12, t13 = st.tabs(lista_dados)
    with t11:
        dados(33)
@@ -132,7 +128,7 @@ if c:
    with t13:
        relatorios()
        
-if d:
+elif d:
    t11, t12, t13 = st.tabs(lista_dados)
    with t11:
        dados(24)
@@ -142,7 +138,7 @@ if d:
    with t13:
        relatorios()
  
-if e:
+elif e:
    t11, t12, t13 = st.tabs(lista_dados)
    with t11:
        dados(22)
@@ -152,7 +148,7 @@ if e:
    with t13:
        relatorios()  
        
-if f:
+elif f:
    t11, t12, t13 = st.tabs(lista_dados)
    with t11:
        dados(39)
@@ -162,7 +158,7 @@ if f:
    with t13:
        relatorios() 
        
-if g:
+elif g:
    t11, t12, t13 = st.tabs(lista_dados)
    with t11:
        dados(16)
@@ -172,7 +168,7 @@ if g:
    with t13:
        relatorios() 
 
-if h:
+elif h:
    t11, t12, t13 = st.tabs(lista_dados)
    with t11:
        dados(17)
@@ -182,7 +178,7 @@ if h:
    with t13:
        relatorios()
            
-if i:
+elif i:
    t11, t12, t13 = st.tabs(lista_dados)
    with t11:
        dados(37)
@@ -192,7 +188,7 @@ if i:
    with t13:
        relatorios() 
 
-if j:
+elif j:
    t11, t12, t13 = st.tabs(lista_dados)
    with t11:
        dados(15)
@@ -202,7 +198,7 @@ if j:
    with t13:
        relatorios() 
 
-if k:
+elif k:
    t11, t12, t13 = st.tabs(lista_dados)
    with t11:
        dados(34)
@@ -212,7 +208,7 @@ if k:
    with t13:
        relatorios()   
        
-if l:
+elif l:
    t11, t12, t13 = st.tabs(lista_dados)
    with t11:
        dados(23)
@@ -222,7 +218,7 @@ if l:
    with t13:
        relatorios()   
        
-if m:
+elif m:
    t11, t12, t13 = st.tabs(lista_dados)
    with t11:
        dados(4)
@@ -232,7 +228,7 @@ if m:
    with t13:
        relatorios()   
        
-if n:
+elif n:
    t11, t12, t13 = st.tabs(lista_dados)
    with t11:
        dados(3)
@@ -242,7 +238,7 @@ if n:
    with t13:
        relatorios() 
        
-if o:
+elif o:
    t11, t12, t13 = st.tabs(lista_dados)
    with t11:
        dados(38)
@@ -252,7 +248,7 @@ if o:
    with t13:
        relatorios() 
        
-if p:
+elif p:
    t11, t12, t13 = st.tabs(lista_dados)
    with t11:
        dados(35)
@@ -262,7 +258,7 @@ if p:
    with t13:
        relatorios() 
        
-if q:
+elif q:
    t11, t12, t13 = st.tabs(lista_dados)
    with t11:
        dados(21)
@@ -272,3 +268,5 @@ if q:
    with t13:
        relatorios() 
        
+else:
+    st.image("img.png")
