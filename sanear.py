@@ -3,7 +3,8 @@ import os
 #from dotenv import load_dotenv
 import st_pages 
 from st_pages import add_page_title
-from elevatorias import ipanema
+#import elevatorias
+from elevatorias import ipanema, canaa
 from pocos import p03, p04
 
 
@@ -35,9 +36,9 @@ if senha == "Poços":
    st.sidebar.link_button("P - 12", "https://estoque1.streamlit.app", use_container_width=True)
    
 
-if senha=="Elevatorias de Esgoto":
-    st.sidebar.button("Canaa", on_click=ipanema, use_container_width=True)
-    st.sidebar.link_button("Rio Vermelho", "https://estoque1.streamlit.app", use_container_width=True)
+elif senha=="Elevatorias de Esgoto":
+    st.sidebar.button("Canaa", on_click=canaa, use_container_width=True)
+    st.sidebar.button("Ipanema", on_click=ipanema, use_container_width=True)
     st.sidebar.link_button("Canivete", "https://estoque1.streamlit.app",  use_container_width=True)
     st.sidebar.link_button("Ipanema", "https://estoque1.streamlit.app", use_container_width=True)
     st.sidebar.link_button("Nova Era", "https://www.youtube.com/watch?v=JnxCIRxt3kQ&t=19s", use_container_width=True)
@@ -51,14 +52,14 @@ if senha=="Elevatorias de Esgoto":
     #st.sidebar.markdown(":red[Trabalhadores de todo mundo, UNI-VOS]")
     #st.sidebar.markdown(":sunglasses:  :sunglasses:  :sunglasses:  :sunglasses:  :sunglasses:")
 
-if senha=="Agencias Comerciais":
+elif senha=="Agencias Comerciais":
     
     st.sidebar.link_button("Centro", "https://www.cifraclub.com.br/raul-seixas/aluga-se/", use_container_width=True)
     st.sidebar.link_button("Vila Operaria", "https://www.cifraclub.com.br/henrique-e-juliano/flor-e-o-beija-flor/", use_container_width=True)
     
     st.sidebar.markdown(":sunglasses:  :sunglasses:  :sunglasses:  :sunglasses:  :sunglasses:")
 
-if senha=="Reservatorios":
+elif senha=="Reservatorios":
     st.sidebar.link_button("Aeroporto", "https://estoque1.streamlit.app", use_container_width=True)
     st.sidebar.link_button("UFR", "https://estoque1.streamlit.app", use_container_width=True)
     st.sidebar.link_button("Atlantico", "https://estoque1.streamlit.app",  use_container_width=True)
@@ -71,7 +72,8 @@ if senha=="Reservatorios":
     st.sidebar.link_button("Magnolia", "http://inquilinos.streamlit.app", use_container_width=True)
     st.sidebar.link_button("Buriti", "http://controle1.streamlit.app", use_container_width=True)
 
-st.html("<h1>Teste</h1>")
+else:
+    st.html("<h1>Estrutura do SANEAR</h1>")
 
 
 
