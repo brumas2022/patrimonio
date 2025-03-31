@@ -77,7 +77,7 @@ lista_contratos=["TECNOBOMBAS - 004/2023(11)", "MASTER - 028/2023(10)", "SPARTAC
 lista_contratos_OBRAS = ["MASTER - 034/2022(13)", "MASTER - 028/2023(10)", "MASTER 019-2024(33)", "MENEGUETI(24)", "TECNBOMBAS - 007/2024(22)", \
                          "SPARTACUS(39)", "MILLENIUM - 009/2023(16)", "MILLENIUM - 003/2024(17)", "MILLENIUM 017-2024(37)", "MILLENIUM - 008/2023(15)", \
                          "COOMSER OBRA(34)", "SPARTACUS(23)", "SM7(4)", "RST ENGENHARIA(3)", "MARCIO SOUZA FARIAS(38)",  "DIMBEL(35)", "DA GARISTO(21)"]
-st.sidebar.header("Contratos")
+st.sidebar.header("Contratos de obras")
 a = st.sidebar.button(lista_contratos_OBRAS[0], use_container_width=True)
 b = st.sidebar.button(lista_contratos_OBRAS[1], use_container_width=True)
 c = st.sidebar.button(lista_contratos_OBRAS[2], use_container_width=True)
@@ -99,6 +99,9 @@ q = st.sidebar.button(lista_contratos_OBRAS[16], use_container_width=True)
 #s = st.sidebar.button(lista_contratos_OBRAS[18], use_container_width=True)
 
 lista_dados=["Dados", "Medições", "Relatorios"]
+
+if not a or b or c or d or e or f or g or h or i or j or l or m or n or p or q:
+    st.write ("As teclas a, b e c nao foram digitadas")
 
 if a:
     t11, t12, t13 = st.tabs(lista_dados)
