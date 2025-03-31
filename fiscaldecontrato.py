@@ -17,34 +17,36 @@ def inicia_relatorio():
     #pdf.cell(200, 10, txt = "Bem-vindo ao Python!", ln = 1, align="C")
     #      pdf.cell(100, 50, txt="Novo texto....avante" )
     #pdf.cell()"C:/Users/Compras/Documents/GitHub/patrimonio/
-            pdf.image("C:/Users/Compras/Documents/GitHub/patrimonio/img.png", x=60, y=10, w=90, h=20) 
+            pdf.image("img.png", x=60, y=10, w=90, h=20) 
             pdf.text(50, 40, txt="RELATORIO MENSAL DE ACOMPANHAMENTO DE CONTRATO")
     #pdf.rect(x=10, y=70, w=180, h=8)
     #pdf.rect(x=10, y=70, w=60, h=8)
     #
     # pdf.rect(x=70, y=70, w=60, h=8)
             pdf.text(11, 50, txt="CONTRATO N° : "+nro)
-            pdf.text(130, 50, txt="DATA DE ABERTURA: ")
-            #pdf.text(180, 50, txt=inicio)
+            pdf.text(130, 50, txt="DATA DE ABERTURA: "+f"{data_inicio}")
+            #pdf.text(180, 50, txt=data_inicio)
             pdf.text(11, 60, txt="CONTRATADO(A)")
             pdf.text(51, 60, str(empresa))
             pdf.rect(10, 55, 40, 10)
             pdf.rect(50, 55, 150, 10)
             pdf.text(11, 73, txt="TERMO DO CONTRATO : ")
-            #pdf.text(53, 73, txt=objeto[:65])
-            #pdf.text(53, 78, txt=objeto[65:130])
-            #pdf.text(53, 83, txt=objeto[130:195])
+            
+            pdf.text(53, 73, txt=objeto[:65])
+            pdf.text(53, 78, txt=objeto[65:130])
+            pdf.text(53, 83, txt=objeto[130:195])
+    
     
             pdf.rect(10, 68, 190, 20)
             pdf.text(11, 95, txt="UNIDADE DETENTORA DO CONTRATO:")
             pdf.rect(10, 90, 190, 8)
             pdf.rect(10, 98, 190, 20)
-            #pdf.text(11, 105, txt="DATA DO INICIO : "+data_inicio)
-            #pdf.text(11, 110, txt="DATA DA CONCLUSAO : "+data_fim)
-            pdf.text(11, 115, txt="PRAZO DO CONTRATO : 365 DIAS")
-            #pdf.text(121, 105, txt="VALOR DO CONTRATO : "+valor)
-            #pdf.text(121, 110, txt="LICITACAO : "+licitacao)
-            pdf.text(121, 115, txt="RECURSO : PROPRIO")
+            pdf.text(11, 105, txt="DATA DO INICIO : "+data_inicio)
+            pdf.text(11, 110, txt="DATA DA CONCLUSAO : "+data_fim)
+            pdf.text(11, 115, txt="PRAZO DO CONTRATO : "+"365 dias")
+            pdf.text(121, 105, txt="VALOR DO CONTRATO : "+f"{valor}")
+            pdf.text(121, 110, txt="LICITACAO : "+licitacao)
+            pdf.text(121, 115, txt="RECURSO : "+f"{recurso}")
             pdf.rect(10, 120, 30, 30)
             pdf.rect(10, 150, 30, 30)
             pdf.rect(10, 180, 30, 30)
@@ -76,9 +78,9 @@ def inicia_relatorio():
             pdf.rect(40, 210, 160, 30)
 
             pdf.rect(10, 260, 100, 8)
-            pdf.text(11, 265, txt="FISCAL DE CONTRATO : JAMAL BADIE DAUD")
+            pdf.text(11, 265, txt="FISCAL DE CONTRATO : "+f"{fiscal_nome}")
             pdf.rect(10, 268, 100, 8)
-            #pdf.text(11, 273, txt=f"PORTARIA N° {portaria_nro},"+f"DATA: {portaria_data}")
+            pdf.text(11, 273, txt=f"PORTARIA N° {portaria_nro},"+f"DATA: {portaria_data}")
             pdf.rect(10, 276, 100, 8)
             pdf.text(11, 281, txt=f"RELATORIO REFERENTE A : {data_relatorio_1}")
 
@@ -89,8 +91,8 @@ def inicia_relatorio():
 
     
             #pdf.output(f"C:/Users/Compras/Desktop/2025/RELATORIOS/CTR {nro.replace("/", "-")} {empresa}.pdf") 
-            # 
-            pdf.output(f"C:/Users/Compras/Desktop/2025/RELATORIOS/CTR {nro.replace("/", "-")}.pdf") 
+            # "C:/Users/Compras/Desktop/2025/RELATORIOS/
+            pdf.output(f"CTR {nro.replace("/", "-")}.pdf") 
 
 
 df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
@@ -108,14 +110,29 @@ with st.form("Relatorio"):
     j=11   
     resultado = df_contratos.loc[df_contratos['contrato']==nro]
     print(resultado.dtypes)
+    print(resultado.iat[0,2])
     print(resultado['empresa'])
-    menina=resultado['prazo']
-    #resultado.set_index('contrato', inplace=True)
+    menina=resultado['empresa']
+    objeto = resultado.iat[0,3]
+    data_inicio = resultado.iat[0,4].strftime("%d/%m/%Y")
+    data_fim = resultado.iat[0,5].strftime("%d/%m/%Y")
+    prazo = resultado.iat[0,6]
+    
+    valor = resultado.iat[0,7]
+    
+    
+    licitacao = resultado.iat[0,8]
+    recurso = resultado.iat[0,9]
+    fiscal_nome = resultado.iat[0,10]
+    portaria_nro = resultado.iat[0,11]
+    portaria_data = resultado.iat[0,12].strftime("%d/%m/%Y")
+    
+    
     n=str(nro)
     #result = resultado[j]['empresa']
     
-    empresa = resultado['empresa']
-    empresa_str = empresa.astype('str')
+    empresa = resultado.iat[0,2]
+    
     #s2=str(empresa)
     #print(result)
     st.sidebar.write(menina)
