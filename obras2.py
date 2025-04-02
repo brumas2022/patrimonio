@@ -74,9 +74,9 @@ lista_contratos=["TECNOBOMBAS - 004/2023(11)", "MASTER - 028/2023(10)", "SPARTAC
                  "LEILOEIRA(20)", "DA GARISTO(21)", "TECNBOMBAS - 007/2024(22)", "UPX(27)", "GENTE(28)", "MILLENIUM - 008/2023(15)", "MILLENIUM - 009/2023(16)", \
                  "MILLENIUM - 003/2024(17)", "MASTER 019-2024(33)", "DIMBEL(35)", "COOMSER OBRA(34)", "MILLENIUM 017-2024(37)", "MARCIO SOUZA FARIAS(38)"]
 
-lista_contratos_OBRAS = ["MASTER - 034/2022(13)", "MASTER - 028/2023(10)", "MASTER 019-2024(33)", "MENEGUETI(24)", "TECNBOMBAS - 007/2024(22)", \
-                         "SPARTACUS(39)", "MILLENIUM - 009/2023(16)", "MILLENIUM - 003/2024(17)", "MILLENIUM 017-2024(37)", "MILLENIUM - 008/2023(15)", \
-                         "COOMSER OBRA(34)", "SPARTACUS(23)", "SM7(4)", "RST ENGENHARIA(3)", "MARCIO SOUZA FARIAS(38)",  "DIMBEL(35)", "DA GARISTO(21)", \
+lista_contratos_OBRAS = ["MASTER - 034/2022", "MASTER - 028/2023", "MASTER 019-2024", "CONSTRUTORA MENEGUETI - VG", "TECNBOMBAS - 007/2024", \
+                         "SPARTACUS", "MILLENIUM - 009/2023", "MILLENIUM - 003/2024", "MILLENIUM 017-2024", "MILLENIUM - 008/2023", \
+                         "COOMSER OBRA", "SPARTACUS", "SM7", "RST ENGENHARIA", "MARCIO SOUZA FARIAS",  "DIMBEL", "DA GARISTO", \
                          "TECNOBOMBAS - 004/2023(11)"]
 st.sidebar.header("Contratos")
 a = st.sidebar.button(lista_contratos_OBRAS[0], use_container_width=True)
