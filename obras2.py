@@ -273,9 +273,9 @@ if q:
 if r:
    t11, t12, t13 = st.tabs(lista_dados)
    with t11:
-       dados(21)
+       dados(11)
    with t12:
-       medicoes(21)
+       medicoes(11)
 
    with t13:
        relatorios() 
