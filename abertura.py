@@ -18,8 +18,8 @@ e = col[1].button("CONTROLE ESTOQUE", use_container_width=True)
 f = col[1].button("PLANEJAMENTO ESTRATEGICO", use_container_width=True)
 
 if d:
-   webbrowser.Chrome("http://obras-contrato.streamlit.app")
-   webbrowser.open_new_tab("http://obras-contrato.streamlit.app") 
+   
+   webbrowser.open_new("http://obras-contrato.streamlit.app") 
 if e:
    webbrowser.open_new_tab("http://estoque1.streamlit.app")
 if a:
