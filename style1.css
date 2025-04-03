@@ -5,15 +5,9 @@
     font-size: 120%;
     
  }
-.stButton > link{
-    background-color: rgb(120, 132, 138);
-    color: rgb(33, 12, 214);
-    height: 200px;
-    font-size: 120%;
-}
 .stLinkButton > a{
     background-color: rgb(120, 132, 138);
-    color: rgb(33, 12, 214);
+    color: rgb(160, 214, 12);
     height: 200px;
-    font-size: 120%;
+    font-size: 120%
 }
