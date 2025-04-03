@@ -21,5 +21,7 @@ if d:
    webbrowser.open_new_tab("http://obras-contrato.streamlit.app") 
 if e:
    webbrowser.open_new_tab("http://estoque1.streamlit.app")
+if a:
+   st.header("DEu certo")
 
 
