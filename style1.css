@@ -11,3 +11,9 @@
     height: 200px;
     font-size: 120%;
 }
+.stLinkButton > button{
+    background-color: rgb(11, 194, 154);
+    color: rgb(33, 12, 214);
+    height: 200px;
+    font-size: 120%;
+}
