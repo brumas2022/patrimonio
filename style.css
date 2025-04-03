@@ -4,5 +4,9 @@
    color: rgb(45, 49, 33);
    
 }
+.stLinkButton > a{
+   background-color: rgb(0, 174, 255);
+   color: rgb(45, 49, 33);
+}
 
 
