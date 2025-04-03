@@ -9,7 +9,7 @@ with open('style1.css') as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 col=st.columns((1,1))
-a = col[0].button("CONTRATOS", use_container_width=True)
+a = col[0].link_button("CONTRATOS", "http://obras-contrato.streamlit.app", use_container_width=True)
 b = col[0].button("FISCAIS", use_container_width=True)
 c = col[0].button("ESTRUTURA SANEAR", use_container_width=True)
 
