@@ -1,14 +1,20 @@
 import openpyxl
+import streamlit as st
+import pandas as pd
 
 
-def atualizar(nome, idade, sexo):
-    workbook = openpyxl.load_workbook("nova.xlsx")
+def atualizar(data, atividades):
+    workbook = openpyxl.load_workbook("relatorio.xlsx")
     aba = workbook.active
-    aba.append([nome, idade, sexo])
-    workbook.save("nova.xlsx")
+    aba.append([data, atividades])
+    workbook.save("reLatorio.xlsx")
     
-nome = input("Nome :")
-idade = input("Idade :")
-sexo = input("Sexo:")
+data = st.text_input("Data:")
+atividades = st.text_area("Atividades")
 
-atualizar(nome, idade, sexo)
+
+atualizar(data, atividades)
+
+df = pd.read_excel("relatorio.xlsx")
+
+st.dataframe(df)
