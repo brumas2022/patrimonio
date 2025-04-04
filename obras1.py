@@ -65,7 +65,10 @@ def relatorios():
     for number in range(30):
         a = st.text_input(f"Linha {number} :", key=number, label_visibility="collapsed")
         linha.append(a)
-
+    
+    
+    
+    
 lista_contratos=["TECNOBOMBAS - 004/2023", "MASTER - 028/2023", "SPARTACUS", \
                  "MENEGUETI", "GEOPOÇOS", "ALPHA", "SM7", "MASTER - 034/2022", "SAGATEC", "ELETRIC", \
                  "LEILOEIRA", "DA GARISTO", "TECNBOMBAS - 007/2024", "UPX", "GENTE", "MILLENIUM - 008/2023", "MILLENIUM - 009/2023", \
