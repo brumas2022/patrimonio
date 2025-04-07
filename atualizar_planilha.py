@@ -8,12 +8,12 @@ def atualizar(data, atividades):
     aba = workbook.active
     aba.append([data, atividades])
     workbook.save("reLatorio.xlsx")
-    
-data = st.text_input("Data:")
-atividades = st.text_area("Atividades")
 
-
-atualizar(data, atividades)
+with st.form("Entrada"):
+    data = st.date_input("Data:")
+    atividades = st.text_area("Atividades")
+    if st.form_submit_button("Confirmar"):
+       atualizar(data, atividades)
 
 df = pd.read_excel("relatorio.xlsx")
 
