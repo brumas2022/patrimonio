@@ -6,7 +6,12 @@ def criar_nro():
     w1 = load_workbook("nova.xlsx")
     aba = w1.active
     aba.append([nome, assunto])
+    #aba.max_row
+    number=aba.max_row-2
     w1.save("nova.xlsx")
+    df = pd.read_excel("nova.xlsx", sheet_name=0)
+    st.write("o numero do seu memorando é:", number)
+    st.dataframe(df)
     
     pass
 
