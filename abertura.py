@@ -22,6 +22,6 @@ if d:
 if e:
    webbrowser.open_new_tab("http://estoque1.streamlit.app")
 if a:
-   st.header("DEu certo")
+   pass
 
 
