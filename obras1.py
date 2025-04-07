@@ -340,7 +340,7 @@ if x:
 if w:
    t11, t12, t13 = st.tabs(lista_dados)
    with t11:
-       dados(39)
+       dados(38)
    with t12:
        #medicoes(38)
        pass
