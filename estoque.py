@@ -35,6 +35,7 @@ def medicao():
    st.markdown(":red[***Ultima atualização em 06/03/2025 - V E GOMES entregou ultima peça, um TUBO FERRO FUNDIDO, FLANGE/FLANGE - PN 10 - DN 700MM - L=0,5]")
    st.markdown(":green[***Ultima atualização em 12/03/2025 - TAF ENTREGOU LOTE PARAFUSOS 125.899,9]")
    st.markdown(":red[***Ultima atualização em 13/03/2025 - TUBCON ENTREGOU 258.900,56 - restante do LOTE 01, lote 03 completo e restante do lote 04]")
+   st.markdown(":green[***Conexo entregou valvulas restantes em 04/04/2025 no valor de 435.000,00]")
    
 def medicao1():
    #st.header("Controle do PREGAO 014/2024")
