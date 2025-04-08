@@ -1,5 +1,6 @@
 import streamlit as st 
 import pandas as pd 
+import openpyxl
 #import matplotlib.pyplot as plt
 
 
@@ -61,11 +62,12 @@ def medicoes(n):
     #st.dataframe(df_x)
 def relatorios():
     st.write('Aqui serão colocados os relatorios mensais da obra')
-    linha = []
-    for number in range(30):
-        a = st.text_input(f"Linha {number} :", key=number, label_visibility="collapsed")
-        linha.append(a)
-    
+    data = st.text_input("Data:")
+    atividades = st.text_area("Atividades")
+    workbook = openpyxl.load_workbook("relatorio.xlsx")
+    aba = workbook.active
+    aba.append([data, atividades])
+    workbook.save("reLatorio.xlsx")
     
     
     
