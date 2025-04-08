@@ -72,8 +72,8 @@ def relatorios():
             aba = workbook.active
             aba.append([data, atividades])
             workbook.save("reLatorio.xlsx")
-            df = pd.read_excel("relatorio.xlsx", sheet_name=0)
-            st.dataframe(df)
+    df = pd.read_excel("relatorio.xlsx", sheet_name=0)
+    st.dataframe(df)
     
     
     
