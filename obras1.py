@@ -64,7 +64,7 @@ def relatorios():
     st.write('Aqui serão colocados os relatorios mensais da obra')
     with st.form("Relatorio"):
     
-         data = st.text_input("Data:")
+         data = st.date_input("Data:")
          atividades = st.text_area("Atividades")
          enviar = st.form_submit_button("Confirma")
          if enviar:
