@@ -74,7 +74,7 @@ def relatorios():
 lista_contratos=["TECNOBOMBAS - 004/2023", "MASTER - 028/2023", "SPARTACUS", \
                  "MENEGUETI", "GEOPOÇOS", "ALPHA", "SM7", "MASTER - 034/2022", "SAGATEC", "ELETRIC", \
                  "LEILOEIRA", "DA GARISTO", "TECNBOMBAS - 007/2024", "UPX", "GENTE", "MILLENIUM - 008/2023", "MILLENIUM - 009/2023", \
-                 "MILLENIUM - 003/2024", "MASTER 019-2024", "DIMBEL", "COOMSER OBRA", "MILLENIUM 017-2024", "MARCIO SOUZA FARIAS"]
+                 "MILLENIUM - 003/2024", "MASTER 019-2024", "DIMBEL", "COOMSER OBRA", "MILLENIUM 017-2024", "MARCIO SOUZA FARIAS", "DIEFRA"]
 
 
 st.sidebar.header("Contratos")
@@ -101,6 +101,7 @@ t = st.sidebar.button(lista_contratos[19], use_container_width=True)
 u = st.sidebar.button(lista_contratos[20], use_container_width=True)
 v = st.sidebar.button(lista_contratos[21], use_container_width=True)
 x = st.sidebar.button(lista_contratos[22], use_container_width=True)
+w = st.sidebar.button(lista_contratos[23], use_container_width=True)
 
 lista_dados=["Dados", "Medições", "Relatorios"]
 
@@ -331,6 +332,17 @@ if x:
    t11, t12, t13 = st.tabs(lista_dados)
    with t11:
        dados(38)
+   with t12:
+       #medicoes(38)
+       pass
+
+   with t13:
+       relatorios()
+
+if w:
+   t11, t12, t13 = st.tabs(lista_dados)
+   with t11:
+       dados(40)
    with t12:
        #medicoes(38)
        pass
