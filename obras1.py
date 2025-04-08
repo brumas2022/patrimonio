@@ -62,16 +62,6 @@ def medicoes(n):
     #st.dataframe(df_x)
 def relatorios():
     st.write('Aqui serão colocados os relatorios mensais da obra')
-    with st.form("Relatorio"):
-    
-         data = st.date_input("Data:")
-         atividades = st.text_area("Atividades")
-         enviar = st.form_submit_button("Confirma")
-         if enviar:
-            workbook = openpyxl.load_workbook("relatorio.xlsx")
-            aba = workbook.active
-            aba.append([data, atividades])
-            workbook.save("reLatorio.xlsx")
     df = pd.read_excel("relatorio.xlsx", sheet_name=0)
     st.dataframe(df)
     
