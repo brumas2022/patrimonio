@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-import fpdf
+#import fpdf
 from fpdf import FPDF
 
 
