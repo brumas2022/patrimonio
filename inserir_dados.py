@@ -10,7 +10,7 @@ def atualizar(data, atividades):
     
 def nova_medicao(nro_ctr, nro_medicao, valor, nf, data_nf, data_pagto):
     w_medicao = openpyxl.load_workbook("relatorio.xlsx")
-    aba1 = w_medicao.active
+    aba1 = w_medicao[Medicao]
     aba1.append([nro_ctr, nro_medicao, valor, nf, data_nf, data_pagto])
     w_medicao.save("novorelatorio.xlsx")
 
