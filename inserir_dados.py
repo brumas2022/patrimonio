@@ -39,9 +39,6 @@ elif a==lista[1]:
         data_pagto= st.text_input("Data pagto")
         if st.form_submit_button("Confirmar"):
             nova_medicao(nro_ctr, nro_medicao, data_medicao, valor, nf, data_nf, data_pagto)
-    df = pd.read_excel("realatorio.xlsx", sheet_name=1) 
+    df = pd.read_excel("relatorio.xlsx", sheet_name=1) 
     st.dataframe(df)  
         
-df = pd.read_excel("relatorio.xlsx")
-
-st.dataframe(df)
