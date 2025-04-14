@@ -1,10 +1,15 @@
 import streamlit as st
+import ironpdf
 
 a = st.sidebar.button("PROJETOS")
 b = st.sidebar.button("LICITACAO")
 c = st.sidebar.button("OBRA")
 d = st.sidebar.button("PENDENCIAS DA OBRA")
 e = st.sidebar.button("PENDENCIAS DA ETA 2")
+
+pdf = ironpdf.PdfDocument.FromBytes(open('CTR 009-2022 ALPHA CONSTRUTORA EIRELI.pdf', 'rb').read())
+
+pdf.Render().Display()
 
 if a:
     c = st.selectbox("QUAL PROJETO", ("FLOCULADOR", "DECANTADOR"))
