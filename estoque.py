@@ -106,7 +106,12 @@ def nad():
    st.dataframe(df_new, hide_index=True, column_config={
         "data envio": st.column_config.DatetimeColumn(
             "data envio",
-            format="D MMM YYYY, h:mm a",
+            format="DD/MM/YYYY",
+            
+        ),
+        "data memorando": st.column_config.DatetimeColumn(
+            "data memorando",
+            format="DD/MM/YYYY",
             
         ),
     })
