@@ -15,7 +15,8 @@ if a:
     if c=="DECANTADOR":
         st.write("ESTE É O PRJETO DECANTADOR")
         with open("CTR 009-2022 ALPHA CONSTRUTORA EIRELI.pdf", "r") as f:
-            st.markdown({f.read()})
+            arquivo = f.read()
+            st.markdown(arquivo)
 
         
                      
