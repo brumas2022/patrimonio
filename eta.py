@@ -1,5 +1,6 @@
 import streamlit as st
 
+st.set_page_config("Obra da Estação de Tratamento de Água 2", layout="wide")
 
 a = st.sidebar.button("PROJETOS")
 b = st.sidebar.button("LICITACAO")
