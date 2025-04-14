@@ -109,6 +109,11 @@ def nad():
             format="DD/MM/YYYY",
             
         ),
+        "data memorando": st.column_config.DatetimeColumn(
+            "data memorando",
+            format="DD/MM/YYYY",
+            
+        ),
     })
    #dfteste=pd.read_excel("controle_nad.xlsx", sheet_name=0)
    #dfnovo=dfteste.style.apply(lambda _: "background-color: green", subset=(dfteste.index[1],))
