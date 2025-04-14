@@ -1,4 +1,6 @@
 import streamlit as st
+import pandas as pd
+from estoque import medicao2
 
 st.set_page_config("Obra da Estação de Tratamento de Água 2", layout="wide")
 
@@ -17,9 +19,10 @@ if a:
     
     if c=="DECANTADOR":
         st.write("ESTE É O PRJETO DECANTADOR")
-        #with open("CTR 009-2022 ALPHA CONSTRUTORA EIRELI.pdf", "r") as f:
-        #    arquivo = f.read()
-        #    st.markdown(arquivo)
-
+        
+if b:
+    st.write("As licitações referente a obra da eta")
+    medicao2()
+        
         
                      
