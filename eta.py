@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import streamlit_pdf_viewer
+import streamlit_pdf_viewer as stf
 
 st.set_page_config("Obra da Estação de Tratamento de Água 2", layout="wide")
 
@@ -15,7 +15,8 @@ if a:
     
     if c=="FLOCULADOR":
        st.write("Este é o projeto do floculador") 
-       st.image("floculador-decantador.jpg")
+       arquivo = stf.pdf_viewer("PLANILHA PREGÃO LOTEAMENTOS.pdf")
+       st.markdown(arquivo)
     
     if c=="DECANTADOR":
         st.write("ESTE É O PRJETO DECANTADOR")
@@ -30,6 +31,10 @@ if b:
     st.markdown(":green[Em 19/03/2025 - Chegou Registro de gaveta DN 600]")
     with open("PREGAO 13.xlsx", "rb") as file: 
        st.download_button(label='PLANILHA ORIGINAL', data=file, file_name="PREGAO 13.xlsx") 
+
+if d:
+    arquivo = stf.pdf_viewer("PROJETO SAIDA ETA.pdf")
+    st.markdown(arquivo)
         
         
                      
