@@ -48,7 +48,7 @@ if d:
 if e:
     st.info("ACOES PARA OPERACIONALIZACAO DA ETA II")
     df_operacao = pd.read_excel("interligacoes-ETA.xlsx", sheet_name=3)
-    st.dataframe(df_operacao)
+    st.dataframe(df_operacao, hide_index=True)
         
     
     
