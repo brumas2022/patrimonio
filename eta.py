@@ -35,12 +35,24 @@ if b:
          st.markdown(arquivo1)
 
 if d:
-    arquivo = stf.pdf_viewer("PROJETO SAIDA ETA.pdf")
-    st.markdown(arquivo)
-    
+    opcoes = ["INTERLIGACAO SAIDA ETA", "INTERLIGACAO CALHA PARSHAL"]
+    selecao = st.pills("Escolha", opcoes)
+    if selecao==opcoes[0]:
+        arquivo = stf.pdf_viewer("PROJETO SAIDA ETA.pdf")
+        st.markdown(arquivo)
+        df_func = pd.read_excel("interligacoes-ETA.xlsx", sheet_name=0)
+        st.dataframe(df_func, hide_index=True)
+    elif selecao ==opcoes[1]:
+        st.markdown("Calha")
+        
 if e:
-    df_func = pd.read_excel("interligacoes-ETA.xlsx", sheet_name=0)
-    st.dataframe(df_func, hide_index=True)
+    st.info("ACOES PARA OPERACIONALIZACAO DA ETA II")
+    df_operacao = pd.read_excel("interligacoes-ETA.xlsx", sheet_name=2)
+    st.dataframe(df_operacao)
+        
+    
+    
+    
         
         
                      
