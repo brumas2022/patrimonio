@@ -29,12 +29,18 @@ if b:
     df_medicao.columns=["LOTE", "EMPRESA", "VALOR", "DATA NAD1", "VALOR NAD1", "SITUAÇAO", "DATA NAD2", "VALOR NAD2"]
     st.dataframe(df_medicao.iloc[3:8], hide_index=True)
     st.markdown(":green[Em 19/03/2025 - Chegou Registro de gaveta DN 600]")
-    with open("PREGAO 13.xlsx", "rb") as file: 
-       st.download_button(label='PLANILHA ORIGINAL', data=file, file_name="PREGAO 13.xlsx") 
+    ata = st.button("Ata de Registro")
+    if ata:
+         arquivo1 = stf.pdf_viewer("Ata_de_Registro_de_Precos_-_Pregao_Eletronico_012.2024__assinado.pdf")
+         st.markdown(arquivo1)
 
 if d:
     arquivo = stf.pdf_viewer("PROJETO SAIDA ETA.pdf")
     st.markdown(arquivo)
+    
+if e:
+    df_func = pd.read_excel("interligacoes-ETA.xlsx", sheet_name=0)
+    st.dataframe(df_func, hide_index=True)
         
         
                      
