@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-#from estoque import medicao2
+import streamlit_pdf_viewer
 
 st.set_page_config("Obra da Estação de Tratamento de Água 2", layout="wide")
 
