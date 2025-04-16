@@ -23,7 +23,8 @@ if a:
     if projeto=="DECANTADOR":
         st.write("ESTE É O PRJETO DECANTADOR")
         arquivo2 = stf.pdf_viewer("PLANILHA PREGÃO LOTEAMENTOS.pdf")
-        st.markdown(arquivo2)
+        st.write(arquivo2)
+        st.button("Vamos")
         
 elif b:
     
