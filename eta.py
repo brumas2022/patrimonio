@@ -18,6 +18,7 @@ if a:
        st.write("Este é o projeto do floculador") 
        arquivo = stf.pdf_viewer("PLANILHA PREGÃO LOTEAMENTOS.pdf", )
        st.write(arquivo)
+       st.button("voltar")
     
     if projeto=="DECANTADOR":
         st.write("ESTE É O PRJETO DECANTADOR")
