@@ -16,8 +16,8 @@ if a:
     
     if projeto=="FLOCULADOR":
        st.write("Este é o projeto do floculador") 
-       arquivo = stf.pdf_viewer("PLANILHA PREGÃO LOTEAMENTOS.pdf")
-       st.markdown(arquivo)
+       arquivo = stf.pdf_viewer("PLANILHA PREGÃO LOTEAMENTOS.pdf", )
+       st.write(arquivo)
     
     if projeto=="DECANTADOR":
         st.write("ESTE É O PRJETO DECANTADOR")
