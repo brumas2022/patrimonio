@@ -31,7 +31,30 @@ def medicoes(n):
     
     df_selecao["%PERCENTUUAL DO CONTRATO"]=(df_selecao["VALOR"].cumsum()/float(valor_contrato))*100
     
-    st.dataframe(df_selecao, hide_index=True)
+    #st.dataframe(df_selecao, hide_index=True)
+    st.dataframe(df_selecao, hide_index=True, column_config={
+        "DATA MEDICAO": st.column_config.DatetimeColumn(
+            "DATA MEDICAO",
+            format="DD/MM/YYYY",
+            
+        ),
+        "DATA NF": st.column_config.DatetimeColumn(
+            "DATA NF",
+            format="DD/MM/YYYY",
+            
+        ),
+        "DATA PAGTO": st.column_config.DatetimeColumn(
+            "DATA PAGTO",
+            format="DD/MM/YYYY",
+            
+        ),
+        #"NF": st.column_config.NumberColumn(
+        #    "NF",
+        #    help="NOTA FISCAL EMITIDA",
+        #    format="plain",
+            
+        #),
+    })
     total_medido = df_selecao["VALOR"].sum()
     contrato = df_contratos.iloc[(n,7)]
     saldo = contrato - total_medido
