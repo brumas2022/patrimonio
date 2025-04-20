@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 import streamlit as st 
 import os
-#import supabase
+import requests
 st.set_page_config("Cadastro dos caes", layout="wide")
 
 load_dotenv()
@@ -12,6 +12,20 @@ from supabase import create_client, Client
 supabase: Client = create_client('https://ibhcxtnwnonsnycfgjay.supabase.co',
                                      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImliaGN4dG53bm9uc255Y2ZnamF5Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY5NTE1Mzk2MiwiZXhwIjoyMDEwNzI5OTYyfQ.W9t9sqi_odq3kV2WovKCVfMXcFGprFOgai9Us9_rTQA')
 
+def advice():
+    
+    #api_key=
+    link_api="https://api.adviceslip.com/advice"
+
+    resposta = requests.get(link_api)
+
+    #print(resposta)
+    #print(resposta.content)
+    dados_requisicao = resposta.json()
+    
+    cons = dados_requisicao['slip']['advice']
+    st.write(cons)
+    
 def inicio():
     total = supabase.table("caninos").select("nome").execute()
     tot = len(total.data)
@@ -77,6 +91,7 @@ fotos = st.sidebar.button("FOTOS", use_container_width=True)
 estrelinhas = st.sidebar.button("ESTRELINHAS", use_container_width=True)
 cast = st.sidebar.button("ANIMAIS CASTRADOS", use_container_width=True)
 nao_cast = st.sidebar.button("ANIMAIS NAO CASTRADOS", use_container_width=True)
+conselho = st.sidebar.button("QUER UM CONSELHO", use_container_width=True)
 
 if nao_cast:
     nao_castrados()
@@ -93,6 +108,10 @@ elif fotos:
     
     apresenta()
     
+elif conselho:
+    
+    advice()
+
 else:
     
     inicio()
