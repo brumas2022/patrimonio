@@ -1,7 +1,9 @@
 from dotenv import load_dotenv
+#import load_dotenv
+#import dotenv
 import streamlit as st 
 import os
-#import supabase
+import requests
 st.set_page_config("Cadastro dos caes", layout="wide")
 
 load_dotenv()
@@ -12,31 +14,116 @@ from supabase import create_client, Client
 supabase: Client = create_client('https://ibhcxtnwnonsnycfgjay.supabase.co',
                                      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImliaGN4dG53bm9uc255Y2ZnamF5Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY5NTE1Mzk2MiwiZXhwIjoyMDEwNzI5OTYyfQ.W9t9sqi_odq3kV2WovKCVfMXcFGprFOgai9Us9_rTQA')
 
-st.header("Animais na ARPAA")
+def advice():
+    
+    #api_key=
+    link_api="https://api.adviceslip.com/advice"
 
-total = supabase.table("caninos").select("nome").execute()
-tot = len(total.data)
-st.sidebar.write("Animais que ja foram ajudados:", tot)
+    resposta = requests.get(link_api)
 
-total_adotados = supabase.table("caninos").select("nome").eq("adotado", "True").execute()
-tot_adotados = len(total_adotados.data)
-st.sidebar.write("Total atual de animais na ARPAA:", tot_adotados)
+    #print(resposta)
+    #print(resposta.content)
+    dados_requisicao = resposta.json()
+    
+    cons = dados_requisicao['slip']['advice']
+    st.write(cons)
+    
+def inicio():
+    total = supabase.table("caninos").select("nome").execute()
+    tot = len(total.data)
+    st.write("Animais que ja foram ajudados nos ultimos anos:", tot)
 
-total_atual = supabase.table("caninos").select("nome").eq("adotado", "False").eq("vivo", "True").execute()
-tot_atual = len(total_atual.data)
-st.sidebar.write("Total atual de animais na ARPAA:", tot_atual)
+    total_adotados = supabase.table("caninos").select("nome").eq("adotado", "True").execute()
+    tot_adotados = len(total_adotados.data)
+    st.write("Total de animais que foram adotados:", tot_adotados)
 
-genero = st.sidebar.selectbox("Escolha o genero do animal", ("macho", "femea"))
-castrado = st.sidebar.selectbox("Defina de castração", ("True", "False"))
-resposta = supabase.table("caninos").select("nome", "genero", "entrada", "foto").eq("adotado", "False").eq("vivo", "True").eq("genero", f"{genero}").eq("castrado", f"{castrado}" ).execute()
-st.dataframe(resposta.data)
-a=len(resposta.data)
-st.write(f"Ainda temos {a} {genero}")
+    total_atual = supabase.table("caninos").select("nome").eq("adotado", "False").eq("vivo", "True").execute()
+    tot_atual = len(total_atual.data)
+    st.write("Total atual de animais na ARPAA:", tot_atual)
+    
+def castrados():
+    st.header("Animais que já foram castrados")
+    machos_castrados = supabase.table("caninos").select("nome", "genero", "entrada").eq("adotado", "False").eq("vivo", "True").eq("genero", "macho").eq("castrado", "True").execute()
+    femeas_castradas = supabase.table("caninos").select("nome", "genero", "entrada").eq("adotado", "False").eq("vivo", "True").eq("genero", "femea").eq("castrado", "True").execute()
+    qtde_machos_castrados = len(machos_castrados.data)
+    qtde_femeas_castradas = len(femeas_castradas.data)
+    st.markdown(f"São {qtde_machos_castrados} machos castrados")
+    st.dataframe(machos_castrados.data)
+    st.markdown(f"São {qtde_femeas_castradas} femeas castradas")
+    st.dataframe(femeas_castradas.data)
+    
+def nao_castrados():
+    st.header("Animais que ainda não foram castrados")
+    machos_nao_castrados = supabase.table("caninos").select("nome", "genero", "entrada").eq("adotado", "False").eq("vivo", "True").eq("genero", "macho").eq("castrado", "False").execute()
+    femeas_nao_castradas = supabase.table("caninos").select("nome", "genero", "entrada").eq("adotado", "False").eq("vivo", "True").eq("genero", "femea").eq("castrado", "False").execute()
+    qtde_machos_nao_castrados = len(machos_nao_castrados.data)
+    qtde_femeas_nao_castradas = len(femeas_nao_castradas.data)
+    st.markdown(f"São {qtde_machos_nao_castrados} machos nao castrados")
+    st.dataframe(machos_nao_castrados.data)
+    st.markdown(f"São {qtde_femeas_nao_castradas} femeas nao castradas")
+    st.dataframe(femeas_nao_castradas.data) 
+       
+def apresenta():
+    st.header("Animais que estão abrigados atualmente")
+    imagem1 = supabase.storage.from_("Meninos").download("Femeas/princesa.jpg")
+    imagen2 = supabase.storage.from_("Meninos").download("Femeas/michele.jpg")
+    imagen3 = supabase.storage.from_("Meninos").download("Femeas/gorda.jpg")
+    imagen4 = supabase.storage.from_("Meninos").download("Femeas/dina.jpg")
+    col = st.columns((1,1,1,1))
+    col[0].image(imagem1, width=200, caption="Princesa")
+    col[1].image(imagen2, width=200, caption="Michele")
+    col[2].image(imagen3, width=200, caption="Gorda")
+    col[3].image(imagen4, width=200, caption="Dina")
+
+def apresenta1():
+    st.header("Animais que já viraram estrelinha")
+    imagem1 = supabase.storage.from_("Meninos").download("Machos/bob.jpg")
+    imagen2 = supabase.storage.from_("Meninos").download("Machos/Bebezao.jpg")
+    imagen3 = supabase.storage.from_("Meninos").download("Machos/branquelo.jpg")
+    imagen4 = supabase.storage.from_("Meninos").download("Machos/nico.jpg")
+    col = st.columns((1,1,1,1))
+    col[0].image(imagem1, width=200, caption="Bob")
+    col[1].image(imagen2, width=200, caption="Bebezao")
+    col[2].image(imagen3, width=200, caption="Branquelo")
+    col[3].image(imagen4, width=200, caption="Nico")
+    
+
+
+fotos = st.sidebar.button("FOTOS", use_container_width=True)
+estrelinhas = st.sidebar.button("ESTRELINHAS", use_container_width=True)
+cast = st.sidebar.button("ANIMAIS CASTRADOS", use_container_width=True)
+nao_cast = st.sidebar.button("ANIMAIS NAO CASTRADOS", use_container_width=True)
+conselho = st.sidebar.button("QUER UM CONSELHO", use_container_width=True)
+
+if nao_cast:
+    nao_castrados()
+    
+elif cast:
+    
+    castrados()
+    
+elif estrelinhas:
+    
+    apresenta1()
+    
+elif fotos:
+    
+    apresenta()
+    
+elif conselho:
+    
+    advice()
+
+else:
+    
+    inicio()
+   
 #exemplo = supabase.table("caninos").select("foto").execute()
 #imagem = supabase.storage.from_("Meninos").get_public_url("Femeas/princesa.jpg")
-imagem1 = supabase.storage.from_("Meninos").download("Femeas/princesa.jpg")
-foto = supabase.table("caninos").select("*").execute()
-st.image(imagem1, width=400)
+
+#if insert:
+#    up = supabase.storage.from_("Meninos").upload(file="img.png", path="Femeas/img.png")
+
 #st.dataframe(foto.data[43]['foto'])
 #st.image(foto.data[78]['foto'], width=300)
 #st.image(foto, width=200)

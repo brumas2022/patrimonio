@@ -2,7 +2,9 @@ import pandas as pd
 import streamlit as st
 import streamlit_pdf_viewer as stf
 
+
 df = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=0)
+
 
 print(df['valor'])
 
@@ -19,4 +21,6 @@ if botao:
 
 
 print(df1)
+
+
 
