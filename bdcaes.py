@@ -32,7 +32,7 @@ def advice():
 
     translator = Translator()
     texto_em_ingles = "Hello, world!"
-    texto_traduzido = translator.translate(cons, dest='pt')
+    texto_traduzido = translator.translate(cons, dest='pt').text()
     st.write(texto_traduzido) # Output: Olá, mundo!
     
 def inicio():
