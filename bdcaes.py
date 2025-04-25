@@ -16,6 +16,7 @@ supabase: Client = create_client('https://ibhcxtnwnonsnycfgjay.supabase.co',
 
 def advice():
     
+    
     #api_key=
     link_api="https://api.adviceslip.com/advice"
 
@@ -27,6 +28,12 @@ def advice():
     
     cons = dados_requisicao['slip']['advice']
     st.write(cons)
+    from googletrans import Translator
+
+    translator = Translator()
+    texto_em_ingles = "Hello, world!"
+    texto_traduzido = translator.translate(cons, dest='pt')
+    st.write(texto_traduzido) # Output: Olá, mundo!
     
 def inicio():
     total = supabase.table("caninos").select("nome").execute()
