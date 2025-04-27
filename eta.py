@@ -4,13 +4,7 @@ import streamlit_pdf_viewer as stf
 
 st.set_page_config("Obra da Estação de Tratamento de Água 2", layout="wide")
 
-a = st.sidebar.button("PROJETOS")
-b = st.sidebar.button("LICITACAO")
-c = st.sidebar.button("OBRA")
-d = st.sidebar.button("PENDENCIAS DA OBRA")
-e = st.sidebar.button("PENDENCIAS DA ETA 2")
-
-if a:
+def projetos():
     st.info("PROJETOS DA ETA")
     projeto = st.selectbox("QUAL PROJETO", ("FLOCULADOR", "DECANTADOR"))
     
@@ -25,6 +19,15 @@ if a:
         arquivo2 = stf.pdf_viewer("PLANILHA PREGÃO LOTEAMENTOS.pdf")
         st.write(arquivo2)
         st.button("Vamos")
+
+a = st.sidebar.button("PROJETOS")
+b = st.sidebar.button("LICITACAO")
+c = st.sidebar.button("OBRA")
+d = st.sidebar.button("PENDENCIAS DA OBRA")
+e = st.sidebar.button("PENDENCIAS DA ETA 2")
+
+if a:
+    projetos()
         
 elif b:
     
