@@ -34,6 +34,7 @@ elif b:
     df_medicao.columns=["LOTE", "EMPRESA", "VALOR", "DATA NAD1", "VALOR NAD1", "SITUAÇAO", "DATA NAD2", "VALOR NAD2"]
     st.dataframe(df_medicao.iloc[3:8], hide_index=True)
     st.markdown(":green[Em 19/03/2025 - Chegou Registro de gaveta DN 600]")
+    st.markdown(":red[Em 24/04/2025 - Chegou Registro de gaveta DN 800]")
     ata = st.button("Ata de Registro")
     if ata:
          arquivo1 = stf.pdf_viewer("Ata_de_Registro_de_Precos_-_Pregao_Eletronico_012.2024__assinado.pdf")
