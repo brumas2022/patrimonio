@@ -46,7 +46,7 @@ elif b:
 elif d:
     opcoes = ["INTERLIGACAO SAIDA ETA", "INTERLIGACAO CALHA PARSHAL"]
     selecao = st.pills("Escolha", opcoes)
-    if selecao=="INTERLIGACAO SAIDA ETA":
+    if selecao==opcoes[0]:
         #arquivo = stf.pdf_viewer("PROJETO SAIDA ETA.pdf")
         #st.markdown(arquivo)
         df_func = pd.read_excel("interligacoes-ETA.xlsx", sheet_name=0)
