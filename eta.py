@@ -6,16 +6,16 @@ st.set_page_config("Obra da Estação de Tratamento de Água 2", layout="wide")
 
 def projetos():
     st.info("PROJETOS DA ETA")
-    projeto = st.selectbox("QUAL PROJETO", ("FLOCULADOR", "DECANTADOR"))
+    op_proj = ["FLOCULADOR", "DECANTADOR"]
+    tab1, tab2 = st.tabs(op_proj)
     
-    if projeto=="FLOCULADOR":
-       st.write("Este é o projeto do floculador") 
-       arquivo = stf.pdf_viewer("PLANILHA PREGÃO LOTEAMENTOS.pdf", )
-       return(st.write(arquivo))
+    with tab1:
+       st.image("floculador-decantador.JPG")
+       #arquivo = stf.pdf_viewer("PLANILHA PREGÃO LOTEAMENTOS.pdf", )
+       #st.write(arquivo)
        
     
-    if projeto=="DECANTADOR":
-        st.write("ESTE É O PRJETO DECANTADOR")
+    with tab2:
         arquivo2 = stf.pdf_viewer("PLANILHA PREGÃO LOTEAMENTOS.pdf")
         return(st.write(arquivo2))
         
@@ -44,17 +44,16 @@ elif b:
          st.markdown(arquivo1)
 
 elif d:
+    df_func_1 = pd.read_excel("interligacoes-ETA.xlsx", sheet_name=0)
+    df_func_2 = pd.read_excel("interligacoes-ETA.xlsx", sheet_name=1)
     opcoes = ["INTERLIGACAO SAIDA ETA", "INTERLIGACAO CALHA PARSHAL"]
-    selecao = st.selectbox("Escolha", opcoes)
-    if selecao==opcoes[0]:
-        #arquivo = stf.pdf_viewer("PROJETO SAIDA ETA.pdf")
-        #st.markdown(arquivo)
-        df_func = pd.read_excel("interligacoes-ETA.xlsx", sheet_name=0)
-        st.dataframe(df_func, hide_index=True)
-        joao = st.button("Pare")
-    elif selecao==opcoes[1]:
-        st.markdown("Calha")
-        luis = st.button("PAre")
+    t1, t2 = st.tabs(opcoes)
+    with t1:
+        st.dataframe(df_func_1, hide_index=True)
+        
+    with t2:
+        st.dataframe(df_func_2, hide_index=True)
+        
         
 elif e:
     st.info("ACOES PARA OPERACIONALIZACAO DA ETA II")
