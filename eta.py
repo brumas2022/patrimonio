@@ -11,14 +11,14 @@ def projetos():
     if projeto=="FLOCULADOR":
        st.write("Este é o projeto do floculador") 
        arquivo = stf.pdf_viewer("PLANILHA PREGÃO LOTEAMENTOS.pdf", )
-       st.write(arquivo)
-       st.button("voltar")
+       return(st.write(arquivo))
+       
     
     if projeto=="DECANTADOR":
         st.write("ESTE É O PRJETO DECANTADOR")
         arquivo2 = stf.pdf_viewer("PLANILHA PREGÃO LOTEAMENTOS.pdf")
-        st.write(arquivo2)
-        st.button("Vamos")
+        return(st.write(arquivo2))
+        
 
 a = st.sidebar.button("PROJETOS")
 b = st.sidebar.button("LICITACAO")
