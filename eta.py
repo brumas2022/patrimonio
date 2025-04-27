@@ -45,15 +45,16 @@ elif b:
 
 elif d:
     opcoes = ["INTERLIGACAO SAIDA ETA", "INTERLIGACAO CALHA PARSHAL"]
-    selecao = st.pills("Escolha", opcoes)
+    selecao = st.selectbox("Escolha", opcoes)
     if selecao==opcoes[0]:
         #arquivo = stf.pdf_viewer("PROJETO SAIDA ETA.pdf")
         #st.markdown(arquivo)
         df_func = pd.read_excel("interligacoes-ETA.xlsx", sheet_name=0)
         st.dataframe(df_func, hide_index=True)
         joao = st.button("Pare")
-    elif selecao ==opcoes[1]:
+    elif selecao==opcoes[1]:
         st.markdown("Calha")
+        luis = st.button("PAre")
         
 elif e:
     st.info("ACOES PARA OPERACIONALIZACAO DA ETA II")
