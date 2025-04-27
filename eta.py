@@ -52,7 +52,7 @@ elif d:
         df_func = pd.read_excel("interligacoes-ETA.xlsx", sheet_name=0)
         st.dataframe(df_func, hide_index=True)
         joao = st.button("Pare")
-    else selecao==opcoes[1]:
+    elif selecao==opcoes[1]:
         st.markdown("Calha")
         luis = st.button("PAre")
         
