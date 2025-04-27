@@ -42,7 +42,10 @@ elif b:
     if ata:
          arquivo1 = stf.pdf_viewer("Ata_de_Registro_de_Precos_-_Pregao_Eletronico_012.2024__assinado.pdf")
          st.markdown(arquivo1)
-
+elif c:
+    df_func_0 = pd.read_excel("interligacoes-ETA.xlsx", sheet_name=2)
+    st.dataframe(df_func_0, hide_index=True)
+    
 elif d:
     df_func_1 = pd.read_excel("interligacoes-ETA.xlsx", sheet_name=0)
     df_func_2 = pd.read_excel("interligacoes-ETA.xlsx", sheet_name=1)
