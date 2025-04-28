@@ -50,7 +50,8 @@ with tab1:
         #df_selecao=df_medicao.groupby(by='CONTRATO').sum(numeric_only=True)
         #st.dataframe(df_selecao)
     with t13:
-        relat = pd.read_excel("relatorio.xlsx", sheet_name=0)
+        nome = "Medicao"
+        relat = pd.read_excel("relatorio.xlsx", sheet_name=f'{nome}')
         st.dataframe(relat)
         st.write("Aqui serão disponibilizados os relatorios mensais de acompanhamento da obra")
         with open("CTR_004-2023_TECNOBOMBAS_BOMBAS_MOTORES_E_SERVICOS_LTDA_assinado.pdf", "rb") as file: 
