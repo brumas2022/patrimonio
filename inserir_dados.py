@@ -1,8 +1,20 @@
 import streamlit as st
 import pandas as pd
 import openpyxl
+from openpyxl import load_workbook
 
-
+def criar(nome, ind):
+    wb = openpyxl.Workbook()
+    del wb['Sheet']
+    if ind==0:
+        wb.create_sheet(title=f'{nome}', index=ind)
+        wb.save("nome_teste.xlsx")
+    else:
+        pass   
+        
+    wb.save("nome1.xlsx")
+    
+    
 def botao():
     st.markdown('<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">', unsafe_allow_html=True)
     st.markdown("""
@@ -47,7 +59,7 @@ def nova_medicao(nro_ctr, nro_medicao, data_medicao, valor, nf, data_nf, data_pa
     w_medicao.save("relatorio.xlsx")
 
 
-lista = ["INSERIR DIARIO DE OBRA", "INSERIR MEDICAO", "INSERIR CONTRATO", "CARD", "BOTAO"]
+lista = ["INSERIR DIARIO DE OBRA", "INSERIR MEDICAO", "INSERIR CONTRATO", "CARD", "BOTAO", "CRIAR"]
 a = st.sidebar.selectbox("Escolha a opção", lista)
 
 if a==lista[0]:
@@ -77,5 +89,30 @@ elif a=="CARD":
     card() 
 elif a=="BOTAO":
     botao()
+elif a=="CRIAR":
+    lista_contratos_OBRAS = ["MASTER - 034-2022", "MASTER - 028-2023", "MASTER 019-2024", "CONSTRUTORA MENEGUETI - VG", "TECNBOMBAS - 007-2024", "TECNOBOMBAS - 004-2023", \
+                         "SPARTACUS - 024-2024", "MILLENIUM - 009-2023", "MILLENIUM - 003-2024", "MILLENIUM 017-2024", "MILLENIUM - 008-2023", \
+                         "COOMSER OBRA", "SPARTACUS - 013-2024", "SM7 - TANKS BR", "RST ENGENHARIA", "MARCIO SOUZA FARIAS",  "DIMBEL", "DA GARISTO"]
+    ind = 0
+    wb = openpyxl.Workbook()
+    del wb['Sheet']
+    
+    #Cria as abas com os nomes dos contratos
+    for nome in lista_contratos_OBRAS:
+        
+        ind = ind + 1
+        print(ind)
+        wb.create_sheet(title=f'{nome}', index=ind)
+        
+    wb.save("nome_teste.xlsx")
+    wb1 = load_workbook("nome_teste.xlsx")
+    
+    #Abre as planilhas e coloca a linha de cabecalho Data e Atividades
+    for nome in lista_contratos_OBRAS:
+        wb1[nome].append(["Data","Atividades"])  
+    wb1.save("nome_final.xlsx")    
+    
+        
+    
  
         
