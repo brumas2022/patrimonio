@@ -72,7 +72,7 @@ def card():
                 )
     col[2].markdown("""
                 <div class="card" style="width: 18rem;">
-                     <img src="https://sebodomarcao-w9epafmc27rcklcpym2lou.streamlit.app/~/+/media/fc89f99ec2a55668e059f101e3248301d4494bf7c10c4cb8b438b9c2.jpg" class="card-img-top" alt="...">
+                     <img src="Gemini_Generated_Image_jwkry5jwkry5jwkr.jpg" class="card-img-top" alt="...">
                      <div class="card-body">
                           <h5 class="card-title">Contratos de Obras</h5>
                           <p class="card-text">Conheça os contratos ativos de obras</p>
