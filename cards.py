@@ -72,7 +72,7 @@ def card():
                 )
     col[2].markdown("""
                 <div class="card" style="width: 18rem;">
-                     <img src="https://sebodomarcao-w9epafmc27rcklcpym2lou.streamlit.app/~/+/media/fc89f99ec2a55668e059f101e3248301d4494bf7c10c4cb8b438b9c2.jpg" class="card-img-top" alt="...">
+                     <img src="https://lh3.googleusercontent.com/gg-dl/AA8i_VL0vmu2mmb7BwKcIUFl1OqkTm-9RhA4VzkpZFk08pIhyP2DLAnVN8JGXd_Df9dQaAXtwKpButra5JVUF_x2_vus1ds8FodZjU0DF93RLsE5vOYDZiddcoJfFARJbonaTYCtRHnLsDsQt8SCTad-QFUmt4qcUmZuPO_w-S9yW649wBA" class="card-img-top" alt="...">
                      <div class="card-body">
                           <h5 class="card-title">Contratos de Obras</h5>
                           <p class="card-text">Conheça os contratos ativos de obras</p>
