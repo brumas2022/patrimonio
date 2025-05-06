@@ -4,28 +4,29 @@ from streamlit_folium import st_folium
 import pandas as pd
 import time
 
-   
-def p03():
-    st.subheader("P03 - Atlantico", divider="orange")
-    m = folium.Map(location=[-16.468104952605543, -54.57546160244493], zoom_start=16)
+def poco_tubular(nome, lat, long, tipo):
+    st.header(f"{nome}", divider="orange")
+    st.markdown(f"Esta é a localização do {tipo}")
+    m = folium.Map(location=[lat, long], zoom_start=16)
     folium.Marker(
-    [-16.468104952605543, -54.57546160244493], popup="Atlantico", tooltip="Atlantico"
+    [lat, long], popup=f"{nome}", tooltip=f"{nome}"
     ).add_to(m)
     
     return st_folium(m, width=725, returned_objects=[])
     
-def p04():
-    st.header("P04 - Vila Goulart", divider="orange")
-    st.markdown("Esta é a localização do poço")
-    m = folium.Map(location=[-16.48933413559257, -54.63979329041073], zoom_start=16)
-    folium.Marker(
-    [-16.48933413559257, -54.63979329041073], popup="Vila Goulart", tooltip="Vila Goulart"
-    ).add_to(m)
-    
-    return st_folium(m, width=725, returned_objects=[])
-            
 
-    #call to render Folium map in Streamlit
-    #st_data = st_folium(m, width=725)
-            
-    
+df = pd.read_csv("pocos.csv")
+
+local = df["nome"].tolist()
+
+escolha = st.sidebar.radio("Escolha o poço tubular", local)
+
+resultado = df[df['nome']==escolha]
+
+nome = resultado.iat[0,0]
+lat = resultado.iat[0,1]
+long = resultado.iat[0,2]
+tipo = resultado.iat[0,3]
+poco_tubular(nome, lat, long, tipo)
+
+
