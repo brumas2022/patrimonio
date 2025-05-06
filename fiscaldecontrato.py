@@ -70,6 +70,7 @@ def inicia_relatorio():
 
             pdf.text(11, 215, txt="Observacoes /")
             pdf.text(51, 215, txt=obs)  # texto da observação
+            #pdf.text_
             pdf.text(11, 220, txt="Sugestões /")
             pdf.text(11, 225, txt="Reclamações")
 
@@ -150,7 +151,7 @@ with st.form("Relatorio"):
     #portaria_nro = st.text_input("Numero da portaria", value=f"{df_contratos.iloc[n,11]}")
     #portaria_data = st.text_input("Data portaria", value=f"{df_contratos.iloc[n,12].strftime("%d/%m/%Y")}")
     #ordem_inicio = st.text_input("Data da ordem de inicio", value= f"{df_contratos.iloc[n,14]}")
-    obs = st.text_input("Observação")
+    obs = st.text_area("Observação")
     diligencia = st.text_input("Diligencias")
     ocorrecias = st.text_input("Ocorrencias")
     avaliacao = st.text_input("Avaliação")
