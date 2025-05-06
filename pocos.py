@@ -14,7 +14,7 @@ def poco_tubular(nome, lat, long, tipo):
     
     return st_folium(m, width=725, returned_objects=[])
     
-df = pd.read_excel("UNIDADES_SANEAR_2025.xlsx", sheet_name=0)
+df = pd.read_excel("UNIDADES_SANEAR_2025_COORD.xlsx", sheet_name=0)
 #df = pd.read_csv("pocos.csv")
 
 local = df["NOME"].tolist()
@@ -25,8 +25,8 @@ resultado = df[df['NOME']==escolha]
 st.dataframe(resultado)
 
 nome = resultado.iat[0,3]
-lat = resultado.iat[0,8]
-long = resultado.iat[0,9]
+lat = resultado.iat[0,15]
+long = resultado.iat[0,14]
 tipo = resultado.iat[0,5]
 poco_tubular(nome, lat, long, tipo)
 
