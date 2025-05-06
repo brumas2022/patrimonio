@@ -14,8 +14,8 @@ def poco_tubular(nome, lat, long, tipo):
     
     return st_folium(m, width=725, returned_objects=[])
     
-
-df = pd.read_csv("pocos.csv")
+df = pd.read_excel("UNIDADES_SANEAR_2025", sheet_name=0)
+#df = pd.read_csv("pocos.csv")
 
 local = df["nome"].tolist()
 
