@@ -53,24 +53,33 @@ def inicia_relatorio():
             pdf.rect(10, 180, 30, 30)
             pdf.rect(10, 210, 30, 30)
             pdf.text(11, 125, txt="Ocorrencias")
-            pdf.text(51, 125, txt=ocorrecias)  #texto da ocorrencia
-
+            pdf.text(51, 125, txt=ocorrecias[:78])  #texto da ocorrencia
+            pdf.text(51, 130, txt=ocorrecias[79:160])
+            pdf.text(51, 135, txt=ocorrecias[161:240])    
             pdf.text(11, 155, txt="Diligencias")
-            pdf.text(51, 155, txt=diligencia) # texto da diligencia
+            pdf.text(51, 155, txt=diligencia[:78]) # texto da diligencia
+            pdf.text(51, 160, txt=diligencia[79:160])
+            pdf.text(51, 165, txt=diligencia[161:240])
             pdf.text(11, 160, txt="demandas e")
             pdf.text(11, 165, txt="providências")
             pdf.text(11, 170, txt="adotadas")
 
             pdf.text(11, 185, txt="Avaliação dos")
-            pdf.text(51, 185, txt=avaliacao) # texto da avaliação
+            pdf.text(51, 185, txt=avaliacao[:78]) # texto da avaliação
+            pdf.text(51, 190, txt=avaliacao[79:160])
+            pdf.text(51, 195, txt=avaliacao[161:240])
+            
+            
             pdf.text(11, 190, txt="serviços e")
             pdf.text(11, 195, txt="documentos")
             pdf.text(11, 200, txt="apresentados")
             pdf.text(11, 205, txt="pela empresa")
 
             pdf.text(11, 215, txt="Observacoes /")
-            pdf.text(51, 215, txt=obs)  # texto da observação
-            #pdf.text_
+            #pdf.text(51, 215, txt=obs)  # texto da observação
+            pdf.text(51,215, txt=obs[:78])
+            pdf.text(51,220, txt=obs[78:160])
+            pdf.text(51,225, txt=obs[160:240])
             pdf.text(11, 220, txt="Sugestões /")
             pdf.text(11, 225, txt="Reclamações")
 
@@ -94,7 +103,7 @@ def inicia_relatorio():
     
             #pdf.output(f"C:/Users/Compras/Desktop/2025/RELATORIOS/CTR {nro.replace("/", "-")} {empresa}.pdf") 
             # "C:/Users/Compras/Desktop/2025/RELATORIOS/
-            pdf.output(f'C:/Users/Compras/Desktop/2025/RELATORIOS/CTR {nro.replace("/", "-")}.pdf') 
+            pdf.output(f'CTR {nro.replace("/", "-")}.pdf') 
             
 
 df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
@@ -131,30 +140,19 @@ with st.form("Relatorio"):
     
     
     n=str(nro)
-    #result = resultado[j]['empresa']
+    
     
     empresa = resultado.iat[0,2]
     
-    #s2=str(empresa)
-    #print(result)
+    
     st.sidebar.write(menina)
     st.sidebar.write(empresa)
     
-    #n=int(resultado['id'])-1
-    #st.write(n)
-    #empresa = st.text_input("EMPRESA", value=f"{df_contratos.iloc[n,2]}")
-    #objeto = st.text_input("OBJETO", value=f"{df_contratos.iloc[n,3]}")
-    #valor = st.text_input("VALOR", value=f"{df_contratos.iloc[n,7]}")
-    #data_inicio = st.text_input("DATA INICIAL", value=f"{df_contratos.iloc[n,4].strftime("%d/%m/%Y")}")
-    #data_fim = st.text_input("DATA FINAL", value=f"{df_contratos.iloc[n,5].strftime("%d/%m/%Y")}")
-    #licitacao = st.text_input("LICITACAO N°/ANO", value=f"{df_contratos.iloc[n,8]}")
-    #portaria_nro = st.text_input("Numero da portaria", value=f"{df_contratos.iloc[n,11]}")
-    #portaria_data = st.text_input("Data portaria", value=f"{df_contratos.iloc[n,12].strftime("%d/%m/%Y")}")
-    #ordem_inicio = st.text_input("Data da ordem de inicio", value= f"{df_contratos.iloc[n,14]}")
+    
+    ocorrecias = st.text_area("Ocorrencias")
+    diligencia = st.text_area("Diligencias")
+    avaliacao = st.text_area("Avaliação")
     obs = st.text_area("Observação")
-    diligencia = st.text_input("Diligencias")
-    ocorrecias = st.text_input("Ocorrencias")
-    avaliacao = st.text_input("Avaliação")
     data_relatorio = st.date_input("Data do relatorio")
     data_relatorio_1 = data_relatorio.strftime("%d/%m/%Y")
     if st.form_submit_button():
