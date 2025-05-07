@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 #import fpdf
 from fpdf import FPDF
-import streamlit_pdf_viewer as stf
+#import streamlit_pdf_viewer as stf
 
 
 
