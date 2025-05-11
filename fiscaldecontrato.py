@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 #import fpdf
 from fpdf import FPDF
-import streamlit_pdf_viewer as stf
+#import streamlit_pdf_viewer as stf
 
 
 
@@ -54,20 +54,20 @@ def inicia_relatorio():
             pdf.rect(10, 210, 30, 30)
             pdf.text(11, 125, txt="Ocorrencias")
             pdf.text(51, 125, txt=ocorrecias[:78])  #texto da ocorrencia
-            pdf.text(51, 130, txt=ocorrecias[79:160])
-            pdf.text(51, 135, txt=ocorrecias[161:240])    
+            pdf.text(51, 130, txt=ocorrecias[78:160])
+            pdf.text(51, 135, txt=ocorrecias[160:240])    
             pdf.text(11, 155, txt="Diligencias")
             pdf.text(51, 155, txt=diligencia[:78]) # texto da diligencia
-            pdf.text(51, 160, txt=diligencia[79:160])
-            pdf.text(51, 165, txt=diligencia[161:240])
+            pdf.text(51, 160, txt=diligencia[78:160])
+            pdf.text(51, 165, txt=diligencia[160:240])
             pdf.text(11, 160, txt="demandas e")
             pdf.text(11, 165, txt="providências")
             pdf.text(11, 170, txt="adotadas")
 
             pdf.text(11, 185, txt="Avaliação dos")
             pdf.text(51, 185, txt=avaliacao[:78]) # texto da avaliação
-            pdf.text(51, 190, txt=avaliacao[79:160])
-            pdf.text(51, 195, txt=avaliacao[161:240])
+            pdf.text(51, 190, txt=avaliacao[78:160])
+            pdf.text(51, 195, txt=avaliacao[160:240])
             
             
             pdf.text(11, 190, txt="serviços e")
