@@ -66,7 +66,7 @@ def inicia_relatorio():
 
             pdf.text(11, 185, txt="Avaliação dos")
             pdf.text(51, 185, txt=avaliacao[:78]) # texto da avaliação
-            pdf.text(51, 190, txt=avaliacao[78:190])
+            pdf.text(51, 190, txt=avaliacao[78:200])
             #pdf.text(51, 195, txt=avaliacao[160:240])
             
             
