@@ -66,8 +66,8 @@ def inicia_relatorio():
 
             pdf.text(11, 185, txt="Avaliação dos")
             pdf.text(51, 185, txt=avaliacao[:78]) # texto da avaliação
-            pdf.text(51, 190, txt=avaliacao[78:160])
-            pdf.text(51, 195, txt=avaliacao[160:240])
+            pdf.text(51, 190, txt=avaliacao[78:190])
+            #pdf.text(51, 195, txt=avaliacao[160:240])
             
             
             pdf.text(11, 190, txt="serviços e")
@@ -78,8 +78,8 @@ def inicia_relatorio():
             pdf.text(11, 215, txt="Observacoes /")
             #pdf.text(51, 215, txt=obs)  # texto da observação
             pdf.text(51,215, txt=obs[:78])
-            pdf.text(51,220, txt=obs[78:160])
-            pdf.text(51,225, txt=obs[160:240])
+            pdf.text(51,220, txt=obs[78:180])
+            #pdf.text(51,225, txt=obs[160:240])
             pdf.text(11, 220, txt="Sugestões /")
             pdf.text(11, 225, txt="Reclamações")
 
