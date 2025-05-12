@@ -33,7 +33,7 @@ def nova_medicao():
     
     nro = st.sidebar.selectbox("Escolha o contrato", df_nro_contrato)
     resultado = df_medicao.loc[df_medicao['CONTRATO']==nro]
-    st.dataframe(resultado, hide_index=True)
+    st.dataframe(resultado)
     nro_medicao = st.sidebar.text_input("nro medicao")
     valor_medicao = st.sidebar.number_input("valor")
     data_medicao = st.sidebar.date_input("data").strftime("%d/%m/%Y")
