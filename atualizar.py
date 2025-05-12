@@ -1,6 +1,14 @@
 import streamlit as st 
-import pandas as pd 
+import pandas as pd
+import openpyxl 
 
+
+def entrada(n, nro, data, valor):
+    workbook = openpyxl.load_workbook("DADOS_CONTRATOS.xlsx")
+    aba = workbook.active
+    aba.append([n, nro, data, valor])
+    workbook.save("DADOS_CONTRATOS.xlsx")
+    
 def acesso():
     form = st.form(key="Caes", clear_on_submit=True)
     with form:
@@ -26,9 +34,18 @@ def nova_medicao():
     nro = st.sidebar.selectbox("Escolha o contrato", df_nro_contrato)
     resultado = df_medicao.loc[df_medicao['CONTRATO']==nro]
     st.dataframe(resultado, hide_index=True)
+    nro_medicao = st.sidebar.text_input("nro medicao")
+    valor_medicao = st.sidebar.number_input("valor")
+    data_medicao = st.sidebar.date_input("data").strftime("%d/%m/%Y")
+    inserir = st.sidebar.button("INSERIR MEDICAO")
+    if inserir:
+        entrada(nro, nro_medicao, data_medicao, valor_medicao)
+        
+    
+    
     
     
             
-acesso()
+#acesso()
 nova_medicao()
     
