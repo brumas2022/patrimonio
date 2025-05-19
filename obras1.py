@@ -14,23 +14,19 @@ df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=3)
 
 def dados(n):
     #n=11
+    
     df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
     df_mostra_dados = df_contratos.loc[(n, ["contrato", "empresa", "objeto", "valor", "fiscal", "inicio", "fim"])]
-    df_mostra_dados.index
-    st.dataframe(df_mostra_dados, column_config={
-        "inicio": st.column_config.DatetimeColumn(
-            "inicio",
-            format="DD/MM/YYYY",
-            
-        ),
-        "fim": st.column_config.DatetimeColumn(
-            "fim",
-            format="DD/MM/YYYY",
-            
-        ),
-    })
+    valor_contrato = df_mostra_dados.values[3].astype(float)
+    st.markdown(f"**CONTRATO** : {df_mostra_dados.values[0]}")
+    st.write("EMPRESA :", df_mostra_dados.values[1])
+    st.write("OBJETO :", df_mostra_dados.values[2])
+    st.markdown(f"VALOR : {valor_contrato}")
+    st.write("FISCAL :", df_mostra_dados.values[4])
+    st.write("INICIO :", df_mostra_dados.values[5].strftime("%d/%m/%Y"))
+    st.write("FIM :", df_mostra_dados.values[6].strftime("%d/%m/%Y"))
     
-    #st.write("dados do contrato")
+    
 
 def medicoes(n):
     #n=11
