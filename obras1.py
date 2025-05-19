@@ -16,7 +16,13 @@ def dados(n):
     #n=11
     df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
     df_mostra_dados = df_contratos.loc[(n, ["contrato", "empresa", "objeto", "valor", "fiscal", "inicio", "fim"])]
-    st.dataframe(df_mostra_dados)
+    st.dataframe(df_mostra_dados, column_config={
+        "inicio": st.column_config.DatetimeColumn(
+            "inicio",
+            format="DD/MM/YYYY",
+            
+        )
+    })
     
     #st.write("dados do contrato")
 
