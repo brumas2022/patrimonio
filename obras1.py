@@ -19,9 +19,14 @@ def dados(n):
     st.dataframe(df_mostra_dados, column_config={
         "inicio": st.column_config.DatetimeColumn(
             "inicio",
+            format="DD/MM/YYYY"
+            
+        ),
+        "fim": st.column_config.DatetimeColumn(
+            "fim",
             format="DD/MM/YYYY",
             
-        )
+        ),
     })
     
     #st.write("dados do contrato")
