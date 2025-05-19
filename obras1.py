@@ -16,7 +16,7 @@ def dados(n):
     #n=11
     df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
     df_mostra_dados = df_contratos.loc[(n, ["contrato", "empresa", "objeto", "valor", "fiscal", "inicio", "fim"])]
-    print(df_mostra_dados)
+    df_mostra_dados.dtypes
     st.dataframe(df_mostra_dados, column_config={
         "inicio": st.column_config.DatetimeColumn(
             "inicio",
