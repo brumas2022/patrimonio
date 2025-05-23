@@ -55,9 +55,25 @@ def castrados():
     qtde_machos_castrados = len(machos_castrados.data)
     qtde_femeas_castradas = len(femeas_castradas.data)
     st.markdown(f"São {qtde_machos_castrados} machos castrados")
-    st.dataframe(machos_castrados.data)
+    st.dataframe(machos_castrados.data, column_config={
+        "entrada": st.column_config.DatetimeColumn(
+            "entrada",
+            format="DD/MM/YYYY",
+            
+        ),
+        
+        
+    })
     st.markdown(f"São {qtde_femeas_castradas} femeas castradas")
-    st.dataframe(femeas_castradas.data)
+    st.dataframe(femeas_castradas.data, column_config={
+        "entrada": st.column_config.DatetimeColumn(
+            "entrada",
+            format="DD/MM/YYYY",
+            
+        ),
+        
+        
+    })
     
 def nao_castrados():
     st.header("Animais que ainda não foram castrados")
@@ -66,9 +82,25 @@ def nao_castrados():
     qtde_machos_nao_castrados = len(machos_nao_castrados.data)
     qtde_femeas_nao_castradas = len(femeas_nao_castradas.data)
     st.markdown(f"São {qtde_machos_nao_castrados} machos nao castrados")
-    st.dataframe(machos_nao_castrados.data)
+    st.dataframe(machos_nao_castrados.data, column_config={
+        "entrada": st.column_config.DatetimeColumn(
+            "entrada",
+            format="DD/MM/YYYY",
+            
+        ),
+        
+        
+    })
     st.markdown(f"São {qtde_femeas_nao_castradas} femeas nao castradas")
-    st.dataframe(femeas_nao_castradas.data) 
+    st.dataframe(femeas_nao_castradas.data, column_config={
+        "entrada": st.column_config.DatetimeColumn(
+            "entrada",
+            format="DD/MM/YYYY",
+            
+        ),
+        
+        
+    }) 
        
 def apresenta():
     st.header("Animais que estão abrigados atualmente")
