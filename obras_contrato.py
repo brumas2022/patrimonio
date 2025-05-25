@@ -20,7 +20,7 @@ def senha():
 
 df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
 df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=3)
-df_aditivos = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=6)
+#df_aditivos = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=6)
 
 st.set_page_config("Consulta contratos de obra", layout="wide")
 colimage = st.columns((1,1,1))
@@ -51,7 +51,7 @@ with tab1:
         #df_selecao=df_medicao.groupby(by='CONTRATO').sum(numeric_only=True)
         #st.dataframe(df_selecao)
     with t13:
-        st.dataframe(df_aditivos[df_aditivos["CONTRATO"]==nro_contrato])
+        #st.dataframe(df_aditivos[df_aditivos["CONTRATO"]==nro_contrato])
         nome = "Medicao"
         relat = pd.read_excel("relatorio.xlsx", sheet_name=f'{nome}')
         st.dataframe(relat)
