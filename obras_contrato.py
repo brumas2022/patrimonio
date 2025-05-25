@@ -20,7 +20,7 @@ def senha():
 
 df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
 df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=3)
-df_aditivos = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=5)
+df_aditivos = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=6)
 
 st.set_page_config("Consulta contratos de obra", layout="wide")
 colimage = st.columns((1,1,1))
