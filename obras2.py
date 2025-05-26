@@ -56,7 +56,7 @@ def medicoes(n):
             
         #),
     })
-    total_medido = df_selecao["VALOR"].sum()
+    total_medido = df_selecao["valor"].sum()
     contrato = df_contratos.iloc[(n,7)]
     saldo = contrato - total_medido
    
@@ -74,7 +74,7 @@ def medicoes(n):
     
     
     #df_medicao.dtypes
-    df_y = df_selecao['VALOR'].tolist()
+    df_y = df_selecao['valor'].tolist()
     #st.dataframe(df_y)
     df_x=[1, 2, 3, 4, 5, 6, 7, 8]
     #df_y=[93264, 89785, 143861, 92502, 192910, 117159, 104735, 101971]
