@@ -12,11 +12,7 @@ df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=4)
 
 
 def dados(n):
-    #n=11
-    #df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
-    #df_mostra_dados = df_contratos.loc[(n, ["contrato", "empresa", "objeto", "valor", "fiscal", "inicio", "fim"])]
-    #st.dataframe(df_mostra_dados)
-    #st.write("dados do contrato")
+    
     df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
     df_mostra_dados = df_contratos.loc[(n, ["contrato", "empresa", "objeto", "valor", "fiscal", "inicio", "fim"])]
     valor_contrato = "R$ {:_.2f}".format(df_mostra_dados.values[3])
