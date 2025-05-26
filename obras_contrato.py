@@ -51,7 +51,8 @@ with tab1:
         #df_selecao=df_medicao.groupby(by='CONTRATO').sum(numeric_only=True)
         #st.dataframe(df_selecao)
     with t13:
-        st.dataframe(df_aditivos[df_aditivos["contrato"]==nro_contrato])
+        #st.dataframe(df_aditivos[df_aditivos["contrato"]==nro_contrato])
+        st.dataframe(df_aditivos[df_aditivos["contrato"]=="009/2022"])
         nome = "Medicao"
         relat = pd.read_excel("relatorio.xlsx", sheet_name=f'{nome}')
         st.dataframe(relat)
