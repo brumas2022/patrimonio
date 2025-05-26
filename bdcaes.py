@@ -38,15 +38,17 @@ def advice():
 def inicio():
     total = supabase.table("caninos").select("nome").execute()
     tot = len(total.data)
-    st.write("Animais que ja foram ajudados nos ultimos anos:", tot)
+    st.markdown(f"**Animais que ja foram ajudados nos ultimos anos:**  {tot}")
 
     total_adotados = supabase.table("caninos").select("nome").eq("adotado", "True").execute()
     tot_adotados = len(total_adotados.data)
-    st.write("Total de animais que foram adotados:", tot_adotados)
+    
+    st.markdown(f"**Total de animais que foram adotados:**  {tot_adotados}")
 
     total_atual = supabase.table("caninos").select("nome").eq("adotado", "False").eq("vivo", "True").execute()
     tot_atual = len(total_atual.data)
-    st.write("Total atual de animais na ARPAA:", tot_atual)
+    
+    st.markdown(f"**Total atual de animais na ARPAA:**  {tot_atual}")
     
 def castrados():
     st.header("Animais que já foram castrados")
