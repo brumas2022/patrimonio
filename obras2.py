@@ -8,7 +8,7 @@ colimage = st.columns((1,1,1))
 #colimage[1].image("logosanear.png", width=300)
 
 df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
-df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=3)
+df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=2)
 
 
 def dados(n):
