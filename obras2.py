@@ -27,7 +27,7 @@ def medicoes(n):
     df_selecao = df_medicao[df_medicao["CONTRATO"]==nro_contrato]
     #df_selecao = df_medicao[df_medicao["contrato"]==nro_contrato]
     
-    valor_contrato = df_contratos.loc[(n, ["VALOR"])]
+    valor_contrato = df_contratos.loc[(n, ["valor"])]
     
     df_selecao["%ACULUMADO"]=df_selecao['VALOR'].cumsum()
     
