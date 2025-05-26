@@ -19,8 +19,8 @@ def senha():
              st.write(f"{email}, a senha está incorreta. Verifique como desenvolvedor do produto")
 
 df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
-df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=3)
-df_aditivos = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name="Planilha5")
+df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=4)
+df_aditivos = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=3)
 
 st.set_page_config("Consulta contratos de obra", layout="wide")
 colimage = st.columns((1,1,1))
