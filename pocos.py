@@ -12,7 +12,7 @@ def poco_tubular(nome, lat, long, tipo):
     [lat, long], popup=f"{nome}", tooltip=f"{nome}"
     ).add_to(m)
     
-    return st_folium(m, width=725, returned_objects=[])
+    return # st_folium(m, width=725, returned_objects=[])
     
 df = pd.read_excel("UNIDADES_SANEAR_2025_COORD.xlsx", sheet_name=0)
 #df = pd.read_csv("pocos.csv")
