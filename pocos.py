@@ -11,6 +11,7 @@ def poco_tubular(nome, lat, long, tipo):
     folium.Marker(
     [lat, long], popup=f"{nome}", tooltip=f"{nome}"
     ).add_to(m)
+    st_folium(m, width=725, returned_objects=[])
     
     return # st_folium(m, width=725, returned_objects=[])
     
