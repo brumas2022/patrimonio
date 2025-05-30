@@ -23,7 +23,7 @@ local = df["NOME"].tolist()
 escolha = st.sidebar.radio("Escolha o poço tubular", local)
 
 resultado = df[df['NOME']==escolha]
-#st.dataframe(resultado)
+st.dataframe(resultado)
 
 nome = resultado.iat[0,3]
 lat = resultado.iat[0,15]
