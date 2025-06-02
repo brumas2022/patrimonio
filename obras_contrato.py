@@ -19,8 +19,8 @@ def senha():
              st.write(f"{email}, a senha está incorreta. Verifique como desenvolvedor do produto")
 
 df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
-df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=3)
-#df_aditivos = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=6)
+df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=4)
+df_aditivos = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=2)
 
 st.set_page_config("Consulta contratos de obra", layout="wide")
 colimage = st.columns((1,1,1))
@@ -32,7 +32,7 @@ colimage[1].image("logosanear.png", width=300)
 lista_contratos=["TECNOBOMBAS - 004/2023", "MASTER - 028/2023", "SPARTACUS", \
                  "MENEGUETI", "GEOPOÇOS", "ALPHA", "SM7", "MASTER - 034/2022", "SAGATEC", "ELETRIC", \
                  "LEILOEIRA", "DA GARISTO", "TECNBOMBAS - 007/2024", "UPX", "GENTE", "RESUMO"]
-lista_dados=["Dados", "Medições", "Relatorios"]
+lista_dados=["Dados", "Medições", "Aditivos"]
 tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11, tab12, tab13, tab14, tab15, tab16 = st.tabs(lista_contratos)
 with tab1:
     
@@ -51,13 +51,9 @@ with tab1:
         #df_selecao=df_medicao.groupby(by='CONTRATO').sum(numeric_only=True)
         #st.dataframe(df_selecao)
     with t13:
-        #st.dataframe(df_aditivos[df_aditivos["CONTRATO"]==nro_contrato])
-        nome = "Medicao"
-        relat = pd.read_excel("relatorio.xlsx", sheet_name=f'{nome}')
-        st.dataframe(relat)
-        st.write("Aqui serão disponibilizados os relatorios mensais de acompanhamento da obra")
-        with open("CTR_004-2023_TECNOBOMBAS_BOMBAS_MOTORES_E_SERVICOS_LTDA_assinado.pdf", "rb") as file: 
-             st.download_button(label='RELATORIO FEVEREIRO-2025', data=file, file_name="CTR_004-2023_TECNOBOMBAS_BOMBAS_MOTORES_E_SERVICOS_LTDA_assinado.pdf")
+        st.dataframe(df_aditivos[df_aditivos["contrato"]==nro_contrato])
+        #st.dataframe(df_aditivos[df_aditivos["contrato"]=="009/2022"])
+        
       
        
         

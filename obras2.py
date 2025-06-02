@@ -8,26 +8,35 @@ colimage = st.columns((1,1,1))
 #colimage[1].image("logosanear.png", width=300)
 
 df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
-df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=3)
+df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=4)
 
 
 def dados(n):
-    #n=11
+    
     df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
     df_mostra_dados = df_contratos.loc[(n, ["contrato", "empresa", "objeto", "valor", "fiscal", "inicio", "fim"])]
-    st.dataframe(df_mostra_dados)
+    valor_contrato = "R$ {:_.2f}".format(df_mostra_dados.values[3])
+    valor_contrato_brasileiro = valor_contrato.replace(".",",").replace("_",".")
     
-    #st.write("dados do contrato")
+    st.markdown(f"**CONTRATO** : {df_mostra_dados.values[0]}")
+    st.markdown(f"**EMPRESA** :  {df_mostra_dados.values[1]}")
+    st.markdown(f"**OBJETO** : {df_mostra_dados.values[2]}")
+    st.markdown(f"**VALOR** : {valor_contrato_brasileiro}")
+    st.markdown(f"**FISCAL** : {df_mostra_dados.values[4]}", )
+    st.markdown(f"**INICIO** : {df_mostra_dados.values[5].strftime("%d/%m/%Y")}")
+    st.markdown(f"**FIM** : {df_mostra_dados.values[6].strftime("%d/%m/%Y")}")
 
 def medicoes(n):
     #n=11
-    df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=3)
+    df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=4)
+    #df_medicao
     nro_contrato = f"{df_contratos.iloc[n,1]}"
     df_selecao = df_medicao[df_medicao["CONTRATO"]==nro_contrato]
+    #df_selecao = df_medicao[df_medicao["contrato"]==nro_contrato]
     
     valor_contrato = df_contratos.loc[(n, ["valor"])]
     
-    df_selecao["%ACULUMADO"]=df_selecao["VALOR"].cumsum()
+    df_selecao["%ACULUMADO"]=df_selecao['VALOR'].cumsum()
     
     df_selecao["%PERCENTUUAL DO CONTRATO"]=(df_selecao["VALOR"].cumsum()/float(valor_contrato))*100
     
