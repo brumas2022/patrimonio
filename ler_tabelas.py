@@ -4,5 +4,5 @@ import streamlit as st
 
 
 tabela = tabula.read_pdf("contratos/arrelatorio_contrato.pdf")
-df = tabela[0]
+df = tabela[1]
 st.dataframe(df)
