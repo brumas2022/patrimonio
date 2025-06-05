@@ -3,6 +3,6 @@ import tabula
 import streamlit as st 
 
 
-tabela = tabula.read_pdf("contratos/arrelatorio_contrato.pdf", pages="all")
+tabela = tabula.read_pdf("contratos/arrelatorio_contrato.pdf")
 df = tabela[0]
 st.dataframe(df)
