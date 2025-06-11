@@ -259,8 +259,8 @@ with st.form("Relatorio"):
         inicia_relatorio()
         wb = load_workbook("relatorio_novo.xlsx", read_only=False)
         ws = wb.active
-        mes = "maio"
-        ws.append([nro, mes, ocorrecias, diligencia, avaliacao, obs])
+        #mes = "maio"
+        ws.append([nro, data_relatorio_1, ocorrecias, diligencia, avaliacao, obs])
         wb.save("relatorio_novo.xlsx")
         st.rerun()
 
