@@ -119,11 +119,13 @@ def inicia_relatorio():
     #pdf.rect(x=10, y=70, w=60, h=8)
     #
     # pdf.rect(x=70, y=70, w=60, h=8)
+            nome_empresa = str(empresa)  
             pdf.text(11, 50, txt="CONTRATO N° : "+nro)
             pdf.text(130, 50, txt="DATA DE ABERTURA: "+f"{data_inicio}")
             #pdf.text(180, 50, txt=data_inicio)
             pdf.text(11, 60, txt="CONTRATADO(A)")
-            pdf.text(51, 60, str(empresa))
+            #pdf.text(51, 60, str(empresa))
+            pdf.text(51, 65, txt=nome_empresa[:60])
             pdf.rect(10, 55, 40, 10)
             pdf.rect(50, 55, 150, 10)
             pdf.text(11, 73, txt="TERMO DO CONTRATO : ")
@@ -231,7 +233,7 @@ with st.form("Relatorio"):
     licitacao = resultado.iat[0,8]
     recurso = resultado.iat[0,9]
     fiscal_nome = resultado.iat[0,10]
-    portaria_nro = resultado.iat[0,11]
+    portaria_nro = int(resultado.iat[0,11])
     portaria_data = resultado.iat[0,12].strftime("%d/%m/%Y")
     
     
