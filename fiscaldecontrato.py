@@ -233,7 +233,7 @@ with st.form("Relatorio"):
     licitacao = resultado.iat[0,8]
     recurso = resultado.iat[0,9]
     fiscal_nome = resultado.iat[0,10]
-    portaria_nro = resultado.iat[0,11]
+    portaria_nro = int(resultado.iat[0,11])
     portaria_data = resultado.iat[0,12].strftime("%d/%m/%Y")
     
     
