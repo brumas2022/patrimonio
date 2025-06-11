@@ -260,7 +260,7 @@ with st.form("Relatorio"):
         ws = wb.active
         mes = "maio"
         ws.append([nro, mes, ocorrecias, diligencia, avaliacao, obs])
-        wb.save("relatorio_novo.xlsx")
+        ws.save("relatorio_novo.xlsx")
         st.rerun()
 
     ws = wb.active
