@@ -2,6 +2,7 @@ import pandas as pd
 import streamlit as st
 #import fpdf
 from fpdf import FPDF
+from openpyxl import load_workbook
 #import streamlit_pdf_viewer as stf
 
 
@@ -255,6 +256,15 @@ with st.form("Relatorio"):
     data_relatorio_1 = data_relatorio.strftime("%d/%m/%Y")
     if st.form_submit_button():
         inicia_relatorio()
+        wb = load_workbook("relatorio_novo.xlsx", read_only=False)
+        ws = wb.active
+        mes = "maio"
+        ws.append([nro, mes, ocorrecias, diligencia, avaliacao, obs])
+        wb.save("relatorio_novo.xlsx")
+        st.rerun()
+
+    ws = wb.active
+        
         #imprime_branco()
 
 
