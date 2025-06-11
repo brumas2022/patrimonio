@@ -173,7 +173,8 @@ def inicia_relatorio():
             pdf.text(11, 215, txt="Observacoes /")
             #pdf.text(51, 215, txt=obs)  # texto da observação
             pdf.text(51,215, txt=obs[:78])
-            pdf.text(51,220, txt=obs[78:180])
+            pdf.text(51,220, txt=obs[78:160])
+            pdf.text(51,225, txt=obs[160:250])
             #pdf.text(51,225, txt=obs[160:240])
             pdf.text(11, 220, txt="Sugestões /")
             pdf.text(11, 225, txt="Reclamações")
@@ -198,7 +199,7 @@ def inicia_relatorio():
     
             #pdf.output(f"C:/Users/Compras/Desktop/2025/RELATORIOS/CTR {nro.replace("/", "-")} {empresa}.pdf") 
             # "C:/Users/Compras/Desktop/2025/RELATORIOS/
-            pdf.output(f'C:/Users/Compras/Desktop/2025/RELATORIOS/CTR {nro.replace("/", "-")}.pdf') 
+            pdf.output(f'C:/Users/Compras/Desktop/2025/RELATORIOS/MAIO/CTR {nro.replace("/", "-")}.pdf') 
             
 
 df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
