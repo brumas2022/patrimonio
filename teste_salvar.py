@@ -11,7 +11,10 @@ def imprime():
     #pdf.cell()"C:/Users/Compras/Documents/GitHub/patrimonio/
     #pdf.image("img.png", x=60, y=10, w=90, h=20) 
     pdf.text(50, 40, txt="RELATORIO MENSAL DE ACOMPANHAMENTO DE CONTRATO")
-    pdf.output("meupdf.pdf", dest="")
+    relatorio = pdf.output("meupdf.pdf", dest="")
+    caminho = "c:\ProjetosPY"
+    st.download_button("Download", relatorio, caminho)
+    #pdf.output("meupdf.pdf", dest="")
      
     
     return
