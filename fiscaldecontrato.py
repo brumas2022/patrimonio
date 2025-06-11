@@ -254,16 +254,17 @@ with st.form("Relatorio"):
     obs = st.text_area("Observação")
     data_relatorio = st.date_input("Data do relatorio")
     data_relatorio_1 = data_relatorio.strftime("%d/%m/%Y")
+    
     if st.form_submit_button():
         inicia_relatorio()
         wb = load_workbook("relatorio_novo.xlsx", read_only=False)
         ws = wb.active
         mes = "maio"
         ws.append([nro, mes, ocorrecias, diligencia, avaliacao, obs])
-        ws.save("relatorio_novo.xlsx")
+        wb.save("relatorio_novo.xlsx")
         st.rerun()
 
-    ws = wb.active
+    
         
         #imprime_branco()
 
