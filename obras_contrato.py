@@ -70,6 +70,22 @@ with tab2:
         
     with t23:
         st.write("Relatorio")
+        import openpyxl
+        def atualizar(data, atividades):
+            workbook = openpyxl.load_workbook("relatorio.xlsx")
+            aba = workbook.active
+            aba.append([data, atividades])
+            workbook.save("reLatorio.xlsx")
+
+        with st.form("Entrada"):
+            data = st.date_input("Data:")
+            atividades = st.text_area("Atividades")
+            if st.form_submit_button("Confirmar"):
+                atualizar(data, atividades)
+
+        df = pd.read_excel("relatorio.xlsx")
+
+        st.dataframe(df)
         
 with tab3:
     t31, t32, t33 = st.tabs(lista_dados)
