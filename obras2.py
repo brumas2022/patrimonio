@@ -312,4 +312,4 @@ elif q:
        relatorios() 
        
 else:
-    st.image("img.png")
+    st.image("contratos/Logosanear1.jpg")
