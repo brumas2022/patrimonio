@@ -24,7 +24,7 @@ df_aditivos = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=2)
 
 st.set_page_config("Consulta contratos de obra", layout="wide")
 colimage = st.columns((1,1,1))
-colimage[1].image("logosanear.png", width=300)
+colimage[1].image("contratos\Logosanear1.jpg", width=300)
 
 #senha()
 
