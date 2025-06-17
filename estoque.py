@@ -157,6 +157,7 @@ if consulta=="POR ITEM":
    resultado_item = df[df['Item']==b]
    #colitem[1].write("Nome "+resultado_item[1])
    #st.dataframe(resultado_item, hide_index=True)
+   colitem[1].dataframe(resultado_item, hide_index=True)
    colitem[0].dataframe(resultado_item['Item'], hide_index=True, use_container_width=True)
    colitem[0].dataframe(resultado_item['Descricao'], hide_index=True, use_container_width=True)
    colitem[0].dataframe(resultado_item['Qtde'], hide_index=True, use_container_width=True)
@@ -173,7 +174,7 @@ elif consulta=="POR NOME":
    resultado = df[df['Descricao']==a]
    
    #st.dataframe(resultado, hide_index=True)
-   colnome[1].dataframe(resultado, hide_index=True)
+   colnome[1].dataframe(resultado[1], hide_index=True)
    colnome[0].dataframe(resultado['Item'], hide_index=True, use_container_width=True)
    colnome[0].dataframe(resultado['Descricao'], hide_index=True, use_container_width=True)
    colnome[0].dataframe(resultado['Qtde'], hide_index=True, use_container_width=True)
