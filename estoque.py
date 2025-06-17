@@ -175,7 +175,7 @@ elif consulta=="POR NOME":
    
    #st.dataframe(resultado, hide_index=True)
    lista = ['Item', 'Descricao', 'Qtde']
-   colnome[0].dataframe(resultado[lista], hide_index=True)
+   colnome[0].dataframe(resultado[lista], hide_index=True, use_container_width=True)
    #colnome[0].dataframe(resultado['Item'], hide_index=True, use_container_width=True)
    #colnome[0].dataframe(resultado['Descricao'], hide_index=True, use_container_width=True)
    #colnome[0].dataframe(resultado['Qtde'], hide_index=True, use_container_width=True)
