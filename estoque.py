@@ -174,7 +174,7 @@ elif consulta=="POR NOME":
    resultado = df[df['Descricao']==a]
    
    #st.dataframe(resultado, hide_index=True)
-   lista = ['Item', 'Descricao']
+   lista = ['Item', 'Descricao', 'Qtde']
    colnome[1].dataframe(resultado[lista], hide_index=True)
    colnome[0].dataframe(resultado['Item'], hide_index=True, use_container_width=True)
    colnome[0].dataframe(resultado['Descricao'], hide_index=True, use_container_width=True)
