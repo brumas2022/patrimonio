@@ -3,7 +3,7 @@ import pandas as pd
 import webbrowser
 
 st.set_page_config("Pagina Diretoria")
-st.image("contratos/Logosanear1.jpg")
+st.image("contratos\Logosanear1.jpg")
 
 with open('style1.css') as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
