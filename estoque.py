@@ -159,9 +159,9 @@ if consulta=="POR ITEM":
    #st.dataframe(resultado_item, hide_index=True)
    lista1 = ['Item', 'Descricao', 'Qtde']
    colitem[0].dataframe(resultado_item[lista1], hide_index=True, use_container_width=True)
-   colitem[0].dataframe(resultado_item['Item'], hide_index=True, use_container_width=True)
-   colitem[0].dataframe(resultado_item['Descricao'], hide_index=True, use_container_width=True)
-   colitem[0].dataframe(resultado_item['Qtde'], hide_index=True, use_container_width=True)
+   #colitem[0].dataframe(resultado_item['Item'], hide_index=True, use_container_width=True)
+   #colitem[0].dataframe(resultado_item['Descricao'], hide_index=True, use_container_width=True)
+   #colitem[0].dataframe(resultado_item['Qtde'], hide_index=True, use_container_width=True)
 
         
          
