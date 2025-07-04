@@ -212,6 +212,8 @@ df_aditivos = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=1)
 
 df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=2)
 
+df_relatorio = pd.read_excel("relatorio_novo.xlsx")
+
 col = st.columns((1,1,1,1))
 
 df_nro_contrato = df_contratos['contrato'].tolist()
@@ -247,6 +249,7 @@ with st.form("Relatorio"):
     
     st.sidebar.write(menina)
     st.sidebar.write(empresa)
+    st.sidebar.dataframe(df_relatorio)
     
     
     ocorrecias = st.text_area("Ocorrencias")
