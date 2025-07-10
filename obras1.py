@@ -34,7 +34,7 @@ def dados(n):
 def medicoes(n):
     #n=11
     #df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=4)
-    df_medicao  = pd.read_excel("NOVA_MEDICAO.xlsx", sheet_name="medicao")
+    df_medicao  = pd.read_excel("NOVA_MEDICAO.xlsx", sheet_name="Medicoes")
     nro_contrato = f"{df_contratos.iloc[n,1]}"
     df_selecao = df_medicao[df_medicao["CONTRATO"]==nro_contrato]
     
