@@ -10,7 +10,7 @@ colimage = st.columns((1,1,1))
 
 df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
 df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=4)
-df_medicao1  = pd.read_excel("NOVA_MEDICAO.xlsx", sheet_name="medicao")
+df_medicao1  = pd.read_excel("NOVA_MEDICAO.xlsx", sheet_name=0)
 
 
 def dados(n):
