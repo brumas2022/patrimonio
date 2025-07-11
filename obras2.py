@@ -8,7 +8,8 @@ colimage = st.columns((1,1,1))
 #colimage[1].image("logosanear.png", width=300)
 
 df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
-df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=4)
+#df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=4)
+df_medicao  = pd.read_excel("NOVA_MEDICAO.xlsx", sheet_name=0)
 
 
 def dados(n):
@@ -28,7 +29,8 @@ def dados(n):
 
 def medicoes(n):
     #n=11
-    df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=4)
+    #df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=4)
+    df_medicao  = pd.read_excel("NOVA_MEDICAO.xlsx", sheet_name=0)
     #df_medicao
     nro_contrato = f"{df_contratos.iloc[n,1]}"
     df_selecao = df_medicao[df_medicao["CONTRATO"]==nro_contrato]
