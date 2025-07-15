@@ -249,7 +249,7 @@ with st.form("Relatorio"):
     
     st.sidebar.write(menina)
     st.sidebar.write(empresa)
-    st.sidebar.dataframe(df_relatorio)
+    st.sidebar.dataframe(df_relatorio.loc[df_relatorio['contrato']==nro])
     
     
     ocorrecias = st.text_area("Ocorrencias")
