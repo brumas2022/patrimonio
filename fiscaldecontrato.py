@@ -221,7 +221,7 @@ nro = st.sidebar.selectbox("Escolha o contrato", df_nro_contrato)
 
 with st.form("Relatorio"):
     j=11   
-    resultado = df_contratos.loc[df_contratos['CONTRATO']==nro]
+    resultado = df_contratos.loc[df_contratos['contrato']==nro]
     print(resultado.dtypes)
     print(resultado.iat[0,2])
     print(resultado['empresa'])
@@ -249,7 +249,7 @@ with st.form("Relatorio"):
     
     st.sidebar.write(menina)
     st.sidebar.write(empresa)
-    st.sidebar.dataframe(df_relatorio.loc[df_relatorio['contrato']==nro])
+    st.sidebar.dataframe(df_relatorio.loc[df_relatorio['CONTRATO']==nro])
     
     
     ocorrecias = st.text_area("Ocorrencias")
