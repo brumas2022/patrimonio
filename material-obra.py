@@ -80,5 +80,5 @@ elif c:
     medicao1()
 else:
     st.header("Materiais e equipamentos para obras")
-    st.image("img.png")
+    st.image("contratos/Logosanear1.jpg")
 
