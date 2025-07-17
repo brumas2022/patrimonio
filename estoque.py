@@ -201,18 +201,18 @@ elif consulta=="ESTOQUE-ZERO":
    estoque_zero()
    
 
-elif consulta=="NAD":
-   nad() 
+#elif consulta=="NAD":
+#   nad() 
       
-elif consulta=="PREGAO 013":
+#elif consulta=="PREGAO 013":
    ##st.write("EM CONSTRUÇÃO")
-   medicao()
+#   medicao()
 
-elif consulta=="PREGAO 014":
-   medicao1()        
+#elif consulta=="PREGAO 014":
+#   medicao1()        
 
-elif consulta=="PREGAO 012":
-   medicao2()
+#elif consulta=="PREGAO 012":
+#   medicao2()
    
    
 
