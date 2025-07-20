@@ -18,8 +18,10 @@ def entrar():
    go=st.button("GO")
    if go:   
       pass
-         
-      
+
+def minimo():
+   df_minimo = pd.read_excel("Estoque_Data_Atual_Excel.xlsx", sheet_name=0 )
+   
 
 def medicao():
    #st.header("Controle do PREGAO 013/2024")
