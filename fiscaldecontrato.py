@@ -115,7 +115,7 @@ def inicia_relatorio():
     #      pdf.cell(100, 50, txt="Novo texto....avante" )
     #pdf.cell()"C:/Users/Compras/Documents/GitHub/patrimonio/
             #pdf.image("contratos\Logosanear1.jpg", x=60, y=10, w=90, h=20)
-            pdf.image("img.png", x=60, y=10, w=90, h=20) 
+            pdf.image("contratos/Logosanear1.jpg", x=60, y=10, w=90, h=30) 
             pdf.text(50, 40, txt="RELATORIO MENSAL DE ACOMPANHAMENTO DE CONTRATO")
     #pdf.rect(x=10, y=70, w=180, h=8)
     #pdf.rect(x=10, y=70, w=60, h=8)
