@@ -13,8 +13,11 @@ df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=4)
 df_medicao1  = pd.read_excel("NOVA_MEDICAO.xlsx", sheet_name=0)
 
 
+
 def dados(n):
     #n=11
+    df_aditivo = pd.read_excel("NOVA_MEDICAO.xlsx", sheet_name=1)
+    #df_aditivo1=df_aditivo.çoc[(n, ["CONTRATO"])]
     
     df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
     df_mostra_dados = df_contratos.loc[(n, ["contrato", "empresa", "objeto", "valor", "fiscal", "inicio", "fim"])]
@@ -28,6 +31,10 @@ def dados(n):
     st.markdown(f"**FISCAL** : {df_mostra_dados.values[4]}", )
     st.markdown(f"**INICIO** : {df_mostra_dados.values[5].strftime("%d/%m/%Y")}")
     st.markdown(f"**FIM** : {df_mostra_dados.values[6].strftime("%d/%m/%Y")}")
+    st.write("---")
+    st.markdown("**ADITIVOS**")
+    st.dataframe(df_aditivo)
+    
     
     
 
