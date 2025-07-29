@@ -16,14 +16,16 @@ df_medicao1  = pd.read_excel("NOVA_MEDICAO.xlsx", sheet_name=0)
 
 def dados(n):
     #n=11
-    nro_contrato = f"{df_contratos.iloc[n,1]}"
-    df_aditivo = pd.read_excel("NOVA_MEDICAO.xlsx", sheet_name=1)
-    df_aditivo1 = df_aditivo[df_aditivo["CONTRATO"]==nro_contrato]
+    
     
     df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
     df_mostra_dados = df_contratos.loc[(n, ["contrato", "empresa", "objeto", "valor", "fiscal", "inicio", "fim"])]
     valor_contrato = "R$ {:_.2f}".format(df_mostra_dados.values[3])
     valor_contrato_brasileiro = valor_contrato.replace(".",",").replace("_",".")
+    
+    nro_contrato = f"{df_contratos.iloc[n,1]}"
+    df_aditivo = pd.read_excel("NOVA_MEDICAO.xlsx", sheet_name=1)
+    df_aditivo1 = df_aditivo[df_aditivo["CONTRATO"]==nro_contrato]
     
     st.markdown(f"**CONTRATO** : {df_mostra_dados.values[0]}")
     st.markdown(f"**EMPRESA** :  {df_mostra_dados.values[1]}")
