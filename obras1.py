@@ -23,7 +23,8 @@ def dados(n):
     valor_contrato = "R$ {:_.2f}".format(df_mostra_dados.values[3])
     valor_contrato_brasileiro = valor_contrato.replace(".",",").replace("_",".")
     
-    nro_contrato = f"{df_contratos.iloc[n,1]}"
+    #nro_contrato = f"{df_contratos.iloc[n,1]}"
+    nro_contrato = df_contratos['contrato'].unique()
     df_aditivo = pd.read_excel("NOVA_MEDICAO.xlsx", sheet_name=1)
     df_aditivo1 = df_aditivo[df_aditivo["CONTRATO"]==nro_contrato]
     
