@@ -19,6 +19,10 @@ def dados(n):
     valor_contrato = "R$ {:_.2f}".format(df_mostra_dados.values[3])
     valor_contrato_brasileiro = valor_contrato.replace(".",",").replace("_",".")
     
+    nro_contrato = f"{df_contratos.iloc[n,1]}"
+    df_aditivo = pd.read_excel("NOVA_MEDICAO.xlsx", sheet_name=1)
+    df_aditivo1 = df_aditivo[df_aditivo["CONTRATO"]==nro_contrato]
+    
     st.markdown(f"**CONTRATO** : {df_mostra_dados.values[0]}")
     st.markdown(f"**EMPRESA** :  {df_mostra_dados.values[1]}")
     st.markdown(f"**OBJETO** : {df_mostra_dados.values[2]}")
@@ -26,6 +30,10 @@ def dados(n):
     st.markdown(f"**FISCAL** : {df_mostra_dados.values[4]}", )
     st.markdown(f"**INICIO** : {df_mostra_dados.values[5].strftime("%d/%m/%Y")}")
     st.markdown(f"**FIM** : {df_mostra_dados.values[6].strftime("%d/%m/%Y")}")
+    
+    st.write("---")
+    st.markdown("**ADITIVOS**")
+    st.dataframe(df_aditivo1)
 
 def medicoes(n):
     #n=11
