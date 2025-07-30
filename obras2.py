@@ -30,7 +30,7 @@ def dados(n):
     st.markdown(f"**FISCAL** : {df_mostra_dados.values[4]}", )
     st.markdown(f"**INICIO** : {df_mostra_dados.values[5].strftime("%d/%m/%Y")}")
     st.markdown(f"**FIM** : {df_mostra_dados.values[6].strftime("%d/%m/%Y")}")
-    
+    hi
     st.write("---")
     st.markdown("**ADITIVOS**")
     st.dataframe(df_aditivo1)
