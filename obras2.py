@@ -33,7 +33,7 @@ def dados(n):
     
     st.write("---")
     st.markdown("**ADITIVOS**")
-    st.dataframe(df_aditivo1)
+    #st.dataframe(df_aditivo1)
     st.dataframe(df_aditivo1, hide_index=False, column_config={
         "EXECUCAO INICIA": st.column_config.DatetimeColumn(
             "EXECUCAO INICIA",
