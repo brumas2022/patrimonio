@@ -34,6 +34,29 @@ def dados(n):
     st.write("---")
     st.markdown("**ADITIVOS**")
     st.dataframe(df_aditivo1)
+    st.dataframe(df_aditivo1, hide_index=True, column_config={
+        "EXECUCAO INICIA": st.column_config.DatetimeColumn(
+            "EXECUCAO INICIA",
+            format="DD/MM/YYYY",
+            
+        ),
+        "EXECUCAO FINAL": st.column_config.DatetimeColumn(
+            "EXECUCAO FINAL",
+            format="DD/MM/YYYY",
+            
+        ),
+        "VIGENCIA INICIAL": st.column_config.DatetimeColumn(
+            "VIGENCIA INICIAL",
+            format="DD/MM/YYYY",
+            
+        ),
+        #"NF": st.column_config.NumberColumn(
+        #    "NF",
+        #    help="NOTA FISCAL EMITIDA",
+        #    format="plain",
+            
+        #),
+    })
 
 def medicoes(n):
     #n=11
