@@ -34,7 +34,7 @@ def dados(n):
     st.write("---")
     st.markdown("**ADITIVOS**")
     st.dataframe(df_aditivo1)
-    st.dataframe(df_aditivo1, hide_index=True, column_config={
+    st.dataframe(df_aditivo1, hide_index=False, column_config={
         "EXECUCAO INICIA": st.column_config.DatetimeColumn(
             "EXECUCAO INICIA",
             format="DD/MM/YYYY",
@@ -47,6 +47,11 @@ def dados(n):
         ),
         "VIGENCIA INICIAL": st.column_config.DatetimeColumn(
             "VIGENCIA INICIAL",
+            format="DD/MM/YYYY",
+            
+        ),
+        "VIGENCIA FINAL": st.column_config.DatetimeColumn(
+            "VIGENCIA FINAL",
             format="DD/MM/YYYY",
             
         ),
