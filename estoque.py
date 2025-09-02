@@ -140,7 +140,7 @@ data_atualizacao = df.columns[1].strftime("%d/%m/%Y")
 
 st.write("Atualizado em :", data_atualizacao)
 
-df = df.drop(columns=['NÚMERO/ANO', 'FABRICAÇÃO', 'VALIDADE', 'FABRICANTE'])
+df = df.drop(columns=['NÚMERO/ANO', 'FABRICAÇÃO', 'VALIDADE', 'FABRICANTE'], inplace=True)
 df.columns=['Item', 'Descricao', 'Unidade', 'Qtde', 'ValorUnit', 'ValorTotal']
 lista_consulta1=["POR ITEM", "POR NOME", "TODOS", "ESTOQUE-ZERO", "NAD", "PREGAO 013", "PREGAO 014", "PREGAO 012"]
 lista_consulta=["POR ITEM", "POR NOME", "TODOS", "ESTOQUE-ZERO"]
