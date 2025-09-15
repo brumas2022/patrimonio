@@ -11,7 +11,7 @@ options = ["MARCOS BRUMATTI", "JAMAL BADIE DAUD", "SINVAL RAIMUNDO DA SILVA", \
 selection = st.pills("Fiscais de Contrato", options)
 st.markdown(f"Voce selecionou o seguinte fiscal: {selection}.")
 df_relacao = df.drop([0, 1]) # apaga linhas do dataframe...detalhe nos colchetes
-df_relacao.columns = ["GEOBRAS", "CONTRATO", "EMPRESA", "TIPO", "FISCAL CONTRATO", "SUPLENTE1", "FISCAL OBRA", "SUPLENTE"]
+df_relacao.columns = ["CONTRATO", "EMPRESA", "TIPO", "FISCAL CONTRATO", "SUPLENTE1", "FISCAL OBRA", "SUPLENTE", "ABRIL", "MAIO", "JUNHO", "JULHO", "AGOSTO"]
 #df_nova = df_relacao.
 
 #st.dataframe(df_relacao)
