@@ -5,9 +5,8 @@ st.set_page_config(layout="wide")
 
 df = pd.read_excel("RELAÇÃO DE FISCAIS DE CONTRATOS VIGENTES.xlsx", sheet_name=0)
 df_relacao = df.iloc[3:]
-#df_relacao = df.drop([0, 1]) # apaga linhas do dataframe...detalhe nos colchetes
-df_relacao.columns = ["CONTRATO", "EMPRESA", "TIPO", "FISCAL CONTRATO", "SUPLENTE1", "FISCAL OBRA", "SUPLENTE"]#, "JAN", "FEVEREIRO", "MARÇO", "ABRIL", "MAIO", "JUNHO", "JULHO", "AGOSTO"]
-#df_nova = df_relacao.
+df_relacao.columns = ["CONTRATO", "EMPRESA", "TIPO", "FISCAL CONTRATO", "SUPLENTEFC", "FISCAL OBRA", "SUPLENTEFO"]#, "JAN", "FEVEREIRO", "MARÇO", "ABRIL", "MAIO", "JUNHO", "JULHO", "AGOSTO"]
+
 
 lista = ["1","2"]
 opcao = df_relacao["FISCAL CONTRATO"].unique().tolist()
