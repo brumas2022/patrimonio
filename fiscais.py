@@ -10,30 +10,38 @@ df_relacao.columns = ["CONTRATO", "EMPRESA", "TIPO", "FISCAL CONTRATO", "SUPLENT
 #df_nova = df_relacao.
 
 lista = ["1","2"]
-opcao = df["FISCAL CONTRATO"].tolist()
+opcao = df_relacao["FISCAL CONTRATO"].unique().tolist()
 st.write(opcao)
 options = ["MARCOS BRUMATTI", "JAMAL BADIE DAUD", "SINVAL RAIMUNDO DA SILVA", \
            "HERMES ÁVILA DE CASTRO", "DENIZE MARIA SODRÉ DE OLIVEIRA", "GRAZIELA DIAS DEGIACOMETI", \
            "MARIA DA CONCEIÇÃO DE GOIS", "JULIO CESAR SALGADO"]
-selection = st.pills("Fiscais de Contrato", options)
+selection = st.pills("Fiscais de Contrato", opcao)
 st.markdown(f"Voce selecionou o seguinte fiscal: {selection}.")
 
 ###ESTAVA AQUI
 #st.dataframe(df_relacao)
 
-if selection=="MARCOS BRUMATTI":
+if selection==opcao[0]:
     st.dataframe(df_relacao[df_relacao['FISCAL CONTRATO']==selection])
-elif selection==options[1]:
+elif selection==opcao[1]:
     st.dataframe(df_relacao[df_relacao['FISCAL CONTRATO']==selection])
-elif selection==options[2]:
+elif selection==opcao[2]:
     st.dataframe(df_relacao[df_relacao['FISCAL CONTRATO']==selection])
-elif selection==options[3]:
+elif selection==opcao[3]:
     st.dataframe(df_relacao[df_relacao['FISCAL CONTRATO']==selection])
-elif selection==options[4]:
+elif selection==opcao[4]:
     st.dataframe(df_relacao[df_relacao['FISCAL CONTRATO']==selection])
-elif selection==options[5]:
+elif selection==opcao[5]:
     st.dataframe(df_relacao[df_relacao['FISCAL CONTRATO']==selection])
-elif selection==options[6]:
+elif selection==opcao[6]:
     st.dataframe(df_relacao[df_relacao['FISCAL CONTRATO']==selection])
-elif selection==options[7]:
+elif selection==opcao[7]:
+    st.dataframe(df_relacao[df_relacao['FISCAL CONTRATO']==selection])
+elif selection==opcao[8]:
+    st.dataframe(df_relacao[df_relacao['FISCAL CONTRATO']==selection])
+elif selection==opcao[9]:
+    st.dataframe(df_relacao[df_relacao['FISCAL CONTRATO']==selection])
+elif selection==opcao[10]:
+    st.dataframe(df_relacao[df_relacao['FISCAL CONTRATO']==selection])
+elif selection==opcao[11]:
     st.dataframe(df_relacao[df_relacao['FISCAL CONTRATO']==selection])
