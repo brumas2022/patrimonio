@@ -5,6 +5,8 @@ st.set_page_config(layout="wide")
 
 df = pd.read_excel("RELAÇÃO DE FISCAIS DE CONTRATOS VIGENTES.xlsx", sheet_name=0)
 lista = ["1","2"]
+opcao = df["FISCAL CONTRATO"].tolist()
+st.write(opcao)
 options = ["MARCOS BRUMATTI", "JAMAL BADIE DAUD", "SINVAL RAIMUNDO DA SILVA", \
            "HERMES ÁVILA DE CASTRO", "DENIZE MARIA SODRÉ DE OLIVEIRA", "GRAZIELA DIAS DEGIACOMETI", \
            "MARIA DA CONCEIÇÃO DE GOIS", "JULIO CESAR SALGADO"]
