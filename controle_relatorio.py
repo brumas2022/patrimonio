@@ -13,36 +13,5 @@ st.dataframe(df_relacao[df_relacao['FISCAL CONTRATO']=="MARCOS BRUMATTI"])
 
 
 
-opcao = df_relacao["FISCAL CONTRATO"].unique().tolist()
-st.write(opcao)
 
-selection = st.pills("Fiscais de Contrato", opcao)
-st.markdown(f"Voce selecionou o seguinte fiscal: {selection}.")
 
-###ESTAVA AQUI
-#st.dataframe(df_relacao)
-
-if selection==opcao[0]:
-    st.dataframe(df_relacao[df_relacao['FISCAL CONTRATO']==selection])
-elif selection==opcao[1]:
-    st.dataframe(df_relacao[df_relacao['FISCAL CONTRATO']==selection])
-elif selection==opcao[2]:
-    st.dataframe(df_relacao[df_relacao['FISCAL CONTRATO']==selection])
-elif selection==opcao[3]:
-    st.dataframe(df_relacao[df_relacao['FISCAL CONTRATO']==selection])
-elif selection==opcao[4]:
-    st.dataframe(df_relacao[df_relacao['FISCAL CONTRATO']==selection])
-elif selection==opcao[5]:
-    st.dataframe(df_relacao[df_relacao['FISCAL CONTRATO']==selection])
-elif selection==opcao[6]:
-    st.dataframe(df_relacao[df_relacao['FISCAL CONTRATO']==selection])
-elif selection==opcao[7]:
-    st.dataframe(df_relacao[df_relacao['FISCAL CONTRATO']==selection])
-elif selection==opcao[8]:
-    st.dataframe(df_relacao[df_relacao['FISCAL CONTRATO']==selection])
-elif selection==opcao[9]:
-    st.dataframe(df_relacao[df_relacao['FISCAL CONTRATO']==selection])
-elif selection==opcao[10]:
-    st.dataframe(df_relacao[df_relacao['FISCAL CONTRATO']==selection])
-elif selection==opcao[11]:
-    st.dataframe(df_relacao[df_relacao['FISCAL CONTRATO']==selection])
