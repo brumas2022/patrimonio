@@ -8,12 +8,14 @@ df_relacao = df.iloc[3:]
 df_relacao.columns = ["CONTRATO", "EMPRESA", "TIPO", "FISCAL CONTRATO", "SUPLENTEFC", "FISCAL OBRA", "SUPLENTEFO", "JAN", "FEVEREIRO", "MARÇO", "ABRIL", "MAIO", "JUNHO", "JULHO", "AGOSTO"]
 
 
-lista = ["1","2"]
+st.dataframe(df_relacao[df_relacao['FISCAL CONTRATO']=="MARCOS BRUMATTI"])
+
+
+
+
 opcao = df_relacao["FISCAL CONTRATO"].unique().tolist()
 st.write(opcao)
-options = ["MARCOS BRUMATTI", "JAMAL BADIE DAUD", "SINVAL RAIMUNDO DA SILVA", \
-           "HERMES ÁVILA DE CASTRO", "DENIZE MARIA SODRÉ DE OLIVEIRA", "GRAZIELA DIAS DEGIACOMETI", \
-           "MARIA DA CONCEIÇÃO DE GOIS", "JULIO CESAR SALGADO"]
+
 selection = st.pills("Fiscais de Contrato", opcao)
 st.markdown(f"Voce selecionou o seguinte fiscal: {selection}.")
 
