@@ -10,7 +10,7 @@ df_relacao.columns = ["CONTRATO", "EMPRESA", "TIPO", "FISCAL CONTRATO", "SUPLENT
 
 lista = ["1","2"]
 opcao = df_relacao["FISCAL CONTRATO"].unique().tolist()
-st.write(opcao)
+
 options = ["MARCOS BRUMATTI", "JAMAL BADIE DAUD", "SINVAL RAIMUNDO DA SILVA", \
            "HERMES ÁVILA DE CASTRO", "DENIZE MARIA SODRÉ DE OLIVEIRA", "GRAZIELA DIAS DEGIACOMETI", \
            "MARIA DA CONCEIÇÃO DE GOIS", "JULIO CESAR SALGADO"]
