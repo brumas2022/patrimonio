@@ -36,8 +36,8 @@ def dados(n):
     st.markdown(f"**FIM** : {df_mostra_dados.values[6].strftime("%d/%m/%Y")}")
     
     hoje = datetime.date.today() 
-    if df_mostra_dados.values[6] > hoje.strftime("%d/%m/%Y"):
-        st.markdown("Este contrato esta vencido. Veja se há aditivo de prazo")
+    if df_mostra_dados.values[6] > df_mostra_dados[5]:
+        st.markdown(f"Este contrato venceu {hoje}")
 
     
     st.write("---")
