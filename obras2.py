@@ -37,7 +37,7 @@ def dados(n):
     
     hoje = datetime.date.today().strftime("%d/%m/%Y") 
     data_fim = df_mostra_dados.values[6].strftime("%d/%m/%Y")
-    if data_fim < hoje:
+    if hoje > data_fim:
         st.markdown(f"Este contrato venceu. Informe o fiscal de contrato")
 
     
