@@ -35,9 +35,9 @@ def dados(n):
     st.markdown(f"**INICIO** : {df_mostra_dados.values[5].strftime("%d/%m/%Y")}")
     st.markdown(f"**FIM** : {df_mostra_dados.values[6].strftime("%d/%m/%Y")}")
     
-    hoje = datetime.date.today() 
-    if df_mostra_dados.values[6].strftime("%d/%m/%Y") > hoje.strftime("%d/%m/%Y"):
-        st.markdown(f"Este contrato venceu {hoje.strftime("%d/%m/%Y")}")
+    #hoje = datetime.date.today() 
+    #if df_mostra_dados.values[6].strftime("%d/%m/%Y") > hoje.strftime("%d/%m/%Y"):
+    #    st.markdown(f"Este contrato venceu {hoje.strftime("%d/%m/%Y")}")
 
     
     st.write("---")
