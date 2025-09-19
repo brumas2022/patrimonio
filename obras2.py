@@ -1,5 +1,6 @@
 import streamlit as st 
 import pandas as pd 
+import datetime
 #import matplotlib.pyplot as plt
 
 
@@ -34,8 +35,9 @@ def dados(n):
     st.markdown(f"**INICIO** : {df_mostra_dados.values[5].strftime("%d/%m/%Y")}")
     st.markdown(f"**FIM** : {df_mostra_dados.values[6].strftime("%d/%m/%Y")}")
     
-    if df_mostra_dados.values[6] > df_mostra_dados[5]:
-        st.markdown("Este contrato esta correto")
+    hoje = datetime.date.today() 
+    if df_mostra_dados.values[6] > hoje:
+        st.markdown("Este contrato esta vencido. Veja se há aditivo de prazo")
 
     
     st.write("---")
