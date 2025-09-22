@@ -15,7 +15,7 @@ c = col[0].link_button("ESTRUTURA SANEAR", "https://estrutura1.streamlit.app", u
 
 d = col[1].link_button("ANDAMENTO DAS OBRAS", "http://obras2.streamlit.app", use_container_width=True)
 e = col[1].link_button("CONTROLE ESTOQUE", "http://estoque1.streamlit.app", use_container_width=True)
-f = col[1].button("PLANEJAMENTO ESTRATEGICO", use_container_width=True)
+f = col[1].link_button("PLANEJAMENTO ESTRATEGICO", "https://comunicasanear-avcnrpqesbpzeg2ecsmuun.streamlit.app",  use_container_width=True)
 
 if d:
    webbrowser.open("http://obras-contrato.streamlit.app") 
