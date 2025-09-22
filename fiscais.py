@@ -10,13 +10,14 @@ df_relacao.columns = ["CONTRATO", "EMPRESA", "TIPO", "FISCAL CONTRATO", "SUPLENT
 
 lista = ["1","2"]
 opcao = df_relacao["FISCAL CONTRATO"].unique().tolist()
+print(opcao)
 
 options = ["MARCOS BRUMATTI", "JAMAL BADIE DAUD", "SINVAL RAIMUNDO DA SILVA", \
            "HERMES ÁVILA DE CASTRO", "DENIZE MARIA SODRÉ DE OLIVEIRA", "GRAZIELA DIAS DEGIACOMETI", \
            "MARIA DA CONCEIÇÃO DE GOIS", "JULIO CESAR SALGADO"]
 selection = st.pills("Fiscais de Contrato", opcao)
 st.markdown(f"Voce selecionou o seguinte fiscal: {selection}")
-st.markdownn(len(opcao))
+
 
 ###ESTAVA AQUI
 #st.dataframe(df_relacao)
