@@ -203,8 +203,8 @@ def inicia_relatorio():
     
             #pdf.output(f"C:/Users/Compras/Desktop/2025/RELATORIOS/CTR {nro.replace("/", "-")} {empresa}.pdf") 
             # "C:/Users/Compras/Desktop/2025/RELATORIOS/
-            pdf.output(f'C:/Users/Compras/Desktop/2025/RELATORIOS/AGOSTO/CTR {nro.replace("/", "-") }.pdf') 
-            
+            #pdf.output(f'C:/Users/Compras/Desktop/2025/RELATORIOS/AGOSTO/CTR {nro.replace("/", "-") }.pdf') 
+            pdf.output(f'C:/Users/marcos.brumatti/Desktop/2025/RELATORIOS/AGOSTO/CTR {nro.replace("/", "-") }.pdf') 
 
 df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
 
