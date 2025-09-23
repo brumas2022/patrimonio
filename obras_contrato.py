@@ -1,10 +1,10 @@
 import streamlit as st 
 import pandas as pd
 import os
+from funcao_contratos import grafico, relatorio, senha
 
 
-
-def senha():
+def senha1():
     form = st.form(key="Obras", clear_on_submit=True)
     with form:
         lista = ["marcos", "maria", "pitoca"]
@@ -39,9 +39,12 @@ with tab1:
     t11, t12, t13 = st.tabs(lista_dados)
     with t11:
         
+        
+        
         n=11
         st.dataframe(df_contratos.loc[(n, ["contrato", "empresa", "objeto"])])
         nro_contrato = f"{df_contratos.iloc[n,1]}"
+        
         
         #open = st.button("Abrir arquivo")
         #if open:
@@ -51,8 +54,11 @@ with tab1:
         #df_selecao=df_medicao.groupby(by='CONTRATO').sum(numeric_only=True)
         #st.dataframe(df_selecao)
     with t13:
-        st.dataframe(df_aditivos[df_aditivos["contrato"]==nro_contrato])
-        #st.dataframe(df_aditivos[df_aditivos["contrato"]=="009/2022"])
+        relatorio(df_contratos[df_contratos["contrato"]=="011/2023"])
+
+        relatorio(df_contratos[df_contratos["prazo"]!=365])
+
+       
         
       
        
