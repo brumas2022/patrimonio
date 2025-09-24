@@ -1,7 +1,7 @@
 import streamlit as st 
 import pandas as pd
 import os
-from funcao_contratos import grafico, relatorio, senha
+from funcao_contratos import grafico, relatorio, senha, inserir
 
 
 def senha1():
@@ -54,9 +54,11 @@ with tab1:
         #df_selecao=df_medicao.groupby(by='CONTRATO').sum(numeric_only=True)
         #st.dataframe(df_selecao)
     with t13:
-        relatorio(df_contratos[df_contratos["contrato"]=="011/2023"])
+        #relatorio(df_contratos[df_contratos["contrato"]=="011/2023"])
 
-        relatorio(df_contratos[df_contratos["prazo"]!=365])
+        #relatorio(df_contratos[df_contratos["prazo"]!=365])
+        inserir()
+
 
        
         
