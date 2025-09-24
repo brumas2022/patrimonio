@@ -1,4 +1,6 @@
 import streamlit as st
+import pandas as pd
+from openpyxl import load_workbook
 def grafico(a,b):
     resultado = a*b
     return resultado
@@ -24,3 +26,19 @@ def senha():
         if a!="":
              st.write(f"{email}, a senha está incorreta. Verifique como desenvolvedor do produto")
     return word
+
+
+def inserir():
+    form =st.form(key="INSERIR", clear_on_submit=True)
+    with form:
+        id = st.number_input("Entre com novo id")
+        contrato = st.text_input("Numero do contrato:")
+        objeto = st.text_input("Objeto: ")
+        valor = st.number_input("Valor")
+        wb = load_workbook("planilha_vazia.xlsx", read_only=False)
+        ws = wb.active
+        if st.form_submit_button("aprovar"):
+            ws.append([id, contrato, objeto, valor])
+            wb.save("planilha_vazia.xlsx")
+            #st.rerun()
+    return
