@@ -178,7 +178,7 @@ p = st.sidebar.button(lista_contratos_OBRAS[16], use_container_width=True)
 q = st.sidebar.button(lista_contratos_OBRAS[17], use_container_width=True)
 r = st.sidebar.button(lista_contratos_OBRAS[18], use_container_width=True)
 s = st.sidebar.button(lista_contratos_OBRAS[19], use_container_width=True)
-T = st.sidebar.button(lista_contratos_OBRAS[20], use_container_width=True)
+t = st.sidebar.button(lista_contratos_OBRAS[20], use_container_width=True)
 
 lista_dados=["Dados", "Medições", "Relatorios"]
 
