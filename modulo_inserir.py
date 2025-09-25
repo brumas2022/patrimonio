@@ -1,11 +1,11 @@
 import streamlit as st
-from funcao_contratos import inserir
+from funcao_contratos import inserir1
 
 st.set_page_config("Modulo para inserir dados", layout="wide")
 
 
-if st.sidebar.button("INSERIR"):
-    inserir()
+st.sidebar.button("INSERIR", on_click=inserir1)
+#inserir()
 
 st.sidebar.button("MOSTRAR")
 
