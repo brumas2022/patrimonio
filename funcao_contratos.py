@@ -31,14 +31,15 @@ def senha():
 def inserir():
     form =st.form(key="INSERIR", clear_on_submit=True)
     with form:
-        id = st.number_input("Entre com novo id")
+        id = st.text_input("Entre com novo id")
         contrato = st.text_input("Numero do contrato:")
         objeto = st.text_input("Objeto: ")
-        valor = st.number_input("Valor")
+        valor = st.text_input("Valor")
+
         wb = load_workbook("planilha_vazia.xlsx", read_only=False)
         ws = wb.active
         if st.form_submit_button("aprovar"):
             ws.append([id, contrato, objeto, valor])
             wb.save("planilha_vazia.xlsx")
-            #st.rerun()
+            st.rerun()
     return
