@@ -42,4 +42,18 @@ def inserir():
             ws.append([id, contrato, objeto, valor])
             wb.save("planilha_vazia.xlsx")
             st.rerun()
+            
     return
+
+def inserir1():
+    with open("planilha_vazia.xlsx", "w") as f:
+        id = st.text_input("Entre com novo id")
+        contrato = st.text_input("Numero do contrato:")
+        objeto = st.text_input("Objeto: ")
+        valor = st.text_input("Valor")
+        wb = load_workbook(f, read_only=False)
+        ws = wb.active
+        if st.form_submit_button("aprovar"):
+            ws.append([id, contrato, objeto, valor])
+            wb.save(f)
+            st.rerun()
