@@ -3,6 +3,7 @@
     color: rgb(33, 12, 214);
     height: 200px;
     font-size: 120%;
+    background: rgb(red, green, blue);
     
  }
 .stLinkButton > a{
