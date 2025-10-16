@@ -17,9 +17,9 @@ d = col[1].link_button("ANDAMENTO DAS OBRAS", "http://obras2.streamlit.app", use
 e = col[1].link_button("CONTROLE ESTOQUE", "http://estoque1.streamlit.app", use_container_width=True)
 f = col[1].link_button("PLANEJAMENTO ESTRATEGICO", "https://comunicasanear-avcnrpqesbpzeg2ecsmuun.streamlit.app",  use_container_width=True)
 
-col[1].link_button("teste1", "http://obras2.streamlit.app", use_container_width=True)
-col[1].link_button("teste2", "http://obras2.streamlit.app", use_container_width=True)
-col[1].link_button("teste3", "http://obras2.streamlit.app", use_container_width=True)
+col[2].link_button("teste1", "http://obras2.streamlit.app", use_container_width=True)
+col[2].link_button("teste2", "http://obras2.streamlit.app", use_container_width=True)
+col[2].link_button("teste3", "http://obras2.streamlit.app", use_container_width=True)
 
 if d:
    webbrowser.open("http://obras-contrato.streamlit.app") 
