@@ -13,11 +13,13 @@ a = col[0].link_button("CONTRATOS", "http://obras1.streamlit.app", use_container
 b = col[0].link_button("FISCAIS", "https://fiscais.streamlit.app/", use_container_width=True)
 c = col[0].link_button("ESTRUTURA SANEAR", "https://estrutura1.streamlit.app", use_container_width=True)
 
-d = col[2].link_button("ANDAMENTO DAS OBRAS", "http://obras2.streamlit.app", use_container_width=True)
-e = col[2].link_button("CONTROLE ESTOQUE", "http://estoque1.streamlit.app", use_container_width=True)
-f = col[2].link_button("PLANEJAMENTO ESTRATEGICO", "https://comunicasanear-avcnrpqesbpzeg2ecsmuun.streamlit.app",  use_container_width=True)
+d = col[1].link_button("ANDAMENTO DAS OBRAS", "http://obras2.streamlit.app", use_container_width=True)
+e = col[1].link_button("CONTROLE ESTOQUE", "http://estoque1.streamlit.app", use_container_width=True)
+f = col[1].link_button("PLANEJAMENTO ESTRATEGICO", "https://comunicasanear-avcnrpqesbpzeg2ecsmuun.streamlit.app",  use_container_width=True)
 
-
+g = col[2].link_button("teste1")
+h = col[2].link_button("teste2")
+i = col[2].link_button("teste3")
 if d:
    webbrowser.open("http://obras-contrato.streamlit.app") 
 if e:
