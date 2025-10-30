@@ -3,22 +3,24 @@ from datetime import datetime
 import pandas as pd
 
 # Entrada de texto
-nome = st.text_input("Digite seu nome:")
-if nome:
-    st.write(f"Olá, {nome}!")
+st.write("ENTRADA DE MEDIÇÕES")
+
 
 # Procurar contrato
 
 df = pd.read_excel("TESTE_MEDICAO.xlsx")
 
+df_nro_contrato = df['CONTRATO'].unique().tolist()
 
 lista = ["ctr 01", "ctr 02"]
 
-contrato = st.selectbox("Qual é o contrato? ", lista)
+nro = st.selectbox("Qual é o contrato? ", df_nro_contrato)
+
+resultado = df.loc[df['CONTRATO']==nro]
 
 # printar as medições deste contrato
 
-st.dataframe(df)
+st.dataframe(resultado)
 
 # iniciar pelo numero da medicao
 
