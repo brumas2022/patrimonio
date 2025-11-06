@@ -22,7 +22,12 @@ resultado = df.loc[df['CONTRATO']==nro]
 
 df_editado = st.data_editor(resultado)
 
+
+
 if st.button("CONFIRMA EDICAO ?"):
+   # aqui eu preciso voltar ao df original
+
+   
    df_editado.to_excel("TESTE_MEDICAO.xlsx", index=False)
 
 
