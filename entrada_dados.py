@@ -71,4 +71,16 @@ if arquivo_carregado:
 
 # Botão de envio
 if st.button("Enviar"):
+    df_inserido = {
+        "CONTRATO": [nro],
+        "NRO MEDICAO": [nro_med],
+        "DATA MEDICAO":[df_nro_contrato],
+        "VALOR":[valor_med],
+        "NF": [nf],
+        "DATA NF":[data_nf],
+        "DATA PGTO":[data_pagto],
+        "OBSERVACAO":[observacao],
+        "protocolo":[protocolo]
+    }
+    st.dataframe(df_inserido)
     st.write("Formulário enviado!")
