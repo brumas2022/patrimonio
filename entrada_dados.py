@@ -78,7 +78,7 @@ if st.button("Enviar"):
         "VALOR":[valor_med],
         "NF": [nf],
         "DATA NF":[data_nf],
-        "DATA PGTO":[data_pagto],
+        "DATA PAGTO":[data_pagto],
         "OBSERVACAO":[observacao],
         "protocolo":[protocolo]
     }
