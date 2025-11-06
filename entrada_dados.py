@@ -12,22 +12,27 @@ df = pd.read_excel("TESTE_MEDICAO.xlsx")
 
 df_nro_contrato = df['CONTRATO'].unique().tolist()
 
-lista = ["ctr 01", "ctr 02"]
-
 nro = st.selectbox("Qual é o contrato? ", df_nro_contrato)
 
 resultado = df.loc[df['CONTRATO']==nro]
 
+
+
+
+
 # printar as medições deste contrato
 
-df_editado = st.data_editor(resultado)
+df_editado = st.dataframe(resultado, on_select="rerun")
 
+novo_resultado = df_editado.selection
+
+st.data_editor(novo_resultado)
 
 
 if st.button("CONFIRMA EDICAO ?"):
    # aqui eu preciso voltar ao df original
 
-   
+
    df_editado.to_excel("TESTE_MEDICAO.xlsx", index=False)
 
 
