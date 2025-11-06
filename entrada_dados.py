@@ -85,6 +85,6 @@ if st.button("Enviar"):
     df_inserido = pd.DataFrame(dado_novo)
     st.dataframe(df_inserido)
     df_combined = pd.concat([df, df_inserido], ignore_index=True)
-    #st.dataframe(df_combined)
-    df_combined.to_excel(df)
+    st.dataframe(df_combined)
+    #df_combined.to_excel(df)
     st.write("Formulário enviado!")
