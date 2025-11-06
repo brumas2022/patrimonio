@@ -20,7 +20,14 @@ resultado = df.loc[df['CONTRATO']==nro]
 
 # printar as medições deste contrato
 
-st.data_editor(resultado)
+df_editado = st.data_editor(resultado)
+
+if st.button("CONFIRMA EDICAO ?"):
+   df_editado.to_excel("TESTE_MEDICAO.xlsx", index=False)
+
+
+
+
 
 # iniciar pelo numero da medicao
 
