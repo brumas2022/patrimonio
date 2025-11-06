@@ -74,7 +74,7 @@ if st.button("Enviar"):
     df_inserido = {
         "CONTRATO": [nro],
         "NRO MEDICAO": [nro_med],
-        "DATA MEDICAO":[df_nro_contrato],
+        "DATA MEDICAO":[data_med],
         "VALOR":[valor_med],
         "NF": [nf],
         "DATA NF":[data_nf],
@@ -83,4 +83,6 @@ if st.button("Enviar"):
         "protocolo":[protocolo]
     }
     st.dataframe(df_inserido)
+    df_combined = pd.concat([df, df_inserido], ignore_index=True)
+    df_combined.to_excel(df, index=False)
     st.write("Formulário enviado!")
