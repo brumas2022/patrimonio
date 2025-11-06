@@ -33,11 +33,11 @@ st.write("---")
 
 col = st.columns((1,1,1))
 
-col[0].write("ETAPA 01")
+col[0].write("DADOS DA MEDICAO")
 
-col[1].write("ETAPA 02")
+col[1].write("DADOS DO PAGAMENTO")
 
-col[2].write("ETAPA 03")
+col[2].write("OUTROS")
 
 nro_med = col[0].text_input("entre com o numero da medicao:")
 
