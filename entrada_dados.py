@@ -34,15 +34,15 @@ col[2].write("ETAPA 03")
 
 nro_med = col[0].text_input("entre com o numero da medicao:")
 
-data_med = col[0].date_input("Data da medicao")
+data_med = col[0].text_input("Data da medicao")
 
 valor_med = col[0].text_input("Valor da medicao")
 
 nf = col[1].text_input("Numero da nf")
 
-data_nf = col[1].date_input("Data da NF")
+data_nf = col[1].text_input("Data da NF")
 
-data_pagto = col[1].date_input("Data do pagamento")
+data_pagto = col[1].text_input("Data do pagamento")
 
 observacao  = col[2].text_input("Observacao")
 
