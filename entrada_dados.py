@@ -20,7 +20,7 @@ resultado = df.loc[df['CONTRATO']==nro]
 
 # printar as medições deste contrato
 
-st.dataframe(resultado)
+st.data_editor(resultado)
 
 # iniciar pelo numero da medicao
 
@@ -85,7 +85,7 @@ if st.button("Enviar"):
     df_inserido = pd.DataFrame(dado_novo)
     st.dataframe(df_inserido)
     df_combined = pd.concat([df, df_inserido], ignore_index=True)
-    st.dataframe(df_combined)
+    #st.dataframe(df_combined)
     df_combined.to_excel("TESTE_MEDICAO.xlsx", index=False)
-    st.rerun()
+    #st.rerun()
     st.write("Formulário enviado!")
