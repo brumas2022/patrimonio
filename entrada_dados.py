@@ -27,7 +27,7 @@ if st.button("CONFIRMA EDICAO ?"):
 
 
 
-
+st.write("---")
 
 # iniciar pelo numero da medicao
 
