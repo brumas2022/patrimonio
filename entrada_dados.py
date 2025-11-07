@@ -22,7 +22,7 @@ resultado = df.loc[df['CONTRATO']==nro]
 
 # printar as medições deste contrato
 
-df_editado = st.dataframe(resultado, on_select="rerun")
+df_editado = st.dataframe(resultado, on_select="callable")
 
 novo_resultado = df_editado.selection
 
