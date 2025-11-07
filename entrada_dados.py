@@ -2,6 +2,9 @@ import streamlit as st
 from datetime import datetime
 import pandas as pd
 
+def mostrar():
+    st.write("Teste")
+
 # Entrada de texto
 st.write("ENTRADA DE MEDIÇÕES")
 
@@ -22,7 +25,7 @@ resultado = df.loc[df['CONTRATO']==nro]
 
 # printar as medições deste contrato
 
-df_editado = st.dataframe(resultado, on_select="callable")
+df_editado = st.dataframe(resultado, on_select=mostrar)
 
 novo_resultado = df_editado.selection
 
