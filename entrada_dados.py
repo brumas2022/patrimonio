@@ -29,7 +29,7 @@ df_editado = st.dataframe(resultado, on_select=mostrar)
 
 novo_resultado = df_editado.selection
 
-st.data_editor(novo_resultado)
+st.data_editor(novo_resultado[0])
 
 
 if st.button("CONFIRMA EDICAO ?"):
