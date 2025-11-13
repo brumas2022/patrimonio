@@ -17,7 +17,7 @@ df_nro_contrato = df['CONTRATO'].unique().tolist()
 
 nro = st.selectbox("Qual é o contrato? ", df_nro_contrato)
 
-resultado = df.loc[df['CONTRATO']==nro]
+resultado = df.loc[df['CONTRATO']==nro, ["CONTRATO", "NRO MEDICAO", "DATA MEDICAO"]]
 
 
 
@@ -25,11 +25,14 @@ resultado = df.loc[df['CONTRATO']==nro]
 
 # printar as medições deste contrato
 
-df_editado = st.dataframe(resultado, on_select=mostrar)
+df_editado = st.dataframe(resultado, on_select="rerun")
 
-novo_resultado = df_editado.selection
+novo_resultado = df_editado
+st.dataframe(novo_resultado)
 
-st.data_editor(novo_resultado[0])
+df.iloc[0,2]
+df_editado.iloc[0,2]
+
 
 
 if st.button("CONFIRMA EDICAO ?"):
