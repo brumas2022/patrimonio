@@ -156,7 +156,7 @@ lista_contratos=["TECNOBOMBAS - 004/2023(11)", "MASTER - 028/2023(10)", "SPARTAC
 
 lista_contratos_OBRAS = ["MASTER - 034/2022", "MASTER - 028/2023", "MASTER 019-2024", "CONSTRUTORA MENEGUETI - VG", "TECNBOMBAS - 007/2024", "TECNOBOMBAS - 004/2023", \
                          "SPARTACUS - 024/2024", "MILLENIUM - 009/2023", "MILLENIUM - 003/2024", "MILLENIUM 017-2024", "MILLENIUM - 008/2023", \
-                         "COOMSER OBRA", "SPARTACUS - 013/2024", "SM7 - TANKS BR", "RST ENGENHARIA", "MARCIO SOUZA FARIAS",  "DIMBEL", "DA GARISTO", "ENRON", "RONDOFONE", "SOLOS"]
+                         "COOMSER OBRA", "SPARTACUS - 013/2024", "SM7 - TANKS BR", "RST ENGENHARIA", "MARCIO SOUZA FARIAS",  "DIMBEL", "DA GARISTO", "ENRON", "RONDOFONE", "SOLOS", "R.SANTANA"]
 st.sidebar.header("Contratos de obras")
 a = st.sidebar.button(lista_contratos_OBRAS[0], use_container_width=True)
 b = st.sidebar.button(lista_contratos_OBRAS[1], use_container_width=True)
@@ -179,6 +179,7 @@ q = st.sidebar.button(lista_contratos_OBRAS[17], use_container_width=True)
 r = st.sidebar.button(lista_contratos_OBRAS[18], use_container_width=True)
 s = st.sidebar.button(lista_contratos_OBRAS[19], use_container_width=True)
 t = st.sidebar.button(lista_contratos_OBRAS[20], use_container_width=True)
+u = st.sidebar.button(lista_contratos_OBRAS[21], use_container_width=True)
 
 lista_dados=["Dados", "Medições", "Relatorios"]
 
@@ -389,6 +390,16 @@ elif t:
 
    with t13:
        relatorios() 
+
+elif u:
+   t11, t12, t13 = st.tabs(lista_dados)
+   with t11:
+       dados(48)
+   with t12:
+       medicoes(48)
+
+   with t13:
+       relatorios()
 
 else:
     st.image("contratos/Logosanear1.jpg")
