@@ -45,6 +45,11 @@ def dados(n):
     st.markdown("**ADITIVOS**")
     #st.dataframe(df_aditivo1)
     st.dataframe(df_aditivo1, hide_index=False, column_config={
+        "DATA": st.column_config.DatetimeColumn(
+            "DATA",
+            format="DD/MM/YYYY",
+            
+        ),
         "EXECUCAO INICIA": st.column_config.DatetimeColumn(
             "EXECUCAO INICIA",
             format="DD/MM/YYYY",
