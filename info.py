@@ -1,6 +1,11 @@
 import pandas as pd
 import streamlit as st
+import os
 
-df = pd.read_excel("BDTESTES/controle_nad.xlsx")
+nome = os.environ("SEGREDO_SANEAR")
 
-st.dataframe(df)
+st.write(nome)
+
+#df = pd.read_excel("BDTESTES/controle_nad.xlsx")
+
+#st.dataframe(df)
