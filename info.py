@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 import os
 
-nome = os.environ("SEGREDO_SANEAR")
+nome = os.getenv("SEGREDO_SANEAR")
 
 st.write(nome)
 
