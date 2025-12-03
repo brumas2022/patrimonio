@@ -87,7 +87,7 @@ def inserir():
     prot = col[2].text_input("Numero do protocolo")
     dados = {
                 "id": total1+1,
-                "contrato" : nro,
+                "contrato" : ctr,
                 "medicao" : med,
                 "datamedicao" : datamed,
                 "valor" : vmed,
