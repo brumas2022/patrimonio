@@ -27,18 +27,22 @@ def lista_contratos():
 
     lista = [ ]
     i=0
-    for i in range(100):
+    for i in range(202):
         a = olhar['data'][i]['contrato']
         lista.append(a)
     return list(set(lista))
 
 def alterar():
     a=0
-    nro = st.selectbox("Escolha o contrato", lista_contratos(), key=2)
-    altera = supabase.table("bdmedicaonova").select("*").eq("contrato", nro).execute()
-    evento = st.dataframe(altera.data, on_select="rerun", selection_mode="single-row")
-    a = evento.selection['rows'][0]
-    st.write(a)
+    try:
+      nro = st.selectbox("Escolha o contrato", lista_contratos(), key=2)
+      altera = supabase.table("bdmedicaonova").select("*").eq("contrato", nro).execute()
+      evento = st.dataframe(altera.data, on_select="rerun", selection_mode="single-row")
+      a = evento.selection['rows'][0]
+      st.write(a)
+    except IndexError:
+      st.warning("ESCOLHA UMA MEDIÇÃO")
+
     col1 = st.columns((1,1,1))
 
     id_altera = altera.data[a]['id']
