@@ -33,6 +33,7 @@ def lista_contratos():
     return list(set(lista))
 
 def alterar():
+    a=0
     nro = st.selectbox("Escolha o contrato", lista_contratos(), key=2)
     altera = supabase.table("bdmedicaonova").select("*").eq("contrato", nro).execute()
     evento = st.dataframe(altera.data, on_select="rerun", selection_mode="single-row")
