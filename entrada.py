@@ -38,15 +38,31 @@ def alterar():
     evento = st.dataframe(altera.data, on_select="rerun", selection_mode="single-row")
     a = evento.selection['rows'][0]
     st.write(a)
-    contrato = st.text_input("Contrato", placeholder=altera.data[a]['contrato'])
-    medicao_nro = st.text_input("Número da Medição", placeholder=altera.data[a]['medicao'])
-    valor = st.text_input("Valor", placeholder=altera.data[a]['valor'])
-    nf = st.text_input("Numero da nota fiscal", placeholder=altera.data[a]['notafiscal'])
+    col1 = st.columns((1,1,1))
+
+    id_altera = altera.data[a]['id']
+    st.write(id_altera)
+    contrato = col1[0].text_input("Contrato", placeholder=altera.data[a]['contrato'])
+    medicao_nro = col1[0].text_input("Número da Medição", placeholder=altera.data[a]['medicao'])
+    datamedicao = col1[0].text_input("Data da medicao", placeholder=altera.data[a]['datamedicao'])
+    valor = col1[0].text_input("Valor", placeholder=altera.data[a]['valor'])
+    nf = col1[1].text_input("Numero da nota fiscal", placeholder=altera.data[a]['notafiscal'])
+    datanf = col1[1].text_input("Data de Emissao NF", placeholder=altera.data[a]['datanota'])
+    datapgto = col1[1].text_input("Data do pagamento", placeholder=altera.data[a]['datapagto'])
+    observ = col1[2].text_input("Observacao", placeholder=altera.data[a]['observacao'])
+    prot = col1[2].text_input("Protocolo", placeholder=altera.data[a]['protocolo'])
+
     if st.button("confirma a alteração?"):
         data_alterar = {
-                            "notafiscal":nf
+                            "notafiscal":nf, 
+                            "datanota":datanf,
+                            "datapagto":datapgto,
+                            "observacao":observ,
+                            "protocolo":prot
                         }
         st.write(data_alterar)
+        return supabase.table("bdmedicaonova").update(data_alterar).eq("id", id_altera).execute()
+
 
 def inserir():
     #ler o total de registros para inserir o id correto
