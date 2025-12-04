@@ -164,13 +164,6 @@ def supa_medicoes():
     st.dataframe(consulta.data)
 
 
-
-
-
-
-
-
-
 def relatorios():
     #st.write('Aqui serão colocados os relatorios mensais da obra')
     #linha = []
