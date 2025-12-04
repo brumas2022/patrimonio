@@ -147,12 +147,37 @@ def medicoes(n):
     #plt.show()
     #df_medicao[df_medicao["CONTRATO"==nro_contrato]]
     #st.dataframe(df_x)
+
+def supa_medicoes():
+    import os
+    from supabase import create_client, Client
+    from dotenv import load_dotenv
+    load_dotenv()
+
+    url = os.getenv("URL")
+    key = os.getenv("KEY")
+
+    supabase: Client = create_client(url, key)
+
+    consulta = supabase.table("bdmedicaonova").select("*").eq("contrato", "009/2022").execute()
+
+    st.dataframe(consulta.data)
+
+
+
+
+
+
+
+
+
 def relatorios():
-    st.write('Aqui serão colocados os relatorios mensais da obra')
-    linha = []
-    for number in range(30):
-        a = st.text_input(f"Linha {number} :", key=number, label_visibility="collapsed")
-        linha.append(a)
+    #st.write('Aqui serão colocados os relatorios mensais da obra')
+    #linha = []
+    #for number in range(30):
+    #    a = st.text_input(f"Linha {number} :", key=number, label_visibility="collapsed")
+    #    linha.append(a)
+    supa_medicoes()
 
 lista_contratos=["TECNOBOMBAS - 004/2023(11)", "MASTER - 028/2023(10)", "SPARTACUS(23)", \
                  "MENEGUETI(24)", "GEOPOÇOS(29)", "ALPHA(0)", "SM7(4)", "MASTER - 034/2022(13)", "SAGATEC(14)", "ELETRIC(19)", \
