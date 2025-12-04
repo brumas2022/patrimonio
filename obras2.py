@@ -165,12 +165,12 @@ def supa_medicoes():
 
 
 def relatorios():
-    
-    #st.write('Aqui serão colocados os relatorios mensais da obra')
-    #linha = []
-    #for number in range(30):
-    #    a = st.text_input(f"Linha {number} :", key=number, label_visibility="collapsed")
-    #    linha.append(a)
+
+    st.write('Aqui serão colocados os relatorios mensais da obra')
+    linha = []
+    for number in range(30):
+        a = st.text_input(f"Linha {number} :", key=number, label_visibility="collapsed")
+        linha.append(a)
     #supa_medicoes()
 
 lista_contratos=["TECNOBOMBAS - 004/2023(11)", "MASTER - 028/2023(10)", "SPARTACUS(23)", \
