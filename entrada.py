@@ -23,7 +23,10 @@ supabase: Client = create_client(url, key)
 def lista_contratos():
     resposta = supabase.table("bdmedicaonova").select("contrato").execute()
 
+
     olhar = resposta.model_dump()
+
+    st.dataframe(olhar)
 
     lista = [ ]
     i=0
