@@ -22,15 +22,16 @@ supabase: Client = create_client(url, key)
 ## esta função tem o objetivo de listar os contratos que já estão no banco de dados
 def lista_contratos():
     resposta = supabase.table("bdmedicaonova").select("contrato").execute()
-
+    contador = supabase.table("bdmedicaonova").select("*").execute()
+    contador1=len(contador.data)
 
     olhar = resposta.model_dump()
 
-    st.dataframe(olhar)
+    #st.dataframe(olhar)
 
     lista = [ ]
     i=0
-    for i in range(205):
+    for i in range(contador1):
         a = olhar['data'][i]['contrato']
         lista.append(a)
     return list(set(lista))
