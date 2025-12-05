@@ -104,7 +104,7 @@ def inserir():
            }
     st.dataframe(dados)
     if st.button("CONFIRMA"):
-       return supabase.table("bdmedicaonova").insert(dados, default_to_null=False).execute()
+       return supabase.table("bdmedicaonova").insert(dados).execute()
     #contrato;medicao;datamedicao;valor;notafiscal;datanota;datapagto;observacao;protocolo;id
 
 
