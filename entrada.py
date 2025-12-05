@@ -30,7 +30,7 @@ def lista_contratos():
 
     lista = [ ]
     i=0
-    for i in range(204):
+    for i in range(205):
         a = olhar['data'][i]['contrato']
         lista.append(a)
     return list(set(lista))
