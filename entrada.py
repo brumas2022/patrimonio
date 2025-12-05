@@ -27,7 +27,7 @@ def lista_contratos():
 
     lista = [ ]
     i=0
-    for i in range(202):
+    for i in range(203):
         a = olhar['data'][i]['contrato']
         lista.append(a)
     return list(set(lista))
@@ -105,7 +105,7 @@ def inserir():
     st.dataframe(dados_inserir)
     if st.button("CONFIRMA"):
        supabase.table('bdmedicaonova').insert(dados_inserir).execute()
-       
+
     #contrato;medicao;datamedicao;valor;notafiscal;datanota;datapagto;observacao;protocolo;id
 
 
