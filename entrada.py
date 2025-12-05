@@ -91,7 +91,7 @@ def inserir():
     obs = col[2].text_input("Observação")
     prot = col[2].text_input("Numero do protocolo")
     dados = {
-                "id": 205,
+                "id": total1+1,
                 "contrato" : ctr,
                 "medicao" : med,
                 "datamedicao" : datamed,
@@ -104,7 +104,7 @@ def inserir():
            }
     st.dataframe(dados)
     if st.button("CONFIRMA"):
-       return supabase.table("bdmedicaonova").insert(dados).execute()
+       return supabase.table('bdmedicaonova').insert(dados).execute()
     #contrato;medicao;datamedicao;valor;notafiscal;datanota;datapagto;observacao;protocolo;id
 
 
