@@ -250,12 +250,22 @@ with st.form("Relatorio"):
     st.sidebar.write(menina)
     st.sidebar.write(empresa)
     st.sidebar.dataframe(df_relatorio.loc[df_relatorio['CONTRATO']==nro])
+
+    ultimo_relatorio = pd.read_excel("relatorio_novo.xlsx")
+    resultado1 = ultimo_relatorio.loc[ultimo_relatorio['CONTRATO']==nro]
+    #st.dataframe(resultado1.tail(1))
+    resultado2=resultado1.tail(1)
+
     
     
-    ocorrecias = st.text_area("Ocorrencias")
-    diligencia = st.text_area("Diligencias")
-    avaliacao = st.text_area("Avaliação")
-    obs = st.text_area("Observação")
+
+
+    
+    
+    ocorrecias = st.text_area("Ocorrencias", placeholder=resultado2.iat[0,2])
+    diligencia = st.text_area("Diligencias", placeholder=resultado2.iat[0,3])
+    avaliacao = st.text_area("Avaliação", placeholder=resultado2.iat[0,4])
+    obs = st.text_area("Observação", placeholder=resultado2.iat[0,5])
     data_relatorio = st.date_input("Data do relatorio")
     data_relatorio_1 = data_relatorio.strftime("%d/%m/%Y")
     
