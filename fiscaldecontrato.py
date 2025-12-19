@@ -262,10 +262,10 @@ with st.form("Relatorio"):
 
     
     
-    ocorrecias = st.text_area("Ocorrencias", placeholder=resultado2.iat[0,2])
-    diligencia = st.text_area("Diligencias", placeholder=resultado2.iat[0,3])
-    avaliacao = st.text_area("Avaliação", placeholder=resultado2.iat[0,4])
-    obs = st.text_area("Observação", placeholder=resultado2.iat[0,5])
+    ocorrecias = st.text_area("Ocorrencias", value=resultado2.iat[0,2], placeholder=resultado2.iat[0,2])
+    diligencia = st.text_area("Diligencias", value=resultado2.iat[0,3], placeholder=resultado2.iat[0,3])
+    avaliacao = st.text_area("Avaliação", value=resultado2.iat[0,4], placeholder=resultado2.iat[0,4])
+    obs = st.text_area("Observação", value=resultado2.iat[0,5], placeholder=resultado2.iat[0,5])
     data_relatorio = st.date_input("Data do relatorio")
     data_relatorio_1 = data_relatorio.strftime("%d/%m/%Y")
     
