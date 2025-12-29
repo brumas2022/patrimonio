@@ -15,6 +15,48 @@ df_medicao  = pd.read_excel("NOVA_MEDICAO.xlsx", sheet_name=0)
 def vencimentos():
     pass
 
+def aditivos(n):
+    nro_contrato = f"{df_contratos.iloc[n,1]}"
+    df_aditivo = pd.read_excel("NOVA_MEDICAO.xlsx", sheet_name=1)
+    df_aditivo1 = df_aditivo[df_aditivo["CONTRATO"]==nro_contrato]
+
+    st.write("---")
+    st.markdown("**ADITIVOS**")
+    #st.dataframe(df_aditivo1)
+    st.dataframe(df_aditivo1, hide_index=False, column_config={
+        "DATA": st.column_config.DatetimeColumn(
+            "DATA",
+            format="DD/MM/YYYY",
+            
+        ),
+        "EXECUCAO INICIA": st.column_config.DatetimeColumn(
+            "EXECUCAO INICIA",
+            format="DD/MM/YYYY",
+            
+        ),
+        "EXECUCAO FINAL": st.column_config.DatetimeColumn(
+            "EXECUCAO FINAL",
+            format="DD/MM/YYYY",
+            
+        ),
+        "VIGENCIA INICIAL": st.column_config.DatetimeColumn(
+            "VIGENCIA INICIAL",
+            format="DD/MM/YYYY",
+            
+        ),
+        "VIGENCIA FINAL": st.column_config.DatetimeColumn(
+            "VIGENCIA FINAL",
+            format="DD/MM/YYYY",
+            
+        ),
+        #"NF": st.column_config.NumberColumn(
+        #    "NF",
+        #    help="NOTA FISCAL EMITIDA",
+        #    format="plain",
+            
+        #),
+    })
+
 
 def dados(n):
     
@@ -215,7 +257,7 @@ if a:
     with t12:
         medicoes(13)
     with t13:
-        relatorios()
+        aditivos(13)
 elif b:
    t11, t12, t13 = st.tabs(lista_dados)
    with t11:
