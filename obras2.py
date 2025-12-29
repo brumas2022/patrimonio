@@ -366,7 +366,7 @@ elif k:
        medicoes(34)
 
    with t13:
-       relatorios()   
+       aditivos(34)   
        
 elif l:
    t11, t12, t13 = st.tabs(lista_dados)
@@ -376,7 +376,7 @@ elif l:
        medicoes(23)
 
    with t13:
-       relatorios()   
+       aditivos(23)   
        
 elif m:
    t11, t12, t13 = st.tabs(lista_dados)
@@ -386,7 +386,7 @@ elif m:
        medicoes(4)
 
    with t13:
-       relatorios()   
+       aditivos(4)   
        
 elif n:
    t11, t12, t13 = st.tabs(lista_dados)
@@ -396,7 +396,7 @@ elif n:
        medicoes(3)
 
    with t13:
-       relatorios() 
+       aditivos(3) 
        
 elif o:
    t11, t12, t13 = st.tabs(lista_dados)
@@ -406,7 +406,7 @@ elif o:
        medicoes(38)
 
    with t13:
-       relatorios() 
+       aditivos(38)
        
 elif p:
    t11, t12, t13 = st.tabs(lista_dados)
@@ -416,7 +416,7 @@ elif p:
        medicoes(35)
 
    with t13:
-       relatorios() 
+       aditivos(35) 
        
 elif q:
    t11, t12, t13 = st.tabs(lista_dados)
@@ -426,7 +426,7 @@ elif q:
        medicoes(21)
 
    with t13:
-       relatorios() 
+       aditivos(21) 
 
 elif r:
    t11, t12, t13 = st.tabs(lista_dados)
@@ -436,7 +436,7 @@ elif r:
        medicoes(45)
 
    with t13:
-       relatorios() 
+       aditivos(45) 
 
 elif s:
    t11, t12, t13 = st.tabs(lista_dados)
@@ -446,7 +446,7 @@ elif s:
        medicoes(46)
 
    with t13:
-       relatorios() 
+       aditivos(46) 
 
 elif t:
    t11, t12, t13 = st.tabs(lista_dados)
@@ -456,7 +456,7 @@ elif t:
        medicoes(47)
 
    with t13:
-       relatorios() 
+       aditivos(47) 
 
 elif u:
    t11, t12, t13 = st.tabs(lista_dados)
@@ -466,7 +466,7 @@ elif u:
        medicoes(48)
 
    with t13:
-       relatorios()
+       aditivos(48)
 
 else:
     st.image("contratos/Logosanear1.jpg")
