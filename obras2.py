@@ -248,7 +248,7 @@ s = st.sidebar.button(lista_contratos_OBRAS[19], use_container_width=True)
 t = st.sidebar.button(lista_contratos_OBRAS[20], use_container_width=True)
 u = st.sidebar.button(lista_contratos_OBRAS[21], use_container_width=True)
 
-lista_dados=["Dados", "Medições", "Relatorios"]
+lista_dados=["Dados", "Medições", "Aditivos"]
 
 if a:
     t11, t12, t13 = st.tabs(lista_dados)
@@ -266,7 +266,7 @@ elif b:
        medicoes(10)
 
    with t13:
-       relatorios() 
+       aditivos(10) 
 
 elif c:
    t11, t12, t13 = st.tabs(lista_dados)
@@ -276,7 +276,7 @@ elif c:
        medicoes(33)
 
    with t13:
-       relatorios()
+       aditivos(33)
        
 elif d:
    t11, t12, t13 = st.tabs(lista_dados)
@@ -286,7 +286,7 @@ elif d:
        medicoes(24)
 
    with t13:
-       relatorios()
+       aditivos(24)
  
 elif e:
    t11, t12, t13 = st.tabs(lista_dados)
@@ -296,7 +296,7 @@ elif e:
        medicoes(22)
 
    with t13:
-       relatorios()  
+       aditivos(22)  
        
 elif f:
    t11, t12, t13 = st.tabs(lista_dados)
@@ -306,7 +306,7 @@ elif f:
        medicoes(39)
 
    with t13:
-       relatorios() 
+       aditivos(30) 
 
 elif f1:
    t11, t12, t13 = st.tabs(lista_dados)
@@ -316,7 +316,7 @@ elif f1:
        medicoes(11)
 
    with t13:
-       relatorios() 
+       aditivos(11) 
        
 elif g:
    t11, t12, t13 = st.tabs(lista_dados)
@@ -326,7 +326,7 @@ elif g:
        medicoes(16)
 
    with t13:
-       relatorios() 
+       aditivos(16) 
 
 elif h:
    t11, t12, t13 = st.tabs(lista_dados)
@@ -336,7 +336,7 @@ elif h:
        medicoes(17)
 
    with t13:
-       relatorios()
+       aditivos(17)
            
 elif i:
    t11, t12, t13 = st.tabs(lista_dados)
@@ -346,7 +346,7 @@ elif i:
        medicoes(37)
 
    with t13:
-       relatorios() 
+       aditivos(37)
 
 elif j:
    t11, t12, t13 = st.tabs(lista_dados)
@@ -356,7 +356,7 @@ elif j:
        medicoes(15)
 
    with t13:
-       relatorios() 
+       aditivos(15) 
 
 elif k:
    t11, t12, t13 = st.tabs(lista_dados)
