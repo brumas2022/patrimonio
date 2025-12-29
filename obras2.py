@@ -34,6 +34,7 @@ def dados(n):
     st.markdown(f"**FISCAL** : {df_mostra_dados.values[4]}", )
     st.markdown(f"**INICIO** : {df_mostra_dados.values[5].strftime("%d/%m/%Y")}")
     st.markdown(f"**FIM** : {df_mostra_dados.values[6].strftime("%d/%m/%Y")}")
+    st.markdown(f"**SITUAÇÃO** : {df_mostra_dados.values[14]}")
     
     #hoje = datetime.date.today().strftime("%d/%m/%Y") 
     #data_fim = df_mostra_dados.values[6].strftime("%d/%m/%Y")
