@@ -14,6 +14,7 @@ df_medicao  = pd.read_excel("NOVA_MEDICAO.xlsx", sheet_name=0)
 
 def vencimentos():
     contratos_vencer = pd.read_excel("janeiro-2026.xlsx", sheet_name=0)
+    st.markdown("**CONTRATOS A VENCER EM JANEIRO/2026**")
     st.dataframe(contratos_vencer)
     
 
@@ -436,7 +437,8 @@ elif u:
        aditivos(48)
 
 else:
-    st.image("contratos/Logosanear1.jpg")
+    #st.image("contratos/Logosanear1.jpg")
+    pass
 
 
 vencimentos()
