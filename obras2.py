@@ -15,7 +15,7 @@ df_medicao  = pd.read_excel("NOVA_MEDICAO.xlsx", sheet_name=0)
 def vencimentos():
     contratos_vencer = pd.read_excel("janeiro-2026.xlsx", sheet_name=0)
     st.dataframe(contratos_vencer)
-    pass
+    
 
 def aditivos(n):
     nro_contrato = f"{df_contratos.iloc[n,1]}"
