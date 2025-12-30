@@ -20,7 +20,7 @@ def aditivos(n):
     df_aditivo = pd.read_excel("NOVA_MEDICAO.xlsx", sheet_name=1)
     df_aditivo1 = df_aditivo[df_aditivo["CONTRATO"]==nro_contrato]
 
-    st.write("---")
+    
     st.markdown("**ADITIVOS**")
     #st.dataframe(df_aditivo1)
     st.dataframe(df_aditivo1, hide_index=False, column_config={
@@ -76,7 +76,7 @@ def dados(n):
     st.markdown(f"**FISCAL** : {df_mostra_dados.values[4]}", )
     st.markdown(f"**INICIO** : {df_mostra_dados.values[5].strftime("%d/%m/%Y")}")
     st.markdown(f"**FIM** : {df_mostra_dados.values[6].strftime("%d/%m/%Y")}")
-    #####st.markdown(f"**SITUAÇÃO** : {df_mostra_dados.values[7]}")
+    st.markdown(f"**SITUAÇÃO** : {df_mostra_dados.values[7]}")
     
     #hoje = datetime.date.today().strftime("%d/%m/%Y") 
     #data_fim = df_mostra_dados.values[6].strftime("%d/%m/%Y")
@@ -84,42 +84,7 @@ def dados(n):
     #    st.markdown(f"Este contrato venceu. Informe o fiscal de contrato")
 
     
-    st.write("---")
-    st.markdown("**ADITIVOS**")
-    #st.dataframe(df_aditivo1)
-    st.dataframe(df_aditivo1, hide_index=False, column_config={
-        "DATA": st.column_config.DatetimeColumn(
-            "DATA",
-            format="DD/MM/YYYY",
-            
-        ),
-        "EXECUCAO INICIA": st.column_config.DatetimeColumn(
-            "EXECUCAO INICIA",
-            format="DD/MM/YYYY",
-            
-        ),
-        "EXECUCAO FINAL": st.column_config.DatetimeColumn(
-            "EXECUCAO FINAL",
-            format="DD/MM/YYYY",
-            
-        ),
-        "VIGENCIA INICIAL": st.column_config.DatetimeColumn(
-            "VIGENCIA INICIAL",
-            format="DD/MM/YYYY",
-            
-        ),
-        "VIGENCIA FINAL": st.column_config.DatetimeColumn(
-            "VIGENCIA FINAL",
-            format="DD/MM/YYYY",
-            
-        ),
-        #"NF": st.column_config.NumberColumn(
-        #    "NF",
-        #    help="NOTA FISCAL EMITIDA",
-        #    format="plain",
-            
-        #),
-    })
+    
 
 def medicoes(n):
     #n=11
