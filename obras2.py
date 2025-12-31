@@ -438,7 +438,8 @@ elif u:
 
 else:
     #st.image("contratos/Logosanear1.jpg")
+    vencimentos()
     pass
 
 
-vencimentos()
+#vencimentos()
