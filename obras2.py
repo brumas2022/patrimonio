@@ -12,6 +12,8 @@ df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
 #df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=4)
 df_medicao  = pd.read_excel("NOVA_MEDICAO.xlsx", sheet_name=0)
 
+
+
 def vencimentos():
     contratos_vencer = pd.read_excel("janeiro-2026.xlsx", sheet_name=0)
     st.markdown("**CONTRATOS A VENCER EM JANEIRO/2026**")
