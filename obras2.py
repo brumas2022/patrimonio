@@ -273,6 +273,8 @@ elif d:
 
    with t13:
        aditivos(24)
+   with t14:
+       graficos(24) 
  
 elif e:
    t11, t12, t13, t14 = st.tabs(lista_dados)
@@ -282,7 +284,9 @@ elif e:
        medicoes(22)
 
    with t13:
-       aditivos(22)  
+       aditivos(22)
+   with t14:
+       graficos(22)    
        
 elif f:
    t11, t12, t13, t14 = st.tabs(lista_dados)
@@ -293,6 +297,8 @@ elif f:
 
    with t13:
        aditivos(30) 
+   with t14:
+       graficos(30) 
 
 elif f1:
    t11, t12, t13, t14 = st.tabs(lista_dados)
@@ -302,7 +308,9 @@ elif f1:
        medicoes(11)
 
    with t13:
-       aditivos(11) 
+       aditivos(11)
+   with t14:
+       graficos(11)  
        
 elif g:
    t11, t12, t13, t14 = st.tabs(lista_dados)
@@ -313,6 +321,8 @@ elif g:
 
    with t13:
        aditivos(16) 
+   with t14:
+       graficos(16) 
 
 elif h:
    t11, t12, t13, t14 = st.tabs(lista_dados)
@@ -323,6 +333,8 @@ elif h:
 
    with t13:
        aditivos(17)
+   with t14:
+       graficos(17) 
            
 elif i:
    t11, t12, t13, t14 = st.tabs(lista_dados)
@@ -333,6 +345,8 @@ elif i:
 
    with t13:
        aditivos(37)
+   with t14:
+       graficos(37) 
 
 elif j:
    t11, t12, t13, t14 = st.tabs(lista_dados)
@@ -342,7 +356,9 @@ elif j:
        medicoes(15)
 
    with t13:
-       aditivos(15) 
+       aditivos(15)
+   with t14:
+       graficos(15)  
 
 elif k:
    t11, t12, t13, t14 = st.tabs(lista_dados)
@@ -352,7 +368,9 @@ elif k:
        medicoes(34)
 
    with t13:
-       aditivos(34)   
+       aditivos(34) 
+   with t14:
+       graficos(34)   
        
 elif l:
    t11, t12, t13, t14 = st.tabs(lista_dados)
@@ -362,7 +380,9 @@ elif l:
        medicoes(23)
 
    with t13:
-       aditivos(23)   
+       aditivos(23)
+   with t14:
+       graficos(23)    
        
 elif m:
    t11, t12, t13, t14 = st.tabs(lista_dados)
@@ -372,7 +392,9 @@ elif m:
        medicoes(4)
 
    with t13:
-       aditivos(4)   
+       aditivos(4)
+   with t14:
+       graficos(4)   
        
 elif n:
    t11, t12, t13, t14 = st.tabs(lista_dados)
@@ -382,7 +404,9 @@ elif n:
        medicoes(3)
 
    with t13:
-       aditivos(3) 
+       aditivos(3)
+   with t14:
+       graficos(3)  
        
 elif o:
    t11, t12, t13, t14 = st.tabs(lista_dados)
@@ -393,6 +417,8 @@ elif o:
 
    with t13:
        aditivos(38)
+   with t14:
+       graficos(38) 
        
 elif p:
    t11, t12, t13, t14 = st.tabs(lista_dados)
@@ -403,6 +429,8 @@ elif p:
 
    with t13:
        aditivos(35) 
+   with t14:
+       graficos(35) 
        
 elif q:
    t11, t12, t13, t14 = st.tabs(lista_dados)
@@ -412,7 +440,9 @@ elif q:
        medicoes(21)
 
    with t13:
-       aditivos(21) 
+       aditivos(21)
+   with t14:
+       graficos(21)  
 
 elif r:
    t11, t12, t13, t14 = st.tabs(lista_dados)
@@ -423,6 +453,8 @@ elif r:
 
    with t13:
        aditivos(45) 
+   with t14:
+       graficos(45) 
 
 elif s:
    t11, t12, t13, t14 = st.tabs(lista_dados)
@@ -432,7 +464,9 @@ elif s:
        medicoes(46)
 
    with t13:
-       aditivos(46) 
+       aditivos(46)
+   with t14:
+       graficos(46)  
 
 elif t:
    t11, t12, t13, t14 = st.tabs(lista_dados)
@@ -443,6 +477,8 @@ elif t:
 
    with t13:
        aditivos(47) 
+   with t14:
+       graficos(47) 
 
 elif u:
    t11, t12, t13, t14 = st.tabs(lista_dados)
@@ -453,6 +489,8 @@ elif u:
 
    with t13:
        aditivos(48)
+   with t14:
+       graficos(48) 
 
 else:
     #st.image("contratos/Logosanear1.jpg")
