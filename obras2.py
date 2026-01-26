@@ -161,6 +161,16 @@ def medicoes(n):
     #df_medicao[df_medicao["CONTRATO"==nro_contrato]]
     #st.dataframe(df_x)
 
+def graficos(n):
+    df_medicao  = pd.read_excel("NOVA_MEDICAO.xlsx", sheet_name=0)
+    nro_contrato = f"{df_contratos.iloc[n,1]}"
+    df_selecao = df_medicao[df_medicao["CONTRATO"]==nro_contrato]
+    df_y = df_selecao['VALOR'].tolist()
+    #st.dataframe(df_y)
+    df_x=[1, 2, 3, 4, 5, 6, 7, 8]
+    #df_y=[93264, 89785, 143861, 92502, 192910, 117159, 104735, 101971]
+    st.bar_chart(df_y, width=750, use_container_width=False)
+
 def supa_medicoes():
     import os
     from supabase import create_client, Client
@@ -218,16 +228,18 @@ s = st.sidebar.button(lista_contratos_OBRAS[19], use_container_width=True)
 t = st.sidebar.button(lista_contratos_OBRAS[20], use_container_width=True)
 u = st.sidebar.button(lista_contratos_OBRAS[21], use_container_width=True)
 
-lista_dados=["Dados", "Medições", "Aditivos"]
+lista_dados=["Dados", "Medições", "Aditivos", "Gráfico"]
 
 if a:
-    t11, t12, t13 = st.tabs(lista_dados)
+    t11, t12, t13, t14 = st.tabs(lista_dados)
     with t11:
         dados(13)
     with t12:
         medicoes(13)
     with t13:
         aditivos(13)
+    with t14:
+        graficos(13)
 elif b:
    t11, t12, t13 = st.tabs(lista_dados)
    with t11:
