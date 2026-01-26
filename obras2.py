@@ -241,7 +241,7 @@ if a:
     with t14:
         graficos(13)
 elif b:
-   t11, t12, t13 = st.tabs(lista_dados)
+   t11, t12, t13, t14 = st.tabs(lista_dados)
    with t11:
        dados(10)
    with t12:
@@ -249,9 +249,11 @@ elif b:
 
    with t13:
        aditivos(10) 
+   with t14:
+       graficos(10) 
 
 elif c:
-   t11, t12, t13 = st.tabs(lista_dados)
+   t11, t12, t13, t14 = st.tabs(lista_dados)
    with t11:
        dados(33)
    with t12:
@@ -259,6 +261,8 @@ elif c:
 
    with t13:
        aditivos(33)
+   with t14:
+       graficos(33)
        
 elif d:
    t11, t12, t13 = st.tabs(lista_dados)
