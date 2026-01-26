@@ -265,7 +265,7 @@ elif c:
        graficos(33)
        
 elif d:
-   t11, t12, t13 = st.tabs(lista_dados)
+   t11, t12, t13, t14 = st.tabs(lista_dados)
    with t11:
        dados(24)
    with t12:
@@ -275,7 +275,7 @@ elif d:
        aditivos(24)
  
 elif e:
-   t11, t12, t13 = st.tabs(lista_dados)
+   t11, t12, t13, t14 = st.tabs(lista_dados)
    with t11:
        dados(22)
    with t12:
@@ -285,7 +285,7 @@ elif e:
        aditivos(22)  
        
 elif f:
-   t11, t12, t13 = st.tabs(lista_dados)
+   t11, t12, t13, t14 = st.tabs(lista_dados)
    with t11:
        dados(39)
    with t12:
@@ -295,7 +295,7 @@ elif f:
        aditivos(30) 
 
 elif f1:
-   t11, t12, t13 = st.tabs(lista_dados)
+   t11, t12, t13, t14 = st.tabs(lista_dados)
    with t11:
        dados(11)
    with t12:
@@ -305,7 +305,7 @@ elif f1:
        aditivos(11) 
        
 elif g:
-   t11, t12, t13 = st.tabs(lista_dados)
+   t11, t12, t13, t14 = st.tabs(lista_dados)
    with t11:
        dados(16)
    with t12:
@@ -315,7 +315,7 @@ elif g:
        aditivos(16) 
 
 elif h:
-   t11, t12, t13 = st.tabs(lista_dados)
+   t11, t12, t13, t14 = st.tabs(lista_dados)
    with t11:
        dados(17)
    with t12:
@@ -325,7 +325,7 @@ elif h:
        aditivos(17)
            
 elif i:
-   t11, t12, t13 = st.tabs(lista_dados)
+   t11, t12, t13, t14 = st.tabs(lista_dados)
    with t11:
        dados(37)
    with t12:
@@ -335,7 +335,7 @@ elif i:
        aditivos(37)
 
 elif j:
-   t11, t12, t13 = st.tabs(lista_dados)
+   t11, t12, t13, t14 = st.tabs(lista_dados)
    with t11:
        dados(15)
    with t12:
@@ -345,7 +345,7 @@ elif j:
        aditivos(15) 
 
 elif k:
-   t11, t12, t13 = st.tabs(lista_dados)
+   t11, t12, t13, t14 = st.tabs(lista_dados)
    with t11:
        dados(34)
    with t12:
@@ -355,7 +355,7 @@ elif k:
        aditivos(34)   
        
 elif l:
-   t11, t12, t13 = st.tabs(lista_dados)
+   t11, t12, t13, t14 = st.tabs(lista_dados)
    with t11:
        dados(23)
    with t12:
@@ -365,7 +365,7 @@ elif l:
        aditivos(23)   
        
 elif m:
-   t11, t12, t13 = st.tabs(lista_dados)
+   t11, t12, t13, t14 = st.tabs(lista_dados)
    with t11:
        dados(4)
    with t12:
@@ -375,7 +375,7 @@ elif m:
        aditivos(4)   
        
 elif n:
-   t11, t12, t13 = st.tabs(lista_dados)
+   t11, t12, t13, t14 = st.tabs(lista_dados)
    with t11:
        dados(3)
    with t12:
@@ -385,7 +385,7 @@ elif n:
        aditivos(3) 
        
 elif o:
-   t11, t12, t13 = st.tabs(lista_dados)
+   t11, t12, t13, t14 = st.tabs(lista_dados)
    with t11:
        dados(38)
    with t12:
@@ -395,7 +395,7 @@ elif o:
        aditivos(38)
        
 elif p:
-   t11, t12, t13 = st.tabs(lista_dados)
+   t11, t12, t13, t14 = st.tabs(lista_dados)
    with t11:
        dados(35)
    with t12:
@@ -405,7 +405,7 @@ elif p:
        aditivos(35) 
        
 elif q:
-   t11, t12, t13 = st.tabs(lista_dados)
+   t11, t12, t13, t14 = st.tabs(lista_dados)
    with t11:
        dados(21)
    with t12:
@@ -415,7 +415,7 @@ elif q:
        aditivos(21) 
 
 elif r:
-   t11, t12, t13 = st.tabs(lista_dados)
+   t11, t12, t13, t14 = st.tabs(lista_dados)
    with t11:
        dados(45)
    with t12:
@@ -425,7 +425,7 @@ elif r:
        aditivos(45) 
 
 elif s:
-   t11, t12, t13 = st.tabs(lista_dados)
+   t11, t12, t13, t14 = st.tabs(lista_dados)
    with t11:
        dados(46)
    with t12:
@@ -435,7 +435,7 @@ elif s:
        aditivos(46) 
 
 elif t:
-   t11, t12, t13 = st.tabs(lista_dados)
+   t11, t12, t13, t14 = st.tabs(lista_dados)
    with t11:
        dados(47)
    with t12:
@@ -445,7 +445,7 @@ elif t:
        aditivos(47) 
 
 elif u:
-   t11, t12, t13 = st.tabs(lista_dados)
+   t11, t12, t13, t14 = st.tabs(lista_dados)
    with t11:
        dados(48)
    with t12:
