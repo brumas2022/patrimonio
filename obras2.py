@@ -398,41 +398,41 @@ elif m:
    with t14:
        graficos(4)   
        
-elif n:
-   t11, t12, t13, t14 = st.tabs(lista_dados)
-   with t11:
-       dados(3)
-   with t12:
-       medicoes(3)
+#elif n:
+#   t11, t12, t13, t14 = st.tabs(lista_dados)
+#   with t11:
+#       dados(3)
+#   with t12:
+#       medicoes(3)
 
-   with t13:
-       aditivos(3)
-   with t14:
-       graficos(3)  
+#   with t13:
+#       aditivos(3)
+#   with t14:
+#       graficos(3)  
        
-elif o:
-   t11, t12, t13, t14 = st.tabs(lista_dados)
-   with t11:
-       dados(38)
-   with t12:
-       medicoes(38)
+# elif o:
+#    t11, t12, t13, t14 = st.tabs(lista_dados)
+#    with t11:
+#        dados(38)
+#    with t12:
+#        medicoes(38)
 
-   with t13:
-       aditivos(38)
-   with t14:
-       graficos(38) 
+#    with t13:
+#        aditivos(38)
+#    with t14:
+#        graficos(38) 
        
-elif p:
-   t11, t12, t13, t14 = st.tabs(lista_dados)
-   with t11:
-       dados(35)
-   with t12:
-       medicoes(35)
+# elif p:
+#    t11, t12, t13, t14 = st.tabs(lista_dados)
+#    with t11:
+#        dados(35)
+#    with t12:
+#        medicoes(35)
 
-   with t13:
-       aditivos(35) 
-   with t14:
-       graficos(35) 
+#    with t13:
+#        aditivos(35) 
+#    with t14:
+#        graficos(35) 
        
 elif q:
    t11, t12, t13, t14 = st.tabs(lista_dados)
