@@ -232,7 +232,7 @@ u = st.sidebar.button(lista_contratos_OBRAS[21], use_container_width=True)
 
 lista_dados=["Dados", "Medições", "Aditivos", "Gráfico"]
 
-if "MASTER - 034/2022":
+if a:
     t11, t12, t13, t14 = st.tabs(lista_dados)
     with t11:
         dados(13)
