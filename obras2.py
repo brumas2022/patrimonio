@@ -204,7 +204,7 @@ lista_contratos=["TECNOBOMBAS - 004/2023(11)", "MASTER - 028/2023(10)", "SPARTAC
                  "MILLENIUM - 003/2024(17)", "MASTER 019-2024(33)", "DIMBEL(35)", "COOMSER OBRA(34)", "MILLENIUM 017-2024(37)", "MARCIO SOUZA FARIAS(38)"]
 
 lista_contratos_OBRAS = ["MASTER - 034/2022", "MASTER - 028/2023", "ALPHA", "CONSTRUTORA MENEGUETI - VG", "TECNBOMBAS - 007/2024", "TECNOBOMBAS - 004/2023", \
-                         "SPARTACUS - 024/2024", "MILLENIUM - 009/2023", "MILLENIUM - 003/2024", "MILLENIUM 017-2024", "MILLENIUM - 008/2023", \
+                         "SPARTACUS - 024/2024", "MILLENIUM - 009/2023", "MILLENIUM - 003/2024", "MILLENIUM - 017/2024", "MILLENIUM - 008/2023", \
                          "COOMSER OBRA", "SPARTACUS - 013/2024", "SM7 - TANKS BR", "RST ENGENHARIA", "MARCIO SOUZA FARIAS",  "DIMBEL", "DA GARISTO", "ENRON", "RONDOFONE", "SOLOS", "R.SANTANA"]
 st.sidebar.header("Contratos de obras")
 a = st.sidebar.button(lista_contratos_OBRAS[0], use_container_width=True)
