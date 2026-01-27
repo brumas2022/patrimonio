@@ -100,8 +100,7 @@ def medicoes(n):
     df_selecao = df_medicao[df_medicao["CONTRATO"]==nro_contrato]
     #df_selecao = df_medicao[df_medicao["contrato"]==nro_contrato]
 
-    st.dataframe(df_selecao)
-    
+        
     valor_contrato = df_contratos.loc[(n, ["valor"])]
     
     df_selecao["%ACUMULADO"]=df_selecao['VALOR'].cumsum()
@@ -144,7 +143,7 @@ def medicoes(n):
     dados = {'TOTAL MEDIDO': total_medido, 'PERCENTUAL EXECUTADO': porcento, 'SALDO DO CONTRATO': saldo}
     df_dados = pd.DataFrame(dados, index=[0])
     st.dataframe(df_dados.style.format(thousands=".", decimal=","), width=500, use_container_width=False, hide_index=True)
-    st.dataframe(df_selecao)
+    
     
     #st.write("Total das medições :", total_medido)
     #st.write("Saldo do contrato", saldo)
