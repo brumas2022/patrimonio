@@ -142,6 +142,7 @@ def medicoes(n):
     dados = {'TOTAL MEDIDO': total_medido, 'PERCENTUAL EXECUTADO': porcento, 'SALDO DO CONTRATO': saldo}
     df_dados = pd.DataFrame(dados, index=[0])
     st.dataframe(df_dados.style.format(thousands=".", decimal=","), width=500, use_container_width=False, hide_index=True)
+    st.dataframe(df_selecao)
     
     #st.write("Total das medições :", total_medido)
     #st.write("Saldo do contrato", saldo)
