@@ -224,7 +224,7 @@ m = st.sidebar.button(lista_contratos_OBRAS[13], use_container_width=True)
 #n = st.sidebar.button(lista_contratos_OBRAS[14], use_container_width=True)
 #o = st.sidebar.button(lista_contratos_OBRAS[15], use_container_width=True)
 #p = st.sidebar.button(lista_contratos_OBRAS[16], use_container_width=True)
-q = st.sidebar.button(lista_contratos_OBRAS[17], use_container_width=True)
+#q = st.sidebar.button(lista_contratos_OBRAS[17], use_container_width=True)
 r = st.sidebar.button(lista_contratos_OBRAS[18], use_container_width=True)
 s = st.sidebar.button(lista_contratos_OBRAS[19], use_container_width=True)
 t = st.sidebar.button(lista_contratos_OBRAS[20], use_container_width=True)
@@ -434,17 +434,17 @@ elif m:
 #    with t14:
 #        graficos(35) 
        
-elif q:
-   t11, t12, t13, t14 = st.tabs(lista_dados)
-   with t11:
-       dados(21)
-   with t12:
-       medicoes(21)
+# elif q:
+#    t11, t12, t13, t14 = st.tabs(lista_dados)
+#    with t11:
+#        dados(21)
+#    with t12:
+#        medicoes(21)
 
-   with t13:
-       aditivos(21)
-   with t14:
-       graficos(21)  
+#    with t13:
+#        aditivos(21)
+#    with t14:
+#        graficos(21)  
 
 elif r:
    t11, t12, t13, t14 = st.tabs(lista_dados)
