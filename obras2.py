@@ -99,6 +99,8 @@ def medicoes(n):
     nro_contrato = f"{df_contratos.iloc[n,1]}"
     df_selecao = df_medicao[df_medicao["CONTRATO"]==nro_contrato]
     #df_selecao = df_medicao[df_medicao["contrato"]==nro_contrato]
+
+    st.dataframe(df_selecao)
     
     valor_contrato = df_contratos.loc[(n, ["valor"])]
     
