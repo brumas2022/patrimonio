@@ -132,7 +132,9 @@ def medicoes(n):
         #),
     })
     total_medido = df_selecao["VALOR"].sum()
-    contrato = df_contratos.iloc[(n,7)]
+    valor_aditivos = 339000
+    contrato = df_contratos.iloc[(n,7)] + valor_aditivos
+    
     saldo = contrato - total_medido
    
     
