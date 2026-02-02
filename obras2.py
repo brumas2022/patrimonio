@@ -134,7 +134,8 @@ def medicoes(n):
     total_medido = df_selecao["VALOR"].sum()
     df_aditivo = pd.read_excel("NOVA_MEDICAO.xlsx", sheet_name=1)
     #total_b = df[df['Produto'] == 'B']['Vendas'].sum()
-    valor_aditivos = df_aditivo[(df_medicao["CONTRATO"]==nro_contrato) & (df_aditivo["TIPO"]=="ADITIVO DE VALOR") & (df_aditivo["TIPO"]=="ADITIVO DE VALOR")]['VALOR'].sum()
+    valor_aditivos = df_aditivo[(df_aditivo["CONTRATO"]==nro_contrato)  & (df_aditivo["TIPO"]=="ADITIVO DE VALOR")]["VALOR"].sum()
+    #st.dataframe(valor_aditivos)
     contrato = df_contratos.iloc[(n,7)] + valor_aditivos
     
     saldo = contrato - total_medido
@@ -144,7 +145,7 @@ def medicoes(n):
     print(total_medido)
     print(df_contratos.loc[(n, ["valor"])])
     
-    dados = {'TOTAL MEDIDO': total_medido, 'PERCENTUAL EXECUTADO': porcento, 'SALDO DO CONTRATO': saldo}
+    dados = {'TOTAL MEDIDO': total_medido, 'PERCENTUAL EXECUTADO': porcento, 'SALDO DO CONTRATO + ADITIVOS': saldo}
     df_dados = pd.DataFrame(dados, index=[0])
     st.dataframe(df_dados.style.format(thousands=".", decimal=","), width=500, use_container_width=False, hide_index=True)
     
