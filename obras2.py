@@ -132,7 +132,9 @@ def medicoes(n):
         #),
     })
     total_medido = df_selecao["VALOR"].sum()
-    valor_aditivos = 339000
+    df_aditivo = pd.read_excel("NOVA_MEDICAO.xlsx", sheet_name=1)
+    #total_b = df[df['Produto'] == 'B']['Vendas'].sum()
+    valor_aditivos = df_aditivo[df_aditivo["TIPO"]=="ADITIVO DE VALOR"]['VALOR'].sum()
     contrato = df_contratos.iloc[(n,7)] + valor_aditivos
     
     saldo = contrato - total_medido
