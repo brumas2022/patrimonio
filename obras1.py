@@ -266,7 +266,7 @@ if a:
         medicoes(11)
 
     with t13:
-        relatorios()
+        main()
 
 if b:
    t11, t12, t13 = st.tabs(lista_dados)
