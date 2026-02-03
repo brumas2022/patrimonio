@@ -1,5 +1,8 @@
 import streamlit as st 
 import pandas as pd 
+import os
+from dotenv import load_dotenv
+from supabase import create_client, Client
 import openpyxl
 #import matplotlib.pyplot as plt
 
@@ -12,19 +15,27 @@ df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
 df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=4)
 df_medicao1  = pd.read_excel("NOVA_MEDICAO.xlsx", sheet_name=0)
 
+def bd_entrada():
+    load_dotenv()
+    url = os.getenv("supabase_url")
+    key = os.getenv("supabase_key")
+
+    supabase: Client = create_client(url, key)
+
+    resposta = supabase.table("bdmedicaonova").select("contrato").execute()
+    st.dataframe(resposta.data)
+
+    # fazer a conexao do banco de dados supa com o dotenv
+    pass
+
+
 #def entrada_supa():
-#    import os
-#    import streamlit as st
-#    from supabase import create_client, Client
-#    import pandas as pd
 
-
-
-
-#    st.set_page_config("Medicoes", layout="wide")
 
 #    #url: str = os.environ.get("https://hdhvkseneldllvnlvpgc.supabase.co")
 #    #key: str = os.environ.get("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhkaHZrc2VuZWxkbGx2bmx2cGdjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTM3MDM4NTEsImV4cCI6MjAwOTI3OTg1MX0.2Mv5sip2DTHrYY-Ar4WbPNISb1Z3Gtbc9ErhnlohPOM")
+
+
 #    supabase: Client = create_client("https://hdhvkseneldllvnlvpgc.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhkaHZrc2VuZWxkbGx2bmx2cGdjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTM3MDM4NTEsImV4cCI6MjAwOTI3OTg1MX0.2Mv5sip2DTHrYY-Ar4WbPNISb1Z3Gtbc9ErhnlohPOM")
 
 #    ## esta função tem o objetivo de listar os contratos que já estão no banco de dados
@@ -491,3 +502,5 @@ if w:
 
    with t13:
        relatorios()
+else:
+    bd_entrada()
