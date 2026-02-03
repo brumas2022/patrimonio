@@ -42,6 +42,49 @@ def empresa():
         empresa = df_contratos["Fornecedor"]
         return empresa
 
+def main():
+        df = pd.concat([ctr_excel(), empresa()], axis=1)
+        #st.dataframe(df)
+        choice = st.sidebar.radio("OPCOES", options=df.itertuples(), format_func=lambda x : f"{x.Contrato} - {str(x.Fornecedor)[:20]}")
+        lista_de_dados = ["Dados", "Medicoes", "Aditivos", "Graficos"]
+        t1,t2,t3, t4 = st.tabs(lista_de_dados)
+        with t1:
+            #as duas linhas abaixo usa o supabase e mostra todos os dados de cada contrato
+            #response1 = supabase.table("bdmedicaonova").select("contrato").eq("contrato", choice).execute()
+            #st.dataframe(response1.data)
+
+
+            #Aqui usamos a tabela em excel para mostrar os dados do contrato
+            #df_dados = pd.read_excel("DADOS_CONTRATOS.xlsx")
+            df_dados = pd.read_excel("relatorio_contratos.xlsx")
+            df_mostra_dados = df_dados[df_dados['Contrato']==choice.Contrato]
+        
+            st.markdown(f"**CONTRATO** : {df_mostra_dados.values[0,0]}")
+            st.markdown(f"**EMPRESA** :  {df_mostra_dados.values[0,3]}")
+            st.markdown(f"**OBJETO** : {df_mostra_dados.values[0,2]}")
+            st.markdown(f"**VALOR** : {df_mostra_dados.values[0,4]}")
+            #st.markdown(f"**FISCAL** : {df_mostra_dados.values[0,10]}", )
+            #st.markdown(f"**INICIO** : {df_mostra_dados.values[0,5].strftime("%d/%m/%Y")}")
+            #st.markdown(f"**FIM** : {df_mostra_dados.values[0,6].strftime("%d/%m/%Y")}")
+            st.markdown(f"**SITUAÇÃO** : {df_mostra_dados.values[0,9]}")
+
+
+        with t2:
+           ctr = choice.Contrato[5:]
+           st.write(ctr)
+           response1 = supabase.table("bdmedicaonova").select("contrato", "medicao", "datamedicao").eq("contrato", ctr).execute()
+           st.dataframe(response1.data)
+        with t3:
+            st.write("ADITIVOS")
+    
+        with t4:
+            st.write("GRAFICOS")
+
+
+
+
+
+
 #def entrada_supa():
 
 
@@ -50,23 +93,6 @@ def empresa():
 
 
 #    supabase: Client = create_client("https://hdhvkseneldllvnlvpgc.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhkaHZrc2VuZWxkbGx2bmx2cGdjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTM3MDM4NTEsImV4cCI6MjAwOTI3OTg1MX0.2Mv5sip2DTHrYY-Ar4WbPNISb1Z3Gtbc9ErhnlohPOM")
-
-#    ## esta função tem o objetivo de listar os contratos que já estão no banco de dados
-#    def ctr_excel():
-#        #df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
-#        df_contratos = pd.read_excel("relatorio_contratos.xlsx")
-#        #choice_ctr = df_contratos["contrato"]
-#        choice_ctr = df_contratos["Contrato"]
-#        return choice_ctr
-
-#    def empresa():
-#        #df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
-#        df_contratos = pd.read_excel("relatorio_contratos.xlsx")
-#        #empresa = df_contratos["empresa"]
-#        empresa = df_contratos["Fornecedor"]
-#        return empresa
-
-
 
 #    def lista_contratos():
 #        resposta = supabase.table("bdmedicaonova").select("contrato").execute()
@@ -86,46 +112,7 @@ def empresa():
 
 
 
- #   def main():
-     
-    
-    
- #       df = pd.concat([ctr_excel(), empresa()], axis=1)
- #       #st.dataframe(df)
- #       choice = st.sidebar.radio("OPCOES", options=df.itertuples(), format_func=lambda x : f"{x.Contrato} - {str(x.Fornecedor)[:20]}")
- #       lista_de_dados = ["Dados", "Medicoes", "Aditivos", "Graficos"]
- #       t1,t2,t3, t4 = st.tabs(lista_de_dados)
- #       with t1:
- #           #as duas linhas abaixo usa o supabase e mostra todos os dados de cada contrato
- #           #response1 = supabase.table("bdmedicaonova").select("contrato").eq("contrato", choice).execute()
- #           #st.dataframe(response1.data)
 
-
- #           #Aqui usamos a tabela em excel para mostrar os dados do contrato
- #           #df_dados = pd.read_excel("DADOS_CONTRATOS.xlsx")
- #           df_dados = pd.read_excel("relatorio_contratos.xlsx")
- #           df_mostra_dados = df_dados[df_dados['Contrato']==choice.Contrato]
-        
- #           st.markdown(f"**CONTRATO** : {df_mostra_dados.values[0,0]}")
- #           st.markdown(f"**EMPRESA** :  {df_mostra_dados.values[0,3]}")
- #           st.markdown(f"**OBJETO** : {df_mostra_dados.values[0,2]}")
- #           st.markdown(f"**VALOR** : {df_mostra_dados.values[0,4]}")
- #           #st.markdown(f"**FISCAL** : {df_mostra_dados.values[0,10]}", )
- #           #st.markdown(f"**INICIO** : {df_mostra_dados.values[0,5].strftime("%d/%m/%Y")}")
- #           #st.markdown(f"**FIM** : {df_mostra_dados.values[0,6].strftime("%d/%m/%Y")}")
- #           st.markdown(f"**SITUAÇÃO** : {df_mostra_dados.values[0,9]}")
-
-
-#        with t2:
-#           ctr = choice.Contrato[5:]
-#           st.write(ctr)
-#           response1 = supabase.table("bdmedicaonova").select("contrato", "medicao", "datamedicao").eq("contrato", ctr).execute()
-#           st.dataframe(response1.data)
-#        with t3:
-#            st.write("ADITIVOS")
-    
-#        with t4:
-#            st.write("GRAFICOS")
 
 
    
