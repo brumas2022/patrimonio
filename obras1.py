@@ -22,8 +22,8 @@ def bd_entrada():
 
     supabase: Client = create_client(url, key)
 
-    resposta = supabase.table("bdmedicaonova").select("contrato").execute()
-    st.dataframe(resposta.data)
+    #resposta = supabase.table("bdmedicaonova").select("contrato").execute()
+    #st.dataframe(resposta.data)
 
     # fazer a conexao do banco de dados supa com o dotenv
     pass
