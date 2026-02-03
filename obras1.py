@@ -28,6 +28,19 @@ def bd_entrada():
     # fazer a conexao do banco de dados supa com o dotenv
     pass
 
+def ctr_excel():
+        #df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
+        df_contratos = pd.read_excel("relatorio_contratos.xlsx")
+        #choice_ctr = df_contratos["contrato"]
+        choice_ctr = df_contratos["Contrato"]
+        return choice_ctr
+
+def empresa():
+        #df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
+        df_contratos = pd.read_excel("relatorio_contratos.xlsx")
+        #empresa = df_contratos["empresa"]
+        empresa = df_contratos["Fornecedor"]
+        return empresa
 
 #def entrada_supa():
 
@@ -502,5 +515,3 @@ if w:
 
    with t13:
        relatorios()
-else:
-    bd_entrada()
