@@ -142,7 +142,7 @@ def medicoes(n):
     saldo = contrato - total_medido
    
     
-    porcento = (total_medido / float(valor_contrato))*100
+    porcento = (total_medido / valor_contrato)*100
     print(total_medido)
     print(df_contratos.loc[(n, ["valor"])])
     
