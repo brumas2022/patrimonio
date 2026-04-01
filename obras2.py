@@ -106,7 +106,7 @@ def medicoes(n):
     
     df_selecao["%ACUMULADO"]=df_selecao['VALOR'].cumsum()
     
-    df_selecao["%PERCENTUUAL DO CONTRATO"]=(df_selecao["VALOR"].cumsum()/float(valor_contrato))*100
+    df_selecao["%PERCENTUUAL DO CONTRATO"]=(df_selecao["VALOR"].cumsum()/valor_contrato)*100
     
     #st.dataframe(df_selecao, hide_index=True)
     st.dataframe(df_selecao, hide_index=True, column_config={
