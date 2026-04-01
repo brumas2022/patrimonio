@@ -92,6 +92,7 @@ def dados(n):
     
 
 def medicoes(n):
+    df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
     #n=11
     #df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=4)
     df_medicao  = pd.read_excel("NOVA_MEDICAO.xlsx", sheet_name=0)
