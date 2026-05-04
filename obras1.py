@@ -15,13 +15,13 @@ df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
 df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=4)
 df_medicao1  = pd.read_excel("NOVA_MEDICAO.xlsx", sheet_name=0)
 
-
+# CONEXAO COM O BDNOVAMEDICAO NO BANCO DE DADOS SUPABASE
 load_dotenv()
 url = os.getenv("URL")
 key = os.getenv("KEY")
 
 supabase: Client = create_client(url, key)
-
+# #########################################################
 
 def ctr_excel():
         #df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
@@ -67,7 +67,7 @@ def main():
         with t2:
            ctr = choice.Contrato[5:]
            st.write(ctr)
-           response1 = supabase.table("bdmedicaonova").select("contrato", "medicao", "datamedicao").eq("contrato", ctr).execute()
+           response1 = supabase.table("bdmedicaonova").select("contrato", "medicao", "datamedicao", "valor").eq("contrato", ctr).execute()
            st.dataframe(response1.data)
         with t3:
             st.write("ADITIVOS")
