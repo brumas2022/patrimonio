@@ -67,8 +67,9 @@ def main():
         with t2:
            ctr = choice.Contrato[5:]
            st.write(ctr)
-           response1 = supabase.table("bdmedicaonova").select("contrato", "medicao", "datamedicao", "valor").eq("contrato", ctr).execute()
+           response1 = supabase.table("bdmedicaonova").select("contrato", "medicao", "datamedicao", "valor", "notafiscal", "datapagto").eq("contrato", ctr).execute()
            st.dataframe(response1.data)
+           
         with t3:
             st.write("ADITIVOS")
     
