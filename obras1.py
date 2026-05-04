@@ -69,6 +69,7 @@ def main():
            st.write(ctr)
            response1 = supabase.table("bdmedicaonova").select("contrato", "medicao", "datamedicao", "valor", "notafiscal", "datapagto").eq("contrato", ctr).execute()
            st.dataframe(response1.data)
+           st.markdown("SOMA")
            
         with t3:
             st.write("ADITIVOS")
