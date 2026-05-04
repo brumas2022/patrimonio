@@ -15,18 +15,13 @@ df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
 df_medicao = pd.read_excel("DADOS_CONTRATOS.xlsx", sheet_name=4)
 df_medicao1  = pd.read_excel("NOVA_MEDICAO.xlsx", sheet_name=0)
 
-def bd_entrada():
-    load_dotenv()
-    url = os.getenv("supabase_url")
-    key = os.getenv("supabase_key")
 
-    supabase: Client = create_client(url, key)
+load_dotenv()
+url = os.getenv("URL")
+key = os.getenv("KEY")
 
-    #resposta = supabase.table("bdmedicaonova").select("contrato").execute()
-    #st.dataframe(resposta.data)
+supabase: Client = create_client(url, key)
 
-    # fazer a conexao do banco de dados supa com o dotenv
-    pass
 
 def ctr_excel():
         #df_contratos = pd.read_excel("DADOS_CONTRATOS.xlsx")
@@ -72,7 +67,6 @@ def main():
         with t2:
            ctr = choice.Contrato[5:]
            st.write(ctr)
-           bd_entrada()
            response1 = supabase.table("bdmedicaonova").select("contrato", "medicao", "datamedicao").eq("contrato", ctr).execute()
            st.dataframe(response1.data)
         with t3:
