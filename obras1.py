@@ -69,15 +69,18 @@ def main():
            st.write(ctr)
            response1 = supabase.table("bdmedicaonova").select("contrato", "medicao", "datamedicao", "valor", "notafiscal", "datapagto").eq("contrato", ctr).execute()
            #st.dataframe(response1.data)
-           col = st.columns(3, width=500)
+           col = st.columns(4, width=500)
            col[0].markdown("***CONTRATO***" )
-           col[1].write("***MEDICAO NRO***")
-           col[2].write("***DATA DA MEDIÇÃO***")
+           col[1].markdown("***MEDICAO NRO***")
+           col[2].markdown("***DATA DA MEDIÇÃO***")
+           col[3].markdown("***VALOR DA MEDIÇÃO***")
 
            for post in response1.data:
                col[0].markdown(f"{post['contrato']}")
                col[1].markdown(f"{post['medicao']}")
-               col[2].markdown(f"{post['datamedicao']}")   
+               col[2].markdown(f"{post['datamedicao']}")
+               col[3].markdown(f"{post['valor']}")
+
                               
            #st.markdown(f"**SOMA** : {response1}")
            
