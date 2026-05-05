@@ -69,6 +69,9 @@ def main():
            st.write(ctr)
            response1 = supabase.table("bdmedicaonova").select("contrato", "medicao", "datamedicao", "valor", "notafiscal", "datapagto").eq("contrato", ctr).execute()
            st.dataframe(response1.data)
+           for post in response1.data:
+               st. markdown(f"Contrato: {post['contrato']}")   
+                              
            #st.markdown(f"**SOMA** : {response1}")
            
         with t3:
