@@ -69,7 +69,7 @@ def main():
            #st.subheader(f"CONTRATO Nº : {ctr}")
            response1 = supabase.table("bdmedicaonova").select("contrato", "medicao", "datamedicao", "valor", "notafiscal", "datapagto").eq("contrato", ctr).execute()
            #st.dataframe(response1.data)
-           col = st.columns(5, vertical_alignment="center", width=900)
+           col = st.columns(5, width=800)
            #st.markdown(f"***CONTRATO Nº*** : {ctr}" )
            #col[0].write("***********************************************")
            col[0].markdown("***:green[MEDICAO NRO]***", text_alignment="center")
