@@ -66,7 +66,7 @@ def main():
 
         with t2:
            ctr = choice.Contrato[5:]
-           st.title(f"CONTRATO Nº : {ctr}")
+           st.subtitle(f"CONTRATO Nº : {ctr}")
            response1 = supabase.table("bdmedicaonova").select("contrato", "medicao", "datamedicao", "valor", "notafiscal", "datapagto").eq("contrato", ctr).execute()
            #st.dataframe(response1.data)
            col = st.columns(4, vertical_alignment="center", width=600)
