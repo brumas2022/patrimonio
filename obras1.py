@@ -74,6 +74,7 @@ def main():
            col[1].markdown("***MEDICAO NRO***")
            col[2].markdown("***DATA DA MEDIÇÃO***")
            col[3].markdown("***VALOR DA MEDIÇÃO***")
+           st.write("____")
 
            for post in response1.data:
                col[0].markdown(f"{post['contrato']}")
