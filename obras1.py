@@ -54,7 +54,7 @@ def main():
             df_dados = pd.read_excel("relatorio_contratos.xlsx")
             df_mostra_dados = df_dados[df_dados['Contrato']==choice.Contrato]
         
-            st.markdown(f"**CONTRATO** : {df_mostra_dados.values[0,0]}")
+            #st.markdown(f"**CONTRATO** : {df_mostra_dados.values[0,0]}")
             st.markdown(f"**EMPRESA** :  {df_mostra_dados.values[0,3]}")
             st.markdown(f"**OBJETO** : {df_mostra_dados.values[0,2]}")
             st.markdown(f"**VALOR** : {df_mostra_dados.values[0,4]}")
@@ -70,18 +70,18 @@ def main():
            response1 = supabase.table("bdmedicaonova").select("contrato", "medicao", "datamedicao", "valor", "notafiscal", "datapagto").eq("contrato", ctr).execute()
            #st.dataframe(response1.data)
            col = st.columns(4, vertical_alignment="center", width=600)
-           col[0].markdown("***CONTRATO***" )
+           #col[0].markdown("***CONTRATO***" )
            col[1].markdown("***MEDICAO NRO***")
            col[2].markdown("***DATA DA MEDIÇÃO***")
            col[3].markdown("***VALOR DA MEDIÇÃO***")
-           col[0].write("____")
+           #col[0].write("____")
            col[1].write("____")
            col[2].write("____")
            col[3].write("____")
 
            for post in response1.data:
-               col[0].markdown(f"{post['contrato']}")
-               col[0].write("___")
+               #col[0].markdown(f"{post['contrato']}")
+               #col[0].write("___")
                col[1].markdown(f"{post['medicao']}")
                col[1].write("___")
                col[2].markdown(f"{post['datamedicao']}")
