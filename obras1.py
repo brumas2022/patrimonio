@@ -66,11 +66,11 @@ def main():
 
         with t2:
            ctr = choice.Contrato[5:]
-           st.write(ctr)
+           st.write(f"CONTRATO Nº : {ctr}")
            response1 = supabase.table("bdmedicaonova").select("contrato", "medicao", "datamedicao", "valor", "notafiscal", "datapagto").eq("contrato", ctr).execute()
            #st.dataframe(response1.data)
            col = st.columns(4, vertical_alignment="center", width=600)
-           st.markdown(f"***CONTRATO Nº*** : {ctr}" )
+           #st.markdown(f"***CONTRATO Nº*** : {ctr}" )
            col[0].write("***********************************************")
            col[0].markdown("***MEDICAO NRO***")
            col[1].markdown("***DATA DA MEDIÇÃO***")
