@@ -71,7 +71,7 @@ def main():
            #st.dataframe(response1.data)
            col = st.columns(3, width=500)
            col[0].markdown("***CONTRATO***" )
-           col[1].write("***MEDICAO NRO")
+           col[1].write("***MEDICAO NRO***")
            col[2].write("***DATA DA MEDIÇÃO***")
 
            for post in response1.data:
