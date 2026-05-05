@@ -77,10 +77,14 @@ def main():
 
            for post in response1.data:
                col[0].markdown(f"{post['contrato']}")
+               col[0].write("___")
                col[1].markdown(f"{post['medicao']}")
+               col[1].write("___")
                col[2].markdown(f"{post['datamedicao']}")
+               col[2].write("___")
                col[3].markdown(f"{post['valor']}")
-               st.write("___")
+               col[3].write("___")
+               #st.write("___")
 
                               
            #st.markdown(f"**SOMA** : {response1}")
