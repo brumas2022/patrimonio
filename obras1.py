@@ -80,6 +80,7 @@ def main():
                col[1].markdown(f"{post['medicao']}")
                col[2].markdown(f"{post['datamedicao']}")
                col[3].markdown(f"{post['valor']}")
+               col[0].write("___")
 
                               
            #st.markdown(f"**SOMA** : {response1}")
