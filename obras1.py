@@ -71,7 +71,7 @@ def main():
            #st.dataframe(response1.data)
            col = st.columns(4, vertical_alignment="center", width=600)
            #st.markdown(f"***CONTRATO Nº*** : {ctr}" )
-           col[0].write("***********************************************")
+           #col[0].write("***********************************************")
            col[0].markdown("***MEDICAO NRO***")
            col[1].markdown("***DATA DA MEDIÇÃO***")
            col[2].markdown("***VALOR DA MEDIÇÃO***")
