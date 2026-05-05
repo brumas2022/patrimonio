@@ -69,7 +69,7 @@ def main():
            st.write(ctr)
            response1 = supabase.table("bdmedicaonova").select("contrato", "medicao", "datamedicao", "valor", "notafiscal", "datapagto").eq("contrato", ctr).execute()
            #st.dataframe(response1.data)
-           col = st.columns(4, width=600)
+           col = st.columns(4, vertical_alignment="center", border=True, width=600)
            col[0].markdown("***CONTRATO***" )
            col[1].markdown("***MEDICAO NRO***")
            col[2].markdown("***DATA DA MEDIÇÃO***")
