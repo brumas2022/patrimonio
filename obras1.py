@@ -72,7 +72,7 @@ def main():
            col = st.columns(4, vertical_alignment="center", width=600)
            #st.markdown(f"***CONTRATO Nº*** : {ctr}" )
            #col[0].write("***********************************************")
-           col[0].markdown("***MEDICAO NRO***", text_alignment="center")
+           col[0].markdown("***:reed[MEDICAO NRO]***", text_alignment="center")
            col[1].markdown("***DATA DA MEDIÇÃO***", text_alignment="center")
            col[2].markdown("***VALOR DA MEDIÇÃO***", text_alignment="center")
            #col[0].write("____")
