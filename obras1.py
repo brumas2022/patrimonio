@@ -69,16 +69,20 @@ def main():
            #st.subheader(f"CONTRATO Nº : {ctr}")
            response1 = supabase.table("bdmedicaonova").select("contrato", "medicao", "datamedicao", "valor", "notafiscal", "datapagto").eq("contrato", ctr).execute()
            #st.dataframe(response1.data)
-           col = st.columns(4, vertical_alignment="center", width=600)
+           col = st.columns(5, vertical_alignment="center", width=800)
            #st.markdown(f"***CONTRATO Nº*** : {ctr}" )
            #col[0].write("***********************************************")
            col[0].markdown("***:green[MEDICAO NRO]***", text_alignment="center")
            col[1].markdown("***:green[DATA DA MEDIÇÃO]***", text_alignment="center")
            col[2].markdown("***:green[VALOR DA MEDIÇÃO]***", text_alignment="center")
+           col[3].markdown("***:green[NOTA FISCAL]***", text_alignment="center")
+           col[4].markdown("***:green[PAGAMENTO]***", text_alignment="center")
            #col[0].write("____")
            col[0].write("____")
            col[1].write("____")
            col[2].write("____")
+           col[3].write("____")
+           col[4].write("____")
 
            for post in response1.data:
                #col[0].markdown(f"{post['contrato']}")
@@ -89,6 +93,10 @@ def main():
                col[1].write("___")
                col[2].markdown(f"{post['valor']}", text_alignment="center")
                col[2].write("___")
+               col[3].markdown(f"{post['notafiscal']}", text_alignment="center")
+               col[3].write("___")
+               col[4].markdown(f"{post['datapagto']}", text_alignment="center")
+               col[4].write("___")
                #st.write("___")
 
                               
