@@ -83,7 +83,7 @@ def main():
            for post in response1.data:
                #col[0].markdown(f"{post['contrato']}")
                #col[0].write("___")
-               col[0].markdown(f"{post['medicao']}")
+               col[0].markdown(f"{post['medicao']}", text_alignment="center")
                col[0].write("___")
                col[1].markdown(f"{post['datamedicao']}")
                col[1].write("___")
