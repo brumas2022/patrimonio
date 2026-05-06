@@ -99,7 +99,7 @@ def inserir():
     obs = col[2].text_input("Observação")
     prot = col[2].text_input("Numero do protocolo")
     dados_inserir = {
-                    "id": total1+1,
+                    "id": ultimo_registro+1,
                     "contrato" : ctr,
                     "medicao" : med,
                     "datamedicao" : datamed,
