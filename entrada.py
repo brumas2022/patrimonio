@@ -82,7 +82,7 @@ def inserir():
     #ler o ultimo registro
     ultimo = supabase.table("bdmedicaonova").select("*").order("id", desc=True).limit(1).execute()
     ultimo_registro = ultimo.data[0]
-    st.write(ultimo_registro)
+    st.write(ultimo_registro['id'])
     #response = supabase.table("bdmedicao").insert({"contrato": nro_contrato , "medicao_nro": nro_medicao, "medicao_data": data_medicao, "valor": valor}).execute()
     nro = st.selectbox("Escolha o contrato", lista_contratos(), key=1)
     response1 = supabase.table("bdmedicaonova").select("contrato", "medicao", "datamedicao").eq("contrato", nro).execute()
