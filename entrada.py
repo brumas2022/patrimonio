@@ -75,10 +75,14 @@ def alterar():
 
 def inserir():
     #ler o total de registros para inserir o id correto
-    total = supabase.table("bdmedicaonova").select("*").execute()
-    total1=len(total.data)
-    st.write(total1)
+    #total = supabase.table("bdmedicaonova").select("*").execute()
+    #total1=len(total.data)
+    #st.write(total1)
     #-----------------------------------------------------------------------
+    #ler o ultimo registro
+    ultimo = supabase.table("bdmedicaonova").select("*").order("id", desc=True).limit(1).execute()
+    ultimo_registro = ultimo.data[0]
+    st.write(ultimo_registro)
     #response = supabase.table("bdmedicao").insert({"contrato": nro_contrato , "medicao_nro": nro_medicao, "medicao_data": data_medicao, "valor": valor}).execute()
     nro = st.selectbox("Escolha o contrato", lista_contratos(), key=1)
     response1 = supabase.table("bdmedicaonova").select("contrato", "medicao", "datamedicao").eq("contrato", nro).execute()
