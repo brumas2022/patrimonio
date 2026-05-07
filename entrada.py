@@ -74,7 +74,7 @@ def alterar():
 
 
 def inserir():
-    #ler o total de registros para inserir o id correto
+    #ler o total de registros para inserir o id correto ## neste caso, se vc exclui um id no banco de dados, acaba dando erro depois
     #total = supabase.table("bdmedicaonova").select("*").execute()
     #total1=len(total.data)
     #st.write(total1)
@@ -112,7 +112,11 @@ def inserir():
                      }
     st.dataframe(dados_inserir)
     if st.button("CONFIRMA"):
-       return supabase.table('bdmedicaonova').insert(dados_inserir).execute()
+        try:
+            supabase.table('bdmedicaonova').insert(dados_inserir).execute()
+            st.info("Inserido com sucesso")
+        except:
+            st.info("Erro ao inserir")
 
     #contrato;medicao;datamedicao;valor;notafiscal;datanota;datapagto;observacao;protocolo;id
 
