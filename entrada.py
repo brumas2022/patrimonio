@@ -89,7 +89,7 @@ def inserir():
     st.dataframe(response1.data)
     #id_novo = st.text_input("Numero do id")
     col = st.columns((1,1,1))
-    ctr = col[0].text_input("Contrato", value={nro}, placeholder=nro)
+    ctr = col[0].text_input("Contrato", value=nro, placeholder=nro)
     med = col[0].text_input("Numero do medicao")
     datamed = col[0].text_input("Data da medição")
     vmed = col[0].text_input("Valor da medicão")
