@@ -55,10 +55,10 @@ def alterar():
     medicao_nro = col1[0].text_input("Número da Medição", placeholder=altera.data[a]['medicao'])
     datamedicao = col1[0].text_input("Data da medicao", placeholder=altera.data[a]['datamedicao'])
     valor = col1[0].text_input("Valor", placeholder=altera.data[a]['valor'])
-    nf = col1[1].text_input("Numero da nota fiscal", placeholder=altera.data[a]['notafiscal'])
-    datanf = col1[1].text_input("Data de Emissao NF", placeholder=altera.data[a]['datanota'])
-    datapgto = col1[1].text_input("Data do pagamento", placeholder=altera.data[a]['datapagto'])
-    observ = col1[2].text_input("Observacao", placeholder=altera.data[a]['observacao'])
+    nf = col1[1].text_input("Numero da nota fiscal", value=altera.data[a]['notafiscal'])
+    datanf = col1[1].text_input("Data de Emissao NF", value=altera.data[a]['datanota'])
+    datapgto = col1[1].text_input("Data do pagamento", value=altera.data[a]['datapagto'])
+    observ = col1[2].text_input("Observacao", value=altera.data[a]['observacao'])
     prot = col1[2].text_input("Protocolo", value=altera.data[a]['protocolo'])
 
     if st.button("confirma a alteração?"):
