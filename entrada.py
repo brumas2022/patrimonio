@@ -59,7 +59,7 @@ def alterar():
     datanf = col1[1].text_input("Data de Emissao NF", placeholder=altera.data[a]['datanota'])
     datapgto = col1[1].text_input("Data do pagamento", placeholder=altera.data[a]['datapagto'])
     observ = col1[2].text_input("Observacao", placeholder=altera.data[a]['observacao'])
-    prot = col1[2].text_input("Protocolo", placeholder=altera.data[a]['protocolo'])
+    prot = col1[2].text_input("Protocolo", value=altera.data[a]['protocolo'])
 
     if st.button("confirma a alteração?"):
         data_alterar = {
