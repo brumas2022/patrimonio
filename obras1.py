@@ -154,7 +154,7 @@ def main():
                 aditivos(choice["index"])
             except:
                  st.info("Ainda não esta funcionado")
-                 st.write(choice)
+                 st.write(choice["index"])
     
         with t4:
             st.write("GRAFICOS")
