@@ -80,7 +80,7 @@ def empresa():
 def main():
         df = pd.concat([ctr_excel(), empresa()], axis=1)
         #st.dataframe(df)
-        choice = st.sidebar.radio("OPCOES", options=df.itertuples(), format_func=lambda x : f"{x.Contrato[5:]} - {str(x.Fornecedor)[:20]}")
+        choice = st.sidebar.radio("CONTRATOS ATIVOS", options=df.itertuples(), format_func=lambda x : f"{x.Contrato[5:]} - {str(x.Fornecedor)[:20]}")
         lista_de_dados = ["Dados", "Medicoes", "Aditivos", "Graficos"]
         t1,t2,t3, t4 = st.tabs(lista_de_dados)
         with t1:
