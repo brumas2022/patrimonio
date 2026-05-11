@@ -150,7 +150,7 @@ def main():
            
         with t3:
             st.write("ADITIVOS")
-            aditivos()
+            aditivos(choice)
     
         with t4:
             st.write("GRAFICOS")
