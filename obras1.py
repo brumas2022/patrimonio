@@ -151,9 +151,10 @@ def main():
         with t3:
             st.write("ADITIVOS")
             try:
-                aditivos(13)
+                aditivos()
             except:
                  st.info("Ainda não esta funcionado")
+                 st.witte(choice)
     
         with t4:
             st.write("GRAFICOS")
