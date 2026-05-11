@@ -154,7 +154,7 @@ def main():
                 aditivos(ctr)
             except:
                  st.info("Ainda não esta funcionado")
-                 st.witte(choice)
+                 st.write(choice)
     
         with t4:
             st.write("GRAFICOS")
