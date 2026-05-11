@@ -149,9 +149,9 @@ def main():
            #st.markdown(f"**SOMA** : {response1}")
            
         with t3:
-            st.write("ADITIVOS")
+            ctr = choice.Contrato[5:]
             try:
-                aditivos()
+                aditivos(ctr)
             except:
                  st.info("Ainda não esta funcionado")
                  st.witte(choice)
