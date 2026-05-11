@@ -72,7 +72,7 @@ def main():
            col = st.columns(5, width=800)
            #st.markdown(f"***CONTRATO Nº*** : {ctr}" )
            #col[0].write("***********************************************")
-           st.button()
+           #st.button()
            col[0].button("MEDICAO NRO")
            #col[0].markdown("***:green[MEDICAO NRO]***", text_alignment="center")
            col[1].markdown("***:green[DATA DA MEDIÇÃO]***", text_alignment="center")
