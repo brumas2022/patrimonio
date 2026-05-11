@@ -80,7 +80,7 @@ def main():
            col[3].markdown("***:green[NOTA FISCAL]***", text_alignment="center")
            col[4].markdown("***:green[PAGAMENTO]***", text_alignment="center")
            #col[0].write("____")
-           col[0].write("____")
+           #col[0].write("____")
            col[1].write("____")
            col[2].write("____")
            col[3].write("____")
