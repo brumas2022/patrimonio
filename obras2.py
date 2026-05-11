@@ -4,7 +4,7 @@ import datetime
 #import matplotlib.pyplot as plt
 
 
-st.set_page_config("Consulta contratos de obra", layout="wide")
+st.set_page_config("Consulta Contratos de obra", layout="wide")
 colimage = st.columns((1,1,1))
 #colimage[1].image("logosanear.png", width=300)
 
