@@ -71,7 +71,7 @@ def main():
            #st.dataframe(response1.data)
            col = st.columns(5, width=900)
            #st.markdown(f"***CONTRATO Nº*** : {ctr}" )
-           #col[0].write("***********************************************")
+           st.write("____")
            #st.button()
            #col[0].button("NRO DA MEDICAO")
            col[0].markdown("***:green[MEDICAO NRO]***", text_alignment="center")
