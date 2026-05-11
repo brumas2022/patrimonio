@@ -23,7 +23,7 @@ key = os.getenv("KEY")
 supabase: Client = create_client(url, key)
 # #########################################################
 def aditivos(n):
-    nro_contrato = f"{df_contratos.iloc[n,1]}"
+    nro_contrato = n #f"{df_contratos.iloc[n,1]}"
     df_aditivo = pd.read_excel("NOVA_MEDICAO.xlsx", sheet_name=1)
     df_aditivo1 = df_aditivo[df_aditivo["CONTRATO"]==nro_contrato]
 
@@ -151,7 +151,7 @@ def main():
         with t3:
             ctr = choice.Contrato[5:]
             try:
-                aditivos(choice["index"])
+                aditivos(ctr)
             except:
                  st.info("Ainda não esta funcionado")
                  st.write(ctr)
