@@ -151,7 +151,7 @@ def main():
         with t3:
             ctr = choice.Contrato[5:]
             try:
-                aditivos(ctr)
+                aditivos(choice["index"])
             except:
                  st.info("Ainda não esta funcionado")
                  st.write(choice)
