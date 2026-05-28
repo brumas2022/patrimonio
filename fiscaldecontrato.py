@@ -144,7 +144,7 @@ def inicia_relatorio():
             pdf.text(11, 105, txt="DATA DO INICIO : "+data_inicio)
             pdf.text(11, 110, txt="DATA DA CONCLUSAO : "+data_fim)
 
-            pdf.text(11, 115, txt="PRAZO DO CONTRATO : "+prazo)
+            pdf.text(11, 115, txt="PRAZO DO CONTRATO : "+f"{prazo}")
             pdf.text(121, 105, txt="VALOR DO CONTRATO : "+f"{valor}")
             pdf.text(121, 110, txt="LICITACAO : "+licitacao)
             pdf.text(121, 115, txt="RECURSO : "+f"{recurso}")
