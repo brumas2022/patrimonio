@@ -53,7 +53,7 @@ if "projetos" not in st.session_state:
 # BARRA LATERAL (LOGO E NAVEGAÇÃO)
 # -----------------------------------------------------------------------------
 with st.sidebar:
-    st.title("Licenciamento Pro")
+    ##st.title("Licenciamento")
     
     # Espaço para inserção do Logotipo
     logo_file = "lh_logo.jpeg" ##st.file_uploader("Upload do Logotipo", type=["png", "jpg", "jpeg"])
