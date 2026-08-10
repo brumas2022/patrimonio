@@ -56,7 +56,7 @@ with st.sidebar:
     st.title("🌱 Licenciamento Pro")
     
     # Espaço para inserção do Logotipo
-    logo_file = "lh_logo.jpeg" **st.file_uploader("Upload do Logotipo", type=["png", "jpg", "jpeg"])
+    logo_file = "lh_logo.jpeg" ##st.file_uploader("Upload do Logotipo", type=["png", "jpg", "jpeg"])
     if logo_file:
         st.image(logo_file, use_container_width=True)
     else:
