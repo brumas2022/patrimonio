@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 # Configuração da página
 st.set_page_config(
     page_title="Gestão de Licenciamento Ambiental",
-    page_icon="🌱",
+    ##page_icon="🌱",
     layout="wide"
 )
 
@@ -53,7 +53,7 @@ if "projetos" not in st.session_state:
 # BARRA LATERAL (LOGO E NAVEGAÇÃO)
 # -----------------------------------------------------------------------------
 with st.sidebar:
-    st.title("🌱 Licenciamento Pro")
+    st.title("Licenciamento Pro")
     
     # Espaço para inserção do Logotipo
     logo_file = "lh_logo.jpeg" ##st.file_uploader("Upload do Logotipo", type=["png", "jpg", "jpeg"])
@@ -80,7 +80,7 @@ with st.sidebar:
 # 1. CADASTRO DE EMPRESAS (CLIENTES)
 # -----------------------------------------------------------------------------
 if menu_principal == "🏢 Cadastros de Empresas":
-    st.title("🏢 Gestão de Empresas (Clientes)")
+    st.title("Gestão de Empresas (Clientes)")
     
     sub_menu = st.radio("Selecione uma ação:", ["Inserir Empresa", "Editar Empresa", "Remover Empresa"], horizontal=True)
 
